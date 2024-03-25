@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ОтборОрганизация" id="115">
+			<DataPath>ОтборОрганизация</DataPath>
+			<TextColor>style:ГруппаВариантовОтчетовЦвет82</TextColor>
+			<ContextMenu name="ОтборОрганизацияКонтекстноеМеню" id="116"/>
+			<ExtendedTooltip name="ОтборОрганизацияРасширеннаяПодсказка" id="117"/>
+		</LabelField>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="10"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="12">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeLoadUserSettingsAtServer">СписокПередЗагрузкойПользовательскихНастроекНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Период" id="22">
+					<DataPath>Список.Period</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Организация" id="25">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="НДСНалоговыйПериод" id="28">
+					<DataPath>Список.НДСНалоговыйПериод</DataPath>
+					<ContextMenu name="НДСНалоговыйПериодКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="НДСНалоговыйПериодРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="НДСМетодОтнесенияВЗачет" id="34">
+					<DataPath>Список.НДСМетодОтнесенияВЗачет</DataPath>
+					<ContextMenu name="НДСМетодОтнесенияВЗачетКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НДСМетодОтнесенияВЗачетРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<CheckBoxField name="ОрганизацияЯвляетсяПлательщикомНДС" id="58">
+					<DataPath>Список.ОрганизацияЯвляетсяПлательщикомНДС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плательщик НДС</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОрганизацияЯвляетсяПлательщикомНДСКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ОрганизацияЯвляетсяПлательщикомНДСРасширеннаяПодсказка" id="60"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОрганизацияЯвляетсяПлательщикомКПН" id="31">
+					<DataPath>Список.ОрганизацияЯвляетсяПлательщикомКПН</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плательщик КПН</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОрганизацияЯвляетсяПлательщикомКПНКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОрганизацияЯвляетсяПлательщикомКПНРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОрганизацияЯвляетсяПлательщикомАкциза" id="61">
+					<DataPath>Список.ОрганизацияЯвляетсяПлательщикомАкциза</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плательщик акциза</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОрганизацияЯвляетсяПлательщикомАкцизаКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ОрганизацияЯвляетсяПлательщикомАкцизаРасширеннаяПодсказка" id="63"/>
+				</CheckBoxField>
+				<CheckBoxField name="УпрощенныйУчетИПНиОПВ" id="64">
+					<DataPath>Список.УпрощенныйУчетИПНиОПВ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УпрощенныйУчетИПНиОПВКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="УпрощенныйУчетИПНиОПВРасширеннаяПодсказка" id="66"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтражениеПоПериодуРегистрации" id="40">
+					<DataPath>Список.ОтражениеПоПериодуРегистрации</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражениеПоПериодуРегистрацииКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ОтражениеПоПериодуРегистрацииРасширеннаяПодсказка" id="42"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛ" id="43">
+					<DataPath>Список.ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОрганизацияЯвляетсяПлательщикомСН" id="37">
+					<DataPath>Список.ОрганизацияЯвляетсяПлательщикомСН</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плательщик СН</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОрганизацияЯвляетсяПлательщикомСНКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОрганизацияЯвляетсяПлательщикомСНРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалога" id="52">
+					<DataPath>Список.ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалога</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалогаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалогаРасширеннаяПодсказка" id="54"/>
+				</CheckBoxField>
+				<LabelField name="ПорядокСписанияЗадолженностиПоЗарплате" id="55">
+					<DataPath>Список.ПорядокСписанияЗадолженностиПоЗарплате</DataPath>
+					<ContextMenu name="ПорядокСписанияЗадолженностиПоЗарплатеКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ПорядокСписанияЗадолженностиПоЗарплатеРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<CheckBoxField name="ОрганизацияЯвляетсяВкладчикомОППВ" id="73">
+					<DataPath>Список.ОрганизацияЯвляетсяВкладчикомОППВ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вкладчик ОППВ</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОрганизацияЯвляетсяВкладчикомОППВКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ОрганизацияЯвляетсяВкладчикомОППВРасширеннаяПодсказка" id="75"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПредоставлятьВычетВМесяцОтсутствияДохода" id="76">
+					<DataPath>~Список.ПредоставлятьВычетВМесяцОтсутствияДохода</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПредоставлятьВычетВМесяцОтсутствияДоходаКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ПредоставлятьВычетВМесяцОтсутствияДоходаРасширеннаяПодсказка" id="78"/>
+				</CheckBoxField>
+				<CheckBoxField name="РаспределятьНалогиПоСтруктурнымЕдиницам" id="67">
+					<DataPath>Список.РаспределятьНалогиПоСтруктурнымЕдиницам</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РаспределятьНалогиПоСтруктурнымЕдиницамКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="РаспределятьНалогиПоСтруктурнымЕдиницамРасширеннаяПодсказка" id="69"/>
+				</CheckBoxField>
+				<CheckBoxField name="РаспределятьНалогиПоПодразделениямОрганизаций" id="70">
+					<DataPath>Список.РаспределятьНалогиПоПодразделениямОрганизаций</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РаспределятьНалогиПоПодразделениямОрганизацийКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="РаспределятьНалогиПоПодразделениямОрганизацийРасширеннаяПодсказка" id="72"/>
+				</CheckBoxField>
+				<LabelField name="СпособОтраженияОПВИП" id="79">
+					<DataPath>Список.СпособОтраженияОПВИП</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СпособОтраженияОПВИПКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="СпособОтраженияОПВИПРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+				<LabelField name="СтавкаОПВдляИП" id="97">
+					<DataPath>Список.СтавкаОПВдляИП</DataPath>
+					<ContextMenu name="СтавкаОПВдляИПКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="СтавкаОПВдляИПРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+				<LabelField name="СпособОтраженияСОИП" id="82">
+					<DataPath>Список.СпособОтраженияСОИП</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ отражения СО в регл.учете</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпособОтраженияСОИПКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="СпособОтраженияСОИПРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="СтавкаСОДляИП" id="100">
+					<DataPath>Список.СтавкаСОДляИП</DataPath>
+					<ContextMenu name="СтавкаСОДляИПКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="СтавкаСОДляИПРасширеннаяПодсказка" id="102"/>
+				</LabelField>
+				<LabelField name="СпособОтраженияВОСМСИП" id="88">
+					<DataPath>Список.СпособОтраженияВОСМСИП</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ отражения ВОСМС в регл.учете</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпособОтраженияВОСМСИПКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="СпособОтраженияВОСМСИПРасширеннаяПодсказка" id="90"/>
+				</LabelField>
+				<LabelField name="СтавкаВОСМСДляИП" id="85">
+					<DataPath>Список.СтавкаВОСМСДляИП</DataPath>
+					<ContextMenu name="СтавкаВОСМСДляИПКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="СтавкаВОСМСДляИПРасширеннаяПодсказка" id="87"/>
+				</LabelField>
+				<LabelField name="СтавкаОПВРдляИП" id="109">
+					<DataPath>Список.СтавкаОПВРдляИП</DataPath>
+					<ContextMenu name="СтавкаОПВРдляИПКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="СтавкаОПВРдляИПРасширеннаяПодсказка" id="111"/>
+				</LabelField>
+				<LabelField name="СпособОтраженияОПВРИП" id="112">
+					<DataPath>Список.СпособОтраженияОПВРИП</DataPath>
+					<ContextMenu name="СпособОтраженияОПВРИПКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="СпособОтраженияОПВРИПРасширеннаяПодсказка" id="114"/>
+				</LabelField>
+				<CheckBoxField name="ПрименятьВычетОПВДляГПХ" id="103">
+					<DataPath>Список.ПрименятьВычетВОСМСДляФизическихЛицИГПХ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применять вычет ОПВ для ГПХ (действует до 2020 г.)</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименятьВычетОПВДляГПХКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ПрименятьВычетОПВДляГПХРасширеннаяПодсказка" id="105"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПрименятьКорректировкуПрочихНалоговВзносовОтчислений" id="91">
+					<DataPath>Список.НеПрименятьКорректировкуПрочихНалоговВзносовОтчислений</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПрименятьКорректировкуПрочихНалоговВзносовОтчисленийКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="НеПрименятьКорректировкуПрочихНалоговВзносовОтчисленийРасширеннаяПодсказка" id="93"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПрименятьВычетВОСМСДляФизическихЛицИГПХ" id="94">
+					<DataPath>Список.ПрименятьВычетВОСМСДляФизическихЛицИГПХ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименятьВычетВОСМСДляФизическихЛицИГПХКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ПрименятьВычетВОСМСДляФизическихЛицИГПХРасширеннаяПодсказка" id="96"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПрименятьВычетОПВиВОСМСДляГПХ" id="106">
+					<DataPath>Список.ПрименятьВычетОПВиВОСМСДляГПХ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименятьВычетОПВиВОСМСДляГПХКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ПрименятьВычетОПВиВОСМСДляГПХРасширеннаяПодсказка" id="108"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.УчетнаяПолитикаНалоговыйУчет</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборОрганизация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПрименятьВычетВОСМСДляФизическихЛицИГПХ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НеПрименятьКорректировкуПрочихНалоговВзносовОтчислений</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Период</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>2020-01-01T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Период</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>2020-12-31T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПрименятьВычетОПВДляГПХ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Период</dcsset:left>
+							<dcsset:comparisonType>Less</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:StandardBeginningDate">
+								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+								<v8:date>2019-01-01T00:00:00</v8:date>
+							</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Период</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:StandardBeginningDate">
+								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+								<v8:date>2019-12-31T00:00:00</v8:date>
+							</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

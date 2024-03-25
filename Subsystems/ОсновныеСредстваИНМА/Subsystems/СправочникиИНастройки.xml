@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="17c12644-e335-411a-b916-cd087bce0fac">
+		<Properties>
+			<Name>СправочникиИНастройки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочники и настройки</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГодовыеГрафикиАмортизацииОС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлассификаторОсновныхФондов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НематериальныеАктивы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОсновныеСредства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПараметрыВыработкиОС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПричиныСписанияОС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СпособыОтраженияРасходовПоАмортизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОбъектыСтроительства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыРасчетаТранспортногоНалога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГруппыНалоговогоУчетаФА</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияОГруппахФиксированныхАктивов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыРасчетаЗемельногоНалога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОбъектыЗемельногоНалога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОбъектыИмущественногоНалога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОбъектыТранспортногоНалога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ШаблоныШтрихкодов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьШтрихкодов</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

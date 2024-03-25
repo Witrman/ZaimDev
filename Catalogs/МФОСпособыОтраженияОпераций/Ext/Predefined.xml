@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.12">
+	<Item id="49bc2001-f597-4614-9e7e-c7ee9df076ff">
+		<Name>ВыдачаЗаймаБанк</Name>
+		<Code>000000001</Code>
+		<Description>Выдача займа банк</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7627f361-0329-4dfb-ad2d-becb3f71e49d">
+		<Name>ВыдачаЗаймаНаличные</Name>
+		<Code>000000002</Code>
+		<Description>Выдача займа наличные</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6ec43bd1-b330-4523-9e6f-f5c55d1fb9b5">
+		<Name>НачислениеВознаграждений</Name>
+		<Code>000000003</Code>
+		<Description>Начисление вознаграждений</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4de69380-8327-4043-97b1-c062228a54d8">
+		<Name>НачислениеКомиссии</Name>
+		<Code>000000004</Code>
+		<Description>Начисление комиссии</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4c63f2e1-5470-4624-8861-590aedc63ee6">
+		<Name>НачислениеПениИШтрафов</Name>
+		<Code>000000005</Code>
+		<Description>Начисление пени и штрафов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9d1b0f90-9095-4d2e-a0f5-e56500bb14b3">
+		<Name>ПогашениеВознагражденийБанк</Name>
+		<Code>000000006</Code>
+		<Description>Погашение вознаграждений банк</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="cd0a0511-a859-45ca-9b6a-306da3d63187">
+		<Name>ПогашениеВознагражденийНал</Name>
+		<Code>000000007</Code>
+		<Description>Погашение вознаграждений касса</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7707aca5-d6ad-42e7-9d49-41c501c13e48">
+		<Name>ПогашениеОДБанк</Name>
+		<Code>000000008</Code>
+		<Description>Погашение основного долга банк</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9a0a6e1b-1a9a-4ac8-aab1-375390a12852">
+		<Name>ПогашениеОДНал</Name>
+		<Code>000000009</Code>
+		<Description>Погашение основного долга касса</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0e6b0f42-970b-40ec-a0b0-a3d29402b2bd">
+		<Name>ПогашениеПениИШтрафовБанк</Name>
+		<Code>000000010</Code>
+		<Description>Погашение пени и штрафов банк</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d1401fff-71b4-43c9-961b-3c6397d9fa46">
+		<Name>ПогашениеПениИШтрафовНал</Name>
+		<Code>000000011</Code>
+		<Description>Погашение пени и штрафов касса</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b72504cf-7e96-487e-8e78-2a539ce304ba">
+		<Name>ПогашениеПросроченногоОДБанк</Name>
+		<Code>000000012</Code>
+		<Description>Погашение просроченного основного долга банк</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f44aa775-0f34-41fd-840d-42ab7804a203">
+		<Name>ПогашениеПросроченногоОДНал</Name>
+		<Code>000000013</Code>
+		<Description>Погашение просроченного основного долга касса</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="51460e14-ccf9-4478-8bc0-4a9e38f1d87d">
+		<Name>ПогашениеПросроченныхВознагражденийБанк</Name>
+		<Code>000000014</Code>
+		<Description>Погашение просроченных вознаграждений банк</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d5321fd6-d378-418e-9bef-0ab41fbbe441">
+		<Name>ПогашениеПросроченныхВознагражденийНал</Name>
+		<Code>000000015</Code>
+		<Description>Погашение просроченных вознаграждений касса</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fcbd6663-9ceb-410d-ba4b-7268eb4d3879">
+		<Name>ПогашениеПросроченныхПениИШтрафовБанк</Name>
+		<Code>000000016</Code>
+		<Description>Погашение просроченных пени и штрафов банк</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="16411c45-f9ba-4830-a8a5-4cd47b74e807">
+		<Name>ПогашениеПросроченныхПениИШтрафовНал</Name>
+		<Code>000000017</Code>
+		<Description>Погашение просроченных пени и штрафов касса</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b5697d7e-b00b-4139-a18f-282dac4ba427">
+		<Name>Пролонгация</Name>
+		<Code>000000018</Code>
+		<Description>Пролонгация</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b23c5ffe-6e90-41ff-8cb3-d52a3f067e79">
+		<Name>ПросроченноеВознаграждение</Name>
+		<Code>000000019</Code>
+		<Description>Просроченное вознаграждение</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6ddc6909-9bd0-4997-b44c-e9374e519493">
+		<Name>ПросроченныйОД</Name>
+		<Code>000000020</Code>
+		<Description>Просроченный основной долг</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

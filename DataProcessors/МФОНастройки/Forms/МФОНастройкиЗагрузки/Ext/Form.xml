@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка загрузки займов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="Подключение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение и загрузка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ПодключениеРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ПодключениеГруппа" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключение группа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключение группа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПодключениеГруппаРасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<InputField name="КонстантыНаборМФОХост" id="9">
+									<DataPath>КонстантыНабор.МФОХост</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КонстантыНаборМФОХостКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="КонстантыНаборМФОХостРасширеннаяПодсказка" id="11"/>
+									<Events>
+										<Event name="OnChange">КонстантыНаборМФОХостПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ДекорацияАдрес" id="26">
+									<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес портала без https:// Например: karyzzaim.kz</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияАдресКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ДекорацияАдресРасширеннаяПодсказка" id="28"/>
+								</LabelDecoration>
+								<InputField name="КонстантыНаборМФОПользователь" id="12">
+									<DataPath>КонстантыНабор.МФОПользователь</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логин</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КонстантыНаборМФОПользовательКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="КонстантыНаборМФОПользовательРасширеннаяПодсказка" id="14"/>
+									<Events>
+										<Event name="OnChange">КонстантыНаборМФОПользовательПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="КонстантыНаборМФОПароль" id="15">
+									<DataPath>КонстантыНабор.МФОПароль</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пароль</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КонстантыНаборМФОПарольКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="КонстантыНаборМФОПарольРасширеннаяПодсказка" id="17"/>
+								</InputField>
+								<Button name="ПроверитьСоединение" id="24">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CommandName>Form.Command.ПроверитьСоединение</CommandName>
+									<ExtendedTooltip name="ПроверитьСоединениеРасширеннаяПодсказка" id="25"/>
+								</Button>
+								<UsualGroup name="ДатаОбновления" id="49">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата обновления</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата обновления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ДатаОбновленияРасширеннаяПодсказка" id="50"/>
+									<ChildItems>
+										<InputField name="МФОДатаОбновления" id="41">
+											<DataPath>КонстантыНабор.МФОДатаОбновления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата обновления загрузки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="МФОДатаОбновленияКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="МФОДатаОбновленияРасширеннаяПодсказка" id="43"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ДекорацияДатаОбновления" id="88">
+									<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Указывается дата последнего полученного документа с портала. В запросе указывается предыдущий день от указанной даты</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияДатаОбновленияКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ДекорацияДатаОбновленияРасширеннаяПодсказка" id="90"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияРегЗадания" id="35">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Необходимо настроить регламентные задания по загрузке:
+Администрирование → Обслуживание → Регламентные и фоновые задания
+Задания "МФО Загрузить займы" и "МФО Загрузить подразделения"</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияРегЗаданияКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ДекорацияРегЗаданияРасширеннаяПодсказка" id="37"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ДатаПотокиГруппа" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата потоки группа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата потоки группа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ДатаПотокиГруппаРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<UsualGroup name="Потоки" id="47">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Потоки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Потоки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПотокиРасширеннаяПодсказка" id="48"/>
+									<ChildItems>
+										<InputField name="МФОКоличествоПотоков" id="44">
+											<DataPath>КонстантыНабор.МФОКоличествоПотоков</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество потоков обработки загрузки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="МФОКоличествоПотоковКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="МФОКоличествоПотоковРасширеннаяПодсказка" id="46"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияПотоки" id="55">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рекомендуемое количество потоков 8 - 10 </v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПотокиКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ДекорацияПотокиРасширеннаяПодсказка" id="57"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="МФОКоличествоОбрабатываемыхСтраниц" id="58">
+									<DataPath>КонстантыНабор.МФОКоличествоОбрабатываемыхСтраниц</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество страниц для обработки по порциям</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="МФОКоличествоОбрабатываемыхСтраницКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="МФОКоличествоОбрабатываемыхСтраницРасширеннаяПодсказка" id="60"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияПорции" id="61">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество страниц для загрузки и обработки по порциям, например - 5 - загружаются, обрабатываются и проводятся по 5 страниц из общего количества. Если указать 0 то разделения не будет</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПорцииКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ДекорацияПорцииРасширеннаяПодсказка" id="63"/>
+								</LabelDecoration>
+								<UsualGroup name="НачальнаяСтраница" id="70">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начальная страница</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начальная страница</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="НачальнаяСтраницаРасширеннаяПодсказка" id="71"/>
+									<ChildItems>
+										<InputField name="МФОНачальнаяСтраница" id="64">
+											<DataPath>КонстантыНабор.МФОНачальнаяСтраница</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Начальная страница</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="МФОНачальнаяСтраницаКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="МФОНачальнаяСтраницаРасширеннаяПодсказка" id="66"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияНачальнаяСтраница" id="67">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Необходимо для загрузки текущей страницы, в случае сбоя значение останется в константе и при восстановлении загрузки начнется с указанной страницы</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияНачальнаяСтраницаКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="ДекорацияНачальнаяСтраницаРасширеннаяПодсказка" id="69"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ПовторятьПриОшибке" id="75">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторять при ошибке</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторять при ошибке</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПовторятьПриОшибкеРасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<InputField name="МФОПовторятьПриОшибке" id="72">
+											<DataPath>КонстантыНабор.МФОПовторятьПриОшибке</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Повторять загрузку страницы при ошибке</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="МФОПовторятьПриОшибкеКонтекстноеМеню" id="73"/>
+											<ExtendedTooltip name="МФОПовторятьПриОшибкеРасширеннаяПодсказка" id="74"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияПовторять" id="77">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>раз</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПовторятьКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ДекорацияПовторятьРасширеннаяПодсказка" id="79"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Логирование" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логирование</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЛогированиеРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<InputField name="КонстантыНаборМФОУровеньЛогирования" id="18">
+							<DataPath>КонстантыНабор.МФОУровеньЛогирования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уровень логирования</v8:content>
+								</v8:item>
+							</Title>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>0 - Логирование не используется</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1 - Записывается информация о загрузке пакета документов и ошибках обработки</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2 - Записывается информация об обработке каждого документа и ошибках обработки</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="КонстантыНаборМФОУровеньЛогированияКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="КонстантыНаборМФОУровеньЛогированияРасширеннаяПодсказка" id="20"/>
+						</InputField>
+						<InputField name="КонстантыНаборМФОДнейАктуальностиЛогирования" id="21">
+							<DataPath>КонстантыНабор.МФОДнейАктуальностиЛогирования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество дней актуальности логирования</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КонстантыНаборМФОДнейАктуальностиЛогированияКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="КонстантыНаборМФОДнейАктуальностиЛогированияРасширеннаяПодсказка" id="23"/>
+							<Events>
+								<Event name="OnChange">КонстантыНаборМФОДнейАктуальностиЛогированияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ДатаАктуальностиЛогирования" id="32">
+							<DataPath>ДатаАктуальностиЛогирования</DataPath>
+							<ContextMenu name="ДатаАктуальностиЛогированияКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДатаАктуальностиЛогированияРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+						<LabelDecoration name="ДекорацияСрокЛогирования" id="29">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документы логирования старше на указанное количество дней будут помечаться на удаление и затем удаляться регламентным заданием.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСрокЛогированияКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ДекорацияСрокЛогированияРасширеннаяПодсказка" id="31"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияРегЗаданияЛогирование" id="38">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:ИнформационныйЦентрЗеленыйЦвет</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необходимо настроить регламентные задания по удалению логирования:
+Администрирование → Обслуживание → Регламентные и фоновые задания
+Задания "МФО Пометить на удаление документы логирования" и "Удаление помеченных объектов"</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияРегЗаданияЛогированиеКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ДекорацияРегЗаданияЛогированиеРасширеннаяПодсказка" id="40"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Отладка" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОтладкаРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<Button name="ЗапускЗагрузкиЗаймовБезФоновыхПроцессов" id="82">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗапускЗагрузкиЗаймовБезФоновыхПроцессов</CommandName>
+							<ExtendedTooltip name="ЗапускЗагрузкиЗаймовБезФоновыхПроцессовРасширеннаяПодсказка" id="83"/>
+						</Button>
+						<Button name="ЗапускЗагрузкиЗаймов" id="86">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗапускЗагрузкиЗаймов</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запуск загрузки займов</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗапускЗагрузкиЗаймовРасширеннаяПодсказка" id="87"/>
+						</Button>
+						<Button name="ЗапускЗагрузкиПодразделений" id="84">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗапускЗагрузкиПодразделений</CommandName>
+							<ExtendedTooltip name="ЗапускЗагрузкиПодразделенийРасширеннаяПодсказка" id="85"/>
+						</Button>
+						<Button name="ЗапускЗагрузкиПодразделенийБезФоновыхПроцессов" id="91">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗапускЗагрузкиПодразделенийБезФоновыхПроцессов</CommandName>
+							<ExtendedTooltip name="ЗапускЗагрузкиПодразделенийБезФоновыхПроцессовРасширеннаяПодсказка" id="92"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КонстантыНабор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Константы набор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДатаАктуальностиЛогирования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата актуальности логирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьСоединение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить соединение</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьСоединение</Action>
+		</Command>
+		<Command name="ЗапускЗагрузкиЗаймовБезФоновыхПроцессов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки займов без фоновых процессов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки займов без фоновых процессов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапускЗагрузкиЗаймовБезФоновыхПроцессов</Action>
+		</Command>
+		<Command name="ЗапускЗагрузкиПодразделений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки подразделений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки подразделений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапускЗагрузкиПодразделений</Action>
+		</Command>
+		<Command name="ЗапускЗагрузкиЗаймов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки займов без фоновых процессов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки займов без фоновых процессов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапускЗагрузкиЗаймов</Action>
+		</Command>
+		<Command name="ЗапускЗагрузкиПодразделенийБезФоновыхПроцессов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки подразделений без фоновых процессов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск загрузки подразделений без фоновых процессов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапускЗагрузкиПодразделенийБезФоновыхПроцессов</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Enum uuid="295874e6-a692-4af0-aeae-ea1dfe554ced">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.СтатусыКодовМаркировкиИСМПТК" category="Ref">
+				<xr:TypeId>a47268b8-4f6c-4564-82a9-6b1fe47144ab</xr:TypeId>
+				<xr:ValueId>95863c51-6896-4068-8ba1-6bb5501fe5a6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.СтатусыКодовМаркировкиИСМПТК" category="Manager">
+				<xr:TypeId>e5d4079c-e8cc-4081-81a9-523d17a2b4d4</xr:TypeId>
+				<xr:ValueId>f78860a7-fa71-40b2-bb7e-8e6a6074e9ff</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.СтатусыКодовМаркировкиИСМПТК" category="List">
+				<xr:TypeId>93bb1fc7-1a60-42f9-a672-bcc079b065e0</xr:TypeId>
+				<xr:ValueId>6aa59546-892f-4e7d-b847-3795b1bfc76a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СтатусыКодовМаркировкиИСМПТК</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы кодов маркировки ИСМПТК</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Order">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="4f0d2b70-59d9-43ad-986e-cee7ca0ded29">
+				<Properties>
+					<Name>ВведенВОборот</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Введен в оборот</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>INTRODUCED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f3503a74-2f8e-49a3-b574-a4a3f45e0153">
+				<Properties>
+					<Name>ВозвращенВОборот</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возвращен в оборот</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>INTRODUCED_RETURNED </Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="22062bb6-09e3-451a-b961-46b966a80f83">
+				<Properties>
+					<Name>ВыведенИзОборота</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выведен из оборота</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>WITHDRAWN </Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="48e5e24c-e7a3-437c-8358-ebce22e522fd">
+				<Properties>
+					<Name>ВыведенИзОборотаПриПеремаркировке</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выведен из оборота при перемаркировке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>REMARK_RETIRED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="00e64dc4-d2aa-4965-a181-14b74ccd0756">
+				<Properties>
+					<Name>ВыведенИзОборотаРассрочка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выведен из оборота по договору рассрочки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>LOAN_RETIRED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="47a67809-cecc-4a23-b325-50e34b87764b">
+				<Properties>
+					<Name>Дезагрегирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дезагрегирован</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>DISAGGREGATED </Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c5dd88b7-a00e-406f-b74c-71c996ff7b38">
+				<Properties>
+					<Name>Экспорт</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Экспортируется</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>EXPORTED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ceb8f18b-4733-475d-a255-acecb9852138">
+				<Properties>
+					<Name>Нанесен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нанесен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>APPLIED </Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="47db38f8-69ce-465c-b0f2-daf0f75064ab">
+				<Properties>
+					<Name>НанесенНеОплачен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нанесен, не оплачен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>APPLIED_NOT_PAID</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1f979f3d-d62d-4729-b462-9cad3a6ee694">
+				<Properties>
+					<Name>Утилизирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утилизирован</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>WRITTEN_OFF</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c985dde5-a0ca-4049-b4a7-a59f96acfd0d">
+				<Properties>
+					<Name>Эмитирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Эмитирован</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>EMITTED</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FunctionalOption uuid="f907a5b6-209a-4880-9c44-12865fbd96c2">
+		<Properties>
+			<Name>ВедетсяПроизводственнаяДеятельность</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведется производственная деятельность</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ВедетсяПроизводственнаяДеятельность</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Subsystem.Производство</xr:Object>
+				<xr:Object>Subsystem.Производство.Subsystem.ВыпускПродукции</xr:Object>
+				<xr:Object>Subsystem.Производство.Subsystem.ПередачаВПереработку</xr:Object>
+				<xr:Object>Subsystem.Производство.Subsystem.Переработка</xr:Object>
+				<xr:Object>Subsystem.Производство.Subsystem.СправочникиИНастройки</xr:Object>
+				<xr:Object>Subsystem.Производство.Subsystem.ЖурналДокументовПоПроизводству</xr:Object>
+				<xr:Object>Constant.ТипЦенПлановойСебестоимостиНоменклатуры</xr:Object>
+				<xr:Object>Catalog.СпецификацииНоменклатуры</xr:Object>
+				<xr:Object>Catalog.МетодыРаспределенияКосвенныхРасходов</xr:Object>
+				<xr:Object>Catalog.Номенклатура.Attribute.НоменклатурнаяГруппа</xr:Object>
+				<xr:Object>Document.АктОбОказанииПроизводственныхУслуг</xr:Object>
+				<xr:Object>Document.ДвижениеНЗП</xr:Object>
+				<xr:Object>Document.ЗакрытиеМесяца.Attribute.РасчетСтоимостиПродукцииБУ</xr:Object>
+				<xr:Object>Document.ЗакрытиеМесяца.Attribute.РасчетСтоимостиПродукцииНУ</xr:Object>
+				<xr:Object>Document.ЗакрытиеМесяца.Attribute.ПереносНЗПБУ</xr:Object>
+				<xr:Object>Document.ЗакрытиеМесяца.Attribute.ПереносНЗПНУ</xr:Object>
+				<xr:Object>Document.ИнвентаризацияНЗП</xr:Object>
+				<xr:Object>Document.ОтчетПроизводстваЗаСмену</xr:Object>
+				<xr:Object>Document.ПередачаТоваров</xr:Object>
+				<xr:Object>Document.ПоступлениеИзПереработки</xr:Object>
+				<xr:Object>Document.РеализацияУслугПоПереработке</xr:Object>
+				<xr:Object>Document.ТребованиеНакладная</xr:Object>
+				<xr:Object>Document.УстановкаПорядкаЗакрытияПодразделений</xr:Object>
+				<xr:Object>DocumentJournal.ПроизводственныеДокументы</xr:Object>
+				<xr:Object>InformationRegister.ВстречныйВыпускПродукцииУслуг</xr:Object>
+				<xr:Object>InformationRegister.МетодыРаспределенияКосвенныхРасходовОрганизаций</xr:Object>
+				<xr:Object>InformationRegister.УчетнаяПолитикаБухгалтерскийУчет.Resource.СпособРасчетаСебестоимостиПроизводства</xr:Object>
+				<xr:Object>InformationRegister.ОсновныеСпецификацииНоменклатуры</xr:Object>
+				<xr:Object>InformationRegister.ПорядокЗакрытияПодразделенийОрганизаций</xr:Object>
+				<xr:Object>InformationRegister.РасчетРаспределенияКосвенныхРасходов</xr:Object>
+				<xr:Object>InformationRegister.РасчетСебестоимостиПродукции</xr:Object>
+				<xr:Object>InformationRegister.СоответствиеСчетовПроизводстваСчетамНезавершенногоПроизводства</xr:Object>
+				<xr:Object>AccumulationRegister.ВыпускПродукцииУслугБухгалтерскийУчет</xr:Object>
+				<xr:Object>AccumulationRegister.ВыпускПродукцииУслугНалоговыйУчет</xr:Object>
+				<xr:Object>DataProcessor.ФормированиеТребованийНакладных</xr:Object>
+				<xr:Object>DataProcessor.ПодборНоменклатуры.TabularSection.ПодобраннаяНоменклатура.Attribute.Спецификация</xr:Object>
+				<xr:Object>Report.СправкаРасчетКалькуляцияСебестоимости</xr:Object>
+				<xr:Object>Report.СправкаРасчетРаспределенияКосвенныхРасходов</xr:Object>
+				<xr:Object>Report.СправкаРасчетСебестоимостиПродукцииИУслуг</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

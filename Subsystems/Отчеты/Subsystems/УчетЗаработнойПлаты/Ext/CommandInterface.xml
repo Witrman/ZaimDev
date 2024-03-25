@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="Report.АнализНачисленийРаботникамОрганизаций.Command.АнализНачисленийРаботникамОрганизаций">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете.Command.КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоРасчетуПениОПВиСО.Command.ОтчетПоРасчетуПениОПВиСО">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетнаяВедомостьОрганизацийТ1.Command.РасчетнаяВедомостьОрганизацийТ1">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетныеВедомостиОрганизаций.Command.РасчетныеВедомостиОрганизаций">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетныеЛисткиОрганизаций.Command.РасчетныеЛисткиОрганизаций">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СводНачисленнойЗарплатыОрганизаций.Command.СводНачисленнойЗарплатыОрганизаций">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СпискиУдержанийПоИсполнительнымЛистам.Command.СпискиУдержанийПоИсполнительнымЛистам">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СправкаРасчетРезервыПоВознаграждениямРаботникам.Command.СправкаРасчетРезервыПоВознаграждениямРаботникам">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередПолучателямиИЛ.Command.СтруктураЗадолженностиОрганизацийПередПолучателямиИЛ">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередРаботниками.Command.СтруктураЗадолженностиОрганизацийПередРаботниками">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоВзносамОСМС.Command.СтруктураЗадолженностиОрганизацийПоВзносамОСМС">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоЕП.Command.СтруктураЗадолженностиОрганизацийПоЕП">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВ.Command.СтруктураЗадолженностиОрганизацийПоОПВ">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВР.Command.СтруктураЗадолженностиОрганизацийПоОПВР">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОППВ.Command.СтруктураЗадолженностиОрганизацийПоОППВ">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОтчислениямОСМС.Command.СтруктураЗадолженностиОрганизацийПоОтчислениямОСМС">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоСО.Command.СтруктураЗадолженностиОрганизацийПоСО">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.АнализНачисленийРаботникамОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоРасчетуПениОПВиСО.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетнаяВедомостьОрганизацийТ1.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетныеВедомостиОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетныеЛисткиОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СводНачисленнойЗарплатыОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СпискиУдержанийПоИсполнительнымЛистам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СправкаРасчетРезервыПоВознаграждениямРаботникам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередПолучателямиИЛ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередРаботниками.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоВзносамОСМС.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоЕП.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВР.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОППВ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОтчислениямОСМС.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоСО.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+</CommandInterface>

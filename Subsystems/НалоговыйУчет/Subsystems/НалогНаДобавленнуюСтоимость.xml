@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="020c88cd-4f07-4c92-afb1-c24148011aa2">
+		<Properties>
+			<Name>НалогНаДобавленнуюСтоимость</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налог на добавленную стоимость</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыПоступления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НомераГТД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтавкиНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ГТДИмпорт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПрочихОперацийПоПриобретеннымТоварамВЦеляхНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПрочихОперацийПоРеализованнымТоварамВЦеляхНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОборотовПоРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийВЦеляхНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.МетодыОтнесенияНДСВЗачет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КодыСтрокДекларацииПоНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КодыСтрокДекларацииПоНДСКЗачету</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.КорректировкаНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.КорректировкаНДСКВозмещению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.НДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.НДСВзаиморасчетыСБюджетом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.НДСЗаНерезидента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.НДСКВозмещению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.НДССИзмененнымСрокомУплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.СведенияСчетовФактурВыданных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияРеализацийВЕАЭС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПодтверждениеРеализацииВЕАЭС</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FilterCriterion uuid="7ab08154-ddb8-4522-8a3b-a75be0331996">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.ДокументыПоРаботникуОрганизации" category="Manager">
+				<xr:TypeId>8804c6d6-c782-41a6-b16a-c8a1091f32a8</xr:TypeId>
+				<xr:ValueId>52e4f993-41c4-4e70-af80-2d892bb43a99</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.ДокументыПоРаботникуОрганизации" category="List">
+				<xr:TypeId>399ee8d2-0a48-462e-b36c-dfc2a05a01c8</xr:TypeId>
+				<xr:ValueId>c667fcf0-8393-4154-b5e7-a7ed6cbc7afc</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДокументыПоРаботникуОрганизации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы по физическому лицу</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвансовыйОтчет.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов.Attribute.ПредставительОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводНачальныхОстатков.TabularSection.РасчетыСПодотчетнымиЛицами.Attribute.РаботникОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводНачальныхОстатковОС.TabularSection.ОС.Attribute.МОЛ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводНачальныхОстатковПоЗарплате.TabularSection.ЗарплатаИНалоги.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводНачальныхОстатковПоЗарплате.TabularSection.ВзносыИОтчисления.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводНачальныхОстатковПоЗарплате.TabularSection.ОПВПодлежитПеречислению.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводСведенийОПлановыхУдержанияхРаботниковОрганизаций.TabularSection.Удержания.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводСведенийОРеглУчетеПлановыхНачисленийРаботниковОрганизаций.TabularSection.ОсновныеНачисления.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратЗарплатыРаботниковОрганизаций.TabularSection.Зарплата.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровПоставщику.TabularSection.ОС.Attribute.МОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ГТДИмпорт.TabularSection.ОС.Attribute.МОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доверенность.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗарплатаКВыплатеОрганизаций.TabularSection.Зарплата.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияДенежныхСредств.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияОС.Attribute.МОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияОС.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияТоваровНаСкладе.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИПНЗаявлениеНаПредоставлениеВычета.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИсполнительныйЛист.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.TabularSection.РаботникиОрганизации.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.TabularSection.ОсновныеНачисления.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КомандировкиОрганизаций.TabularSection.РаботникиОрганизации.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МодернизацияОС.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникамОрганизаций.TabularSection.Начисления.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОПВВозвратВзносов.TabularSection.ПенсионныеВзносы.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОПВПеречислениеВФонды.TabularSection.ПенсионныеВзносы.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтражениеЗарплатыВРеглУчете.TabularSection.ОтражениеВУчете.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаОС.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеОС.TabularSection.ОС.Attribute.МОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеОС.TabularSection.ОС.Attribute.НовыйМОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПлатежноеПоручениеИсходящее.TabularSection.ПеречислениеВПодотчет.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеЗаработнойПлаты.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДопРасходов.TabularSection.ОС.Attribute.МОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваровУслуг.TabularSection.ОС.Attribute.МОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.TabularSection.РаботникиОрганизации.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.TabularSection.ОсновныеНачисления.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПринятиеКУчетуОС.TabularSection.ОС.Attribute.МОЛ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПринятиеКУчетуОС.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетНалоговПриПоступленииАктивовУслуг.TabularSection.ИсчисленныйСН.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетНалоговПриПоступленииАктивовУслуг.TabularSection.ВычетыИПН.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетПениОПВиСО.TabularSection.ИсчислениеПени.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетСНиСО.TabularSection.ИсчисленныйСН.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетСНиСО.TabularSection.ИсчисленныеСО.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетСНиСО.TabularSection.ИсчисленныйОППВ.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетУдержанийРаботниковОрганизаций.TabularSection.ИсчисленныйИПН.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетУдержанийРаботниковОрганизаций.TabularSection.ИсчисленныйОПВ.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетУдержанийРаботниковОрганизаций.TabularSection.Удержания.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетУдержанийРаботниковОрганизаций.TabularSection.НалоговыеВычеты.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетУдержанийРаботниковОрганизаций.TabularSection.ВычетыИПН.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПрочихДоходовВЦеляхНалогообложения.TabularSection.СведенияОДоходах.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхУдержанийРаботниковОрганизаций.TabularSection.Удержания.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеструктуризацияОС.TabularSection.ОС.Attribute.МОЛОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СОВозвратОтчислений.TabularSection.СоциальныеОтчисления.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СОПеречислениеВФонды.TabularSection.СоциальныеОтчисления.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеОС.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеТоваров.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТребованиеНакладная.TabularSection.ИнвентаризационнаяКомиссия.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УдержаниеИПНиОПВНУ.TabularSection.УдержанныйИПН.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УдержаниеИПНиОПВНУ.TabularSection.УдержанныйОПВ.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетЕдиногоПлатежа.TabularSection.ИсчисленныйЕП.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЕППеречислениеВФонды.TabularSection.ЕдиныеПлатежи.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЕПВозвратПлатежа.TabularSection.ЕдиныеПлатежи.Attribute.ФизЛицо</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

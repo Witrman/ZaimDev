@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ДатаПоказа" id="1">
+			<DataPath>Запись.ДатаПоказа</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ДатаПоказаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаПоказаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ЗаПериодПо" id="4">
+			<DataPath>Запись.ЗаПериодПо</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ЗаПериодПоКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ЗаПериодПоРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ЗаПериодС" id="7">
+			<DataPath>Запись.ЗаПериодС</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За период с</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЗаПериодСКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЗаПериодСРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ИсточникОтчета" id="10">
+			<DataPath>Запись.ИсточникОтчета</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет/налог</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИсточникОтчетаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИсточникОтчетаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Организация" id="13">
+			<DataPath>Запись.Организация</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Пользователь" id="16">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ПоследняяДатаДействия" id="19">
+			<DataPath>Запись.ПоследняяДатаДействия</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПоследняяДатаДействияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПоследняяДатаДействияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Состояние" id="22">
+			<DataPath>Запись.Состояние</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="СостояниеКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ТипСообщения" id="25">
+			<DataPath>Запись.ТипСообщения</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТипСообщенияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ТипСообщенияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ФормаОтчета" id="40">
+			<DataPath>Запись.ФормаОтчета</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ФормаОтчетаКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ФормаОтчетаРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="Периодичность" id="31">
+			<DataPath>Запись.Периодичность</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ПериодичностьКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПериодичностьРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="Название" id="34">
+			<DataPath>Запись.Название</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="НазваниеКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="НазваниеРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Налогоплательщик" id="37">
+			<DataPath>Запись.Налогоплательщик</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="НалогоплательщикКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="НалогоплательщикРасширеннаяПодсказка" id="39"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СобытияКалендаряБухгалтера</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

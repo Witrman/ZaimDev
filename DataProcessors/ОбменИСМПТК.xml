@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<DataProcessor uuid="35ff24fc-0171-4e1d-a66b-88ab03ec3d25">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ОбменИСМПТК" category="Object">
+				<xr:TypeId>ca4f6353-5479-4e64-bcef-b938866ef99d</xr:TypeId>
+				<xr:ValueId>0fe92437-3b83-4a8f-8e1b-eb0d5b33c11b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ОбменИСМПТК" category="Manager">
+				<xr:TypeId>17e0989a-3c06-48aa-bf52-7eec5b19906d</xr:TypeId>
+				<xr:ValueId>4c53c558-7357-4977-bc28-fa509537a47b</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОбменИСМПТК</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркировка и прослеживаемость товаров</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ОбменИСМПТК.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+			<Form>КлиентУправляемая</Form>
+			<Form>СписокДокументовИСМПТ</Form>
+			<Form>ФормаУточненияДанныхИС</Form>
+			<Form>ИнформацияОНевозможностиДобавленияОтсканированногоИСМПТ</Form>
+			<Form>ФормаВыбораДокументаОснования</Form>
+			<Form>ФормаВыбораСпискаОрганизацийИСМПТК</Form>
+			<Form>ПолучениеСчета</Form>
+			<Template>СхемаАПП_XML_API</Template>
+			<Template>СхемаУОР_XML_API</Template>
+			<Template>СхемаУВВО_XML_API</Template>
+			<Template>СхемаУВИО_XML_API</Template>
+			<Template>КриптобиблиотекаИСМПТ</Template>
+			<Template>СхемаВвозИзЕАЭС_XML_API</Template>
+			<Template>СхемаВвозИзТретьихСтран_XML_API</Template>
+			<Template>ИдентификаторыПримененияGS1</Template>
+			<Template>КомпонентаПечатиШтрихкодовИСМПТК</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

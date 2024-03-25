@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Enum uuid="0f47da3a-a12c-48b9-9f19-6f7a7118e739">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыРемонтаВА" category="Ref">
+				<xr:TypeId>b70b3b9c-2bc2-4eb8-87cf-b1ba4e3a51ce</xr:TypeId>
+				<xr:ValueId>b1028852-e59f-4495-aa09-400b634aac6e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыРемонтаВА" category="Manager">
+				<xr:TypeId>a51d41dc-6d3a-4d00-9089-5651c3a88001</xr:TypeId>
+				<xr:ValueId>1f60935f-d11e-47ec-a71f-d4dfeff8e043</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыРемонтаВА" category="List">
+				<xr:TypeId>39f499e4-a47b-451f-83d5-e7decedec995</xr:TypeId>
+				<xr:ValueId>42831fbc-3468-48ff-9819-4c04d94b1d8b</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыРемонтаВА</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды ремонта внеоборотных активов </v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>QuickChoice</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="1614e3df-3cc3-4413-8b53-8f4d6f816a15">
+				<Properties>
+					<Name>Текущий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Текущий ремонт</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2112f882-1854-402e-8020-cf3b939c9bdf">
+				<Properties>
+					<Name>Капитальный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Капитальный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Капитальный ремонт</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b811d54f-429c-4552-a0ba-80863042e3b6">
+				<Properties>
+					<Name>Преференции</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Преференции</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

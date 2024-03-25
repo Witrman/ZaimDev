@@ -1,0 +1,1510 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<nestedSchema>
+		<name>ИмуществоОчередной</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Имущество очередной</v8:content>
+			</v8:item>
+		</title>
+		<schema>
+			<dataSource>
+				<name>ИсточникДанных1</name>
+				<dataSourceType>Local</dataSourceType>
+			</dataSource>
+			<dataSet xsi:type="DataSetQuery">
+				<name>НаборДанных1</name>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтруктурнаяЕдиница</dataPath>
+					<field>СтруктурнаяЕдиница</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация/Подразделение</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Счет</dataPath>
+					<field>Счет</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Организация</dataPath>
+					<field>Организация</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтруктурноеПодразделение</dataPath>
+					<field>СтруктурноеПодразделение</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Субконто1</dataPath>
+					<field>Субконто1</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КодОбъекта</dataPath>
+					<field>КодОбъекта</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код объекта</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Субконто2</dataPath>
+					<field>Субконто2</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Субконто3</dataPath>
+					<field>Субконто3</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ОстаточнаяСтоимость</dataPath>
+					<field>ОстаточнаяСтоимость</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаточная стоимость</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Валюта</dataPath>
+					<field>Валюта</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ОбъектНалогообложения</dataPath>
+					<field>ОбъектНалогообложения</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект налогообложения</v8:content>
+						</v8:item>
+					</title>
+					<role>
+						<dcscom:dimension>true</dcscom:dimension>
+						<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+					</role>
+				</field>
+				<dataSource>ИсточникДанных1</dataSource>
+				<query>ВЫБРАТЬ
+	ОбъектыИмущественногоНалога.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	ЕСТЬNULL(ТиповойОстатки.СуммаОстаток, 0) КАК ОстаточнаяСтоимость,
+	ТиповойОстатки.Субконто1 КАК ОбъектНалогообложения,
+	ТиповойОстатки.Субконто1.Код КАК КодОбъекта
+ИЗ
+	РегистрСведений.ОбъектыИмущественногоНалога.СрезПоследних(
+			&amp;Дата,
+			Налогоплательщик = &amp;Налогоплательщик
+				И СтруктурнаяЕдиница В (&amp;СписокСтруктурныхЕдиниц)) КАК ОбъектыИмущественногоНалога
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрБухгалтерии.Типовой.Остатки(
+				&amp;Дата,
+				Счет В ИЕРАРХИИ (&amp;СписокСчетов),
+				,
+				Субконто1 В
+					(ВЫБРАТЬ
+						ОбъектыИмущественногоНалогаСрезПоследних.ОбъектНалогообложения
+					ИЗ
+						РегистрСведений.ОбъектыИмущественногоНалога.СрезПоследних(&amp;Дата, Налогоплательщик = &amp;Налогоплательщик
+							И СтруктурнаяЕдиница В (&amp;СписокСтруктурныхЕдиниц)) КАК ОбъектыИмущественногоНалогаСрезПоследних
+					ГДЕ
+						ОбъектыИмущественногоНалогаСрезПоследних.НачислятьНалог = ИСТИНА)) КАК ТиповойОстатки
+		ПО (ТиповойОстатки.Организация = ОбъектыИмущественногоНалога.Организация)
+			И (ТиповойОстатки.Субконто1 = ОбъектыИмущественногоНалога.ОбъектНалогообложения)
+ГДЕ
+	ОбъектыИмущественногоНалога.НачислятьНалог = ИСТИНА
+</query>
+			</dataSet>
+			<totalField>
+				<dataPath>ОстаточнаяСтоимость</dataPath>
+				<expression>Сумма(ОстаточнаяСтоимость)</expression>
+				<group>ОбъектНалогообложения</group>
+				<group>СтруктурнаяЕдиница</group>
+				<group>ОбщийИтог</group>
+			</totalField>
+			<parameter>
+				<name>Период</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>false</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Налогоплательщик</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налогоплательщик</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>СписокСтруктурныхЕдиниц</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список структурных единиц</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<useRestriction>true</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+			</parameter>
+			<parameter>
+				<name>СписокСчетов</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список счетов</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:ChartOfAccountsRef.Типовой</v8:Type>
+				</valueType>
+				<useRestriction>false</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+			</parameter>
+			<settingsVariant>
+				<dcsset:name>Основной</dcsset:name>
+				<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+				<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+			</settingsVariant>
+		</schema>
+		<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</nestedSchema>
+	<nestedSchema>
+		<name>ИмуществоДополнительный</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Имущество дополнительный</v8:content>
+			</v8:item>
+		</title>
+		<schema>
+			<dataSource>
+				<name>ИсточникДанных1</name>
+				<dataSourceType>Local</dataSourceType>
+			</dataSource>
+			<dataSet xsi:type="DataSetQuery">
+				<name>НаборДанных1</name>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Счет</dataPath>
+					<field>Счет</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорСчет</dataPath>
+					<field>КорСчет</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ВалютаКор</dataPath>
+					<field>ВалютаКор</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>БалансоваяСтоимостьВыбывших</dataPath>
+					<field>БалансоваяСтоимостьВыбывших</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Балансовая стоимость выбывших</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ИзменениеСтоимостиВыбывшихАктивов</dataPath>
+					<field>ИзменениеСтоимостиВыбывшихАктивов</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменение стоимости выбывших активов</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорСубконто1</dataPath>
+					<field>КорСубконто1</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорСубконто2</dataPath>
+					<field>КорСубконто2</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Организация</dataPath>
+					<field>Организация</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорСубконто3</dataPath>
+					<field>КорСубконто3</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КоличествоМесяцев</dataPath>
+					<field>КоличествоМесяцев</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество месяцев</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ИзменениеСтоимостиПоступившихАктивов</dataPath>
+					<field>ИзменениеСтоимостиПоступившихАктивов</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменение стоимости поступивших активов</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ПервоначальнаяСтоимость</dataPath>
+					<field>ПервоначальнаяСтоимость</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Первоначальная стоимость</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КодОбъекта</dataPath>
+					<field>КодОбъекта</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код объекта</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Субконто1</dataPath>
+					<field>Субконто1</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтруктурноеПодразделение</dataPath>
+					<field>СтруктурноеПодразделение</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтруктурноеПодразделениеКор</dataPath>
+					<field>СтруктурноеПодразделениеКор</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Субконто2</dataPath>
+					<field>Субконто2</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Субконто3</dataPath>
+					<field>Субконто3</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ИзменениеСтоимости</dataPath>
+					<field>ИзменениеСтоимости</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменение стоимости</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Валюта</dataPath>
+					<field>Валюта</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ОбъектНалогообложения</dataPath>
+					<field>ОбъектНалогообложения</field>
+					<role>
+						<dcscom:dimension>true</dcscom:dimension>
+					</role>
+				</field>
+				<dataSource>ИсточникДанных1</dataSource>
+				<query>ВЫБРАТЬ
+	ТаблицаПоМесяцам.Период
+ПОМЕСТИТЬ ТаблицаЗапросаПоМесяцам
+ИЗ
+	(ВЫБРАТЬ
+		&amp;Дата1 КАК Период
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата2
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата3
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата4
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата5
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата6
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата7
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата8
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата9
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата10
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата11
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;Дата12) КАК ТаблицаПоМесяцам
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Периоды.Период КАК ПериодГода,
+	ОбъектыИмущественногоНалога.ОбъектНалогообложения КАК ОбъектНалогообложения,
+	ОбъектыИмущественногоНалога.Организация КАК Организация,
+	ОбъектыИмущественногоНалога.Период КАК ПериодЗаписи,
+	ОбъектыИмущественногоНалога.НачислятьНалог КАК НачислятьНалог
+ПОМЕСТИТЬ Объекты
+ИЗ
+	ТаблицаЗапросаПоМесяцам КАК Периоды
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОбъектыИмущественногоНалога КАК ОбъектыИмущественногоНалога
+		ПО (ОбъектыИмущественногоНалога.Налогоплательщик = &amp;Налогоплательщик)
+			И (НАЧАЛОПЕРИОДА(ОбъектыИмущественногоНалога.Период, МЕСЯЦ) &lt;= Периоды.Период)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Объекты.ПериодГода КАК ПериодГода,
+	Объекты.ОбъектНалогообложения КАК ОбъектНалогообложения,
+	Объекты.Организация КАК Организация,
+	МАКСИМУМ(Объекты.ПериодЗаписи) КАК ПериодЗаписи
+ПОМЕСТИТЬ ВТ_ОбъектыБезПризнакаОбложения
+ИЗ
+	Объекты КАК Объекты
+
+СГРУППИРОВАТЬ ПО
+	Объекты.ПериодГода,
+	Объекты.ОбъектНалогообложения,
+	Объекты.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыБезПризнакаОбложения.ПериодГода КАК ПериодГода,
+	ОбъектыБезПризнакаОбложения.Организация КАК Организация,
+	ОбъектыБезПризнакаОбложения.ОбъектНалогообложения КАК ОбъектНалогообложения,
+	ОбъектыИмущественногоНалога.НачислятьНалог КАК НачислятьНалог,
+	ОбъектыИмущественногоНалога.Период КАК ПериодЗаписи
+ПОМЕСТИТЬ ОбъектыИмущественногоНалога
+ИЗ
+	ВТ_ОбъектыБезПризнакаОбложения КАК ОбъектыБезПризнакаОбложения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбъектыИмущественногоНалога КАК ОбъектыИмущественногоНалога
+		ПО (ОбъектыИмущественногоНалога.Организация = ОбъектыБезПризнакаОбложения.Организация)
+			И (ОбъектыИмущественногоНалога.ОбъектНалогообложения = ОбъектыБезПризнакаОбложения.ОбъектНалогообложения)
+			И (ОбъектыИмущественногоНалога.Период = ОбъектыБезПризнакаОбложения.ПериодЗаписи)
+ГДЕ
+	ОбъектыИмущественногоНалога.СтруктурнаяЕдиница В(&amp;СписокСтруктурныхЕдиниц)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыИмущественногоНалога.ПериодГода КАК ПериодГода,
+	ОбъектыИмущественногоНалога.ОбъектНалогообложения КАК ОбъектНалогообложения,
+	ОбъектыИмущественногоНалога.Организация КАК Организация,
+	СУММА(ЕСТЬNULL(ТиповойОборотыПоступления.СуммаОборотДт, 0)) КАК ПриобретениеВТечениеГода
+ПОМЕСТИТЬ ВТ_ПриобретениеЗаГод
+ИЗ
+	ОбъектыИмущественногоНалога КАК ОбъектыИмущественногоНалога
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрБухгалтерии.Типовой.Обороты(&amp;НачалоПериода, &amp;ДатаКон, Месяц, Счет В ИЕРАРХИИ (&amp;СписокСчетов), , , , ) КАК ТиповойОборотыПоступления
+		ПО ОбъектыИмущественногоНалога.ОбъектНалогообложения = ТиповойОборотыПоступления.Субконто1
+			И ОбъектыИмущественногоНалога.Организация = ТиповойОборотыПоступления.Организация
+			И ОбъектыИмущественногоНалога.ПериодГода &gt;= ТиповойОборотыПоступления.Период
+ГДЕ
+	ТиповойОборотыПоступления.СуммаОборотДт &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	ОбъектыИмущественногоНалога.ПериодГода,
+	ОбъектыИмущественногоНалога.ОбъектНалогообложения,
+	ОбъектыИмущественногоНалога.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ВЫБОР
+			КОГДА КонИтоговаяТаблица.ИзменениеСтоимостиВыбывшихАктивов &lt;&gt; 0
+				ТОГДА -КонИтоговаяТаблица.КоличествоМесяцев
+			ИНАЧЕ КонИтоговаяТаблица.КоличествоМесяцев
+		КОНЕЦ) КАК КоличествоМесяцев,
+	КонИтоговаяТаблица.ОбъектНалогообложения КАК ОбъектНалогообложения,
+	КонИтоговаяТаблица.ОбъектНалогообложения.Код КАК КодОбъекта,
+	КонИтоговаяТаблица.Организация КАК Организация,
+	СУММА(КонИтоговаяТаблица.ПервоначальнаяСтоимость) КАК ПервоначальнаяСтоимость,
+	СУММА(КонИтоговаяТаблица.БалансоваяСтоимостьВыбывших) КАК БалансоваяСтоимостьВыбывших,
+	СУММА((ВЫРАЗИТЬ(КонИтоговаяТаблица.ИзменениеСтоимостиПоступившихАктивов / 13 КАК ЧИСЛО(15, 2))) - (ВЫРАЗИТЬ(КонИтоговаяТаблица.ИзменениеСтоимостиВыбывшихАктивов / 13 КАК ЧИСЛО(15, 2)))) КАК ИзменениеСтоимости,
+	СУММА(ВЫРАЗИТЬ(КонИтоговаяТаблица.ИзменениеСтоимостиПоступившихАктивов / 13 КАК ЧИСЛО(15, 2))) КАК ИзменениеСтоимостиПоступившихАктивов,
+	СУММА(ВЫРАЗИТЬ(КонИтоговаяТаблица.ИзменениеСтоимостиВыбывшихАктивов / 13 КАК ЧИСЛО(15, 2))) КАК ИзменениеСтоимостиВыбывшихАктивов
+ИЗ
+	(ВЫБРАТЬ
+		КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ИтоговаяТаблица.ПериодГода) КАК КоличествоМесяцев,
+		ИтоговаяТаблица.ОбъектНалогообложения КАК ОбъектНалогообложения,
+		ИтоговаяТаблица.Организация КАК Организация,
+		СУММА(ИтоговаяТаблица.ИзменениеСтоимостиПоступившихАктивов) КАК ИзменениеСтоимостиПоступившихАктивов,
+		СУММА(ИтоговаяТаблица.ИзменениеСтоимостиВыбывшихАктивов) КАК ИзменениеСтоимостиВыбывшихАктивов,
+		ИтоговаяТаблица.ИзменениеСтоимостиПоступившихАктивов КАК ПервоначальнаяСтоимость,
+		ИтоговаяТаблица.ИзменениеСтоимостиВыбывшихАктивов КАК БалансоваяСтоимостьВыбывших
+	ИЗ
+		(ВЫБРАТЬ
+			ОбъектыИмущественногоНалога.ПериодГода КАК ПериодГода,
+			ОбъектыИмущественногоНалога.ОбъектНалогообложения КАК ОбъектНалогообложения,
+			ОбъектыИмущественногоНалога.Организация КАК Организация,
+			0 КАК ИзменениеСтоимостиПоступившихАктивов,
+			ВЫБОР
+				КОГДА ЕСТЬNULL(ТиповойОстаткиНаНачалоГода.СуммаОстаток, 0) = 0
+						И ЕСТЬNULL(ТиповойОстаткиНаКонецОтчетногоПериода.СуммаОстаток, 0) = 0
+					ТОГДА ЕСТЬNULL(ПриобретениеЗаГод.ПриобретениеВТечениеГода, 0)
+				КОГДА ЕСТЬNULL(ТиповойОстаткиНаКонецОтчетногоПериода.СуммаОстаток, 0) = 0
+					ТОГДА ЕСТЬNULL(ТиповойОстаткиНаНачалоГода.СуммаОстаток, 0)
+				ИНАЧЕ ЕСТЬNULL(ТиповойОбороты.СуммаОборотКт, 0)
+			КОНЕЦ КАК ИзменениеСтоимостиВыбывшихАктивов
+		ИЗ
+			ОбъектыИмущественногоНалога КАК ОбъектыИмущественногоНалога
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрБухгалтерии.Типовой.Остатки(&amp;НачалоПериода, Счет В ИЕРАРХИИ (&amp;СписокСчетовОстаточнойСтоимости), , ) КАК ТиповойОстаткиНаНачалоГода
+				ПО ОбъектыИмущественногоНалога.ОбъектНалогообложения = ТиповойОстаткиНаНачалоГода.Субконто1
+					И ОбъектыИмущественногоНалога.Организация = ТиповойОстаткиНаНачалоГода.Организация
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрБухгалтерии.Типовой.Остатки(&amp;ДатаКонГраница, Счет В ИЕРАРХИИ (&amp;СписокСчетовОстаточнойСтоимости), , ) КАК ТиповойОстаткиНаКонецОтчетногоПериода
+				ПО ОбъектыИмущественногоНалога.ОбъектНалогообложения = ТиповойОстаткиНаКонецОтчетногоПериода.Субконто1
+					И ОбъектыИмущественногоНалога.Организация = ТиповойОстаткиНаКонецОтчетногоПериода.Организация
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрБухгалтерии.Типовой.Обороты(&amp;ДатаНач, &amp;ДатаКон, Месяц, Счет В ИЕРАРХИИ (&amp;СписокСчетов), , , , ) КАК ТиповойОбороты
+				ПО ОбъектыИмущественногоНалога.ОбъектНалогообложения = ТиповойОбороты.Субконто1
+					И ОбъектыИмущественногоНалога.Организация = ТиповойОбороты.Организация
+					И ОбъектыИмущественногоНалога.ПериодГода &gt;= ТиповойОбороты.Период
+				ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПриобретениеЗаГод КАК ПриобретениеЗаГод
+				ПО ОбъектыИмущественногоНалога.ОбъектНалогообложения = ПриобретениеЗаГод.ОбъектНалогообложения
+					И ОбъектыИмущественногоНалога.Организация = ПриобретениеЗаГод.Организация
+					И ОбъектыИмущественногоНалога.ПериодГода = ПриобретениеЗаГод.ПериодГода
+		ГДЕ
+			ТиповойОбороты.СуммаОборотКт &lt;&gt; 0
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ
+			ОбъектыИмущественногоНалога.ПериодГода,
+			ОбъектыИмущественногоНалога.ОбъектНалогообложения,
+			ОбъектыИмущественногоНалога.Организация,
+			ТаблицаПервоначальнаяСтоимость.ПервоначальнаяСтоимость,
+			0
+		ИЗ
+			ОбъектыИмущественногоНалога КАК ОбъектыИмущественногоНалога
+				ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+					ТиповойОбороты.Период КАК Период,
+					ТиповойОбороты.Субконто1 КАК ОсновноеСредство,
+					ТиповойОбороты.Организация КАК Организация,
+					ТиповойОбороты.СуммаОборотДт КАК ПервоначальнаяСтоимость
+				ИЗ
+					РегистрБухгалтерии.Типовой.Обороты(&amp;ДатаНач, &amp;ДатаКон, Месяц, Счет В ИЕРАРХИИ (&amp;СписокСчетов), , , , ) КАК ТиповойОбороты) КАК ТаблицаПервоначальнаяСтоимость
+				ПО ОбъектыИмущественногоНалога.ОбъектНалогообложения = ТаблицаПервоначальнаяСтоимость.ОсновноеСредство
+					И ОбъектыИмущественногоНалога.Организация = ТаблицаПервоначальнаяСтоимость.Организация
+					И ОбъектыИмущественногоНалога.ПериодГода &gt;= ТаблицаПервоначальнаяСтоимость.Период
+		ГДЕ
+			ТаблицаПервоначальнаяСтоимость.ПервоначальнаяСтоимость &lt;&gt; 0) КАК ИтоговаяТаблица
+	
+	СГРУППИРОВАТЬ ПО
+		ИтоговаяТаблица.ОбъектНалогообложения,
+		ИтоговаяТаблица.Организация,
+		ИтоговаяТаблица.ИзменениеСтоимостиПоступившихАктивов,
+		ИтоговаяТаблица.ИзменениеСтоимостиВыбывшихАктивов) КАК КонИтоговаяТаблица
+ГДЕ
+	(КонИтоговаяТаблица.ИзменениеСтоимостиПоступившихАктивов &lt;&gt; 0
+			ИЛИ КонИтоговаяТаблица.ИзменениеСтоимостиВыбывшихАктивов &lt;&gt; 0)
+
+СГРУППИРОВАТЬ ПО
+	КонИтоговаяТаблица.ОбъектНалогообложения,
+	КонИтоговаяТаблица.Организация,
+	КонИтоговаяТаблица.ОбъектНалогообложения.Код</query>
+			</dataSet>
+			<totalField>
+				<dataPath>ИзменениеСтоимости</dataPath>
+				<expression>Сумма(ИзменениеСтоимости)</expression>
+				<group>Организация</group>
+				<group>ОбщийИтог</group>
+			</totalField>
+			<totalField>
+				<dataPath>ИзменениеСтоимостиВыбывшихАктивов</dataPath>
+				<expression>Сумма(ИзменениеСтоимостиВыбывшихАктивов)</expression>
+				<group>Организация</group>
+				<group>ОбщийИтог</group>
+			</totalField>
+			<totalField>
+				<dataPath>ИзменениеСтоимостиПоступившихАктивов</dataPath>
+				<expression>Сумма(ИзменениеСтоимостиПоступившихАктивов)</expression>
+				<group>Организация</group>
+				<group>ОбщийИтог</group>
+			</totalField>
+			<parameter>
+				<name>НачалоПериода</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Начало периода</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>false</useRestriction>
+			</parameter>
+			<parameter>
+				<name>КонецПериода</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Конец периода</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>false</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Период</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>false</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата1</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата1</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата10</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата10</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата11</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата11</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата12</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата12</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата2</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата2</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата3</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата3</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата4</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата4</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата5</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата5</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата6</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата6</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата7</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата7</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата8</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата8</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата9</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата9</v8:content>
+					</v8:item>
+				</title>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>ДатаКон</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата кон</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>ДатаКонГраница</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата кон граница</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>ДатаНач</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата нач</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Налогоплательщик</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налогоплательщик</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>СписокСтруктурныхЕдиниц</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список структурных единиц</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<useRestriction>true</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+			</parameter>
+			<parameter>
+				<name>СписокСчетов</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список счетов</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:ChartOfAccountsRef.Типовой</v8:Type>
+				</valueType>
+				<useRestriction>true</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+			</parameter>
+			<parameter>
+				<name>СписокСчетовОстаточнойСтоимости</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список счетов остаточной стоимости</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:ChartOfAccountsRef.Типовой</v8:Type>
+				</valueType>
+				<useRestriction>true</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+			</parameter>
+			<settingsVariant>
+				<dcsset:name>Основной</dcsset:name>
+				<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+				<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+			</settingsVariant>
+		</schema>
+		<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</nestedSchema>
+	<nestedSchema>
+		<name>ЗемельныйОчередной</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Земельный очередной</v8:content>
+			</v8:item>
+		</title>
+		<schema>
+			<dataSource>
+				<name>ИсточникДанных1</name>
+				<dataSourceType>Local</dataSourceType>
+			</dataSource>
+			<dataSet xsi:type="DataSetQuery">
+				<name>НаборДанных1</name>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтавкаНалогаСУчетомКорректировки</dataPath>
+					<field>СтавкаНалогаСУчетомКорректировки</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка налога с учетом корректировки</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтруктурнаяЕдиница</dataPath>
+					<field>СтруктурнаяЕдиница</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорректировкаБазовойСтавкиНалога</dataPath>
+					<field>КорректировкаБазовойСтавкиНалога</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ПлощадьОблагаемая</dataPath>
+					<field>ПлощадьОблагаемая</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ВидЗемельногоНалога</dataPath>
+					<field>ВидЗемельногоНалога</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид земельного налога</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Регистратор</dataPath>
+					<field>Регистратор</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>БазоваяСтавкаНалога</dataPath>
+					<field>БазоваяСтавкаНалога</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Период</dataPath>
+					<field>Период</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КатегорияЗемель</dataPath>
+					<field>КатегорияЗемель</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Организация</dataPath>
+					<field>Организация</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СуммаЗемельногоНалога</dataPath>
+					<field>СуммаЗемельногоНалога</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма земельного налога</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Налогоплательщик</dataPath>
+					<field>Налогоплательщик</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов</dataPath>
+					<field>КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ПроцентИзмененияБазовойСтавкиНалога</dataPath>
+					<field>ПроцентИзмененияБазовойСтавкиНалога</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ</dataPath>
+					<field>КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КодОбъекта</dataPath>
+					<field>КодОбъекта</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код объекта</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КБК</dataPath>
+					<field>КБК</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>КБК</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ОбъектНалогообложения</dataPath>
+					<field>ОбъектНалогообложения</field>
+				</field>
+				<dataSource>ИсточникДанных1</dataSource>
+				<query>ВЫБРАТЬ
+	ОбъектыЗемельногоНалогаСрезПоследних.Период,
+	ОбъектыЗемельногоНалогаСрезПоследних.Регистратор,
+	ОбъектыЗемельногоНалогаСрезПоследних.ОбъектНалогообложения,
+	ОбъектыЗемельногоНалогаСрезПоследних.ОбъектНалогообложения.Код КАК КодОбъекта,
+	ОбъектыЗемельногоНалогаСрезПоследних.Налогоплательщик КАК Налогоплательщик,
+	ОбъектыЗемельногоНалогаСрезПоследних.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	ОбъектыЗемельногоНалогаСрезПоследних.Организация,
+	ПараметрыРасчетаЗемельногоНалога.КатегорияЗемель,
+	ПараметрыРасчетаЗемельногоНалога.КатегорияЗемель.ВидЗемельногоНалога КАК ВидЗемельногоНалога,
+	ПараметрыРасчетаЗемельногоНалога.КатегорияЗемель.ВидЗемельногоНалога.КодБК КАК КБК,
+	ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога,
+	ПараметрыРасчетаЗемельногоНалога.ПлощадьОблагаемая,
+	(ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) + ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПроцентИзмененияБазовойСтавкиНалога, 0) * ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) / 100) * ВЫБОР
+		КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0) = 0
+			ТОГДА 1
+		ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0)
+	КОНЕЦ * ВЫБОР
+		КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0) = 0
+			ТОГДА 1
+		ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0)
+	КОНЕЦ * ВЫБОР
+		КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0) = 0
+			ТОГДА 1
+		ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0)
+	КОНЕЦ КАК СтавкаНалогаСУчетомКорректировки,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПлощадьОблагаемая, 0) * (ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) + ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПроцентИзмененияБазовойСтавкиНалога, 0) * ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) / 100) * ВЫБОР
+			КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0) = 0
+				ТОГДА 1
+			ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0)
+		КОНЕЦ * ВЫБОР
+			КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0) = 0
+				ТОГДА 1
+			ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0)
+		КОНЕЦ * ВЫБОР
+			КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0) = 0
+				ТОГДА 1
+			ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0)
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаЗемельногоНалога,
+	ПараметрыРасчетаЗемельногоНалога.ПроцентИзмененияБазовойСтавкиНалога,
+	ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога,
+	ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ,
+	ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов
+ИЗ
+	РегистрСведений.ОбъектыЗемельногоНалога.СрезПоследних(
+			&amp;Дата,
+			Налогоплательщик = &amp;Налогоплательщик
+				И СтруктурнаяЕдиница В (&amp;СписокСтруктурныхЕдиниц)) КАК ОбъектыЗемельногоНалогаСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПараметрыРасчетаЗемельногоНалога КАК ПараметрыРасчетаЗемельногоНалога
+		ПО ОбъектыЗемельногоНалогаСрезПоследних.ОбъектНалогообложения = ПараметрыРасчетаЗемельногоНалога.ОсновноеСредство
+			И ОбъектыЗемельногоНалогаСрезПоследних.Организация = ПараметрыРасчетаЗемельногоНалога.Организация
+ГДЕ
+	ОбъектыЗемельногоНалогаСрезПоследних.НачислятьНалог = ИСТИНА</query>
+			</dataSet>
+			<totalField>
+				<dataPath>СуммаЗемельногоНалога</dataPath>
+				<expression>Сумма(СуммаЗемельногоНалога)</expression>
+				<group>КБК</group>
+				<group>Налогоплательщик</group>
+				<group>СтруктурнаяЕдиница</group>
+			</totalField>
+			<parameter>
+				<name>Период</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>false</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Дата</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Налогоплательщик</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налогоплательщик</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>СписокСтруктурныхЕдиниц</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список структурных единиц</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<useRestriction>true</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+			</parameter>
+			<settingsVariant>
+				<dcsset:name>Основной</dcsset:name>
+				<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+				<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+			</settingsVariant>
+		</schema>
+		<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</nestedSchema>
+	<nestedSchema>
+		<name>ЗемельныйДополнительный</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Земельный дополнительный</v8:content>
+			</v8:item>
+		</title>
+		<schema>
+			<dataSource>
+				<name>ИсточникДанных1</name>
+				<dataSourceType>Local</dataSourceType>
+			</dataSource>
+			<dataSet xsi:type="DataSetQuery">
+				<name>НаборДанных1</name>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтавкаНалогаСУчетомКорректировки</dataPath>
+					<field>СтавкаНалогаСУчетомКорректировки</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка налога с учетом корректировки</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СтруктурнаяЕдиница</dataPath>
+					<field>СтруктурнаяЕдиница</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорректировкаБазовойСтавкиНалога</dataPath>
+					<field>КорректировкаБазовойСтавкиНалога</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Событие</dataPath>
+					<field>Событие</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Событие</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ВидЗемельногоНалога</dataPath>
+					<field>ВидЗемельногоНалога</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид земельного налога</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ПлощадьОблагаемая</dataPath>
+					<field>ПлощадьОблагаемая</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>БазоваяСтавкаНалога</dataPath>
+					<field>БазоваяСтавкаНалога</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КатегорияЗемель</dataPath>
+					<field>КатегорияЗемель</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Организация</dataPath>
+					<field>Организация</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ГодоваяСуммаЗемельногоНалога</dataPath>
+					<field>ГодоваяСуммаЗемельногоНалога</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Годовая сумма земельного налога</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>СуммаЗемельногоНалога</dataPath>
+					<field>СуммаЗемельногоНалога</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма земельного налога</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КоличествоМесяцев</dataPath>
+					<field>КоличествоМесяцев</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество месяцев</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Налогоплательщик</dataPath>
+					<field>Налогоплательщик</field>
+					<role>
+						<dcscom:dimension>true</dcscom:dimension>
+					</role>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов</dataPath>
+					<field>КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ПроцентИзмененияБазовойСтавкиНалога</dataPath>
+					<field>ПроцентИзмененияБазовойСтавкиНалога</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ</dataPath>
+					<field>КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КодОбъекта</dataPath>
+					<field>КодОбъекта</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код объекта</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>КБК</dataPath>
+					<field>КБК</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>КБК</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Период</dataPath>
+					<field>Период</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ОбъектНалогообложения</dataPath>
+					<field>ОбъектНалогообложения</field>
+					<role>
+						<dcscom:dimension>true</dcscom:dimension>
+					</role>
+				</field>
+				<dataSource>ИсточникДанных1</dataSource>
+				<query>ВЫБРАТЬ
+	ОбъектыЗемельногоНалога.Период,
+	ОбъектыЗемельногоНалога.Регистратор,
+	ОбъектыЗемельногоНалога.НомерСтроки,
+	ОбъектыЗемельногоНалога.Активность,
+	ОбъектыЗемельногоНалога.ОбъектНалогообложения,
+	ОбъектыЗемельногоНалога.Налогоплательщик,
+	ОбъектыЗемельногоНалога.НачислятьНалог,
+	ОбъектыЗемельногоНалога.СтруктурнаяЕдиница,
+	ОбъектыЗемельногоНалога.Организация,
+	ОбъектыЗемельногоНалога.МоментВремени
+ПОМЕСТИТЬ ОбъектыЗамельногоНалога
+ИЗ
+	РегистрСведений.ОбъектыЗемельногоНалога КАК ОбъектыЗемельногоНалога
+ГДЕ
+	ОбъектыЗемельногоНалога.Период МЕЖДУ &amp;ДатаНач И &amp;ДатаКон
+	И ОбъектыЗемельногоНалога.Налогоплательщик = &amp;Налогоплательщик
+	И ОбъектыЗемельногоНалога.СтруктурнаяЕдиница В(&amp;СписокСтруктурныхЕдиниц)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИтоговаяТаблица.Период,
+	ИтоговаяТаблица.ОбъектНалогообложения,
+	ИтоговаяТаблица.ОбъектНалогообложения.Код КАК КодОбъекта,
+	ИтоговаяТаблица.Налогоплательщик КАК Налогоплательщик,
+	ИтоговаяТаблица.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	ИтоговаяТаблица.Организация,
+	ИтоговаяТаблица.КоличествоМесяцев,
+	ИтоговаяТаблица.БазоваяСтавкаНалога,
+	ИтоговаяТаблица.ПроцентИзмененияБазовойСтавкиНалога,
+	ИтоговаяТаблица.КорректировкаБазовойСтавкиНалога,
+	ИтоговаяТаблица.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ,
+	ИтоговаяТаблица.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов,
+	ИтоговаяТаблица.СтавкаНалогаСУчетомКорректировки,
+	ИтоговаяТаблица.ПлощадьОблагаемая,
+	ИтоговаяТаблица.КатегорияЗемель,
+	ИтоговаяТаблица.ВидЗемельногоНалога,
+	ИтоговаяТаблица.КБК КАК КБК,
+	ИтоговаяТаблица.СуммаЗемельногоНалога КАК ГодоваяСуммаЗемельногоНалога,
+	ВЫРАЗИТЬ(ИтоговаяТаблица.СуммаЗемельногоНалога * ИтоговаяТаблица.КоличествоМесяцев / 12 КАК ЧИСЛО(15, 0)) КАК СуммаЗемельногоНалога,
+	ВЫБОР
+		КОГДА ИтоговаяТаблица.НачислятьНалог = ИСТИНА
+			ТОГДА "Поступил"
+		ИНАЧЕ "Выбыл"
+	КОНЕЦ КАК Событие
+ИЗ
+	(ВЫБРАТЬ
+		НАЧАЛОПЕРИОДА(ОбъектыЗамельногоНалога.Период, МЕСЯЦ) КАК Период,
+		ОбъектыЗамельногоНалога.ОбъектНалогообложения КАК ОбъектНалогообложения,
+		ОбъектыЗамельногоНалога.Налогоплательщик КАК Налогоплательщик,
+		ОбъектыЗамельногоНалога.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+		ОбъектыЗамельногоНалога.Организация КАК Организация,
+		РАЗНОСТЬДАТ(НАЧАЛОПЕРИОДА(ОбъектыЗамельногоНалога.Период, МЕСЯЦ), ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(ОбъектыЗамельногоНалога.Период, ГОД), СЕКУНДА, 1), МЕСЯЦ) КАК КоличествоМесяцев,
+		ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога КАК БазоваяСтавкаНалога,
+		ПараметрыРасчетаЗемельногоНалога.ПроцентИзмененияБазовойСтавкиНалога КАК ПроцентИзмененияБазовойСтавкиНалога,
+		ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога КАК КорректировкаБазовойСтавкиНалога,
+		ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ КАК КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ,
+		ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов КАК КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов,
+		(ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) + ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПроцентИзмененияБазовойСтавкиНалога, 0) * ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) / 100) * ВЫБОР
+			КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0) = 0
+				ТОГДА 1
+			ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0)
+		КОНЕЦ * ВЫБОР
+			КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0) = 0
+				ТОГДА 1
+			ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0)
+		КОНЕЦ * ВЫБОР
+			КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0) = 0
+				ТОГДА 1
+			ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0)
+		КОНЕЦ КАК СтавкаНалогаСУчетомКорректировки,
+		ПараметрыРасчетаЗемельногоНалога.ПлощадьОблагаемая КАК ПлощадьОблагаемая,
+		ПараметрыРасчетаЗемельногоНалога.КатегорияЗемель КАК КатегорияЗемель,
+		ПараметрыРасчетаЗемельногоНалога.КатегорияЗемель.ВидЗемельногоНалога КАК ВидЗемельногоНалога,
+		ПараметрыРасчетаЗемельногоНалога.КатегорияЗемель.ВидЗемельногоНалога.КодБК КАК КБК,
+		ВЫБОР
+			КОГДА ОбъектыЗамельногоНалога.НачислятьНалог = ИСТИНА
+				ТОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПлощадьОблагаемая, 0) * (ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) + ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПроцентИзмененияБазовойСтавкиНалога, 0) * ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) / 100) * ВЫБОР
+						КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0) = 0
+							ТОГДА 1
+						ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0)
+					КОНЕЦ * ВЫБОР
+						КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0) = 0
+							ТОГДА 1
+						ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0)
+					КОНЕЦ * ВЫБОР
+						КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0) = 0
+							ТОГДА 1
+						ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0)
+					КОНЕЦ
+			ИНАЧЕ -ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПлощадьОблагаемая, 0) * (ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) + ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.ПроцентИзмененияБазовойСтавкиНалога, 0) * ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.БазоваяСтавкаНалога, 0) / 100) * ВЫБОР
+					КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0) = 0
+						ТОГДА 1
+					ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалога, 0)
+				КОНЕЦ * ВЫБОР
+					КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0) = 0
+						ТОГДА 1
+					ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ, 0)
+				КОНЕЦ * ВЫБОР
+					КОГДА ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0) = 0
+						ТОГДА 1
+					ИНАЧЕ ЕСТЬNULL(ПараметрыРасчетаЗемельногоНалога.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов, 0)
+				КОНЕЦ
+		КОНЕЦ КАК СуммаЗемельногоНалога,
+		ОбъектыЗамельногоНалога.НачислятьНалог КАК НачислятьНалог
+	ИЗ
+		ОбъектыЗамельногоНалога КАК ОбъектыЗамельногоНалога
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПараметрыРасчетаЗемельногоНалога КАК ПараметрыРасчетаЗемельногоНалога
+			ПО ОбъектыЗамельногоНалога.ОбъектНалогообложения = ПараметрыРасчетаЗемельногоНалога.ОсновноеСредство
+				И ОбъектыЗамельногоНалога.Организация = ПараметрыРасчетаЗемельногоНалога.Организация) КАК ИтоговаяТаблица</query>
+			</dataSet>
+			<totalField>
+				<dataPath>СуммаЗемельногоНалога</dataPath>
+				<expression>Сумма(СуммаЗемельногоНалога)</expression>
+				<group>КБК</group>
+				<group>Налогоплательщик</group>
+				<group>СтруктурнаяЕдиница</group>
+				<group>ОбщийИтог</group>
+			</totalField>
+			<totalField>
+				<dataPath>ГодоваяСуммаЗемельногоНалога</dataPath>
+				<expression>Сумма(ГодоваяСуммаЗемельногоНалога)</expression>
+				<group>КБК</group>
+				<group>Налогоплательщик</group>
+				<group>СтруктурнаяЕдиница</group>
+			</totalField>
+			<parameter>
+				<name>ДатаКон</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата кон</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>ДатаНач</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата нач</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>Налогоплательщик</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налогоплательщик</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<value xsi:nil="true"/>
+				<useRestriction>true</useRestriction>
+			</parameter>
+			<parameter>
+				<name>СписокСтруктурныхЕдиниц</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список структурных единиц</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</valueType>
+				<useRestriction>true</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+			</parameter>
+			<settingsVariant>
+				<dcsset:name>Основной</dcsset:name>
+				<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+				<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+			</settingsVariant>
+		</schema>
+		<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</nestedSchema>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</settingsVariant>
+</DataCompositionSchema>

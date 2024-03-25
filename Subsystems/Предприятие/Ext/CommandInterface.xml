@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="Catalog.Организации.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПодразделенияОрганизаций.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОсновныеНастройкиОрганизации.Command.ОсновныеНастройкиОрганизации">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="CommonCommand.ДополнительныеОтчетыПредприятие">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОсновныеНастройкиОрганизации.Command.ОсновныеНастройкиОрганизации">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиПредприятие">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Предприятие.Subsystem.Предприятие</Subsystem>
+		<Subsystem>Subsystem.Предприятие.Subsystem.УчетнаяПолитика</Subsystem>
+		<Subsystem>Subsystem.Предприятие.Subsystem.ПланыCчетов</Subsystem>
+		<Subsystem>Subsystem.Предприятие.Subsystem.ВводНачальныхОстатков</Subsystem>
+		<Subsystem>Subsystem.Предприятие.Subsystem.ТоварыМатериалыПродукцияУслуги</Subsystem>
+		<Subsystem>Subsystem.Предприятие.Subsystem.Налоги</Subsystem>
+		<Subsystem>Subsystem.Предприятие.Subsystem.СправочникиНастройки</Subsystem>
+		<Subsystem>Subsystem.Предприятие.Subsystem.Органайзер</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>ActionsPanelReports</Group>
+		<Group>ActionsPanelTools</Group>
+	</GroupsOrder>
+</CommandInterface>

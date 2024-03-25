@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередПолучателямиИЛ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередРаботниками.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоВзносамОСМС.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоЕП.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВР.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОППВ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОтчислениямОСМС.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоСО.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередРаботниками.Command.СтруктураЗадолженностиОрганизацийПередРаботниками">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПередПолучателямиИЛ.Command.СтруктураЗадолженностиОрганизацийПередПолучателямиИЛ">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВ.Command.СтруктураЗадолженностиОрганизацийПоОПВ">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОППВ.Command.СтруктураЗадолженностиОрганизацийПоОППВ">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоСО.Command.СтруктураЗадолженностиОрганизацийПоСО">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоВзносамОСМС.Command.СтруктураЗадолженностиОрганизацийПоВзносамОСМС">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОтчислениямОСМС.Command.СтруктураЗадолженностиОрганизацийПоОтчислениямОСМС">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоЕП.Command.СтруктураЗадолженностиОрганизацийПоЕП">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураЗадолженностиОрганизацийПоОПВР.Command.СтруктураЗадолженностиОрганизацийПоОПВР">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+	</GroupsOrder>
+</CommandInterface>

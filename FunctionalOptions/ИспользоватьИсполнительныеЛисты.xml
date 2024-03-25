@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FunctionalOption uuid="005d99ab-84b9-4649-9126-5ca651b2344a">
+		<Properties>
+			<Name>ИспользоватьИсполнительныеЛисты</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать исполнительные листы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ИспользоватьИсполнительныеЛисты</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Document.ИЛПеречислениеПолучателям</xr:Object>
+				<xr:Object>Document.ИсполнительныйЛист</xr:Object>
+				<xr:Object>Document.АвансовыйОтчет.TabularSection.ОплатаПоИсполнительнымЛистам</xr:Object>
+				<xr:Object>Document.ПлатежноеПоручениеИсходящее.TabularSection.ПеречислениеПоИсполнительнымЛистам</xr:Object>
+				<xr:Object>Document.РасходныйКассовыйОрдер.TabularSection.ВыплатаПоИсполнительнымЛистам</xr:Object>
+				<xr:Object>Catalog.ИсполнительныйЛистПрисоединенныеФайлы</xr:Object>
+				<xr:Object>Report.СтруктураЗадолженностиОрганизацийПередПолучателямиИЛ</xr:Object>
+				<xr:Object>Report.СпискиУдержанийПоИсполнительнымЛистам</xr:Object>
+				<xr:Object>InformationRegister.УчетнаяПолитикаНалоговыйУчет.Resource.ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛ</xr:Object>
+				<xr:Object>AccumulationRegister.ВзаиморасчетыОрганизацийСПолучателямиИЛ</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

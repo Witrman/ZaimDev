@@ -1,0 +1,84 @@
+﻿<ValueTable xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTable">
+
+	<column>
+		<Name xsi:type="xs:string">Сокращение</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>10</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+	
+	<column>
+		<Name xsi:type="xs:string">Наименование</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>100</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+	
+	<column>
+		<Name xsi:type="xs:string">СокращениеНаКазахском</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>10</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+	
+	<column>
+		<Name xsi:type="xs:string">НаименованиеНаКазахском</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>100</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+
+	<column>
+		<Name xsi:type="xs:string">Уровень</Name>
+		<ValueType>
+			<Type>xs:decimal</Type>
+		</ValueType>
+	</column>
+	
+	<index><column>Сокращение</column></index>
+	<index><column>Наименование</column></index>
+	<index><column>Наименование</column><column>Сокращение</column></index>
+
+	<row><Value>обл.</Value>    <Value>Область</Value>                         <Value>обл.</Value>       <Value>Облыс</Value>               <Value>1</Value></row>
+	<row><Value>область</Value> <Value>Область</Value>                         <Value>облыс</Value>      <Value>Облыс</Value>               <Value>1</Value></row>
+	<row><Value>р-н</Value>     <Value>Район</Value>                           <Value>а-н</Value>        <Value>Аудан</Value>               <Value>2</Value></row>
+	<row><Value>район</Value>   <Value>Район</Value>                           <Value>ауданы</Value>     <Value>Аудан</Value>               <Value>2</Value></row>
+	<row><Value>г.</Value>      <Value>Город</Value>                           <Value>қ.</Value>         <Value>Қала</Value>                <Value>3</Value></row>
+	<row><Value>п.</Value>      <Value>Поселок</Value>                         <Value>к.</Value>         <Value>Кент</Value>                <Value>5</Value></row>
+	<row><Value>а.о.</Value>    <Value>Аульный округ</Value>                   <Value>а.о.</Value>       <Value>Ауылдық округ</Value>       <Value>4</Value></row>
+	<row><Value>а.</Value>      <Value>Аул</Value>                             <Value>а.</Value>         <Value>Ауыл</Value>                <Value>5</Value></row>
+	<row><Value>с.о.</Value>    <Value>Сельский округ</Value>                  <Value>с.о.</Value>       <Value>Селолық округ</Value>       <Value>4</Value></row>
+	<row><Value>с.</Value>      <Value>Село</Value>                            <Value>с.</Value>         <Value>Село</Value>                <Value>5</Value></row>
+	<row><Value>уч.</Value>     <Value>Участок</Value>                         <Value>уч.</Value>        <Value>Учаске</Value>              <Value>5</Value></row>
+	<row><Value>рзд.</Value>    <Value>Разъезд</Value>                         <Value>рзд.</Value>       <Value>Разъезд</Value>             <Value>5</Value></row>
+	<row><Value>отг.</Value>    <Value>Отгон</Value>                           <Value>ж.</Value>         <Value>Жайылым</Value>             <Value>5</Value></row>
+	<row><Value>ст.</Value>     <Value>Станция</Value>                         <Value>ст.</Value>        <Value>Станса</Value>              <Value>5</Value></row>
+	<row><Value>подхоз</Value>  <Value>Подсобное хозяйство</Value>             <Value>қосшар</Value>     <Value>Қосалқы шаруашылығы</Value> <Value>5</Value></row>
+	<row><Value>кр.хоз</Value>  <Value>Крестьянское хозяйство</Value>          <Value>шарқож</Value>     <Value>Шаруа қожалығы</Value>      <Value>5</Value></row>
+	<row><Value>лесхоз</Value>  <Value>Лесничье хозяйство, лесничество</Value> <Value>орманшар</Value>   <Value>Орман шаруашылығы</Value>   <Value>5</Value></row>
+	<row><Value>селхоз</Value>  <Value>Сельское хозяйство</Value>              <Value>ауылшар</Value>    <Value>Ауыл шаруашылығы</Value>    <Value>5</Value></row>
+	<row><Value>маш.двор</Value><Value>Машинный двор</Value>                   <Value>маш.ауласы</Value> <Value>Машина ауласы</Value>       <Value>5</Value></row>
+	<row><Value>г.а.</Value>    <Value>Городской акимат</Value>                <Value>қ.ә.</Value>       <Value>Қалалық әкімдік</Value>     <Value>3</Value></row>
+	<row><Value>р.а.</Value>    <Value>Районная администрация</Value>          <Value>а.ә.</Value>       <Value>Аудандық әкімшілік</Value>  <Value>3</Value></row>
+	<row><Value>г.а.</Value>    <Value>Городская администрация</Value>         <Value>қ.ә.</Value>       <Value>Қалалық әкімшілік</Value>   <Value>3</Value></row>
+	<row><Value>п.а.</Value>    <Value>Поселковая администрация</Value>        <Value>к.ә.</Value>       <Value>Кенттік әкімшілік</Value>   <Value>5</Value></row>
+	<row><Value>а.а.</Value>    <Value>Аульная администрация</Value>           <Value>а.ә.</Value>       <Value>Ауылдық әкімшілік</Value>   <Value>4</Value></row>
+	<row><Value>с.а.</Value>    <Value>Сельская администрация</Value>          <Value>с.ә.</Value>       <Value>Селолық әкімшілік</Value>   <Value>4</Value></row>
+
+</ValueTable>

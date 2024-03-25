@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="d3303206-8272-4ea0-8f1f-6d726fe87607">
+		<Properties>
+			<Name>ЭлектронныеСопроводительныеНакладные</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные сопроводительные накладные</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыВвозаСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыВывозаСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыПеремещенияСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТВызовСервераПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТКлиентСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СНТСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЭлектронныеСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЭлектронныеСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СНТИспользоватьВнешнийМодульОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СНТВнешнийМодульОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыВиртуальногоСкладаВРезерве</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НаправленияСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеНастроекСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеНастроекСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбменСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПервичныеДокументыСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.СНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализОстатковТоваровНаВиртуальномСкладеСУчетомРезервов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВиртуальныеСкладыКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СопоставлениеСНТиФНО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыСопоставленийСНТиФНО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ЗаявлениеОВвозеТоваровСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособВыпискиСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СопоставленныеИсточникиПроисхождения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ЭСФИСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СтатусыВиртуальныхСкладов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыСопоставленияДляСНТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОсновныеВиртуальныеСкладыКонтрагентов</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

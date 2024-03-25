@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="110"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="135">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="136"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="137"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="138">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="139"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="140"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="141">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="142"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="143"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Организация" id="4">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="111"/>
+				</LabelField>
+				<LabelField name="Номенклатура" id="6">
+					<DataPath>Список.Номенклатура</DataPath>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НоменклатураExtendedTooltip" id="112"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСчетаБухгалтерскогоУчета" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета бухгалтерского учета</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ГруппаСчетаБухгалтерскогоУчетаExtendedTooltip" id="113"/>
+					<ChildItems>
+						<LabelField name="СчетУчетаБУ" id="8">
+							<DataPath>Список.СчетУчетаБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаБУКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="СчетУчетаБУExtendedTooltip" id="114"/>
+						</LabelField>
+						<LabelField name="СчетУчетаЗабалансовый" id="10">
+							<DataPath>Список.СчетУчетаЗабалансовый</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаЗабалансовыйКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СчетУчетаЗабалансовыйExtendedTooltip" id="115"/>
+						</LabelField>
+						<LabelField name="СчетУчетаПередачиБУ" id="12">
+							<DataPath>Список.СчетУчетаПередачиБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаПередачиБУКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="СчетУчетаПередачиБУExtendedTooltip" id="116"/>
+						</LabelField>
+						<LabelField name="СчетУчетаПередачиЗабалансовый" id="14">
+							<DataPath>Список.СчетУчетаПередачиЗабалансовый</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаПередачиЗабалансовыйКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СчетУчетаПередачиЗабалансовыйExtendedTooltip" id="117"/>
+						</LabelField>
+						<LabelField name="СчетДоходовОтРеализацииБУ" id="24">
+							<DataPath>Список.СчетДоходовОтРеализацииБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетДоходовОтРеализацииБУКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="СчетДоходовОтРеализацииБУExtendedTooltip" id="118"/>
+						</LabelField>
+						<LabelField name="СчетДоходовПриВозвратеБУ" id="60">
+							<DataPath>Список.СчетДоходовПриВозвратеБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетДоходовПриВозвратеБУКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="СчетДоходовПриВозвратеБУExtendedTooltip" id="119"/>
+						</LabelField>
+						<LabelField name="СчетСебестоимостиПриРеализацииБУ" id="32">
+							<DataPath>Список.СчетСебестоимостиПриРеализацииБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетСебестоимостиПриРеализацииБУКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="СчетСебестоимостиПриРеализацииБУExtendedTooltip" id="120"/>
+						</LabelField>
+						<LabelField name="СчетУчетаНДСПоПриобретению" id="16">
+							<DataPath>Список.СчетУчетаНДСПоПриобретению</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаНДСПоПриобретениюКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СчетУчетаНДСПоПриобретениюExtendedTooltip" id="121"/>
+						</LabelField>
+						<LabelField name="СчетУчетаНДСПоРеализации" id="18">
+							<DataPath>Список.СчетУчетаНДСПоРеализации</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаНДСПоРеализацииКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СчетУчетаНДСПоРеализацииExtendedTooltip" id="122"/>
+						</LabelField>
+						<LabelField name="СчетУчетаНДСУплаченногоНаТаможне" id="20">
+							<DataPath>Список.СчетУчетаНДСУплаченногоНаТаможне</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаНДСУплаченногоНаТаможнеКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СчетУчетаНДСУплаченногоНаТаможнеExtendedTooltip" id="123"/>
+						</LabelField>
+						<LabelField name="СчетУчетаАкцизаПоРеализации" id="22">
+							<DataPath>Список.СчетУчетаАкцизаПоРеализации</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаАкцизаПоРеализацииКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СчетУчетаАкцизаПоРеализацииExtendedTooltip" id="124"/>
+						</LabelField>
+						<LabelField name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ" id="76">
+							<DataPath>Список.СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУExtendedTooltip" id="125"/>
+						</LabelField>
+						<LabelField name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ" id="84">
+							<DataPath>Список.СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУExtendedTooltip" id="126"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаСчетаНалоговогоУчета" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета налогового учета</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ГруппаСчетаНалоговогоУчетаExtendedTooltip" id="127"/>
+					<ChildItems>
+						<LabelField name="СчетУчетаНУ" id="40">
+							<DataPath>Список.СчетУчетаНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетУчетаНУКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СчетУчетаНУExtendedTooltip" id="128"/>
+						</LabelField>
+						<LabelField name="СчетУчетаПередачиНУ" id="42">
+							<DataPath>Список.СчетУчетаПередачиНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетУчетаПередачиНУКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="СчетУчетаПередачиНУExtendedTooltip" id="129"/>
+						</LabelField>
+						<LabelField name="СчетДоходовОтРеализацииНУ" id="44">
+							<DataPath>Список.СчетДоходовОтРеализацииНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетДоходовОтРеализацииНУКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="СчетДоходовОтРеализацииНУExtendedTooltip" id="130"/>
+						</LabelField>
+						<LabelField name="СчетДоходовПриВозвратеНУ" id="62">
+							<DataPath>Список.СчетДоходовПриВозвратеНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетДоходовПриВозвратеНУКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="СчетДоходовПриВозвратеНУExtendedTooltip" id="131"/>
+						</LabelField>
+						<LabelField name="СчетСебестоимостиПриРеализацииНУ" id="52">
+							<DataPath>Список.СчетСебестоимостиПриРеализацииНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетСебестоимостиПриРеализацииНУКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СчетСебестоимостиПриРеализацииНУExtendedTooltip" id="132"/>
+						</LabelField>
+						<LabelField name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ" id="92">
+							<DataPath>Список.СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУExtendedTooltip" id="133"/>
+						</LabelField>
+						<LabelField name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ" id="100">
+							<DataPath>Список.СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУExtendedTooltip" id="134"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Номенклатура</Field>
+				<Field>Список.Организация</Field>
+				<Field>Список.СчетДоходовОтРеализацииБУ</Field>
+				<Field>Список.СчетДоходовОтРеализацииНУ</Field>
+				<Field>Список.СчетДоходовПриВозвратеБУ</Field>
+				<Field>Список.СчетДоходовПриВозвратеНУ</Field>
+				<Field>Список.СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</Field>
+				<Field>Список.СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ</Field>
+				<Field>Список.СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</Field>
+				<Field>Список.СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ</Field>
+				<Field>Список.СчетСебестоимостиПриРеализацииБУ</Field>
+				<Field>Список.СчетСебестоимостиПриРеализацииНУ</Field>
+				<Field>Список.СчетУчетаАкцизаПоРеализации</Field>
+				<Field>Список.СчетУчетаБУ</Field>
+				<Field>Список.СчетУчетаЗабалансовый</Field>
+				<Field>Список.СчетУчетаНДСПоПриобретению</Field>
+				<Field>Список.СчетУчетаНДСПоРеализации</Field>
+				<Field>Список.СчетУчетаНДСУплаченногоНаТаможне</Field>
+				<Field>Список.СчетУчетаНУ</Field>
+				<Field>Список.СчетУчетаПередачиБУ</Field>
+				<Field>Список.СчетУчетаПередачиЗабалансовый</Field>
+				<Field>Список.СчетУчетаПередачиНУ</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.СчетаУчетаНоменклатуры</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Организация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Организация</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстВторостепеннойНадписи</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;Для всех организаций&gt;</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Номенклатура</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Номенклатура</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстВторостепеннойНадписи</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;Для всей номенклатуры&gt;</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

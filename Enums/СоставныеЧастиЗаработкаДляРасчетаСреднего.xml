@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Enum uuid="e1da76f4-b46f-4d04-a12f-657942c76552">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.СоставныеЧастиЗаработкаДляРасчетаСреднего" category="Ref">
+				<xr:TypeId>90305d65-cb2a-4364-a59c-aaf7d49e0093</xr:TypeId>
+				<xr:ValueId>593bbfc7-7973-4b16-951f-203ef4910890</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.СоставныеЧастиЗаработкаДляРасчетаСреднего" category="Manager">
+				<xr:TypeId>f04e72ea-9a15-4395-84b4-5bb86f1ca95d</xr:TypeId>
+				<xr:ValueId>69f0de51-1d75-48e8-b408-e915c148ec02</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.СоставныеЧастиЗаработкаДляРасчетаСреднего" category="List">
+				<xr:TypeId>6bc21bc0-0691-48d4-af1d-53bd2899ae02</xr:TypeId>
+				<xr:ValueId>6d694954-8dfb-4334-98a4-b40c6c3c2cf5</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СоставныеЧастиЗаработкаДляРасчетаСреднего</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Составные части заработка для расчета среднего</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>QuickChoice</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="ff9a02bc-26c0-4e9b-8af8-0e9d513a2388">
+				<Properties>
+					<Name>ИндексируемыйЗаработок</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индексируемый заработок</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="53e89fc2-5761-467d-808f-239a6e9c2418">
+				<Properties>
+					<Name>НеИндексируемыйЗаработок</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не индексируемый заработок</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

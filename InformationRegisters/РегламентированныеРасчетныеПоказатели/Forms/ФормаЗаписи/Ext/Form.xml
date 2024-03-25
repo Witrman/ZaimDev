@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ПериодПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаРазмерМЗПРазмерМРП" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер МЗП и МРП</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРазмерМЗПРазмерМРПРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаМЗПМРП" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер МЗП и МРП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа МЗПМРП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМЗПМРПРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<InputField name="РазмерМЗП" id="4">
+							<DataPath>Запись.РазмерМЗП</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>МЗП</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РазмерМЗПКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="РазмерМЗПРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="РазмерМРП" id="7">
+							<DataPath>Запись.РазмерМРП</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>МРП</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РазмерМРПКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="РазмерМРПРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМЗПМРПДляЦелейНалогообложения" id="28">
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МЗП и МРП для целей налогообложения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМЗПМРПДляЦелейНалогообложенияРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="РазмерМЗПДляЦелейНалогообложения" id="16">
+							<DataPath>Запись.РазмерМЗПДляЦелейНалогообложения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>МЗП для целей налогообложения (до 2018 года)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РазмерМЗПДляЦелейНалогообложенияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="РазмерМЗПДляЦелейНалогообложенияРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="РазмерМРПДляЦелейНалогообложения" id="19">
+							<DataPath>Запись.РазмерМРПДляЦелейНалогообложения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>МРП для целей налогообложения (до 2018 года)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РазмерМРПДляЦелейНалогообложенияКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="РазмерМРПДляЦелейНалогообложенияРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМРПДляПособийИныхСоциальныхВыплат" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МЗП и МРП для пособий и иных социальных выплат</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМРПДляПособийИныхСоциальныхВыплатРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияМЗПДляПособийИныхСоциальнызВыплат" id="38">
+							<Height>1</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация МЗПДля пособий иных социальныз выплат</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияМЗПДляПособийИныхСоциальнызВыплатКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ДекорацияМЗПДляПособийИныхСоциальнызВыплатРасширеннаяПодсказка" id="40"/>
+						</PictureDecoration>
+						<InputField name="РазмерМРПДляПособийИныхСоциальныхВыплат" id="35">
+							<DataPath>Запись.РазмерМРПДляПособийИныхСоциальныхВыплат</DataPath>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="РазмерМРПДляПособийИныхСоциальныхВыплатКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="РазмерМРПДляПособийИныхСоциальныхВыплатРасширеннаяПодсказка" id="37"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРазмерНеоблагаемогоИПНДохода" id="22">
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер необлагаемого ИПН дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаРазмерНеоблагаемогоИПНДоходаРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="РазмерНеоблагаемогоИПНДоходаИнвалидов1_2Группы" id="10">
+					<DataPath>Запись.РазмерНеоблагаемогоИПНДоходаИнвалидов1_2Группы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>участников ВОВ, инвалидов I и II-ой группы, родителей инвалидов (до 2018 года)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РазмерНеоблагаемогоИПНДоходаИнвалидов1_2ГруппыКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="РазмерНеоблагаемогоИПНДоходаИнвалидов1_2ГруппыРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="РазмерНеоблагаемогоИПНДоходаИнвалидов3Группы" id="13">
+					<DataPath>Запись.РазмерНеоблагаемогоИПНДоходаИнвалидов3Группы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>инвалидов III-ей группы (до 2018 года)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РазмерНеоблагаемогоИПНДоходаИнвалидов3ГруппыКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="РазмерНеоблагаемогоИПНДоходаИнвалидов3ГруппыРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.РегламентированныеРасчетныеПоказатели</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

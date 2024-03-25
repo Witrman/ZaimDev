@@ -1,0 +1,2296 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанныхБУ</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfAccountsRef.Типовой</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетКт</dataPath>
+			<field>СчетКт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетДт</dataPath>
+			<field>СчетДт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСчет</dataPath>
+			<field>КорСчет</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто1</dataPath>
+			<field>КорСубконто1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто2</dataPath>
+			<field>КорСубконто2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто3</dataPath>
+			<field>КорСубконто3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто1</dataPath>
+			<field>Субконто1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКт1</dataPath>
+			<field>СубконтоКт1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКт2</dataPath>
+			<field>СубконтоКт2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКт3</dataPath>
+			<field>СубконтоКт3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоДт1</dataPath>
+			<field>СубконтоДт1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоДт2</dataPath>
+			<field>СубконтоДт2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоДт3</dataPath>
+			<field>СубконтоДт3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаКор</dataPath>
+			<field>ВалютаКор</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаКт</dataPath>
+			<field>ВалютаКт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаДт</dataPath>
+			<field>ВалютаДт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗатратыКосвенные</dataPath>
+			<field>ЗатратыКосвенные</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.СтатьиЗатрат</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПрямыхЗатрат</dataPath>
+			<field>КоличествоПрямыхЗатрат</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонОстНЗП</dataPath>
+			<field>КонОстНЗП</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Группа</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСчетПрямыхЗатрат</dataPath>
+			<field>КорСчетПрямыхЗатрат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кор. счет прямых затрат</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<presentationExpression>КорСчетПрямыхЗатрат.Наименование</presentationExpression>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfAccountsRef.Типовой</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачОстНЗП</dataPath>
+			<field>НачОстНЗП</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Группа</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураПрямыхЗатрат</dataPath>
+			<field>НоменклатураПрямыхЗатрат</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатурнаяГруппа</dataPath>
+			<field>НоменклатурнаяГруппа</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.НоменклатурныеГруппы</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрямыеЗатраты</dataPath>
+			<field>ПрямыеЗатраты</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.СтатьиЗатрат</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурноеПодразделениеКор</dataPath>
+			<field>СтруктурноеПодразделениеКор</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурноеПодразделениеДт</dataPath>
+			<field>СтруктурноеПодразделениеДт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКосвЗатрат</dataPath>
+			<field>СуммаКосвЗатрат</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПрямыхЗатрат</dataPath>
+			<field>СуммаПрямыхЗатрат</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеВыпуска</dataPath>
+			<field>ПодразделениеВыпуска</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структурное подразделение</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТиповойОборотыДтКт.СчетКт КАК Счет,
+	ТиповойОборотыДтКт.Организация КАК Организация,
+	ТиповойОборотыДтКт.СтруктурноеПодразделениеКт КАК Подразделение,
+	ТиповойОборотыДтКт.СубконтоКт1 КАК ПодразделениеВыпуска,
+	ТиповойОборотыДтКт.СубконтоКт2 КАК НоменклатурнаяГруппаВыпуска,
+	ТиповойОборотыДтКт.СубконтоДт1 КАК НоменклатураВыпуска,
+	ТиповойОборотыДтКт.СуммаОборот КАК СуммаВыпуска,
+	ТиповойОборотыДтКт.КоличествоОборотДт КАК КоличествоВыпуска
+ПОМЕСТИТЬ ВТ_Выпуск
+ИЗ
+	РегистрБухгалтерии.Типовой.ОборотыДтКт({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , , , СчетКт В ИЕРАРХИИ (&amp;СчетПрямЗатрат), , {(СтруктурноеПодразделениеКт).* КАК Подразделение, (Организация).* КАК Организация}) КАК ТиповойОборотыДтКт
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	НоменклатураВыпуска,
+	ПодразделениеВыпуска,
+	НоменклатурнаяГруппаВыпуска
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТиповойОстаткиИОбороты.Счет КАК Счет,
+	ТиповойОстаткиИОбороты.Организация КАК Организация,
+	ТиповойОстаткиИОбороты.СтруктурноеПодразделение КАК Подразделение,
+	ТиповойОстаткиИОбороты.СуммаНачальныйОстаток КАК НачОст,
+	ТиповойОстаткиИОбороты.СуммаКонечныйОстаток КАК КонОст,
+	ТиповойОстаткиИОбороты.Субконто1 КАК ПодразделениеНЗП,
+	ТиповойОстаткиИОбороты.Субконто2 КАК НоменклатурнаяГруппаНЗП
+ПОМЕСТИТЬ ВТ_НЗП
+ИЗ
+	РегистрБухгалтерии.Типовой.ОстаткиИОбороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , , Счет В ИЕРАРХИИ (&amp;СчетПрямЗатратДляНЗП), , {(СтруктурноеПодразделение).* КАК Подразделение, (Организация).* КАК Организация}) КАК ТиповойОстаткиИОбороты
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	ПодразделениеНЗП,
+	НоменклатурнаяГруппаНЗП
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТиповойОбороты.Счет КАК Счет,
+	ТиповойОбороты.Организация КАК Организация,
+	ТиповойОбороты.СтруктурноеПодразделение КАК Подразделение,
+	ТиповойОбороты.Субконто1 КАК ПодразделениеКосвенныхЗатрат,
+	ТиповойОбороты.Субконто2 КАК НоменклатурнаяГруппаКосвенныхЗатрат,
+	ТиповойОбороты.Субконто3 КАК ЗатратыКосвенные,
+	ТиповойОбороты.СуммаОборотДт КАК СуммаКосвЗатрат
+ПОМЕСТИТЬ ВТ_КосвенныеЗатраты
+ИЗ
+	РегистрБухгалтерии.Типовой.Обороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , Счет В ИЕРАРХИИ (&amp;СчетПрямЗатрат), , {(СтруктурноеПодразделение).* КАК Подразделение, (Организация).* КАК Организация}, КорСчет В ИЕРАРХИИ (&amp;СчетКосвЗатрат), ) КАК ТиповойОбороты
+ГДЕ
+	ТиповойОбороты.СуммаОборотДт &lt;&gt; 0
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	ПодразделениеКосвенныхЗатрат,
+	НоменклатурнаяГруппаКосвенныхЗатрат
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТиповойОбороты.Счет КАК Счет,
+	ТиповойОбороты.Организация КАК Организация,
+	ТиповойОбороты.СтруктурноеПодразделение КАК Подразделение,
+	ТиповойОбороты.Субконто1 КАК ПодразделениеПрямыхЗатрат,
+	ТиповойОбороты.Субконто2 КАК НоменклатурнаяГруппаПрямыхЗатрат,
+	ТиповойОбороты.Субконто3 КАК ЗатратыПрямыхЗатрат,
+	ТиповойОбороты.КорСчет КАК КорСчетПрямыхЗатрат,
+	ТиповойОбороты.КорСубконто1 КАК КорСубконтоПрямыхЗатрат,
+	ТиповойОбороты.СуммаОборотДт КАК СуммаПрямыхЗатрат,
+	ТиповойОбороты.КоличествоКорОборот КАК КоличествоПрямыхЗатрат
+ПОМЕСТИТЬ ВТ_ПрямыеЗатраты
+ИЗ
+	РегистрБухгалтерии.Типовой.Обороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , Счет В ИЕРАРХИИ (&amp;СчетПрямЗатрат), , {(СтруктурноеПодразделение).* КАК Подразделение, (Организация).* КАК Организация}, НЕ КорСчет В ИЕРАРХИИ (&amp;СчетКосвЗатрат), ) КАК ТиповойОбороты
+ГДЕ
+	(ТиповойОбороты.СуммаОборотДт &lt;&gt; 0
+			ИЛИ ТиповойОбороты.КоличествоКорОборот &lt;&gt; 0)
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	ПодразделениеПрямыхЗатрат,
+	НоменклатурнаяГруппаПрямыхЗатрат
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Выпуск.Организация,
+	Выпуск.Подразделение КАК Подразделение,
+	Выпуск.ПодразделениеВыпуска КАК ПодразделениеВыпуска,
+	Выпуск.НоменклатурнаяГруппаВыпуска КАК НоменклатурнаяГруппа,
+	Выпуск.НоменклатураВыпуска КАК Номенклатура,
+	ПрямыеЗатраты.ЗатратыПрямыхЗатрат КАК ПрямыеЗатраты,
+	ПрямыеЗатраты.КорСчетПрямыхЗатрат КАК КорСчетПрямыхЗатрат,
+	ПрямыеЗатраты.КорСубконтоПрямыхЗатрат КАК НоменклатураПрямыхЗатрат,
+	ОбщеПроизводственныеЗатраты.ЗатратыКосвенные КАК ЗатратыКосвенные,
+	ЕСТЬNULL(Выпуск.КоличествоВыпуска, 0) КАК Количество,
+	ЕСТЬNULL(ПрямыеЗатраты.КоличествоПрямыхЗатрат, 0) КАК КоличествоПрямыхЗатрат,
+	ЕСТЬNULL(Выпуск.СуммаВыпуска, 0) КАК Сумма,
+	ЕСТЬNULL(ПрямыеЗатраты.СуммаПрямыхЗатрат, 0) КАК СуммаПрямыхЗатрат,
+	ЕСТЬNULL(НЗП.НачОст, 0) КАК НачОстНЗП,
+	ЕСТЬNULL(НЗП.КонОст, 0) КАК КонОстНЗП,
+	ЕСТЬNULL(ОбщеПроизводственныеЗатраты.СуммаКосвЗатрат, 0) КАК СуммаКосвЗатрат
+ИЗ
+	ВТ_Выпуск КАК Выпуск
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПрямыеЗатраты КАК ПрямыеЗатраты
+		ПО Выпуск.ПодразделениеВыпуска = ПрямыеЗатраты.ПодразделениеПрямыхЗатрат
+			И Выпуск.НоменклатурнаяГруппаВыпуска = ПрямыеЗатраты.НоменклатурнаяГруппаПрямыхЗатрат
+			И Выпуск.Организация = ПрямыеЗатраты.Организация
+			И Выпуск.Подразделение = ПрямыеЗатраты.Подразделение
+			И Выпуск.Счет = ПрямыеЗатраты.Счет
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_КосвенныеЗатраты КАК ОбщеПроизводственныеЗатраты
+		ПО Выпуск.ПодразделениеВыпуска = ОбщеПроизводственныеЗатраты.ПодразделениеКосвенныхЗатрат
+			И Выпуск.НоменклатурнаяГруппаВыпуска = ОбщеПроизводственныеЗатраты.НоменклатурнаяГруппаКосвенныхЗатрат
+			И Выпуск.Организация = ОбщеПроизводственныеЗатраты.Организация
+			И Выпуск.Подразделение = ОбщеПроизводственныеЗатраты.Подразделение
+			И Выпуск.Счет = ОбщеПроизводственныеЗатраты.Счет
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НЗП КАК НЗП
+		ПО Выпуск.НоменклатурнаяГруппаВыпуска = НЗП.НоменклатурнаяГруппаНЗП
+			И Выпуск.ПодразделениеВыпуска = НЗП.ПодразделениеНЗП
+			И Выпуск.Организация = НЗП.Организация
+			И Выпуск.Подразделение = НЗП.Подразделение
+
+УПОРЯДОЧИТЬ ПО
+	ПодразделениеВыпуска,
+	НоменклатурнаяГруппа,
+	Номенклатура</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанныхНУ</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКт1</dataPath>
+			<field>СубконтоКт1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКт2</dataPath>
+			<field>СубконтоКт2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКт3</dataPath>
+			<field>СубконтоКт3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоДт3</dataPath>
+			<field>СубконтоДт3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоДт2</dataPath>
+			<field>СубконтоДт2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоДт1</dataPath>
+			<field>СубконтоДт1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВР</dataPath>
+			<field>КоличествоВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ВР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПР</dataPath>
+			<field>КоличествоПР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ПР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНУ</dataPath>
+			<field>КоличествоНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество НУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто1</dataPath>
+			<field>Субконто1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfAccountsRef.Налоговый</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидУчета</dataPath>
+			<field>ВидУчета</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ВидыУчетаНУ</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПрямыхЗатратВР</dataPath>
+			<field>КоличествоПрямыхЗатратВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество прямых затрат ВР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПрямыхЗатратПР</dataPath>
+			<field>КоличествоПрямыхЗатратПР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество прямых затрат ПР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПрямыхЗатратНУ</dataPath>
+			<field>КоличествоПрямыхЗатратНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество прямых затрат НУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСчет</dataPath>
+			<field>КорСчет</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетКт</dataPath>
+			<field>СчетКт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетДт</dataPath>
+			<field>СчетДт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидУчетаКор</dataPath>
+			<field>ВидУчетаКор</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНУ</dataPath>
+			<field>СуммаНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКосвЗатратВР</dataPath>
+			<field>СуммаКосвЗатратВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма косв затрат ВР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКосвЗатратПР</dataPath>
+			<field>СуммаКосвЗатратПР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма косв затрат ПР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурноеПодразделениеКор</dataPath>
+			<field>СтруктурноеПодразделениеКор</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКосвЗатратНУ</dataPath>
+			<field>СуммаКосвЗатратНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма косв затрат НУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонОстНЗПВР</dataPath>
+			<field>КонОстНЗПВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кон ост НЗПВР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонОстНЗППР</dataPath>
+			<field>КонОстНЗППР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кон ост НЗППР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидУчетаКт</dataPath>
+			<field>ВидУчетаКт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонОстНЗПНУ</dataPath>
+			<field>КонОстНЗПНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кон ост НЗПНУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Группа</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидУчетаДт</dataPath>
+			<field>ВидУчетаДт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто1</dataPath>
+			<field>КорСубконто1</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПрямыхЗатратВР</dataPath>
+			<field>СуммаПрямыхЗатратВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма прямых затрат ВР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПрямыхЗатратПР</dataPath>
+			<field>СуммаПрямыхЗатратПР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма прямых затрат ПР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПрямыхЗатратНУ</dataPath>
+			<field>СуммаПрямыхЗатратНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма прямых затрат НУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто2</dataPath>
+			<field>КорСубконто2</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто3</dataPath>
+			<field>КорСубконто3</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачОстНЗПВР</dataPath>
+			<field>НачОстНЗПВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нач ост НЗПВР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачОстНЗППР</dataPath>
+			<field>НачОстНЗППР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нач ост НЗППР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВР</dataPath>
+			<field>СуммаВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ВР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачОстНЗПНУ</dataPath>
+			<field>НачОстНЗПНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нач ост НЗПНУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Группа</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурноеПодразделениеДт</dataPath>
+			<field>СтруктурноеПодразделениеДт</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПР</dataPath>
+			<field>СуммаПР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ПР</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеНУ</dataPath>
+			<field>ПодразделениеНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структурное подразделение</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеВыпускаНУ</dataPath>
+			<field>ПодразделениеВыпускаНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение выпуска</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗатратыКосвенныеНУ</dataPath>
+			<field>ЗатратыКосвенныеНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затраты косвенные</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.СтатьиЗатрат</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияНУ</dataPath>
+			<field>ОрганизацияНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураНУ</dataPath>
+			<field>НоменклатураНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураПрямыхЗатратНУ</dataPath>
+			<field>НоменклатураПрямыхЗатратНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура прямых затрат</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСчетПрямыхЗатратНУ</dataPath>
+			<field>КорСчетПрямыхЗатратНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кор счет прямых затрат НУ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатурнаяГруппаНУ</dataPath>
+			<field>НоменклатурнаяГруппаНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатурная группа</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.НоменклатурныеГруппы</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрямыеЗатратыНУ</dataPath>
+			<field>ПрямыеЗатратыНУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прямые затраты</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.СтатьиЗатрат</v8:Type>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	НалоговыйОборотыДтКт.СчетКт КАК Счет,
+	НалоговыйОборотыДтКт.Организация КАК Организация,
+	НалоговыйОборотыДтКт.СтруктурноеПодразделениеКт КАК Подразделение,
+	НалоговыйОборотыДтКт.СубконтоКт1 КАК ПодразделениеВыпуска,
+	НалоговыйОборотыДтКт.СубконтоКт2 КАК НоменклатурнаяГруппаВыпуска,
+	НалоговыйОборотыДтКт.СубконтоДт1 КАК НоменклатураВыпуска,
+	СУММА(НалоговыйОборотыДтКт.СуммаОборот) КАК СуммаВыпускаНУ,
+	СУММА(НалоговыйОборотыДтКт.КоличествоОборотДт) КАК КоличествоВыпускаНУ,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОборотыДтКт.ВидУчетаДт.Родитель = &amp;ВидУчетаПР
+				ТОГДА НалоговыйОборотыДтКт.СуммаОборот
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаВыпускаПР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОборотыДтКт.ВидУчетаДт.Родитель = &amp;ВидУчетаПР
+				ТОГДА НалоговыйОборотыДтКт.КоличествоОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоВыпускаПР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОборотыДтКт.ВидУчетаДт = &amp;ВидУчетаВР
+				ТОГДА НалоговыйОборотыДтКт.СуммаОборот
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаВыпускаВР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОборотыДтКт.ВидУчетаДт = &amp;ВидУчетаВР
+				ТОГДА НалоговыйОборотыДтКт.КоличествоОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоВыпускаВР
+ПОМЕСТИТЬ ВТ_Выпуск
+ИЗ
+	РегистрБухгалтерии.Налоговый.ОборотыДтКт({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , , , СчетКт В ИЕРАРХИИ (&amp;СчетПрямЗатратНУ), , {(СтруктурноеПодразделениеКт).* КАК ПодразделениеНУ, (Организация).* КАК ОрганизацияНУ}) КАК НалоговыйОборотыДтКт
+
+СГРУППИРОВАТЬ ПО
+	НалоговыйОборотыДтКт.СчетКт,
+	НалоговыйОборотыДтКт.Организация,
+	НалоговыйОборотыДтКт.СтруктурноеПодразделениеКт,
+	НалоговыйОборотыДтКт.СубконтоКт1,
+	НалоговыйОборотыДтКт.СубконтоКт2,
+	НалоговыйОборотыДтКт.СубконтоДт1
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	ПодразделениеВыпуска,
+	НоменклатурнаяГруппаВыпуска
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	НалоговыйОстаткиИОбороты.Счет КАК Счет,
+	НалоговыйОстаткиИОбороты.Организация КАК Организация,
+	НалоговыйОстаткиИОбороты.СтруктурноеПодразделение КАК Подразделение,
+	НалоговыйОстаткиИОбороты.Субконто1 КАК ПодразделениеНЗП,
+	НалоговыйОстаткиИОбороты.Субконто2 КАК НоменклатурнаяГруппаНЗП,
+	СУММА(НалоговыйОстаткиИОбороты.СуммаКонечныйОстаток) КАК КонОстНУ,
+	СУММА(НалоговыйОстаткиИОбороты.СуммаНачальныйОстаток) КАК НачОстНУ,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОстаткиИОбороты.ВидУчета.Родитель = &amp;ВидУчетаПР
+				ТОГДА НалоговыйОстаткиИОбороты.СуммаКонечныйОстаток
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КонОстПР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОстаткиИОбороты.ВидУчета.Родитель = &amp;ВидУчетаПР
+				ТОГДА НалоговыйОстаткиИОбороты.СуммаНачальныйОстаток
+			ИНАЧЕ 0
+		КОНЕЦ) КАК НачОстПР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОстаткиИОбороты.ВидУчета = &amp;ВидУчетаВР
+				ТОГДА НалоговыйОстаткиИОбороты.СуммаКонечныйОстаток
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КонОстВР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОстаткиИОбороты.ВидУчета = &amp;ВидУчетаВР
+				ТОГДА НалоговыйОстаткиИОбороты.СуммаНачальныйОстаток
+			ИНАЧЕ 0
+		КОНЕЦ) КАК НачОстВР
+ПОМЕСТИТЬ ВТ_НЗП
+ИЗ
+	РегистрБухгалтерии.Налоговый.ОстаткиИОбороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , , Счет В ИЕРАРХИИ (&amp;СчетПрямЗатратДляНЗПНУ), , {(СтруктурноеПодразделение).* КАК ПодразделениеНУ, (Организация).* КАК ОрганизацияНУ}) КАК НалоговыйОстаткиИОбороты
+
+СГРУППИРОВАТЬ ПО
+	НалоговыйОстаткиИОбороты.Счет,
+	НалоговыйОстаткиИОбороты.Организация,
+	НалоговыйОстаткиИОбороты.СтруктурноеПодразделение,
+	НалоговыйОстаткиИОбороты.Субконто1,
+	НалоговыйОстаткиИОбороты.Субконто2
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	ПодразделениеНЗП,
+	НоменклатурнаяГруппаНЗП
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	НалоговыйОбороты.Счет КАК Счет,
+	НалоговыйОбороты.Организация КАК Организация,
+	НалоговыйОбороты.СтруктурноеПодразделение КАК Подразделение,
+	НалоговыйОбороты.Субконто1 КАК ПодразделениеКосвенныхЗатрат,
+	НалоговыйОбороты.Субконто2 КАК НоменклатурнаяГруппаКосвенныхЗатрат,
+	НалоговыйОбороты.Субконто3 КАК ЗатратыКосвенные,
+	СУММА(НалоговыйОбороты.СуммаОборотДт) КАК СуммаКосвЗатратНУ,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОбороты.ВидУчета.Родитель = &amp;ВидУчетаПР
+				ТОГДА НалоговыйОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаКосвЗатратПР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОбороты.ВидУчета = &amp;ВидУчетаВР
+				ТОГДА НалоговыйОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаКосвЗатратВР
+ПОМЕСТИТЬ ВТ_КосвенныеЗатраты
+ИЗ
+	РегистрБухгалтерии.Налоговый.Обороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , Счет В ИЕРАРХИИ (&amp;СчетПрямЗатратНУ), , {(СтруктурноеПодразделение).* КАК ПодразделениеНУ, (Организация).* КАК ОрганизацияНУ}, КорСчет В ИЕРАРХИИ (&amp;СчетКосвЗатратНУ), ) КАК НалоговыйОбороты
+ГДЕ
+	НалоговыйОбороты.СуммаОборотДт &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	НалоговыйОбороты.Счет,
+	НалоговыйОбороты.Организация,
+	НалоговыйОбороты.СтруктурноеПодразделение,
+	НалоговыйОбороты.Субконто1,
+	НалоговыйОбороты.Субконто2,
+	НалоговыйОбороты.Субконто3
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	ПодразделениеКосвенныхЗатрат,
+	НоменклатурнаяГруппаКосвенныхЗатрат
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	НалоговыйОбороты.Счет КАК Счет,
+	НалоговыйОбороты.Организация КАК Организация,
+	НалоговыйОбороты.СтруктурноеПодразделение КАК Подразделение,
+	НалоговыйОбороты.Субконто1 КАК ПодразделениеПрямыхЗатрат,
+	НалоговыйОбороты.Субконто2 КАК НоменклатурнаяГруппаПрямыхЗатрат,
+	НалоговыйОбороты.Субконто3 КАК ЗатратыПрямыхЗатрат,
+	НалоговыйОбороты.КорСчет КАК КорСчетПрямыхЗатрат,
+	НалоговыйОбороты.КорСубконто1 КАК КорСубконтоПрямыхЗатрат,
+	СУММА(НалоговыйОбороты.СуммаОборотДт) КАК СуммаПрямыхЗатратНУ,
+	СУММА(НалоговыйОбороты.КоличествоКорОборот) КАК КоличествоПрямыхЗатратНУ,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОбороты.ВидУчета.Родитель = &amp;ВидУчетаПР
+				ТОГДА НалоговыйОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаПрямыхЗатратПР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОбороты.ВидУчета.Родитель = &amp;ВидУчетаПР
+				ТОГДА НалоговыйОбороты.КоличествоКорОборот
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоПрямыхЗатратПР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОбороты.ВидУчета = &amp;ВидУчетаВР
+				ТОГДА НалоговыйОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаПрямыхЗатратВР,
+	СУММА(ВЫБОР
+			КОГДА НалоговыйОбороты.ВидУчета = &amp;ВидУчетаВР
+				ТОГДА НалоговыйОбороты.КоличествоКорОборот
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоПрямыхЗатратВР
+ПОМЕСТИТЬ ВТ_ПрямыеЗатраты
+ИЗ
+	РегистрБухгалтерии.Налоговый.Обороты({(&amp;НачалоПериода)}, {(&amp;КонецПериода)}, , Счет В ИЕРАРХИИ (&amp;СчетПрямЗатратНУ), , {(СтруктурноеПодразделение).* КАК ПодразделениеНУ, (Организация).* КАК ОрганизацияНУ}, НЕ КорСчет В ИЕРАРХИИ (&amp;СчетКосвЗатратНУ), ) КАК НалоговыйОбороты
+ГДЕ
+	(НалоговыйОбороты.СуммаОборотДт &lt;&gt; 0
+			ИЛИ НалоговыйОбороты.КоличествоКорОборот &lt;&gt; 0)
+
+СГРУППИРОВАТЬ ПО
+	НалоговыйОбороты.Счет,
+	НалоговыйОбороты.Организация,
+	НалоговыйОбороты.СтруктурноеПодразделение,
+	НалоговыйОбороты.Субконто1,
+	НалоговыйОбороты.Субконто2,
+	НалоговыйОбороты.Субконто3,
+	НалоговыйОбороты.КорСчет,
+	НалоговыйОбороты.КорСубконто1
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет,
+	Организация,
+	Подразделение,
+	ПодразделениеПрямыхЗатрат,
+	НоменклатурнаяГруппаПрямыхЗатрат
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Выпуск.Организация КАК ОрганизацияНУ,
+	Выпуск.Подразделение КАК ПодразделениеНУ,
+	Выпуск.ПодразделениеВыпуска КАК ПодразделениеВыпускаНУ,
+	Выпуск.НоменклатурнаяГруппаВыпуска КАК НоменклатурнаяГруппаНУ,
+	Выпуск.НоменклатураВыпуска КАК НоменклатураНУ,
+	ПрямыеЗатраты.ЗатратыПрямыхЗатрат КАК ПрямыеЗатратыНУ,
+	ПрямыеЗатраты.КорСчетПрямыхЗатрат КАК КорСчетПрямыхЗатратНУ,
+	ПрямыеЗатраты.КорСубконтоПрямыхЗатрат КАК НоменклатураПрямыхЗатратНУ,
+	ОбщеПроизводственныеЗатраты.ЗатратыКосвенные КАК ЗатратыКосвенныеНУ,
+	ЕСТЬNULL(Выпуск.КоличествоВыпускаНУ, 0) КАК КоличествоНУ,
+	ЕСТЬNULL(ПрямыеЗатраты.КоличествоПрямыхЗатратНУ, 0) КАК КоличествоПрямыхЗатратНУ,
+	ЕСТЬNULL(Выпуск.СуммаВыпускаНУ, 0) КАК СуммаНУ,
+	ЕСТЬNULL(ПрямыеЗатраты.СуммаПрямыхЗатратНУ, 0) КАК СуммаПрямыхЗатратНУ,
+	ЕСТЬNULL(НЗП.НачОстНУ, 0) КАК НачОстНЗПНУ,
+	ЕСТЬNULL(НЗП.КонОстНУ, 0) КАК КонОстНЗПНУ,
+	ЕСТЬNULL(ОбщеПроизводственныеЗатраты.СуммаКосвЗатратНУ, 0) КАК СуммаКосвЗатратНУ,
+	ЕСТЬNULL(Выпуск.СуммаВыпускаПР, 0) КАК СуммаПР,
+	ЕСТЬNULL(Выпуск.КоличествоВыпускаПР, 0) КАК КоличествоПР,
+	ЕСТЬNULL(Выпуск.СуммаВыпускаВР, 0) КАК СуммаВР,
+	ЕСТЬNULL(Выпуск.КоличествоВыпускаВР, 0) КАК КоличествоВР,
+	ЕСТЬNULL(НЗП.КонОстПР, 0) КАК КонОстНЗППР,
+	ЕСТЬNULL(НЗП.НачОстПР, 0) КАК НачОстНЗППР,
+	ЕСТЬNULL(НЗП.КонОстВР, 0) КАК КонОстНЗПВР,
+	ЕСТЬNULL(НЗП.НачОстВР, 0) КАК НачОстНЗПВР,
+	ЕСТЬNULL(ОбщеПроизводственныеЗатраты.СуммаКосвЗатратПР, 0) КАК СуммаКосвЗатратПР,
+	ЕСТЬNULL(ОбщеПроизводственныеЗатраты.СуммаКосвЗатратВР, 0) КАК СуммаКосвЗатратВР,
+	ЕСТЬNULL(ПрямыеЗатраты.СуммаПрямыхЗатратПР, 0) КАК СуммаПрямыхЗатратПР,
+	ЕСТЬNULL(ПрямыеЗатраты.КоличествоПрямыхЗатратПР, 0) КАК КоличествоПрямыхЗатратПР,
+	ЕСТЬNULL(ПрямыеЗатраты.СуммаПрямыхЗатратВР, 0) КАК СуммаПрямыхЗатратВР,
+	ЕСТЬNULL(ПрямыеЗатраты.КоличествоПрямыхЗатратВР, 0) КАК КоличествоПрямыхЗатратВР
+ИЗ
+	ВТ_Выпуск КАК Выпуск
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПрямыеЗатраты КАК ПрямыеЗатраты
+		ПО Выпуск.Счет = ПрямыеЗатраты.Счет
+			И Выпуск.Организация = ПрямыеЗатраты.Организация
+			И Выпуск.Подразделение = ПрямыеЗатраты.Подразделение
+			И Выпуск.ПодразделениеВыпуска = ПрямыеЗатраты.ПодразделениеПрямыхЗатрат
+			И Выпуск.НоменклатурнаяГруппаВыпуска = ПрямыеЗатраты.НоменклатурнаяГруппаПрямыхЗатрат
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_КосвенныеЗатраты КАК ОбщеПроизводственныеЗатраты
+		ПО Выпуск.Счет = ОбщеПроизводственныеЗатраты.Счет
+			И Выпуск.Организация = ОбщеПроизводственныеЗатраты.Организация
+			И Выпуск.Подразделение = ОбщеПроизводственныеЗатраты.Подразделение
+			И Выпуск.ПодразделениеВыпуска = ОбщеПроизводственныеЗатраты.ПодразделениеКосвенныхЗатрат
+			И Выпуск.НоменклатурнаяГруппаВыпуска = ОбщеПроизводственныеЗатраты.НоменклатурнаяГруппаКосвенныхЗатрат
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НЗП КАК НЗП
+		ПО Выпуск.Организация = НЗП.Организация
+			И Выпуск.Подразделение = НЗП.Подразделение
+			И Выпуск.НоменклатурнаяГруппаВыпуска = НЗП.НоменклатурнаяГруппаНЗП
+			И Выпуск.ПодразделениеВыпуска = НЗП.ПодразделениеНЗП
+
+УПОРЯДОЧИТЬ ПО
+	ПодразделениеНУ,
+	НоменклатурнаяГруппаНУ,
+	НоменклатураНУ</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Коэффициент</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффициент</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КорСчетПрямыхЗатрат</dataPath>
+		<expression>КорСчетПрямыхЗатрат.Наименование</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Кор. счет прямых затрат</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+		</useRestriction>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоэффициентНУ</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффициент НУ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоэффициентПР</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффициент ПР</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоэффициентВР</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффициент ВР</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КорСчетПрямыхЗатратНУ</dataPath>
+		<expression>КорСчетПрямыхЗатратНУ.Наименование</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Кор. счет прямых затрат (НУ)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+		</useRestriction>
+	</calculatedField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Максимум(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПрямыхЗатрат</dataPath>
+		<expression>Максимум(КоличествоПрямыхЗатрат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонОстНЗП</dataPath>
+		<expression>Максимум(КонОстНЗП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачОстНЗП</dataPath>
+		<expression>Максимум(НачОстНЗП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаКосвЗатрат</dataPath>
+		<expression>Максимум(СуммаКосвЗатрат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПрямыхЗатрат</dataPath>
+		<expression>Максимум(СуммаПрямыхЗатрат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Максимум(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Коэффициент</dataPath>
+		<expression>ВычислитьВыражение("Сумма(Сумма)","Номенклатура")/ВычислитьВыражение("Сумма(Сумма)","НоменклатурнаяГруппа")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНУ</dataPath>
+		<expression>Максимум(КоличествоНУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПР</dataPath>
+		<expression>Максимум(КоличествоПР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоВР</dataPath>
+		<expression>Максимум(КоличествоВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПрямыхЗатратВР</dataPath>
+		<expression>Максимум(КоличествоПрямыхЗатратВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПрямыхЗатратНУ</dataPath>
+		<expression>Максимум(КоличествоПрямыхЗатратНУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПрямыхЗатратПР</dataPath>
+		<expression>Максимум(КоличествоПрямыхЗатратПР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонОстНЗПВР</dataPath>
+		<expression>Максимум(КонОстНЗПВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонОстНЗПНУ</dataPath>
+		<expression>Максимум(КонОстНЗПНУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонОстНЗППР</dataPath>
+		<expression>Максимум(КонОстНЗППР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачОстНЗПВР</dataPath>
+		<expression>Максимум(НачОстНЗПВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачОстНЗПНУ</dataPath>
+		<expression>Максимум(НачОстНЗПНУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачОстНЗППР</dataPath>
+		<expression>Максимум(НачОстНЗППР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаКосвЗатратВР</dataPath>
+		<expression>Максимум(СуммаКосвЗатратВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаКосвЗатратНУ</dataPath>
+		<expression>Максимум(СуммаКосвЗатратНУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаКосвЗатратПР</dataPath>
+		<expression>Максимум(СуммаКосвЗатратПР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПрямыхЗатратВР</dataPath>
+		<expression>Максимум(СуммаПрямыхЗатратВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПрямыхЗатратНУ</dataPath>
+		<expression>Максимум(СуммаПрямыхЗатратНУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПрямыхЗатратПР</dataPath>
+		<expression>Максимум(СуммаПрямыхЗатратПР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВР</dataPath>
+		<expression>Максимум(СуммаВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНУ</dataPath>
+		<expression>Максимум(СуммаНУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПР</dataPath>
+		<expression>Максимум(СуммаПР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоэффициентНУ</dataPath>
+		<expression>ВЫБОР 
+	КОГДА ВычислитьВыражение("Сумма(СуммаНУ)","НоменклатурнаяГруппаНУ")=0 ТОГДА 0
+	ИНАЧЕ ВычислитьВыражение("Сумма(СуммаНУ)","НоменклатураНУ")/ВычислитьВыражение("Сумма(СуммаНУ)","НоменклатурнаяГруппаНУ")
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоэффициентПР</dataPath>
+		<expression>ВЫБОР 
+	КОГДА ВычислитьВыражение("Сумма(СуммаПР)","НоменклатурнаяГруппаНУ")=0 ТОГДА 0
+	ИНАЧЕ ВычислитьВыражение("Сумма(СуммаПР)","НоменклатураНУ")/ВычислитьВыражение("Сумма(СуммаПР)","НоменклатурнаяГруппаНУ")
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоэффициентВР</dataPath>
+		<expression>ВЫБОР 
+	КОГДА ВычислитьВыражение("Сумма(СуммаВР)","НоменклатурнаяГруппаНУ")=0 ТОГДА 0
+	ИНАЧЕ ВычислитьВыражение("Сумма(СуммаВР)","НоменклатураНУ")/ВычислитьВыражение("Сумма(СуммаВР)","НоменклатурнаяГруппаНУ")
+КОНЕЦ</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетКосвЗатрат</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет косв затрат</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.НакладныеРасходы</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетПрямЗатрат</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет прям затрат</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ОсновноеПроизводство</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПолуфабрикатыСобственногоПроизводства</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ВспомогательныеПроизводства</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СчетПрямЗатратДляНЗП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет прям затрат для НЗП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ОсновноеПроизводство</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПолуфабрикатыСобственногоПроизводства</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ВспомогательныеПроизводства</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.НезавершенноеПроизводство</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ВидУчетаВР</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид учета ВР</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыУчетаНУ</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВидыУчетаНУ.ВР</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидУчетаПР</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид учета ПР</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыУчетаНУ</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВидыУчетаНУ.ПР</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетКосвЗатратНУ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет косв затрат НУ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Налоговый</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.НакладныеРасходы</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетПрямЗатратДляНЗПНУ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет прям затрат для НЗПНУ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Налоговый</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.ОсновноеПроизводство</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.ПолуфабрикатыСобственногоПроизводства</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.ВспомогательныеПроизводства</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.НезавершенноеПроизводство</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СчетПрямЗатратНУ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет прям затрат НУ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Налоговый</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.ОсновноеПроизводство</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.ПолуфабрикатыСобственногоПроизводства</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Налоговый.ВспомогательныеПроизводства</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СчетКосвЗатрат</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.НакладныеРасходы</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СчетПрямЗатрат</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ОсновноеПроизводство</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПолуфабрикатыСобственногоПроизводства</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ВспомогательныеПроизводства</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СчетПрямЗатратДляНЗП</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</dcscor:value>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Организация</dcsset:name>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Коэффициент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПрямыхЗатрат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПрямыхЗатрат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаКосвЗатрат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачОстНЗП</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КонОстНЗП</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ПодразделениеВыпуска</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>НоменклатурнаяГруппа</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>Номенклатура</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+								<dcsset:item xsi:type="dcsset:StructureItemGroup">
+									<dcsset:groupItems>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>ПрямыеЗатраты</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+									</dcsset:groupItems>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+									</dcsset:selection>
+									<dcsset:item xsi:type="dcsset:StructureItemGroup">
+										<dcsset:groupItems>
+											<dcsset:item xsi:type="dcsset:GroupItemField">
+												<dcsset:field>КорСчетПрямыхЗатрат</dcsset:field>
+												<dcsset:groupType>Items</dcsset:groupType>
+												<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+												<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+												<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+											</dcsset:item>
+										</dcsset:groupItems>
+										<dcsset:order>
+											<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+										</dcsset:order>
+										<dcsset:selection>
+											<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+										</dcsset:selection>
+										<dcsset:item xsi:type="dcsset:StructureItemGroup">
+											<dcsset:groupItems>
+												<dcsset:item xsi:type="dcsset:GroupItemField">
+													<dcsset:field>НоменклатураПрямыхЗатрат</dcsset:field>
+													<dcsset:groupType>Items</dcsset:groupType>
+													<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+													<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+													<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+												</dcsset:item>
+											</dcsset:groupItems>
+											<dcsset:order>
+												<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+											</dcsset:order>
+											<dcsset:selection>
+												<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+											</dcsset:selection>
+										</dcsset:item>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:StructureItemGroup">
+									<dcsset:groupItems>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>ЗатратыКосвенные</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+									</dcsset:groupItems>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+									</dcsset:selection>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>ОрганизацияСРазницами</dcsset:name>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОрганизацияНУ</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоэффициентНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоэффициентПР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоэффициентВР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоВР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПрямыхЗатратНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПрямыхЗатратПР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПрямыхЗатратВР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПрямыхЗатратНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПрямыхЗатратПР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПрямыхЗатратВР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаКосвЗатратНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаКосвЗатратПР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаКосвЗатратВР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачОстНЗПНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачОстНЗППР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачОстНЗПВР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КонОстНЗПНУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КонОстНЗППР</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КонОстНЗПВР</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПодразделениеНУ</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ПодразделениеВыпускаНУ</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>НоменклатурнаяГруппаНУ</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>НоменклатураНУ</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+								<dcsset:item xsi:type="dcsset:StructureItemGroup">
+									<dcsset:groupItems>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>ПрямыеЗатратыНУ</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+									</dcsset:groupItems>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+									</dcsset:selection>
+									<dcsset:item xsi:type="dcsset:StructureItemGroup">
+										<dcsset:groupItems>
+											<dcsset:item xsi:type="dcsset:GroupItemField">
+												<dcsset:field>КорСчетПрямыхЗатратНУ</dcsset:field>
+												<dcsset:groupType>Items</dcsset:groupType>
+												<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+												<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+												<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+											</dcsset:item>
+										</dcsset:groupItems>
+										<dcsset:order>
+											<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+										</dcsset:order>
+										<dcsset:selection>
+											<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+										</dcsset:selection>
+										<dcsset:item xsi:type="dcsset:StructureItemGroup">
+											<dcsset:groupItems>
+												<dcsset:item xsi:type="dcsset:GroupItemField">
+													<dcsset:field>НоменклатураПрямыхЗатратНУ</dcsset:field>
+													<dcsset:groupType>Items</dcsset:groupType>
+													<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+													<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+													<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+												</dcsset:item>
+											</dcsset:groupItems>
+											<dcsset:order>
+												<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+											</dcsset:order>
+											<dcsset:selection>
+												<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+											</dcsset:selection>
+										</dcsset:item>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:StructureItemGroup">
+									<dcsset:groupItems>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>ЗатратыКосвенныеНУ</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+									</dcsset:groupItems>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+									</dcsset:selection>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

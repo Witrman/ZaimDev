@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="4">
+			<DataPath>Запись.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ОсновноеСредство" id="1">
+			<DataPath>Запись.ОсновноеСредство</DataPath>
+			<ContextMenu name="ОсновноеСредствоКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОсновноеСредствоРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ОсновноеСредствоПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ВидТранспортногоСредства" id="7">
+			<DataPath>Запись.ВидТранспортногоСредства</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ВидТранспортногоСредстваКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидТранспортногоСредстваРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ВидТранспортногоСредстваПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПараметрыТранспортныхСредств" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры транспортных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыТранспортныхСредствРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНомерТранспортногоСредстваДатаВыпуска" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер транспортного средства и дата выпуска</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНомерТранспортногоСредстваДатаВыпускаРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<InputField name="НомерТранспортногоСредства" id="28">
+							<DataPath>Запись.НомерТранспортногоСредства</DataPath>
+							<ContextMenu name="НомерТранспортногоСредстваКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="НомерТранспортногоСредстваРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="МощностьВКиловаттах" id="22">
+							<DataPath>Запись.МощностьВКиловаттах</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="МощностьВКиловаттахКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="МощностьВКиловаттахРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<UsualGroup name="ГруппаПараметрыТранспортногоСредстваПоНалоговойБазе" id="59">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры транспортного средства в лошадинных силах</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа параметры транспортного средства по налоговой базе</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыТранспортногоСредстваПоНалоговойБазеРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<InputField name="МощностьВКиловаттахПоНалоговойБазе" id="61">
+									<DataPath>Запись.МощностьВКиловаттах</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Мощность двигателя</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="МощностьВКиловаттахПоНалоговойБазеКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="МощностьВКиловаттахПоНалоговойБазеРасширеннаяПодсказка" id="63"/>
+								</InputField>
+								<InputField name="ЕдиницаИзмеренияНалоговойБазы" id="64">
+									<DataPath>Запись.ЕдиницаИзмеренияНалоговойБазы</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="ЕдиницаИзмеренияНалоговойБазыКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ЕдиницаИзмеренияНалоговойБазыРасширеннаяПодсказка" id="66"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="МощностьВЛошадиныхСилах" id="25">
+							<DataPath>Запись.МощностьВЛошадиныхСилах</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="МощностьВЛошадиныхСилахКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="МощностьВЛошадиныхСилахРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="ОбъемДвигателя" id="31">
+							<DataPath>Запись.ОбъемДвигателя</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ОбъемДвигателяКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ОбъемДвигателяРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="Грузоподъемность" id="10">
+							<DataPath>Запись.Грузоподъемность</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ГрузоподъемностьКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ГрузоподъемностьРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="КоличествоПосадочныхМест" id="19">
+							<DataPath>Запись.КоличествоПосадочныхМест</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="КоличествоПосадочныхМестКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КоличествоПосадочныхМестРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМощностьВКиловаттахДатаПриобретения" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мощность в киловаттах и дата приобретения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМощностьВКиловаттахДатаПриобретенияРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<InputField name="ДатаВыпуска" id="13">
+							<DataPath>Запись.ДатаВыпуска</DataPath>
+							<ContextMenu name="ДатаВыпускаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ДатаВыпускаРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="ДатаПриобретения" id="16">
+							<DataPath>Запись.ДатаПриобретения</DataPath>
+							<ContextMenu name="ДатаПриобретенияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДатаПриобретенияРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПроизводствоСтранСНГ" id="34">
+			<DataPath>Запись.ПроизводствоСтранСНГ</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПроизводствоСтранСНГКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ПроизводствоСтранСНГРасширеннаяПодсказка" id="36"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЭксплуатацияВРКдо1апреля1999г" id="37">
+			<DataPath>Запись.ЭксплуатацияВРКдо1апреля1999г</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЭксплуатацияВРКдо1апреля1999гКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ЭксплуатацияВРКдо1апреля1999гРасширеннаяПодсказка" id="39"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаСведенияОПроизводителе" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о производителе</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСведенияОПроизводителеРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<RadioButtonField name="Произведено" id="56">
+					<DataPath>ПроизводствоРК</DataPath>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>в РК</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>в других странах</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПроизведеноКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ПроизведеноРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">ПроизведеноПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<InputField name="СтранаПроизводитель" id="50">
+					<DataPath>Запись.СтранаПроизводитель</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СтранаПроизводительКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="СтранаПроизводительРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">СтранаПроизводительПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаВвозаНаТерриториюРК" id="53">
+					<DataPath>Запись.ДатаВвозаНаТерриториюРК</DataPath>
+					<ContextMenu name="ДатаВвозаНаТерриториюРККонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДатаВвозаНаТерриториюРКРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПараметрыРасчетаТранспортногоНалога</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПроизводствоРК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

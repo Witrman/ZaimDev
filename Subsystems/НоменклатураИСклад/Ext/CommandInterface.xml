@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="Report.МатериальнаяВедомость.Command.МатериальнаяВедомость">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СверкаДанныхТоваровВСИБУ.Command.СверкаДанныхТоваровНаВиртуальныхСкладахИБУ">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СверкаДанныхТоваровОрганизацийИБУ.Command.СверкаДанныхТоваровОрганизацийИБУ">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПанельОбменИСМПТК.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="CommonCommand.ДополнительныеОтчетыНоменклатураИСклад">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.МатериальнаяВедомость.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.КонтрольОтрицательныхОстатков.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СверкаДанныхТоваровОрганизацийИБУ.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СверкаДанныхТоваровВСИБУ.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.НоменклатураИСклад.Subsystem.Склад</Subsystem>
+		<Subsystem>Subsystem.НоменклатураИСклад.Subsystem.Инвентаризация</Subsystem>
+		<Subsystem>Subsystem.НоменклатураИСклад.Subsystem.Цены</Subsystem>
+		<Subsystem>Subsystem.НоменклатураИСклад.Subsystem.СправочникиИНастройки</Subsystem>
+		<Subsystem>Subsystem.НоменклатураИСклад.Subsystem.ВиртуальныйСклад</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>ActionsPanelReports</Group>
+	</GroupsOrder>
+</CommandInterface>

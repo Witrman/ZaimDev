@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Контактная информация</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="74">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="75"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="76">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="77"/>
+			</Button>
+			<ButtonGroup name="КомандыСписка" id="68">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды списка</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды списка</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Item.НаборЗаписейКонтактнаяИнформация</CommandSource>
+				<ExtendedTooltip name="КомандыСпискаРасширеннаяПодсказка" id="69"/>
+				<ChildItems>
+					<Button name="ФормаРедактироватьКИВДиалоге" id="81">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РедактироватьКИВДиалоге</CommandName>
+						<ExtendedTooltip name="ФормаРедактироватьКИВДиалогеРасширеннаяПодсказка" id="82"/>
+					</Button>
+					<Button name="ФормаУстановитьОсновной" id="72">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьОсновной</CommandName>
+						<ExtendedTooltip name="ФормаУстановитьОсновнойРасширеннаяПодсказка" id="73"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="НаборЗаписейКонтактнаяИнформация" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>НаборЗаписейКонтактнаяИнформация</DataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.КонтактнаяИнформация</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборЗаписейКонтактнаяИнформацияКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="НаборЗаписейКонтактнаяИнформацияКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="НаборЗаписейКонтактнаяИнформацияСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>НаборЗаписейКонтактнаяИнформация</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейКонтактнаяИнформацияСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборЗаписейКонтактнаяИнформацияСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>НаборЗаписейКонтактнаяИнформация</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейКонтактнаяИнформацияСостояниеПросмотраКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборЗаписейКонтактнаяИнформацияУправлениеПоиском" id="15">
+				<AdditionSource>
+					<Item>НаборЗаписейКонтактнаяИнформация</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейКонтактнаяИнформацияУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">НаборЗаписейКонтактнаяИнформацияПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">НаборЗаписейКонтактнаяИнформацияПередУдалением</Event>
+				<Event name="OnActivateRow">НаборЗаписейКонтактнаяИнформацияПриАктивизацииСтроки</Event>
+				<Event name="BeforeRowChange">НаборЗаписейКонтактнаяИнформацияПередНачаломИзменения</Event>
+				<Event name="OnStartEdit">НаборЗаписейКонтактнаяИнформацияПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="НаборЗаписейКонтактнаяИнформацияИндексКартинки" id="78">
+					<DataPath>НаборЗаписейКонтактнаяИнформация.ИндексКартинки</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КонтактнаяИнформация</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="НаборЗаписейКонтактнаяИнформацияИндексКартинкиКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияИндексКартинкиРасширеннаяПодсказка" id="80"/>
+				</PictureField>
+				<InputField name="НаборЗаписейКонтактнаяИнформацияТип" id="23">
+					<DataPath>НаборЗаписейКонтактнаяИнформация.Тип</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаборЗаписейКонтактнаяИнформацияТипКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияТипРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">НаборЗаписейКонтактнаяИнформацияТипПриИзменении</Event>
+						<Event name="Clearing">НаборЗаписейКонтактнаяИнформацияТипОчистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="НаборЗаписейКонтактнаяИнформацияВид" id="26">
+					<DataPath>НаборЗаписейКонтактнаяИнформация.Вид</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChooseType>false</ChooseType>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.ВидОбъектаКонтактнойИнформации</xr:Name>
+							<xr:DataPath xsi:type="xs:string">ВидОбъектаКИ</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+						<xr:Link>
+							<xr:Name>Отбор.Тип</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Items.НаборЗаписейКонтактнаяИнформация.CurrentData.Тип</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="НаборЗаписейКонтактнаяИнформацияВидКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияВидРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">НаборЗаписейКонтактнаяИнформацияВидПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="НаборЗаписейКонтактнаяИнформацияПредставление" id="29">
+					<DataPath>НаборЗаписейКонтактнаяИнформация.Представление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="НаборЗаписейКонтактнаяИнформацияПредставлениеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияПредставлениеРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">НаборЗаписейКонтактнаяИнформацияПредставлениеПриИзменении</Event>
+						<Event name="StartChoice">НаборЗаписейКонтактнаяИнформацияПредставлениеНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="НаборЗаписейКонтактнаяИнформацияКомментарий" id="62">
+					<DataPath>НаборЗаписейКонтактнаяИнформация.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаборЗаписейКонтактнаяИнформацияКомментарийКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияКомментарийРасширеннаяПодсказка" id="64"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="НаборЗаписейКонтактнаяИнформацияКомментарий1" id="65">
+			<DataPath>Items.НаборЗаписейКонтактнаяИнформация.CurrentData.Комментарий</DataPath>
+			<ContextMenu name="НаборЗаписейКонтактнаяИнформацияКомментарий1КонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="НаборЗаписейКонтактнаяИнформацияКомментарий1РасширеннаяПодсказка" id="67"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОбъектКИ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект КИ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.КонтактныеЛица</v8:Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаборЗаписейКонтактнаяИнформация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор записей контактная информация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.КонтактнаяИнформация</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="НаборЗаписейКонтактнаяИнформация">
+					<Column name="ИндексКартинки" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Индекс картинки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПроизвольныйВидКИ" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Произвольный вид КИ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="НаборЗаписейКонтактнаяИнформация.Filter"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВидОбъектаКИ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид объекта КИ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыОбъектовКонтактнойИнформации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РедактироватьКИВДиалоге" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать КИ в диалоге</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>РедактироватьКИВДиалоге</Field>
+			</Save>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НаборЗаписейКонтактнаяИнформация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборЗаписейКонтактнаяИнформация.Представление</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НаборЗаписейКонтактнаяИнформацияВид</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборЗаписейКонтактнаяИнформация.ПроизвольныйВидКИ</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстИнформационнойНадписи</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НаборЗаписейКонтактнаяИнформация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборЗаписейКонтактнаяИнформация.ЗначениеПоУмолчанию</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьОсновной" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать как основную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выбранную строку контактной информации основной</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОперацияВыполненаУспешно</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьОсновной</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Записать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Записать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РедактироватьКИВДиалоге" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать КИ в диалоге</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать контактную информацию в диалоге</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EditInDialog</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РедактироватьКИВДиалоге</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ОбъектКИ">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

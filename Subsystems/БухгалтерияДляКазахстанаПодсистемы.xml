@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="08811afb-790a-4aa9-b7e7-f79d36ef35a9">
+		<Properties>
+			<Name>БухгалтерияДляКазахстанаПодсистемы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бухгалтерия для казахстана подсистемы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьНесколькоОтветственных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьДепонированиеЗаработнойПлаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьИсполнительныеЛисты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьНачисленияПрочихДоходВЦеляхНалогообложения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВедетсяУчетЗарплатыИКадры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьКомплектациюОС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВедетсяПроизводственнаяДеятельность</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВедетсяУчетНМА</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОплатуПоПлатежнымКартам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьРеструктуризациюОС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВедетсяУчетОсновныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьУчетНДСЗаНерезидента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьКомплектациюНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВедетсяУчетИмпортныхТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВедетсяУчетТоваровПоТоварамОрганизацииБУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетПоДоговорам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетПоДоговорам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОсновныеДоговорыКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьНесколькоСкладов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьНесколькоСкладов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.РеквизитыОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетПоОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НеВестиУчетПоОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИспользоватьНесколькоБанковскихСчетовОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ФункциональностьПрограммы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Функциональность</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьОбменЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОбменЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОбъектыПростойБухгалтерии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьОбъектыПростойБухгалтерии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьНесколькоНоменклатурныхГрупп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьНесколькоНоменклатурныхГрупп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИспользоватьНесколькоКассОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегистрНалоговогоУчетаПоПриобретению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегистрНалоговогоУчетаПоДоходам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегистрНДСПоОтнесениюВЗачет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегистрНалоговогоУчетаПоОборотуВВидеОстатковТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегистрНалоговогоУчетаПоЗапасам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегистрНалоговогоУчетаПоДоходамПолученныхПутемБезналичныхРасчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийРозничнаяПродажа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НачалоРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НастройкаЗаполненияЦеныПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НастройкаЗаполненияЦеныПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦеныНоменклатурыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПерсональныеНастройки</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

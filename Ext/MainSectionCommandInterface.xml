@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="CommonCommand.НастройкаПараметровУчета">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.Организации">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.РеквизитыОрганизации">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПодразделенияОрганизаций.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаБухгалтерскийУчет.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаНалоговыйУчет.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаПоПерсоналуОрганизаций.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ВводНачальныхОстатков.Command.ВводНачальныхОстатков">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатков.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатковОС.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатковПоЗарплате.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыРабочийСтол">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ПерсональныеНастройки">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиРабочийСтол">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.НастройкиСинхронизацииДанных">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ЭкспрессПроверкаВеденияУчета.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Новости.Command.КомандаСписокНовостей">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonForm.ОписаниеИзмененийПрограммы.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="CommonCommand.НастройкаПараметровУчета">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.Организации">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.РеквизитыОрганизации">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ПодразделенияОрганизаций.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаБухгалтерскийУчет.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаНалоговыйУчет.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаПоПерсоналуОрганизаций.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ВводНачальныхОстатков.Command.ВводНачальныхОстатков">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатков.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатковОС.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатковПоЗарплате.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыРабочийСтол">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ПерсональныеНастройки">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиРабочийСтол">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.НастройкиСинхронизацииДанных">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ЭкспрессПроверкаВеденияУчета.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Новости.Command.КомандаСписокНовостей">
+			<CommandGroup>CommandGroup.Информация</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonForm.ОписаниеИзмененийПрограммы.StandardCommand.Open">
+			<CommandGroup>CommandGroup.Информация</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="CommonCommand.НастройкаПараметровУчета">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Организации">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.РеквизитыОрганизации">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПодразделенияОрганизаций.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаБухгалтерскийУчет.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаНалоговыйУчет.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.УчетнаяПолитикаПоПерсоналуОрганизаций.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Настройки</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ВводНачальныхОстатков.Command.ВводНачальныхОстатков">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатков.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатковОС.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+		</Command>
+		<Command name="Document.ВводНачальныхОстатковПоЗарплате.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.НачальныеОстатки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыРабочийСтол">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ПерсональныеНастройки">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиРабочийСтол">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.НастройкиСинхронизацииДанных">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЭкспрессПроверкаВеденияУчета.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Catalog.Новости.Command.КомандаСписокНовостей">
+			<CommandGroup>CommandGroup.Информация</CommandGroup>
+		</Command>
+		<Command name="CommonForm.ОписаниеИзмененийПрограммы.StandardCommand.Open">
+			<CommandGroup>CommandGroup.Информация</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>CommandGroup.Настройки</Group>
+		<Group>CommandGroup.НачальныеОстатки</Group>
+		<Group>CommandGroup.НовостиСервис</Group>
+		<Group>ActionsPanelReports</Group>
+		<Group>ActionsPanelTools</Group>
+		<Group>CommandGroup.Информация</Group>
+	</GroupsOrder>
+</CommandInterface>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ПериодПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ВидОперации" id="4">
+			<DataPath>Запись.ВидОперации</DataPath>
+			<ContextMenu name="ВидОперацииКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="КодСтроки" id="7">
+			<DataPath>Запись.КодСтроки</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<Mask>999.99.999.XXXXXXXXXXX</Mask>
+			<ContextMenu name="КодСтрокиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КодСтрокиРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">КодСтрокиПриИзменении</Event>
+				<Event name="StartChoice">КодСтрокиНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаНаименованиеКодаСтроки" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование кода строки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодаСтрокиРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<LabelDecoration name="Отступ" id="18">
+					<Width>13</Width>
+					<ContextMenu name="ОтступКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ОтступРасширеннаяПодсказка" id="20"/>
+				</LabelDecoration>
+				<LabelField name="НаименованиеКодаСтроки" id="15">
+					<DataPath>НаименованиеКодаСтроки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<VerticalAlign>Top</VerticalAlign>
+					<Height>2</Height>
+					<VerticalStretch>true</VerticalStretch>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<ContextMenu name="НаименованиеКодаСтрокиКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="НаименованиеКодаСтрокиРасширеннаяПодсказка" id="17"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.КодыСтрокДекларацииПоНДС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НаименованиеКодаСтроки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование кода строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мМакетКодовСтрок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макет кодов строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

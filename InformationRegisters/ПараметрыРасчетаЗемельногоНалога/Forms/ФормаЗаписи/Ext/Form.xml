@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<Page name="ГруппаОбщиеДанные" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие данные</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОбщиеДанныеРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="Организация" id="4">
+							<DataPath>Запись.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ОсновноеСредство" id="1">
+							<DataPath>Запись.ОсновноеСредство</DataPath>
+							<ContextMenu name="ОсновноеСредствоКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОсновноеСредствоРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="МестонахождениеУчастка" id="37">
+							<DataPath>Запись.МестонахождениеУчастка</DataPath>
+							<ContextMenu name="МестонахождениеУчасткаКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="МестонахождениеУчасткаРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<UsualGroup name="ГруппаБаллБонитетаЕдиницаИзмеренияКадастровыйНомерБазоваяСтавкаНалогаКатегорияЗемель" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа балл бонитета единица измерения кадастровый номер базовая ставка налога категория земель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа балл бонитета единица измерения кадастровый номер базовая ставка налога категория земель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаБаллБонитетаЕдиницаИзмеренияКадастровыйНомерБазоваяСтавкаНалогаКатегорияЗемельРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКадастровыйНомерБазоваяСтавкаНалогаКатегорияЗемель" id="57">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кадастровый номер, базовая ставка налога и категория земель</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКадастровыйНомерБазоваяСтавкаНалогаКатегорияЗемельРасширеннаяПодсказка" id="58"/>
+									<ChildItems>
+										<InputField name="КадастровыйНомер" id="22">
+											<DataPath>Запись.КадастровыйНомер</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="КадастровыйНомерКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="КадастровыйНомерРасширеннаяПодсказка" id="24"/>
+										</InputField>
+										<InputField name="БазоваяСтавкаНалога" id="7">
+											<DataPath>Запись.БазоваяСтавкаНалога</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="БазоваяСтавкаНалогаКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="БазоваяСтавкаНалогаРасширеннаяПодсказка" id="9"/>
+										</InputField>
+										<InputField name="КатегорияЗемель" id="25">
+											<DataPath>Запись.КатегорияЗемель</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="КатегорияЗемельКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="КатегорияЗемельРасширеннаяПодсказка" id="27"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаБаллБонитетаЕдиницаИзмерения" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Балл бонитета и ед. изм.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаБаллБонитетаЕдиницаИзмеренияРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<InputField name="БаллБонитета" id="10">
+											<DataPath>Запись.БаллБонитета</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="БаллБонитетаКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="БаллБонитетаРасширеннаяПодсказка" id="12"/>
+										</InputField>
+										<InputField name="ЕдиницаИзмерения" id="19">
+											<DataPath>Запись.ЕдиницаИзмерения</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="21"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПлощадьЗемельногоУчастга" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Площадь земельного участка (га, кв.м.)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаПлощадьЗемельногоУчастгаРасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<InputField name="ПлощадьОблагаемая" id="43">
+									<DataPath>Запись.ПлощадьОблагаемая</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Облагаемая</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПлощадьОблагаемаяКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ПлощадьОблагаемаяРасширеннаяПодсказка" id="45"/>
+								</InputField>
+								<InputField name="ПлощадьНеОблагаемая" id="40">
+									<DataPath>Запись.ПлощадьНеОблагаемая</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Необлагаемая</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПлощадьНеОблагаемаяКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ПлощадьНеОблагаемаяРасширеннаяПодсказка" id="42"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеСведения" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные сведения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительныеСведенияРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКорректировкаСтавкиНалогаПравоСобственности" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Корректировка ставки налога и  право собственности</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКорректировкаСтавкиНалогаПравоСобственностиРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКорректировкаСтавкиНалога" id="63">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корректировка ставки налога</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаКорректировкаСтавкиНалогаРасширеннаяПодсказка" id="64"/>
+									<ChildItems>
+										<InputField name="ПроцентИзмененияБазовойСтавкиНалога" id="46">
+											<DataPath>Запись.ПроцентИзмененияБазовойСтавкиНалога</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="ПроцентИзмененияБазовойСтавкиНалогаКонтекстноеМеню" id="47"/>
+											<ExtendedTooltip name="ПроцентИзмененияБазовойСтавкиНалогаРасширеннаяПодсказка" id="48"/>
+										</InputField>
+										<InputField name="КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов" id="34">
+											<DataPath>Запись.КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОрганов</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОргановКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="КорректировкаБазовойСтавкиНалогаПоРешениюМестныхОргановРасширеннаяПодсказка" id="36"/>
+										</InputField>
+										<InputField name="КорректировкаБазовойСтавкиНалога" id="28">
+											<DataPath>Запись.КорректировкаБазовойСтавкиНалога</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="КорректировкаБазовойСтавкиНалогаКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="КорректировкаБазовойСтавкиНалогаРасширеннаяПодсказка" id="30"/>
+										</InputField>
+										<InputField name="КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ" id="31">
+											<DataPath>Запись.КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗ</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="КорректировкаБазовойСтавкиНалогаНаТерриторияхСЭЗРасширеннаяПодсказка" id="33"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПравоСобственности" id="65">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Право собственности</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаПравоСобственностиРасширеннаяПодсказка" id="66"/>
+									<ChildItems>
+										<InputField name="ДатаПрекращенияПрава" id="16">
+											<DataPath>Запись.ДатаПрекращенияПрава</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата прекращения права собственности на земельный участок</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДатаПрекращенияПраваКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ДатаПрекращенияПраваРасширеннаяПодсказка" id="18"/>
+										</InputField>
+										<InputField name="ДатаВозникновенияПрава" id="13">
+											<DataPath>Запись.ДатаВозникновенияПрава</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата возникновения права на земельный участок</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДатаВозникновенияПраваКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ДатаВозникновенияПраваРасширеннаяПодсказка" id="15"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПараметрыРасчетаЗемельногоНалога</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

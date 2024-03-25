@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="5993af57-29d0-4635-96fe-d866d72611cd">
+		<Properties>
+			<Name>ЭлектронныеСчетаФактуры</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные счета-фактуры</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НаправленияЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыМетодовИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПользовательскиеСтатусыЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбменЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПользователиИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.СинхронизацияСИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПрофилиИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КриптографияКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФВызовСервераПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.МестоВыполненияКриптографическихОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.МестаВыполненияКриптографическихОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыСчетовФактур</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствияНаименованийИСсылокТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствияНаименованийИСсылокЕдиницИзмерения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыОбменаДокументами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникНастройкиОбменаЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыПодключенияКСерверуИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗагрузитьXMLФайлВИнформационнуюБазу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВыгрузитьДанныеИзИнформационнойБазыВXMLФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КриптографияВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыПодписиЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АктуальныеЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСФКлиентСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОбменЭСФЧерезAPI</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьОбменЭСФЧерезAPI</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОбменЭСФЧерезXML</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьОбменЭСФЧерезXML</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СчетаФактурыПрекратившиеДействие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЭСФВнешнийМодуль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЭСФВерсияВнешнегоМодуля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЭСФПараметрыСоглашения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КриптографияКлиентСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПричиныВыпискиСФНаБумаге</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОчередьОтправкиЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ЕдиницаИзмеренияЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ИсточникПроисхождения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СтраныМираЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.НоменклатураЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ОрганизацияЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПользовательЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ОтправительПолучательЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ДоговорКонтрагентаЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВалютаЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СчетФактураЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СтавкаАкцизаЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СтавкаНДСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПодразделениеЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СчетФактураВыданнныйЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СчетФактураПолученныйЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.НомерГТДЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.КонтрагентЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СтруктурнаяЕдиницаЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыЭСФВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеНастроекЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеПользователейИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеНастроекЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АналитикаУчетаСоответствий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствиеНаименованийИСсылокЕдиницИзмеренийИТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлючиАналитикиУчетаСоответствий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПрисоединенныйФайлЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВопросЭСФ32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОшибкаЭСФ32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.УспешноЭСФ32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПредупреждениеЭСФ_32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнформацияВС32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЭСФИспользоватьВнешнийМодульОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЭСФВнешнийМодульОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АктивныеСессииИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыПрофилейИСЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗнакСтопЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнвертироватьФлажкиЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнформацияЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПоказыватьПарольЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НеПоказыватьПарольЭСФ</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,1208 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыРазделов" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы разделов</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="ГруппаСтраницыРазделовРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<Page name="СтраницаРазделовОсновная" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРазделовОсновнаяРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<InputField name="Период" id="75">
+							<DataPath>Запись.Period</DataPath>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="77"/>
+							<Events>
+								<Event name="OnChange">ПериодПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="78">
+							<DataPath>Запись.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="80"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="РежимНалогообложения" id="258">
+							<DataPath>Запись.РежимНалогообложения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Режим</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Период</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Запись.Period</xr:DataPath>
+									<xr:ValueChange>DontChange</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="РежимНалогообложенияКонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="РежимНалогообложенияРасширеннаяПодсказка" id="260"/>
+							<Events>
+								<Event name="OnChange">РежимНалогообложенияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПорядокОбложенияДоходовРаботников" id="277">
+							<DataPath>Запись.ПорядокОбложенияДоходовРаботников</DataPath>
+							<ContextMenu name="ПорядокОбложенияДоходовРаботниковКонтекстноеМеню" id="278"/>
+							<ExtendedTooltip name="ПорядокОбложенияДоходовРаботниковРасширеннаяПодсказка" id="279"/>
+						</InputField>
+						<UsualGroup name="ГруппаНалогообложение" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Налогообложение</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаНалогообложениеРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<CheckBoxField name="ОрганизацияЯвляетсяПлательщикомКПН" id="87">
+									<DataPath>Запись.ОрганизацияЯвляетсяПлательщикомКПН</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОрганизацияЯвляетсяПлательщикомКПНКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ОрганизацияЯвляетсяПлательщикомКПНРасширеннаяПодсказка" id="89"/>
+									<Events>
+										<Event name="OnChange">ОрганизацияЯвляетсяПлательщикомКПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ОрганизацияЯвляетсяПлательщикомНДС" id="81">
+									<DataPath>Запись.ОрганизацияЯвляетсяПлательщикомНДС</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОрганизацияЯвляетсяПлательщикомНДСКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ОрганизацияЯвляетсяПлательщикомНДСРасширеннаяПодсказка" id="83"/>
+									<Events>
+										<Event name="OnChange">ОрганизацияЯвляетсяПлательщикомНДСПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ОрганизацияЯвляетсяПлательщикомАкциза" id="84">
+									<DataPath>Запись.ОрганизацияЯвляетсяПлательщикомАкциза</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Плательщик акциза</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОрганизацияЯвляетсяПлательщикомАкцизаКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ОрганизацияЯвляетсяПлательщикомАкцизаРасширеннаяПодсказка" id="86"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРазделовНДС" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРазделовНДСРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПараметрыУчетнойПолитикиНДС" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры учетной политики</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаПараметрыУчетнойПолитикиНДСРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<InputField name="НДСНалоговыйПериод" id="90">
+									<DataPath>Запись.НДСНалоговыйПериод</DataPath>
+									<ContextMenu name="НДСНалоговыйПериодКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="НДСНалоговыйПериодРасширеннаяПодсказка" id="92"/>
+									<Events>
+										<Event name="OnChange">НДСНалоговыйПериодПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="НДСМетодОтнесенияВЗачет" id="93">
+									<DataPath>Запись.НДСМетодОтнесенияВЗачет</DataPath>
+									<ContextMenu name="НДСМетодОтнесенияВЗачетКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="НДСМетодОтнесенияВЗачетРасширеннаяПодсказка" id="95"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРазделовЗарплата" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зарплата</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРазделовЗарплатаРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПараметрыУчетнойПолитикиЗарплата" id="69">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры учетной политики</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаПараметрыУчетнойПолитикиЗарплатаРасширеннаяПодсказка" id="70"/>
+							<ChildItems>
+								<CheckBoxField name="ОтражениеПоПериодуРегистрации" id="96">
+									<DataPath>Запись.ОтражениеПоПериодуРегистрации</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтражениеПоПериодуРегистрацииКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ОтражениеПоПериодуРегистрацииРасширеннаяПодсказка" id="98"/>
+								</CheckBoxField>
+								<LabelDecoration name="НадписьОтражениеПоПериодуРегистрации" id="99">
+									<Width>50</Width>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если флажок установлен, то вне зависимости от того, за какой месяц производится начисление отдельных видов зарплаты (отпуск будущего периода, больничный прошлого периода и т.д.), в целях налогового учета все начисления будут учитываться в том месяце, когда они были зарегистрированы.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОтражениеПоПериодуРегистрацииКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="НадписьОтражениеПоПериодуРегистрацииРасширеннаяПодсказка" id="101"/>
+								</LabelDecoration>
+								<InputField name="ПорядокСписанияЗадолженностиПоЗарплате" id="102">
+									<DataPath>Запись.ПорядокСписанияЗадолженностиПоЗарплате</DataPath>
+									<ContextMenu name="ПорядокСписанияЗадолженностиПоЗарплатеКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ПорядокСписанияЗадолженностиПоЗарплатеРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<LabelDecoration name="НадписьПорядокСписанияЗадолженностиПоЗарплате" id="105">
+									<Width>50</Width>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При использовании метода FIFO, погашение задолженности по зарплате всегда будет происходить по остаткам, начиная с самого раннего месяца, за который имеется задолженность.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПорядокСписанияЗадолженностиПоЗарплатеКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="НадписьПорядокСписанияЗадолженностиПоЗарплатеРасширеннаяПодсказка" id="107"/>
+								</LabelDecoration>
+								<CheckBoxField name="РаспределятьНалогиПоСтруктурнымЕдиницам" id="108">
+									<DataPath>Запись.РаспределятьНалогиПоСтруктурнымЕдиницам</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РаспределятьНалогиПоСтруктурнымЕдиницамКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="РаспределятьНалогиПоСтруктурнымЕдиницамРасширеннаяПодсказка" id="110"/>
+									<Events>
+										<Event name="OnChange">РаспределятьНалогиПоСтруктурнымЕдиницамПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="НадписьРаспределятьНалогиПоСтруктурнымЕдиницам" id="111">
+									<Width>50</Width>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если флажок установлен, то суммы взаиморасчетов, налогов, сборов, отчислений и удержаний будут вестись в разрезе организаций и структурных единиц, использованных при начислении заработной платы</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьРаспределятьНалогиПоСтруктурнымЕдиницамКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="НадписьРаспределятьНалогиПоСтруктурнымЕдиницамРасширеннаяПодсказка" id="113"/>
+								</LabelDecoration>
+								<CheckBoxField name="РаспределятьНалогиПоПодразделениямОрганизаций" id="114">
+									<DataPath>Запись.РаспределятьНалогиПоПодразделениямОрганизаций</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РаспределятьНалогиПоПодразделениямОрганизацийКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="РаспределятьНалогиПоПодразделениямОрганизацийРасширеннаяПодсказка" id="116"/>
+								</CheckBoxField>
+								<LabelDecoration name="НадписьРаспределятьНалогиПоПодразделениямОрганизаций" id="117">
+									<Width>50</Width>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если флажок установлен, то дополнительным разрезом заработной платы будут выступать подразделения организаций, использованные при расчете начислений сотрудников организаций.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьРаспределятьНалогиПоПодразделениямОрганизацийКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="НадписьРаспределятьНалогиПоПодразделениямОрганизацийРасширеннаяПодсказка" id="119"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРазделовНалогиВзносыОтчисления" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоги, взносы, отчисления</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРазделовНалогиВзносыОтчисленияРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПараметрыУчетнойПолитикиНалоги" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры учетной политики</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаПараметрыУчетнойПолитикиНалогиРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<RadioButtonField name="УпрощенныйУчетИПНиОПВ" id="120">
+									<DataPath>УпрощенныйУчетИПНиОПВ</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>при выплате доходов</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>при исчислении</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="УпрощенныйУчетИПНиОПВКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="УпрощенныйУчетИПНиОПВРасширеннаяПодсказка" id="122"/>
+									<Events>
+										<Event name="OnChange">УпрощенныйУчетИПНиОПВПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<LabelDecoration name="НадписьУпрощенныйУчетИПНиОПВ" id="123">
+									<Width>50</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если установлено значение "при выплате доходов" суммы налогов и взносов, подлежащие перечислению, будут рассчитываться от выплаченных доходов работника. 
+Если установлено значение "при исчислении", то ИПН, ОПВ и ВОСМС будут отражаться как подлежащие перечислению сразу же в момент исчисления. 
+При порядке обложения дохода работников единым платежом начисления по доходу от работодателя отражаются как подлежащие перечислению сразу в момент исчисления, независимо от установленной настройки.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьУпрощенныйУчетИПНиОПВКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="НадписьУпрощенныйУчетИПНиОПВРасширеннаяПодсказка" id="125"/>
+								</LabelDecoration>
+								<CheckBoxField name="ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛ" id="126">
+									<DataPath>Запись.ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛ</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛРасширеннаяПодсказка" id="128"/>
+								</CheckBoxField>
+								<LabelDecoration name="НадписьЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛ" id="129">
+									<Width>50</Width>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если флажок установлен, то удержания по исполнительным листам в целях налогового учета будут учитыватся как выплаченный доход работнику сразу же в момент удержания этих суммы из заработной платы вне зависимости от того, были ли эти суммы перечислены их получателям или нет.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="НадписьЗасчитыватьВВыплаченныеДоходыУдержанияПоИЛРасширеннаяПодсказка" id="131"/>
+								</LabelDecoration>
+								<CheckBoxField name="ОрганизацияЯвляетсяВкладчикомОППВ" id="132">
+									<DataPath>Запись.ОрганизацияЯвляетсяВкладчикомОППВ</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОрганизацияЯвляетсяВкладчикомОППВКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ОрганизацияЯвляетсяВкладчикомОППВРасширеннаяПодсказка" id="134"/>
+								</CheckBoxField>
+								<LabelDecoration name="НадписьОрганизацияЯвляетсяВкладчикомОППВ" id="135">
+									<Width>50</Width>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данный признак необходимо установить, если организация является вкладчиком обязательных профессиональных пенсионных взносов в пользу работников, занятых на работах с вредными (особо вредными) условиями труда. Действует с 1 января 2014 года.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОрганизацияЯвляетсяВкладчикомОППВКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="НадписьОрганизацияЯвляетсяВкладчикомОППВРасширеннаяПодсказка" id="137"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПорядокРасчетаСН" id="73">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Порядок расчета социального налога</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаПорядокРасчетаСНРасширеннаяПодсказка" id="74"/>
+									<ChildItems>
+										<InputField name="ПорядокРасчетаСН" id="138">
+											<DataPath>ПорядокРасчетаСН</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ContextMenu name="ПорядокРасчетаСНКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="ПорядокРасчетаСНРасширеннаяПодсказка" id="140"/>
+											<Events>
+												<Event name="OnChange">ПорядокРасчетаСНПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="НадписьПорядокРасчетаСН" id="141">
+											<Width>50</Width>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При расчете социального налога на основе упрощенной декларации, налог определяется от дохода, отражаемого в форме 910.00, иначе налог рассчитывается с помощью документа "Расчет налогов, взносов и отчислений сотрудников организации".</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПорядокРасчетаСНКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="НадписьПорядокРасчетаСНРасширеннаяПодсказка" id="143"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаСНИндивидуальногоПредпринимателя" id="150">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Социальный налог индивидуального предпринимателя</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСНИндивидуальногоПредпринимателяРасширеннаяПодсказка" id="151"/>
+											<ChildItems>
+												<InputField name="КоэффициентМРПДляРасчетаСНЗаИндивидуальногоПредпринимателя" id="144">
+													<DataPath>Запись.КоэффициентМРПДляРасчетаСНЗаИндивидуальногоПредпринимателя</DataPath>
+													<ContextMenu name="КоэффициентМРПДляРасчетаСНЗаИндивидуальногоПредпринимателяКонтекстноеМеню" id="145"/>
+													<ExtendedTooltip name="КоэффициентМРПДляРасчетаСНЗаИндивидуальногоПредпринимателяРасширеннаяПодсказка" id="146"/>
+												</InputField>
+												<InputField name="КоэффициентМРПДляРасчетаСНЗаНаемногоРаботника" id="147">
+													<DataPath>Запись.КоэффициентМРПДляРасчетаСНЗаНаемногоРаботника</DataPath>
+													<ContextMenu name="КоэффициентМРПДляРасчетаСНЗаНаемногоРаботникаКонтекстноеМеню" id="148"/>
+													<ExtendedTooltip name="КоэффициентМРПДляРасчетаСНЗаНаемногоРаботникаРасширеннаяПодсказка" id="149"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаСНЮрЛица" id="152">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Социальный налог юридического лица</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСНЮрЛицаРасширеннаяПодсказка" id="153"/>
+											<ChildItems>
+												<CheckBoxField name="ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалога" id="154">
+													<DataPath>Запись.ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалога</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалогаКонтекстноеМеню" id="155"/>
+													<ExtendedTooltip name="ПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалогаРасширеннаяПодсказка" id="156"/>
+												</CheckBoxField>
+												<LabelDecoration name="НадписьРасшифровкаПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалога" id="157">
+													<Width>50</Width>
+													<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Если установлен флажок, то при расчете социального налога будет учитываться минимальный предел, установленный законодательством. Действует с 1 января 2009 г.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьРасшифровкаПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалогаКонтекстноеМеню" id="158"/>
+													<ExtendedTooltip name="НадписьРасшифровкаПрименятьОграничениеНаМинимальнуюБазуСоциальногоНалогаРасширеннаяПодсказка" id="159"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОграничениеНаМинимальныйОбъектОСМС" id="226">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограничение на минимальный объект ОСМС</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОграничениеНаМинимальныйОбъектОСМСРасширеннаяПодсказка" id="227"/>
+									<ChildItems>
+										<CheckBoxField name="ПрименятьОграничениеНаМинимальныйОбъектОСМС" id="160">
+											<DataPath>Запись.ПрименятьОграничениеНаМинимальныйОбъектОСМС</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПрименятьОграничениеНаМинимальныйОбъектОСМСКонтекстноеМеню" id="161"/>
+											<ExtendedTooltip name="ПрименятьОграничениеНаМинимальныйОбъектОСМСРасширеннаяПодсказка" id="162"/>
+										</CheckBoxField>
+										<LabelDecoration name="НадписьПрименятьОграничениеНаМинимальныйОбъектОСМС" id="163">
+											<Width>50</Width>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если установлен флажок, то при расчете отчислений ОСМС, если объект исчисления меньше МЗП, в качестве объекта будет учитываться МЗП. Действует с 1 января 2018 г.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПрименятьОграничениеНаМинимальныйОбъектОСМСКонтекстноеМеню" id="164"/>
+											<ExtendedTooltip name="НадписьПрименятьОграничениеНаМинимальныйОбъектОСМСРасширеннаяПодсказка" id="165"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<CheckBoxField name="ПредоставлятьВычетВМесяцОтсутствияДохода" id="200">
+									<DataPath>Запись.ПредоставлятьВычетВМесяцеОтсутствияДохода</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПредоставлятьВычетВМесяцОтсутствияДоходаКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="ПредоставлятьВычетВМесяцОтсутствияДоходаРасширеннаяПодсказка" id="202"/>
+								</CheckBoxField>
+								<LabelDecoration name="НадписьПредоставлятьВычетВМесяцОтсутствияДохода" id="203">
+									<Width>50</Width>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если установлен флажок, разрешенный вычет будет предоставляться в месяце отсутствия дохода. Действует с 1 января 2018 г.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПредоставлятьВычетВМесяцОтсутствияДоходаКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="НадписьПредоставлятьВычетВМесяцОтсутствияДоходаРасширеннаяПодсказка" id="205"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПрименятьВычетОПВДляГПХ" id="267">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа применять вычет ОПВ для ГПХ (действует до 2020 г.)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Применять вычет ОПВ для ГПХ (действует до 2020 г.)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПрименятьВычетОПВДляГПХРасширеннаяПодсказка" id="268"/>
+									<ChildItems>
+										<CheckBoxField name="ПрименятьВычетОПВДляГПХ" id="261">
+											<DataPath>Запись.ПрименятьВычетВОСМСДляФизическихЛицИГПХ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Применять вычет ОПВ для ГПХ (действует до 2020 г.)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПрименятьВычетОПВДляГПХКонтекстноеМеню" id="262"/>
+											<ExtendedTooltip name="ПрименятьВычетОПВДляГПХРасширеннаяПодсказка" id="263"/>
+											<Events>
+												<Event name="OnChange">ПрименятьВычетВОСМСДляФизическихЛицИГПХПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="НадписьПрименятьВычетОПВДляГПХ" id="264">
+											<Width>50</Width>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действует с 01.01.2019 по 31.12.2019. Законом Республики Казахстан № 382-VI «О внесении изменений и дополнений в Кодекс Республики Казахстан  «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс) и Закон Республики Казахстан «О введении в действие Кодекса Республики Казахстан «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс)»  предусмотрено предоставление физическим лицам по договорам ГПХ вычета по ОПВ при расчете ИПН.
+Если признак установлен, при расчете ИПН предоставляется вычет в размере ОПВ.
+Если признак не установлен, вычет по ОПВ не предоставляется.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПрименятьВычетОПВДляГПХКонтекстноеМеню" id="265"/>
+											<ExtendedTooltip name="НадписьПрименятьВычетОПВДляГПХРасширеннаяПодсказка" id="266"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКорректировкаПрименятьВычетВОСМСДляФизическихЛицИГПХ" id="269">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа применять вычет ВОСМС для физических лиц (сотрудников) и вычеты ОПВ и ВОСМС для ГПХ и расчет СН, ООСМС, ВОСМС без применения 90% корректировки по ИПН</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа применять вычет ВОСМС для физических лиц (сотрудников) и вычеты ОПВ и ВОСМС для ГПХ и расчет СН, ООСМС, ВОСМС без применения 90% корректировки по ИПН</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКорректировкаПрименятьВычетВОСМСДляФизическихЛицИГПХРасширеннаяПодсказка" id="270"/>
+									<ChildItems>
+										<CheckBoxField name="НеПрименятьКорректировкуПрочихНалоговВзносовОтчислений" id="237">
+											<DataPath>Запись.НеПрименятьКорректировкуПрочихНалоговВзносовОтчислений</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="НеПрименятьКорректировкуПрочихНалоговВзносовОтчисленийКонтекстноеМеню" id="238"/>
+											<ExtendedTooltip name="НеПрименятьКорректировкуПрочихНалоговВзносовОтчисленийРасширеннаяПодсказка" id="239"/>
+											<Events>
+												<Event name="OnChange">НеПрименятьКорректировкуПрочихНалоговВзносовОтчисленийПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="НадписьНеПрименятьКорректировкуПрочихНалоговВзносовОтчислений" id="240">
+											<Width>50</Width>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действует с 01.01.2020. Законом Республики Казахстан № 382-VI «О внесении изменений и дополнений в Кодекс Республики Казахстан  «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс) и Закон Республики Казахстан «О введении в действие Кодекса Республики Казахстан «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс)»   предусмотрен расчет СН, ООСМС, ВОСМС без применения 90% корректировки по ИПН. Если признак установлен, то при расчете социального налога, отчислений и взносов на обязательное социальное медицинское страхование не применяется 90% корректировка облагаемого дохода работников  в соответствии с пп. 49) пункта 1 статьи 341 НК РК.
+Если признак снят, то корректировка участвует в расчете социального налога и взносов/отчислений по ОСМС.
+</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьНеПрименятьКорректировкуПрочихНалоговВзносовОтчисленийКонтекстноеМеню" id="241"/>
+											<ExtendedTooltip name="НадписьНеПрименятьКорректировкуПрочихНалоговВзносовОтчисленийРасширеннаяПодсказка" id="242"/>
+										</LabelDecoration>
+										<CheckBoxField name="ПрименятьВычетВОСМСДляФизическихЛицИГПХ1" id="271">
+											<DataPath>Запись.ПрименятьВычетВОСМСДляФизическихЛицИГПХ</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПрименятьВычетВОСМСДляФизическихЛицИГПХ1КонтекстноеМеню" id="272"/>
+											<ExtendedTooltip name="ПрименятьВычетВОСМСДляФизическихЛицИГПХ1РасширеннаяПодсказка" id="273"/>
+											<Events>
+												<Event name="OnChange">ПрименятьВычетВОСМСДляФизическихЛицИГПХПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="НадписьПрименятьВычетВОСМСДляФизическихЛиц1" id="274">
+											<Width>50</Width>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действует с 01.01.2020. Законом Республики Казахстан № 382-VI «О внесении изменений и дополнений в Кодекс Республики Казахстан  «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс) и Закон Республики Казахстан «О введении в действие Кодекса Республики Казахстан «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс)»   предусмотрено предоставление физическим лицам  вычетов по ИПН по доходам работников вычета на сумму ВОСМС
+Если признак установлен, то при расчете ИПН физическим лицам предоставляются вычеты. 
+Если признак снят, то вычеты не предоставляются.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПрименятьВычетВОСМСДляФизическихЛиц1КонтекстноеМеню" id="275"/>
+											<ExtendedTooltip name="НадписьПрименятьВычетВОСМСДляФизическихЛиц1РасширеннаяПодсказка" id="276"/>
+										</LabelDecoration>
+										<CheckBoxField name="ПрименятьВычетОПВиВОСМСДляГПХ" id="234">
+											<DataPath>Запись.ПрименятьВычетОПВиВОСМСДляГПХ</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПрименятьВычетОПВиВОСМСДляГПХКонтекстноеМеню" id="235"/>
+											<ExtendedTooltip name="ПрименятьВычетОПВиВОСМСДляГПХРасширеннаяПодсказка" id="236"/>
+											<Events>
+												<Event name="OnChange">ПрименятьВычетВОСМСДляФизическихЛицИГПХПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="НадписьПрименятьВычетВОСМСДляФизическихЛиц" id="243">
+											<Width>50</Width>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действует с 01.01.2020. Законом Республики Казахстан № 382-VI «О внесении изменений и дополнений в Кодекс Республики Казахстан  «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс) и Закон Республики Казахстан «О введении в действие Кодекса Республики Казахстан «О налогах и других обязательных платежах в бюджет» (Налоговый кодекс)»   предусмотрено предоставление физическим лицам  вычетов по ИПН по доходам гражданско-правового характера вычетов на сумму ВОСМС и ОПВ.
+Если признак установлен, то при расчете ИПН физическим лицам предоставляются вычеты. 
+Если признак снят, то вычеты не предоставляются.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПрименятьВычетВОСМСДляФизическихЛицКонтекстноеМеню" id="244"/>
+											<ExtendedTooltip name="НадписьПрименятьВычетВОСМСДляФизическихЛицРасширеннаяПодсказка" id="245"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРазделовУчетИП" id="166">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет индивидуального предпринимателя</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРазделовУчетИПРасширеннаяПодсказка" id="167"/>
+					<ChildItems>
+						<CheckBoxField name="ЕжемесячныйРасчетВзносовИОтчисленийЗаИП" id="170">
+							<DataPath>Запись.ЕжемесячныйРасчетВзносовИОтчисленийЗаИП</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЕжемесячныйРасчетВзносовИОтчисленийЗаИПКонтекстноеМеню" id="171"/>
+							<ExtendedTooltip name="ЕжемесячныйРасчетВзносовИОтчисленийЗаИПРасширеннаяПодсказка" id="172"/>
+							<Events>
+								<Event name="OnChange">ЕжемесячныйРасчетВзносовИОтчисленийЗаИППриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СуммаЗаявленногоДоходаИП" id="280">
+							<DataPath>Запись.СуммаЗаявленногоДоходаИП</DataPath>
+							<ContextMenu name="СуммаЗаявленногоДоходаИПКонтекстноеМеню" id="281"/>
+							<ExtendedTooltip name="СуммаЗаявленногоДоходаИПРасширеннаяПодсказка" id="282"/>
+						</InputField>
+						<UsualGroup name="ИнформацияОбОшибке" id="192">
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИнформацияОбОшибкеРасширеннаяПодсказка" id="193"/>
+							<ChildItems>
+								<LabelDecoration name="ИнформацияОбОшибкеФизЛицо" id="189">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<ContextMenu name="ИнформацияОбОшибкеФизЛицоКонтекстноеМеню" id="190"/>
+									<ExtendedTooltip name="ИнформацияОбОшибкеФизЛицоРасширеннаяПодсказка" id="191"/>
+								</LabelDecoration>
+								<LabelField name="ОформитьУвольнениеИП" id="194">
+									<DataPath>ОформитьУвольнениеИП</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ОформитьУвольнениеИПКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="ОформитьУвольнениеИПРасширеннаяПодсказка" id="196"/>
+									<Events>
+										<Event name="Click">ОформитьУвольнениеИПНажатие</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="СсылкаДокументУвольнениеИП" id="197">
+							<DataPath>СсылкаДокументУвольнениеИП</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="СсылкаДокументУвольнениеИПКонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="СсылкаДокументУвольнениеИПРасширеннаяПодсказка" id="199"/>
+						</LabelField>
+						<UsualGroup name="ГруппаОПВ" id="173">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ОПВ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаОПВРасширеннаяПодсказка" id="174"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиОтраженияОПВ" id="256">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки отражения ОПВ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки отражения ОПВ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиОтраженияОПВРасширеннаяПодсказка" id="257"/>
+									<ChildItems>
+										<InputField name="ПорядокРасчетаДоходаОПВ" id="177">
+											<DataPath>Запись.ПорядокРасчетаДоходаОПВ</DataPath>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ПорядокРасчетаДоходаОПВКонтекстноеМеню" id="178"/>
+											<ExtendedTooltip name="ПорядокРасчетаДоходаОПВРасширеннаяПодсказка" id="179"/>
+										</InputField>
+										<InputField name="РазмерДоходаОПВ" id="180">
+											<DataPath>Запись.РазмерДоходаОПВ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Размер</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="РазмерДоходаОПВКонтекстноеМеню" id="181"/>
+											<ExtendedTooltip name="РазмерДоходаОПВРасширеннаяПодсказка" id="182"/>
+										</InputField>
+										<LabelDecoration name="НадписьНастройкиОтраженияОПВ" id="283">
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действует до 01.07.2023 г.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьНастройкиОтраженияОПВКонтекстноеМеню" id="284"/>
+											<ExtendedTooltip name="НадписьНастройкиОтраженияОПВРасширеннаяПодсказка" id="285"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="СпособОтраженияОПВИП" id="206">
+									<DataPath>Запись.СпособОтраженияОПВИП</DataPath>
+									<ContextMenu name="СпособОтраженияОПВИПКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="СпособОтраженияОПВИПРасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="СтавкаОПВдляИП" id="248">
+									<DataPath>Запись.СтавкаОПВдляИП</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ставка ОПВ для ИП</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтавкаОПВдляИПКонтекстноеМеню" id="249"/>
+									<ExtendedTooltip name="СтавкаОПВдляИПРасширеннаяПодсказка" id="250"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСО" id="175">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>СО</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаСОРасширеннаяПодсказка" id="176"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиОтраженияСО" id="254">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки отражения СО</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки отражения СО</v8:content>
+										</v8:item>
+									</ToolTip>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиОтраженияСОРасширеннаяПодсказка" id="255"/>
+									<ChildItems>
+										<InputField name="ПорядокРасчетаДоходаСО" id="183">
+											<DataPath>Запись.ПорядокРасчетаДоходаСО</DataPath>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ПорядокРасчетаДоходаСОКонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="ПорядокРасчетаДоходаСОРасширеннаяПодсказка" id="185"/>
+										</InputField>
+										<InputField name="РазмерДоходаСО" id="186">
+											<DataPath>Запись.РазмерДоходаСО</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Размер</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="РазмерДоходаСОКонтекстноеМеню" id="187"/>
+											<ExtendedTooltip name="РазмерДоходаСОРасширеннаяПодсказка" id="188"/>
+										</InputField>
+										<LabelDecoration name="НадписьНастройкиОтраженияСО" id="286">
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действует до 01.07.2023 г.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьНастройкиОтраженияСОКонтекстноеМеню" id="287"/>
+											<ExtendedTooltip name="НадписьНастройкиОтраженияСОРасширеннаяПодсказка" id="288"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="СпособОтраженияСОИП" id="209">
+									<DataPath>Запись.СпособОтраженияСОИП</DataPath>
+									<ContextMenu name="СпособОтраженияСОИПКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="СпособОтраженияСОИПРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<InputField name="СтавкаСОДляИП" id="251">
+									<DataPath>Запись.СтавкаСОДляИП</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ставка СО для ИП</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтавкаСОДляИПКонтекстноеМеню" id="252"/>
+									<ExtendedTooltip name="СтавкаСОДляИПРасширеннаяПодсказка" id="253"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВОСМС" id="212">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВОСМС</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ВОСМС</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаВОСМСРасширеннаяПодсказка" id="213"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиОтражения" id="246">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки отражения ВОСМС</v8:content>
+										</v8:item>
+									</Title>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиОтраженияРасширеннаяПодсказка" id="247"/>
+									<ChildItems>
+										<InputField name="ПорядокРасчетаДоходаВОСМС" id="217">
+											<DataPath>Запись.ПорядокРасчетаДоходаВОСМС</DataPath>
+											<ContextMenu name="ПорядокРасчетаДоходаВОСМСКонтекстноеМеню" id="218"/>
+											<ExtendedTooltip name="ПорядокРасчетаДоходаВОСМСРасширеннаяПодсказка" id="219"/>
+										</InputField>
+										<InputField name="РазмерДоходаВОСМС" id="220">
+											<DataPath>Запись.РазмерДоходаВОСМС</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Размер</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="РазмерДоходаВОСМСКонтекстноеМеню" id="221"/>
+											<ExtendedTooltip name="РазмерДоходаВОСМСРасширеннаяПодсказка" id="222"/>
+										</InputField>
+										<LabelDecoration name="НадписьНастройкиОтражения" id="289">
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действует до 01.07.2023 г.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьНастройкиОтраженияКонтекстноеМеню" id="290"/>
+											<ExtendedTooltip name="НадписьНастройкиОтраженияРасширеннаяПодсказка" id="291"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="СпособОтраженияВОСМС" id="223">
+									<DataPath>Запись.СпособОтраженияВОСМСИП</DataPath>
+									<ContextMenu name="СпособОтраженияВОСМСКонтекстноеМеню" id="224"/>
+									<ExtendedTooltip name="СпособОтраженияВОСМСРасширеннаяПодсказка" id="225"/>
+								</InputField>
+								<InputField name="СтавкаВОСМСДляИП" id="214">
+									<DataPath>Запись.СтавкаВОСМСДляИП</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ставка ВОСМС для ИП</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтавкаВОСМСДляИПКонтекстноеМеню" id="215"/>
+									<ExtendedTooltip name="СтавкаВОСМСДляИПРасширеннаяПодсказка" id="216"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОПВР" id="292">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ОПВР</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаОПВРРасширеннаяПодсказка" id="293"/>
+							<ChildItems>
+								<InputField name="СпособОтраженияОПВРИП" id="305">
+									<DataPath>Запись.СпособОтраженияОПВРИП</DataPath>
+									<ContextMenu name="СпособОтраженияОПВРИПКонтекстноеМеню" id="306"/>
+									<ExtendedTooltip name="СпособОтраженияОПВРИПРасширеннаяПодсказка" id="307"/>
+								</InputField>
+								<InputField name="СтавкаОПВРдляИП" id="308">
+									<DataPath>Запись.СтавкаОПВРдляИП</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ставка ОПВР для ИП</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтавкаОПВРдляИПКонтекстноеМеню" id="309"/>
+									<ExtendedTooltip name="СтавкаОПВРдляИПРасширеннаяПодсказка" id="310"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УчетнаяПолитикаНалоговыйУчет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПорядокРасчетаСН" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок расчета СН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущаяОрганизация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийПризнакПлательщикаКПН" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий признак плательщика КПН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийПризнакПлательщикаНДС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий признак плательщика НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийПризнакПлательщикаСН" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий признак плательщика СН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МонопольныйРежимИспользуется" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Монопольный режим используется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетПоВсемОрганизациям" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет по всем организациям</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УпрощенныйУчетИПНиОПВ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламентированные удержания принимать к учету как удержанные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОформитьУвольнениеИП" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить увольнение ИП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаДокументУвольнениеИП" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка документ увольнение ИП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.УвольнениеИзОрганизаций</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВедетсяУчетЗарплатыИКадры" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведется учет зарплаты и кадры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьИсполнительныеЛисты" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать исполнительные листы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияЯвляетсяИП" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация является ИП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КопированиеЗаписи" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копирование записи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьОбменЗарплата3Бухгалтерия3" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать обмен зарплата3 бухгалтерия3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийПорядокОбложенияДоходовРаботников" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий порядок обложения доходов работников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПравоИзменятьПорядокРасчетаСН" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть право изменять порядок расчета СН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

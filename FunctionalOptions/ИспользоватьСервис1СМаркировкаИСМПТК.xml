@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FunctionalOption uuid="9645188c-9c2e-4c98-b364-a0cbeddbf113">
+		<Properties>
+			<Name>ИспользоватьСервис1СМаркировкаИСМПТК</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать сервис1 с маркировка ИСМПТК</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ИспользоватьСервис1СМаркировкаИСМПТК</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Document.СканированиеТоваровИСМПТК</xr:Object>
+				<xr:Object>Document.АгрегацияКодовМаркировкиСУЗИСМПТК</xr:Object>
+				<xr:Object>Document.НанесениеКодовМаркировкиСУЗИСМПТК</xr:Object>
+				<xr:Object>Document.ЗаказКодовМаркировкиСУЗИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОбОтгрузкеЕАЭСИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОПриемкеЕАЭСИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОбЭкспортеЕАЭСИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОВвозеИзТретьихСтранИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОВвозеИзЕАЭСИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОВыводеИзОборотаИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОВводеВОборотИСМПТК</xr:Object>
+				<xr:Object>Document.УведомлениеОРасхожденииИСМПТК</xr:Object>
+				<xr:Object>Document.АктПриемаПередачиИСМПТК</xr:Object>
+				<xr:Object>Catalog.СтанцииУправленияЗаказамиИСМПТК</xr:Object>
+				<xr:Object>Catalog.ХранилищеШаблоновИСМПТК</xr:Object>
+				<xr:Object>InformationRegister.СтатусыЗаказовИСМПТК</xr:Object>
+				<xr:Object>InformationRegister.НастройкиОбменаСУЗИСМПТК</xr:Object>
+				<xr:Object>InformationRegister.ПулКодовМаркировкиСУЗИСМПТК</xr:Object>
+				<xr:Object>InformationRegister.ПараметрыМетодовИСМПТК</xr:Object>
+				<xr:Object>InformationRegister.ШтрихкодыSSCCИСМПТК</xr:Object>
+				<xr:Object>InformationRegister.НастройкиПодключенияМобильноеПриложениеИСМПТК</xr:Object>
+				<xr:Object>DataProcessor.ПечатьКодовМаркировкиИСМПТК</xr:Object>
+				<xr:Object>DataProcessor.ГенерацияШтрихкодовИСМПТК</xr:Object>
+				<xr:Object>DataProcessor.ОбменИСМПТК</xr:Object>
+				<xr:Object>DataProcessor.ПанельОбменИСМПТК</xr:Object>
+				<xr:Object>DataProcessor.РабочиеМестаИСМПТК</xr:Object>
+				<xr:Object>Subsystem.МаркировкаИСМПТК</xr:Object>
+				<xr:Object>Subsystem.МаркировкаИСМПТК.Subsystem.РабочиеМеста</xr:Object>
+				<xr:Object>Subsystem.МаркировкаИСМПТК.Subsystem.ОптовоПроизводственныйКонтур</xr:Object>
+				<xr:Object>Subsystem.МаркировкаИСМПТК.Subsystem.Сервис</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

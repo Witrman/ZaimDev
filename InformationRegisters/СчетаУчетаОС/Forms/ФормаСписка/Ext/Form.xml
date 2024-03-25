@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="74">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="77">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="78"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="80">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeLoadUserSettingsAtServer">СписокПередЗагрузкойПользовательскихНастроекНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Регистратор" id="10">
+					<DataPath>Список.Recorder</DataPath>
+					<ContextMenu name="РегистраторКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="РегистраторРасширеннаяПодсказка" id="12"/>
+				</LabelField>
+				<LabelField name="НомерСтроки" id="13">
+					<DataPath>Список.LineNumber</DataPath>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="15"/>
+				</LabelField>
+				<CheckBoxField name="Активность" id="67">
+					<DataPath>Список.Active</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктивностьКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="АктивностьРасширеннаяПодсказка" id="69"/>
+				</CheckBoxField>
+				<LabelField name="Период" id="7">
+					<DataPath>Список.Period</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+				<LabelField name="ОсновноеСредство" id="16">
+					<DataPath>Список.ОсновноеСредство</DataPath>
+					<ContextMenu name="ОсновноеСредствоКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОсновноеСредствоРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Организация" id="19">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="СтруктурноеПодразделение" id="64">
+					<DataPath>Список.СтруктурноеПодразделение</DataPath>
+					<ContextMenu name="СтруктурноеПодразделениеКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СтруктурноеПодразделениеРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСчетаБухгалтерскогоУчета" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета бухгалтерского учета</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ГруппаСчетаБухгалтерскогоУчетаРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<LabelField name="СчетУчетаБУ" id="22">
+							<DataPath>Список.СчетУчетаБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаБУКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СчетУчетаБУРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="СчетНачисленияАмортизацииБУ" id="25">
+							<DataPath>Список.СчетНачисленияАмортизацииБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетНачисленияАмортизацииБУКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="СчетНачисленияАмортизацииБУРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+						<LabelField name="СчетУчетаЗатратПоМодернизацииБУ" id="43">
+							<DataPath>Список.СчетУчетаЗатратПоМодернизацииБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаЗатратПоМодернизацииБУКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="СчетУчетаЗатратПоМодернизацииБУРасширеннаяПодсказка" id="45"/>
+						</LabelField>
+						<LabelField name="СчетУчетаНДСПоПриобретению" id="28">
+							<DataPath>Список.СчетУчетаНДСПоПриобретению</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаНДСПоПриобретениюКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СчетУчетаНДСПоПриобретениюРасширеннаяПодсказка" id="30"/>
+						</LabelField>
+						<LabelField name="СчетУчетаНДСПоРеализации" id="31">
+							<DataPath>Список.СчетУчетаНДСПоРеализации</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаНДСПоРеализацииКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СчетУчетаНДСПоРеализацииРасширеннаяПодсказка" id="33"/>
+						</LabelField>
+						<LabelField name="СчетУчетаНДСУплаченногоНаТаможне" id="34">
+							<DataPath>Список.СчетУчетаНДСУплаченногоНаТаможне</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетУчетаНДСУплаченногоНаТаможнеКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="СчетУчетаНДСУплаченногоНаТаможнеРасширеннаяПодсказка" id="36"/>
+						</LabelField>
+						<LabelField name="СчетДоходовОтРеализацииБУ" id="37">
+							<DataPath>Список.СчетДоходовОтРеализацииБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетДоходовОтРеализацииБУКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="СчетДоходовОтРеализацииБУРасширеннаяПодсказка" id="39"/>
+						</LabelField>
+						<LabelField name="СчетСебестоимостиПриРеализацииБУ" id="40">
+							<DataPath>Список.СчетСебестоимостиПриРеализацииБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетСебестоимостиПриРеализацииБУКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СчетСебестоимостиПриРеализацииБУРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<LabelField name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ" id="58">
+							<DataPath>Список.СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУРасширеннаяПодсказка" id="60"/>
+						</LabelField>
+						<LabelField name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ" id="61">
+							<DataPath>Список.СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУРасширеннаяПодсказка" id="63"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаСчетаНалоговогоУчета" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета налогового учета</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ГруппаСчетаНалоговогоУчетаРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<LabelField name="СчетУчетаНУ" id="46">
+							<DataPath>Список.СчетУчетаНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетУчетаНУКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="СчетУчетаНУРасширеннаяПодсказка" id="48"/>
+						</LabelField>
+						<LabelField name="СчетНачисленияАмортизацииНУ" id="55">
+							<DataPath>Список.СчетНачисленияАмортизацииНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетНачисленияАмортизацииНУКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="СчетНачисленияАмортизацииНУРасширеннаяПодсказка" id="57"/>
+						</LabelField>
+						<LabelField name="СчетДоходовОтРеализацииНУ" id="49">
+							<DataPath>Список.СчетДоходовОтРеализацииНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетДоходовОтРеализацииНУКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="СчетДоходовОтРеализацииНУРасширеннаяПодсказка" id="51"/>
+						</LabelField>
+						<LabelField name="СчетСебестоимостиПриРеализацииНУ" id="52">
+							<DataPath>Список.СчетСебестоимостиПриРеализацииНУ</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+							<ContextMenu name="СчетСебестоимостиПриРеализацииНУКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СчетСебестоимостиПриРеализацииНУРасширеннаяПодсказка" id="54"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.СчетаУчетаОС</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

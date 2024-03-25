@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="0af01f84-8209-4062-9e8b-e3ea6d0e54db">
+		<Properties>
+			<Name>ВиртуальныйСклад</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виртуальный склад</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВССервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВССерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВССерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ДокументПартииВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СтраныМираЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СкладВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ЕдиницаИзмеренияЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ИсточникПроисхождения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.НоменклатураЭСФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыПодключенияКСерверуВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОбменВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НоменклатураГСВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ИсточникиПроисхождения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронныйДокументВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыФормВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыУТТН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидДетализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПричинаСписанияВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипПроисхожденияТоваровВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыПошлинВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияОНоменклатуреГСВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыНаВиртуальныхСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаПереходаНаУчетПоТоварамОрганизацийНаВиртуальныхСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникПереходаНаУчетТоваровВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСКлиентСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыКодовГСВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьОбменВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникКорректировкиТоваровНаВиртуальныхСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализОстатковТоваровНаВиртуальномСкладе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВиртуальныеСклады</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОформленияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособЗаполненияЦеныЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатусыОформленияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствиеСкладовИВиртуальныхСкладов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПриПроведенииСтатусОформленияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПриОтменеПроведенияСтатусОформленияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПервичныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СтатусыОформленияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПервичныеДокументыОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ТипЦеныВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСОбщегоНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСВызовСервераПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ОбновлениеНоменклатурыГСВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеНСИЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеНСИЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПодборИсточниковПроисхождения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КонтрольДублированияТоваровНаВиртуальныхСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияЭДВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПредупреждениеЭСФ_32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаПереходаНаУчетПоИдентификаторамТоваровВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УчетПоИдентификаторамТоваровВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.УчетПоИдентификаторамТоваровВС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнформацияВС32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыВиртуальныхСкладов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыВиртуальныхСкладов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыВиртуальногоСкладаВРезерве</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыКорректировкиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособВыпискиСНТ</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Документы</Subsystem>
+			<Subsystem>СправочникиИНастройки</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

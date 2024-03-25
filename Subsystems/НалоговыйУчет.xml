@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="235eb5ab-f65d-4bc6-9b42-26987f356065">
+		<Properties>
+			<Name>НалоговыйУчет</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговый учет</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыРасходовНУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыУчетаНУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НалогиСборыОтчисления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Резервы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КомплектацияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОперацияБух</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УстановкаСоответствияСчетовБУиНУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ЖурналОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыВзаиморасчетовСБюджетом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыРезервов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РазделыНалоговогоУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РазделыУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыРасчетаСебестоимостиПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДатаАктуальностиУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсчислениеНалоговСтруктурныхЕдиниц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияОСтавкахНалоговСборовОтчислений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствиеСчетовБУиНУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УчетнаяПолитикаНалоговыйУчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfAccounts.Налоговый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияОСтавкахОСМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияОДоляхЕП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиВидовНалоговВНалоговомУчете</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>НалогНаПрибыль</Subsystem>
+			<Subsystem>НалогНаДобавленнуюСтоимость</Subsystem>
+			<Subsystem>Акциз</Subsystem>
+			<Subsystem>НалогиВзносыОтчисленияЗарплаты</Subsystem>
+			<Subsystem>РозничныйНалог</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

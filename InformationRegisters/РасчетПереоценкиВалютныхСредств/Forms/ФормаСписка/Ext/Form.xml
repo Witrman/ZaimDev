@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="85">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="86"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="88">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="89"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="91">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="92"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<ColumnGroup name="ГруппаРегистраторНомерСтроки" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистратор и номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРегистраторНомерСтрокиРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<LabelField name="Регистратор" id="7">
+							<DataPath>Список.Recorder</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="РегистраторКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="РегистраторРасширеннаяПодсказка" id="9"/>
+						</LabelField>
+						<LabelField name="НомерСтроки" id="10">
+							<DataPath>Список.LineNumber</DataPath>
+							<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="12"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаАктивностьПериодРасчета" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активность и период расчета</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАктивностьПериодРасчетаРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<CheckBoxField name="Активность" id="71">
+							<DataPath>Список.Active</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="АктивностьКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="АктивностьРасширеннаяПодсказка" id="73"/>
+						</CheckBoxField>
+						<LabelField name="ПериодРасчета" id="13">
+							<DataPath>Список.ПериодРасчета</DataPath>
+							<ContextMenu name="ПериодРасчетаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПериодРасчетаРасширеннаяПодсказка" id="15"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Организация" id="16">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="СтруктурноеПодразделение" id="82">
+					<DataPath>Список.СтруктурноеПодразделение</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СтруктурноеПодразделениеКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="СтруктурноеПодразделениеРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="Счет" id="22">
+					<DataPath>Список.Счет</DataPath>
+					<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+					<ContextMenu name="СчетКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Валюта" id="25">
+					<DataPath>Список.Валюта</DataPath>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСубконто" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Субконто</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа субконто</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСубконтоРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<LabelField name="Субконто1" id="28">
+							<DataPath>Список.Субконто1</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="Субконто1КонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="Субконто1РасширеннаяПодсказка" id="30"/>
+						</LabelField>
+						<LabelField name="Субконто2" id="31">
+							<DataPath>Список.Субконто2</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="Субконто2КонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="Субконто2РасширеннаяПодсказка" id="33"/>
+						</LabelField>
+						<LabelField name="Субконто3" id="34">
+							<DataPath>Список.Субконто3</DataPath>
+							<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+							<ContextMenu name="Субконто3КонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="Субконто3РасширеннаяПодсказка" id="36"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаСуммаВВалютеКурсПереоценки" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма в валюте и курс переоценки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСуммаВВалютеКурсПереоценкиРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<LabelField name="СуммаВВалюте" id="43">
+							<DataPath>Список.СуммаВВалюте</DataPath>
+							<ContextMenu name="СуммаВВалютеКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="СуммаВВалютеРасширеннаяПодсказка" id="45"/>
+						</LabelField>
+						<LabelField name="КурсПереоценки" id="46">
+							<DataPath>Список.КурсПереоценки</DataPath>
+							<ContextMenu name="КурсПереоценкиКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="КурсПереоценкиРасширеннаяПодсказка" id="48"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Сумма" id="37">
+					<DataPath>Список.Сумма</DataPath>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСуммаНУПРВР" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НУ, ПР иВР</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сумма НУПРВР</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСуммаНУПРВРРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<LabelField name="СуммаНУ" id="49">
+							<DataPath>Список.СуммаНУ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НУ</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаНУКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="СуммаНУРасширеннаяПодсказка" id="51"/>
+						</LabelField>
+						<LabelField name="СуммаПР" id="52">
+							<DataPath>Список.СуммаПР</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ПР</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаПРКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СуммаПРРасширеннаяПодсказка" id="54"/>
+						</LabelField>
+						<LabelField name="СуммаВР" id="55">
+							<DataPath>Список.СуммаВР</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВР</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаВРКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="СуммаВРРасширеннаяПодсказка" id="57"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="СуммаВТенге" id="40">
+					<DataPath>Список.СуммаВТенге</DataPath>
+					<ContextMenu name="СуммаВТенгеКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СуммаВТенгеРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСуммаВТенгеНУПРВР" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма в тенге НУ, ПР и ВР</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сумма в тенге НУПРВР</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСуммаВТенгеНУПРВРРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<LabelField name="СуммаВТенгеНУ" id="58">
+							<DataPath>Список.СуммаВТенгеНУ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НУ</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаВТенгеНУКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="СуммаВТенгеНУРасширеннаяПодсказка" id="60"/>
+						</LabelField>
+						<LabelField name="СуммаВТенгеПР" id="61">
+							<DataPath>Список.СуммаВТенгеПР</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ПР</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаВТенгеПРКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="СуммаВТенгеПРРасширеннаяПодсказка" id="63"/>
+						</LabelField>
+						<LabelField name="СуммаВТенгеВР" id="64">
+							<DataPath>Список.СуммаВТенгеВР</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВР</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаВТенгеВРКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="СуммаВТенгеВРРасширеннаяПодсказка" id="66"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.РасчетПереоценкиВалютныхСредств</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Enum uuid="b7b03ef0-5f5a-40fd-8a81-1913c866a1df">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.СтатусыДокументовИСМПТК" category="Ref">
+				<xr:TypeId>8656f0d8-5cc9-4518-9b7e-5b5268a893e0</xr:TypeId>
+				<xr:ValueId>a2838f37-efd1-448d-8954-d4f54874de5c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.СтатусыДокументовИСМПТК" category="Manager">
+				<xr:TypeId>a6da1dcb-d5ef-4c5f-a1ae-e05a881f6edb</xr:TypeId>
+				<xr:ValueId>064beabf-cdfc-4383-a2a5-542016e999f5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.СтатусыДокументовИСМПТК" category="List">
+				<xr:TypeId>3bff85d7-ea70-4df4-b389-cdbf9f6d88fe</xr:TypeId>
+				<xr:ValueId>3e418f71-c01d-49ea-86a9-98ef0fe6e874</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СтатусыДокументовИСМПТК</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы документов ИСМПТК</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Сервер)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Order">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="8cdf6929-26c4-4f64-b4cd-2ae9911cc7b3">
+				<Properties>
+					<Name>Черновик</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Черновик</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>0</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8c39c60d-ebff-418d-9029-fb137485c9ce">
+				<Properties>
+					<Name>Отправлен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>1</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c2112316-c43b-4fe4-81da-bd7ab2e0c612">
+				<Properties>
+					<Name>ОжидаетПриемку</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидает подтверждения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>3</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8e0a1ced-25da-483c-b388-4ff8c7452cc2">
+				<Properties>
+					<Name>ПринятПодтвержден</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтвержден</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>4</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d2625abc-4c4f-4155-ba8b-34a37304ba6f">
+				<Properties>
+					<Name>Отклонен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>5</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c6fed860-933a-45cc-bdd9-ca180962dced">
+				<Properties>
+					<Name>Отозван</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отозван</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>16</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0e700e4b-8c74-4317-ad6f-6ebd0680896b">
+				<Properties>
+					<Name>Аннулирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аннулирован</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>17</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1472b68e-381e-4bc2-b09e-aaf17ff946ba">
+				<Properties>
+					<Name>НаСогласовании</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На согласовании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>8</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c264fa4c-edce-4355-8ad1-bfb364416cd6">
+				<Properties>
+					<Name>Ошибка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>10</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="37d8124e-126a-44d4-99cb-d8bae8c5b3e2">
+				<Properties>
+					<Name>Проверяется</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверяется</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>IN_PROGRESS</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ef942870-914a-4f9f-9410-32d57fd65be2">
+				<Properties>
+					<Name>Оформлен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформлен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>CHECKED_OK</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6f676757-52ea-47df-98ac-0c5f117d8507">
+				<Properties>
+					<Name>ОшибкаПриПроверке</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка при проверке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>CHECKED_NOT_OK</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2bc61d03-89ae-433e-b963-d549d0230fc1">
+				<Properties>
+					<Name>ОшибкаПриОбработке</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка при обработке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>PROCESSING_ERROR</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1c85f6a7-c157-4bde-8c3c-e1dd3aad9dfe">
+				<Properties>
+					<Name>НеОпределен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Черновик</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>UNDEFINED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a513f65e-caa7-4ccc-83d8-356c4522c272">
+				<Properties>
+					<Name>Новое</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новое</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

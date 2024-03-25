@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Enum uuid="5953cc3c-f72d-41c3-97d7-7087a0ca696e">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ШаблоныКодовМаркировкиСУЗИСМПТК" category="Ref">
+				<xr:TypeId>13f0f96b-87a8-44cf-91ef-54c9198deda0</xr:TypeId>
+				<xr:ValueId>5d9dcd7f-15ec-4d84-a499-7132d54b7e42</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ШаблоныКодовМаркировкиСУЗИСМПТК" category="Manager">
+				<xr:TypeId>6a38ff51-28ea-4a88-a5e5-ff264d0597a2</xr:TypeId>
+				<xr:ValueId>793ae798-d3a2-450c-8c17-1e12d50a2f79</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ШаблоныКодовМаркировкиСУЗИСМПТК" category="List">
+				<xr:TypeId>7d23df9f-8dd0-46e3-aa88-4fc5dbe4282e</xr:TypeId>
+				<xr:ValueId>07a7986b-acae-4853-8ad5-8b3944a2f1c7</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ШаблоныКодовМаркировкиСУЗИСМПТК</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблоны кодов маркировки СУЗИСМПТК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Шаблоны кодов маркировки СУЗИСМПТК</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Order">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="d27e1271-5115-4480-99ca-96268e67faf8">
+				<Properties>
+					<Name>Обувь</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обувь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Обувь</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(1) в СУЗ: 01 + gtin + 21 + serial (13 chars) </Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8cd9aa9d-987d-46cb-8571-c2b35700e484">
+				<Properties>
+					<Name>БлокТабачныхПачек</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сигареты, блоки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Блок табачных пачек</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(3) в СУЗ: 01 + gtin + 21 + serial (7 chars)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c26edbb8-718b-411e-8684-c2ffc5e39c2e">
+				<Properties>
+					<Name>ТабачнаяПачка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сигареты, пачки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Табачная пачка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(4) в СУЗ: gtin + serial (7 chars)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e2df94d5-5fbb-44b1-85b2-33be09980f38">
+				<Properties>
+					<Name>МолочнаяПродукция</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Молочная продукция</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="43cd875c-42fd-4049-ad9b-3845c87233dc">
+				<Properties>
+					<Name>ЛегкаяПромышленность</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Легкая промышленность</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(10) в СУЗ: 01 + gtin + 21 + serial (13 chars)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="51c784d3-b459-4117-a6e0-21c0423d6d8f">
+				<Properties>
+					<Name>УпакованнаяВодаИНапитки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упакованная вода и напитки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(16) в СУЗ: 01 + gtin + 21 + serial (13 chars) </Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="21b21566-2a25-49d4-85a8-b579ac6fc9bf">
+				<Properties>
+					<Name>ЛекарственныеПрепараты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лекарственные препараты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(5) в СУЗ: 01 + gtin + 21 + serial (13 chars)</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

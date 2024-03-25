@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<ExchangePlan uuid="f4747d41-f0bb-4c06-8326-0795c99bab6e">
+		<InternalInfo>
+			<xr:ThisNode>ddbb735b-738e-4086-939a-65a04173aeb0</xr:ThisNode>
+			<xr:GeneratedType name="ExchangePlanObject.УдалитьОбменУправлениеТорговлейБухгалтерияФоновый" category="Object">
+				<xr:TypeId>0e66684c-a1b7-4ceb-96ac-f48b9b0ca755</xr:TypeId>
+				<xr:ValueId>ec02732c-76c5-42b7-8d4d-0cf5d1194323</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanRef.УдалитьОбменУправлениеТорговлейБухгалтерияФоновый" category="Ref">
+				<xr:TypeId>2e702c46-f7f3-401c-ae6b-9a0387c24ffe</xr:TypeId>
+				<xr:ValueId>dca68629-d102-409d-8d34-36a09b01a826</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanSelection.УдалитьОбменУправлениеТорговлейБухгалтерияФоновый" category="Selection">
+				<xr:TypeId>f67ac69b-22a3-44bb-998c-a92c05569c38</xr:TypeId>
+				<xr:ValueId>fde5d5a3-4cd7-4912-b515-7b9be72e8e54</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanList.УдалитьОбменУправлениеТорговлейБухгалтерияФоновый" category="List">
+				<xr:TypeId>0c20d51b-08f1-4b0a-a629-410b55c63cd9</xr:TypeId>
+				<xr:ValueId>090b91fb-8b3f-4b9b-bc85-5d51661d7a67</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanManager.УдалитьОбменУправлениеТорговлейБухгалтерияФоновый" category="Manager">
+				<xr:TypeId>231d2573-97b5-4889-a72b-60b9db3e9e08</xr:TypeId>
+				<xr:ValueId>a7862984-bb31-42bf-b002-9eb01f27505e</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>УдалитьОбменУправлениеТорговлейБухгалтерияФоновый</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(не используется) Обмен Управление торговлей и Бухгалтерия фоновый</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<CodeLength>3</CodeLength>
+			<CodeAllowedLength>Fixed</CodeAllowedLength>
+			<DescriptionLength>100</DescriptionLength>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<EditType>InDialog</EditType>
+			<QuickChoice>false</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<InputByString>
+				<xr:Field>ExchangePlan.УдалитьОбменУправлениеТорговлейБухгалтерияФоновый.StandardAttribute.Description</xr:Field>
+				<xr:Field>ExchangePlan.УдалитьОбменУправлениеТорговлейБухгалтерияФоновый.StandardAttribute.Code</xr:Field>
+			</InputByString>
+			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
+			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
+			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
+			<DefaultObjectForm/>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryObjectForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<Characteristics/>
+			<BasedOn/>
+			<DistributedInfoBase>false</DistributedInfoBase>
+			<IncludeConfigurationExtensions>false</IncludeConfigurationExtensions>
+			<CreateOnInput>DontUse</CreateOnInput>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<DataLockFields/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+			<FullTextSearch>Use</FullTextSearch>
+			<ObjectPresentation/>
+			<ExtendedObjectPresentation/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<DataHistory>DontUse</DataHistory>
+			<UpdateDataHistoryImmediatelyAfterWrite>false</UpdateDataHistoryImmediatelyAfterWrite>
+			<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
+		</Properties>
+		<ChildObjects/>
+	</ExchangePlan>
+</MetaDataObject>

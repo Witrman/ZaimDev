@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="Report.ВедомостьАмортизацииНМАБухгалтерскийУчет.Command.ВедомостьАмортизацииНМАБухгалтерскийУчет">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ВедомостьАмортизацииОСБухгалтерскийУчет.Command.ВедомостьАмортизацииОСБухгалтерскийУчет">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоДвижениюСтоимостиФАНУ.Command.ОтчетПоДвижениюСтоимостиФАНУ">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.СведенияОГруппахФиксированныхАктивов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="CommonCommand.ПанельОтчетовОсновныеСредстваИНМА">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыОсновныеСредстваИНМА">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ВедомостьАмортизацииОСБухгалтерскийУчет.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ВедомостьАмортизацииНМАБухгалтерскийУчет.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоДвижениюСтоимостиФАНУ.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.ОсновныеСредстваИНМА.Subsystem.ЖурналыДокументовПоВА</Subsystem>
+		<Subsystem>Subsystem.ОсновныеСредстваИНМА.Subsystem.ОсновныеСредства</Subsystem>
+		<Subsystem>Subsystem.ОсновныеСредстваИНМА.Subsystem.УчетОсновныхСредств</Subsystem>
+		<Subsystem>Subsystem.ОсновныеСредстваИНМА.Subsystem.АмортизацияОС</Subsystem>
+		<Subsystem>Subsystem.ОсновныеСредстваИНМА.Subsystem.НематериальныеАктивы</Subsystem>
+		<Subsystem>Subsystem.ОсновныеСредстваИНМА.Subsystem.АмортизацияНМА</Subsystem>
+		<Subsystem>Subsystem.ОсновныеСредстваИНМА.Subsystem.СправочникиИНастройки</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>ActionsPanelReports</Group>
+	</GroupsOrder>
+</CommandInterface>

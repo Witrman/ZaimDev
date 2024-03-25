@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="aa2facef-02d3-4ad0-90a0-abaff9bd22c7">
+		<Properties>
+			<Name>ЭлектронныеАВР</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные АВР</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронныйАктВыполненныхРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АВРКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АВРВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АВРКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АВРКлиентСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АВРСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АВРСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АВРКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбработкаЗаписиОснованийЭАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЭлектронныеАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЭлектронныеАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЭлектронныхАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЭлектронныхАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ЭАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.УслугаАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПервичныеДокументыАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТребуетсяОформлениеЭАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПервичныеДокументыАВРОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеНастроекЭлектронныхАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеНастроекЭлектронныхАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыРегистрацииНПАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыЭАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыАВР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АктуальныеЭАВР</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

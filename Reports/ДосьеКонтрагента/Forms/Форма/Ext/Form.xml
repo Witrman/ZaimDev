@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Досье контрагента</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
+		<ExcludedCommand>ChangeVariant</ExcludedCommand>
+		<ExcludedCommand>Generate</ExcludedCommand>
+		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
+		<ExcludedCommand>LoadVariant</ExcludedCommand>
+		<ExcludedCommand>Print</ExcludedCommand>
+		<ExcludedCommand>ReportSettings</ExcludedCommand>
+		<ExcludedCommand>Save</ExcludedCommand>
+		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
+		<ExcludedCommand>SaveVariant</ExcludedCommand>
+		<ExcludedCommand>StandardSettings</ExcludedCommand>
+	</CommandSet>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСтрокаКоманднойПанели" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка командной панели</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтрокаКоманднойПанелиРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="119">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="137">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="138"/>
+							<ChildItems>
+								<RadioButtonField name="ТипДанных" id="116">
+									<DataPath>ТипДанных</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ItemHeight>1</ItemHeight>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>БИН / ИИН</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">БИН</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Наименование</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Наименование</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТипДанныхКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ТипДанныхРасширеннаяПодсказка" id="118"/>
+									<Events>
+										<Event name="OnChange">ТипДанныхПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="132">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="133"/>
+							<ChildItems>
+								<InputField name="СтрокаПоиска" id="6">
+									<DataPath>СтрокаПоиска</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БИН / ИИН контрагента,
+по которому нужно сформировать досье</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>30</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БИН / ИИН контрагента</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="8"/>
+									<Events>
+										<Event name="AutoComplete">СтрокаПоискаАвтоПодбор</Event>
+										<Event name="TextEditEnd">СтрокаПоискаОкончаниеВводаТекста</Event>
+									</Events>
+								</InputField>
+								<CommandBar name="ГруппаКнопкиКоманднойПанели" id="15">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопки командной панели</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаКнопкиКоманднойПанелиРасширеннаяПодсказка" id="16"/>
+									<ChildItems>
+										<ButtonGroup name="ГруппаКнопкиФормы" id="22">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кнопки формы</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSource>Form</CommandSource>
+											<ExtendedTooltip name="ГруппаКнопкиФормыРасширеннаяПодсказка" id="23"/>
+										</ButtonGroup>
+										<Button name="КнопкаСформироватьОтчет" id="9">
+											<Type>CommandBarButton</Type>
+											<Representation>Text</Representation>
+											<DefaultButton>true</DefaultButton>
+											<CommandName>Form.Command.СформироватьОтчет</CommandName>
+											<ExtendedTooltip name="КнопкаСформироватьОтчетРасширеннаяПодсказка" id="10"/>
+										</Button>
+										<Button name="СохранитьОтчет" id="112">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<Enabled>false</Enabled>
+											<CommandName>Form.Command.СохранитьОтчет</CommandName>
+											<ExtendedTooltip name="СохранитьОтчетРасширеннаяПодсказка" id="113"/>
+										</Button>
+										<Button name="ДобавитьВСправочник" id="114">
+											<Type>CommandBarButton</Type>
+											<Enabled>false</Enabled>
+											<CommandName>Form.Command.ДобавитьВСправочник</CommandName>
+											<ExtendedTooltip name="ДобавитьВСправочникРасширеннаяПодсказка" id="115"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРазделыДосье" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделы досье</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРазделыДосьеРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОбщиеДанные" id="100">
+					<TextColor>web:Red</TextColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие данные</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияОбщиеДанныеКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ДекорацияОбщиеДанныеРасширеннаяПодсказка" id="102"/>
+					<Events>
+						<Event name="Click">ДекорацияОбщиеДанныеНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияБлагонадежность" id="103">
+					<TextColor>style:FormTextColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Благонадежность</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияБлагонадежностьКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ДекорацияБлагонадежностьРасширеннаяПодсказка" id="105"/>
+					<Events>
+						<Event name="Click">ДекорацияБлагонадежностьНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияНалоговыеОтчисления" id="106">
+					<TextColor>style:FormTextColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоговые отчисления</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияНалоговыеОтчисленияКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ДекорацияНалоговыеОтчисленияРасширеннаяПодсказка" id="108"/>
+					<Events>
+						<Event name="Click">ДекорацияНалоговыеОтчисленияНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияДополнительнаяИнформация" id="109">
+					<TextColor>style:FormTextColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияДополнительнаяИнформацияКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ДекорацияДополнительнаяИнформацияРасширеннаяПодсказка" id="111"/>
+					<Events>
+						<Event name="Click">ДекорацияДополнительнаяИнформацияНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<SpreadSheetDocumentField name="РезультатОбщиеДанные" id="64">
+			<DataPath>РезультатОбщиеДанные</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<CommandSet>
+				<ExcludedCommand>AlignCenter</ExcludedCommand>
+				<ExcludedCommand>AlignDrawingBottom</ExcludedCommand>
+				<ExcludedCommand>AlignDrawingCenter</ExcludedCommand>
+				<ExcludedCommand>AlignDrawingLeft</ExcludedCommand>
+				<ExcludedCommand>AlignDrawingMiddle</ExcludedCommand>
+				<ExcludedCommand>AlignDrawingRight</ExcludedCommand>
+				<ExcludedCommand>AlignDrawingTop</ExcludedCommand>
+				<ExcludedCommand>AlignJustify</ExcludedCommand>
+				<ExcludedCommand>AlignLeft</ExcludedCommand>
+				<ExcludedCommand>AlignRight</ExcludedCommand>
+				<ExcludedCommand>BackColor</ExcludedCommand>
+				<ExcludedCommand>BlackAndWhiteView</ExcludedCommand>
+				<ExcludedCommand>Bold</ExcludedCommand>
+				<ExcludedCommand>BorderAll</ExcludedCommand>
+				<ExcludedCommand>BorderBottom</ExcludedCommand>
+				<ExcludedCommand>BorderColor</ExcludedCommand>
+				<ExcludedCommand>BorderInside</ExcludedCommand>
+				<ExcludedCommand>BorderLeft</ExcludedCommand>
+				<ExcludedCommand>BorderNone</ExcludedCommand>
+				<ExcludedCommand>BorderOutline</ExcludedCommand>
+				<ExcludedCommand>BorderRight</ExcludedCommand>
+				<ExcludedCommand>BorderTop</ExcludedCommand>
+				<ExcludedCommand>BringDrawingForward</ExcludedCommand>
+				<ExcludedCommand>BringDrawingToFront</ExcludedCommand>
+				<ExcludedCommand>ClearAll</ExcludedCommand>
+				<ExcludedCommand>ClearContent</ExcludedCommand>
+				<ExcludedCommand>CollapseAllGroups</ExcludedCommand>
+				<ExcludedCommand>ColumnWidth</ExcludedCommand>
+				<ExcludedCommand>CombineToGroup</ExcludedCommand>
+				<ExcludedCommand>DeleteColumns</ExcludedCommand>
+				<ExcludedCommand>DeleteComment</ExcludedCommand>
+				<ExcludedCommand>DeleteRows</ExcludedCommand>
+				<ExcludedCommand>DistributeDrawingsHorizontally</ExcludedCommand>
+				<ExcludedCommand>DistributeDrawingsVertically</ExcludedCommand>
+				<ExcludedCommand>Edit</ExcludedCommand>
+				<ExcludedCommand>Ellipse</ExcludedCommand>
+				<ExcludedCommand>EqualDrawingHeight</ExcludedCommand>
+				<ExcludedCommand>EqualDrawingSize</ExcludedCommand>
+				<ExcludedCommand>EqualDrawingWidth</ExcludedCommand>
+				<ExcludedCommand>ExpandAllGroups</ExcludedCommand>
+				<ExcludedCommand>Font</ExcludedCommand>
+				<ExcludedCommand>GoToCell</ExcludedCommand>
+				<ExcludedCommand>Group</ExcludedCommand>
+				<ExcludedCommand>HeaderFooter</ExcludedCommand>
+				<ExcludedCommand>Hide</ExcludedCommand>
+				<ExcludedCommand>InsertColumnsLeft</ExcludedCommand>
+				<ExcludedCommand>InsertColumnsRight</ExcludedCommand>
+				<ExcludedCommand>InsertComment</ExcludedCommand>
+				<ExcludedCommand>InsertPageBreak</ExcludedCommand>
+				<ExcludedCommand>InsertRows</ExcludedCommand>
+				<ExcludedCommand>InsertRowsBottom</ExcludedCommand>
+				<ExcludedCommand>InsertRowsTop</ExcludedCommand>
+				<ExcludedCommand>Italic</ExcludedCommand>
+				<ExcludedCommand>Line</ExcludedCommand>
+				<ExcludedCommand>Merge</ExcludedCommand>
+				<ExcludedCommand>Names</ExcludedCommand>
+				<ExcludedCommand>NextComment</ExcludedCommand>
+				<ExcludedCommand>PageViewMode</ExcludedCommand>
+				<ExcludedCommand>Picture</ExcludedCommand>
+				<ExcludedCommand>PreviousComment</ExcludedCommand>
+				<ExcludedCommand>Properties</ExcludedCommand>
+				<ExcludedCommand>Rectangle</ExcludedCommand>
+				<ExcludedCommand>Redo</ExcludedCommand>
+				<ExcludedCommand>RemoveFromGroup</ExcludedCommand>
+				<ExcludedCommand>RemoveName</ExcludedCommand>
+				<ExcludedCommand>RemovePageBreak</ExcludedCommand>
+				<ExcludedCommand>RemovePrintArea</ExcludedCommand>
+				<ExcludedCommand>RemoveRepeatOnEachPage</ExcludedCommand>
+				<ExcludedCommand>RepeatOnEachPage</ExcludedCommand>
+				<ExcludedCommand>RowHeight</ExcludedCommand>
+				<ExcludedCommand>SendDrawingBackward</ExcludedCommand>
+				<ExcludedCommand>SendDrawingToBack</ExcludedCommand>
+				<ExcludedCommand>SetName</ExcludedCommand>
+				<ExcludedCommand>SetPrintArea</ExcludedCommand>
+				<ExcludedCommand>Show</ExcludedCommand>
+				<ExcludedCommand>ShowCellNames</ExcludedCommand>
+				<ExcludedCommand>ShowComments</ExcludedCommand>
+				<ExcludedCommand>ShowGrid</ExcludedCommand>
+				<ExcludedCommand>ShowGroups</ExcludedCommand>
+				<ExcludedCommand>ShowHeaders</ExcludedCommand>
+				<ExcludedCommand>ShowRowAndColumnNames</ExcludedCommand>
+				<ExcludedCommand>SplitCell</ExcludedCommand>
+				<ExcludedCommand>Text</ExcludedCommand>
+				<ExcludedCommand>TextColor</ExcludedCommand>
+				<ExcludedCommand>ThickBorderBottom</ExcludedCommand>
+				<ExcludedCommand>ThickBorderOutline</ExcludedCommand>
+				<ExcludedCommand>ThickBorderTop</ExcludedCommand>
+				<ExcludedCommand>Underline</ExcludedCommand>
+				<ExcludedCommand>Undo</ExcludedCommand>
+				<ExcludedCommand>Ungroup</ExcludedCommand>
+			</CommandSet>
+			<VerticalScrollBar>true</VerticalScrollBar>
+			<HorizontalScrollBar>false</HorizontalScrollBar>
+			<ViewScalingMode>Normal</ViewScalingMode>
+			<ContextMenu name="РезультатОбщиеДанныеКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="РезультатОбщиеДанныеРасширеннаяПодсказка" id="66"/>
+			<Events>
+				<Event name="Selection">РезультатОбщиеДанныеВыбор</Event>
+			</Events>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.ДосьеКонтрагента</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РезультатОбщиеДанные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат - Общие данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаПоиска" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН или наименование контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="НайденныйИНН" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденный ИНН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БИНПоиска" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>БИН поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеКонтрагента" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипДанных" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>25</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеЗапросаПоНаименованию" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные запроса по наименованию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="БИН" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БИН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Версия" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентБИН" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент БИН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьОтчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьОтчет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьОтчет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить отчет в PDF</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить отчет в PDF</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматPDF</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьОтчет</Action>
+		</Command>
+		<Command name="ДобавитьВСправочник" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в справочник</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в справочник</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВСправочник</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Контрагент">
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+		<Parameter name="БИН">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

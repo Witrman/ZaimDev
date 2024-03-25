@@ -1,0 +1,3165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Работники</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияРаботники</dataPath>
+			<field>Организация</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизации</dataPath>
+			<field>ПодразделениеОрганизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ. лицо</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ФизическиеЛица</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник.Размер</dataPath>
+			<field>Размер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник.Оклад (тариф)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>ОбособленноеПодразделение</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник.Должность</dataPath>
+			<field>Должность</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РаботникиОрганизации.Сотрудник.Физлицо КАК ФизЛицо,
+	РаботникиОрганизации.Организация КАК Организация,
+	РаботникиОрганизации.ОбособленноеПодразделение,
+	МАКСИМУМ(ВЫБОР
+			КОГДА РаботникиОрганизации.ПричинаИзмененияСостояния = ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение)
+				ТОГДА ДОБАВИТЬКДАТЕ(РаботникиОрганизации.Период, ДЕНЬ, -1)
+			ИНАЧЕ РаботникиОрганизации.Период
+		КОНЕЦ) КАК Период,
+	МАКСИМУМ(ПлановыеНачисления.Период) КАК ПериодНачисления
+ПОМЕСТИТЬ ВТ_ДатыПоследнегоНазначения
+ИЗ
+	РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизации
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПлановыеНачисленияРаботниковОрганизаций КАК ПлановыеНачисления
+		ПО (ПлановыеНачисления.Активность)
+			И РаботникиОрганизации.Сотрудник = ПлановыеНачисления.Сотрудник
+			И РаботникиОрганизации.Организация = ПлановыеНачисления.Организация
+			И (ПлановыеНачисления.ВидРасчетаИзмерение.Код ЕСТЬ NULL )
+			И (ПлановыеНачисления.Период &lt;= РаботникиОрганизации.Период)
+			И (ПлановыеНачисления.Размер &lt;&gt; 0)
+			И РаботникиОрганизации.ОбособленноеПодразделение = ПлановыеНачисления.ОбособленноеПодразделение
+ГДЕ
+	РаботникиОрганизации.Активность
+	И РаботникиОрганизации.Период &lt;= &amp;КонецПериода
+	И РаботникиОрганизации.Сотрудник.ВидЗанятости &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ВнутреннееСовместительство)
+
+СГРУППИРОВАТЬ ПО
+	РаботникиОрганизации.Сотрудник.Физлицо,
+	РаботникиОрганизации.Организация,
+	РаботникиОрганизации.ОбособленноеПодразделение
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизЛицо,
+	Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДатыПоследнегоНазначения.Организация КАК Организация,
+	РаботникиОрганизацийСрезПоследних.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	ДатыПоследнегоНазначения.ОбособленноеПодразделение КАК ОбособленноеПодразделение,
+	ДатыПоследнегоНазначения.ФизЛицо КАК ФизЛицо,
+	РаботникиОрганизацийСрезПоследних.Сотрудник КАК Сотрудник,
+	РаботникиОрганизацийСрезПоследних.Должность КАК Должность,
+	ПлановыеНачисления.Размер
+ИЗ
+	ВТ_ДатыПоследнегоНазначения КАК ДатыПоследнегоНазначения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизацийСрезПоследних
+		ПО (РаботникиОрганизацийСрезПоследних.Активность)
+			И ДатыПоследнегоНазначения.ФизЛицо = РаботникиОрганизацийСрезПоследних.Сотрудник.Физлицо
+			И ДатыПоследнегоНазначения.Организация = РаботникиОрганизацийСрезПоследних.Организация
+			И (ДатыПоследнегоНазначения.Период = ВЫБОР
+				КОГДА РаботникиОрганизацийСрезПоследних.ПричинаИзмененияСостояния = ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение)
+					ТОГДА ДОБАВИТЬКДАТЕ(РаботникиОрганизацийСрезПоследних.Период, ДЕНЬ, -1)
+				ИНАЧЕ РаботникиОрганизацийСрезПоследних.Период
+			КОНЕЦ)
+			И РаботникиОрганизацийСрезПоследних.Период &lt;= &amp;КонецПериода
+			И (РаботникиОрганизацийСрезПоследних.Сотрудник.ВидЗанятости &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ВнутреннееСовместительство))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПлановыеНачисленияРаботниковОрганизаций КАК ПлановыеНачисления
+		ПО (ПлановыеНачисления.Активность)
+			И (РаботникиОрганизацийСрезПоследних.Сотрудник = ПлановыеНачисления.Сотрудник)
+			И (РаботникиОрганизацийСрезПоследних.Организация = ПлановыеНачисления.Организация)
+			И ДатыПоследнегоНазначения.ПериодНачисления = ПлановыеНачисления.Период
+			И (ПлановыеНачисления.ВидРасчетаИзмерение.Код ЕСТЬ NULL )
+{ГДЕ
+	ДатыПоследнегоНазначения.Организация.*,
+	РаботникиОрганизацийСрезПоследних.ПодразделениеОрганизации.*,
+	ДатыПоследнегоНазначения.ФизЛицо.*,
+	РаботникиОрганизацийСрезПоследних.Сотрудник.*}
+
+УПОРЯДОЧИТЬ ПО
+	ФизЛицо,
+	ОбособленноеПодразделение</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetUnion">
+		<name>Данные</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Группа</dataPath>
+			<field>Группа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа расчетов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяВысота</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяВидаРасчета</dataPath>
+			<field>ИмяВидаРасчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид расчета</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяВысота</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяВидаРасчета.ПриоритетВидаРасчета</dataPath>
+			<field>ПриоритетВидаРасчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Группа.ПриоритетГруппы</dataPath>
+			<field>ПриоритетГруппы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Результат</dataPath>
+			<field>Результат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ. лицо</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ФизическиеЛица</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ-регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ОтработаноДней</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОсновныеНачисленияРаботниковОрганизации.Ссылка.Организация КАК Организация,
+	ОсновныеНачисленияРаботниковОрганизации.Физлицо КАК ФизЛицо,
+	"Отработано дней" КАК ИмяВидаРасчета,
+	"А" КАК ПриоритетВидаРасчета,
+	"_Удалить_2_Время" КАК Группа,
+	&amp;парамПриоритетГруппыОтработаноДней КАК ПриоритетГруппы,
+	ОсновныеНачисленияРаботниковОрганизации.ОтработаноДней КАК Результат,
+	ОсновныеНачисленияРаботниковОрганизации.Ссылка КАК Регистратор
+ИЗ
+	Документ.НачислениеЗарплатыРаботникамОрганизаций.Начисления КАК ОсновныеНачисленияРаботниковОрганизации
+ГДЕ
+	&amp;парамИспользоватьОтработаноДней
+	И ОсновныеНачисленияРаботниковОрганизации.Ссылка.Проведен
+	И ОсновныеНачисленияРаботниковОрганизации.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ОсновныеНачисленияРаботниковОрганизации.ОтработаноДней &lt;&gt; 0
+	И ОсновныеНачисленияРаботниковОрганизации.ВидРасчета.ЗачетОтработанногоВремени</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ОтработаноЧасов</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОсновныеНачисленияРаботниковОрганизации.Ссылка.Организация КАК Организация,
+	ОсновныеНачисленияРаботниковОрганизации.Физлицо КАК ФизЛицо,
+	"Отработано часов" КАК ИмяВидаРасчета,
+	"Б" КАК ПриоритетВидаРасчета,
+	"_Удалить_2_Время" КАК Группа,
+	&amp;парамПриоритетГруппыОтработаноЧасов КАК ПриоритетГруппы,
+	ОсновныеНачисленияРаботниковОрганизации.ОтработаноЧасов КАК Результат,
+	ОсновныеНачисленияРаботниковОрганизации.Ссылка КАК Регистратор
+ИЗ
+	Документ.НачислениеЗарплатыРаботникамОрганизаций.Начисления КАК ОсновныеНачисленияРаботниковОрганизации
+ГДЕ
+	&amp;парамИспользоватьОтработаноЧасов
+	И ОсновныеНачисленияРаботниковОрганизации.Ссылка.Проведен
+	И ОсновныеНачисленияРаботниковОрганизации.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ОсновныеНачисленияРаботниковОрганизации.ОтработаноЧасов &lt;&gt; 0
+	И ОсновныеНачисленияРаботниковОрганизации.ВидРасчета.ЗачетОтработанногоВремени</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>Начисления</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОсновныеНачисленияРаботниковОрганизации.Ссылка.Организация КАК Организация,
+	ОсновныеНачисленияРаботниковОрганизации.Физлицо КАК ФизЛицо,
+	ОсновныеНачисленияРаботниковОрганизации.ВидРасчета.Наименование КАК ИмяВидаРасчета,
+	ОсновныеНачисленияРаботниковОрганизации.ВидРасчета.Наименование КАК ПриоритетВидаРасчета,
+	"Всего начислено" КАК Группа,
+	&amp;парамПриоритетГруппыНачислено КАК ПриоритетГруппы,
+	ОсновныеНачисленияРаботниковОрганизации.Результат КАК Результат,
+	ОсновныеНачисленияРаботниковОрганизации.Ссылка КАК Регистратор
+ИЗ
+	Документ.НачислениеЗарплатыРаботникамОрганизаций.Начисления КАК ОсновныеНачисленияРаботниковОрганизации
+ГДЕ
+	&amp;парамИспользоватьНачислено
+	И ОсновныеНачисленияРаботниковОрганизации.Ссылка.Проведен
+	И ОсновныеНачисленияРаботниковОрганизации.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ОсновныеНачисленияРаботниковОрганизации.Результат &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>Удержания</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УдержанияРаботниковОрганизации.Ссылка.Организация КАК Организация,
+	УдержанияРаботниковОрганизации.ФизЛицо КАК ФизЛицо,
+	УдержанияРаботниковОрганизации.ВидРасчета.Наименование КАК ИмяВидаРасчета,
+	УдержанияРаботниковОрганизации.ВидРасчета.Наименование КАК ПриоритетВидаРасчета,
+	"Всего удержано" КАК Группа,
+	&amp;парамПриоритетГруппыУдержано КАК ПриоритетГруппы,
+	УдержанияРаботниковОрганизации.Результат КАК Результат,
+	УдержанияРаботниковОрганизации.Ссылка КАК Регистратор
+ИЗ
+	Документ.РасчетУдержанийРаботниковОрганизаций.Удержания КАК УдержанияРаботниковОрганизации
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И УдержанияРаботниковОрганизации.Ссылка.Проведен
+	И УдержанияРаботниковОрганизации.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И УдержанияРаботниковОрганизации.Результат &lt;&gt; 0
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УдержанияРаботниковОрганизации.Ссылка.Организация,
+	УдержанияРаботниковОрганизации.Физлицо,
+	УдержанияРаботниковОрганизации.ВидРасчета.Наименование,
+	УдержанияРаботниковОрганизации.ВидРасчета.Наименование,
+	"Всего удержано",
+	&amp;парамПриоритетГруппыУдержано,
+	УдержанияРаботниковОрганизации.Результат,
+	УдержанияРаботниковОрганизации.Ссылка
+ИЗ
+	Документ.РегистрацияРазовыхУдержанийРаботниковОрганизаций.Удержания КАК УдержанияРаботниковОрганизации
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И УдержанияРаботниковОрганизации.Ссылка.Проведен
+	И УдержанияРаботниковОрганизации.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И УдержанияРаботниковОрганизации.Результат &lt;&gt; 0
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УдержанияРаботниковОрганизации.Ссылка.Организация,
+	УдержанияРаботниковОрганизации.ФизЛицо,
+	УдержанияРаботниковОрганизации.ВидРасчета.Наименование,
+	УдержанияРаботниковОрганизации.ВидРасчета.Наименование,
+	"Всего удержано",
+	&amp;парамПриоритетГруппыУдержано,
+	УдержанияРаботниковОрганизации.Результат,
+	УдержанияРаботниковОрганизации.Ссылка
+ИЗ
+	Документ.РасчетЕдиногоПлатежа.Удержания КАК УдержанияРаботниковОрганизации
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И УдержанияРаботниковОрганизации.Ссылка.Проведен
+	И УдержанияРаботниковОрганизации.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И УдержанияРаботниковОрганизации.Результат &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ИПН</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИПНРасчетыСБюджетом.Организация,
+	ИПНРасчетыСБюджетом.ФизЛицо,
+	"ИПН" КАК ИмяВидаРасчета,
+	"ИПН" КАК ПриоритетВидаРасчета,
+	"Всего удержано" КАК Группа,
+	&amp;парамПриоритетГруппыУдержано КАК ПриоритетГруппы,
+	ИПНРасчетыСБюджетом.Налог КАК Результат,
+	ИПНРасчетыСБюджетом.Регистратор
+ИЗ
+	РегистрНакопления.ИПНРасчетыСБюджетом КАК ИПНРасчетыСБюджетом
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И ИПНРасчетыСБюджетом.Активность
+	И ИПНРасчетыСБюджетом.ФизЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И ИПНРасчетыСБюджетом.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ИПНРасчетыСБюджетом.ВидДвижения = &amp;Приход
+	И ИПНРасчетыСБюджетом.ВидСтроки = &amp;ВидСтроки
+	И ИПНРасчетыСБюджетом.НеОтражатьВРеглУчете = ЛОЖЬ
+	И ИПНРасчетыСБюджетом.Налог &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ОПВ</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОПВРасчетыСФондами.Организация,
+	ОПВРасчетыСФондами.ФизЛицо,
+	"ОПВ" КАК ИмяВидаРасчета,
+	"ОПВ" КАК ПриоритетВидаРасчета,
+	"Всего удержано" КАК Группа,
+	&amp;парамПриоритетГруппыУдержано КАК ПриоритетГруппы,
+	ОПВРасчетыСФондами.Взнос КАК Результат,
+	ОПВРасчетыСФондами.Регистратор
+ИЗ
+	РегистрНакопления.ОПВРасчетыСФондами КАК ОПВРасчетыСФондами
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И ОПВРасчетыСФондами.Активность
+	И ОПВРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ОПВРасчетыСФондами.ВидДвижения = &amp;Приход
+	И ОПВРасчетыСФондами.ВидПлатежа = &amp;Налог
+	И ОПВРасчетыСФондами.ВидСтроки = &amp;ВидСтроки
+	И ОПВРасчетыСФондами.Взнос &lt;&gt; 0
+	И ОПВРасчетыСФондами.ФизЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И ОПВРасчетыСФондами.НеОтражатьВРеглУчете = ЛОЖЬ
+
+</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>Взаиморасчеты</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Взаиморасчеты.Организация,
+	Взаиморасчеты.Физлицо КАК ФизЛицо,
+	ВЫБОР
+		КОГДА Взаиморасчеты.СпособВыплаты = &amp;ЧерезКассу
+			ТОГДА ВЫБОР
+					КОГДА Взаиморасчеты.ВидСтроки = &amp;Возврат
+						ТОГДА "Возвращено в кассу"
+					ИНАЧЕ "Выплачено из кассы"
+				КОНЕЦ
+		КОГДА Взаиморасчеты.СпособВыплаты = &amp;ЧерезБанк
+			ТОГДА ВЫБОР
+					КОГДА Взаиморасчеты.ВидСтроки = &amp;Возврат
+						ТОГДА "Возвращено из банка"
+					ИНАЧЕ "Перечислено в банк"
+				КОНЕЦ
+		ИНАЧЕ "Способ выплаты не указан "
+	КОНЕЦ КАК ИмяВидаРасчета,
+	"" КАК ПриоритетВидаРасчета,
+	"Всего выплачено" КАК Группа,
+	&amp;парамПриоритетГруппыВыплачено КАК ПриоритетГруппы,
+	Взаиморасчеты.СуммаВзаиморасчетов КАК Результат,
+	Взаиморасчеты.Регистратор
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСРаботникамиОрганизаций КАК Взаиморасчеты
+ГДЕ
+	&amp;парамИспользоватьВыплачено
+	И Взаиморасчеты.Активность
+	И Взаиморасчеты.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И Взаиморасчеты.ВидДвижения = &amp;Расход
+	И Взаиморасчеты.СуммаВзаиморасчетов &lt;&gt; 0
+	И НЕ Взаиморасчеты.Регистратор ССЫЛКА Документ.ДепонированиеЗаработнойПлаты
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Взаиморасчеты.Организация,
+	Взаиморасчеты.Физлицо,
+	ВЫБОР
+		КОГДА Взаиморасчеты.СпособВыплаты = &amp;ЧерезКассу
+			ТОГДА ВЫБОР
+					КОГДА Взаиморасчеты.ВидСтроки = &amp;Возврат
+						ТОГДА "Возвращено в кассу"
+					ИНАЧЕ "Выплачено из кассы"
+				КОНЕЦ
+		КОГДА Взаиморасчеты.СпособВыплаты = &amp;ЧерезБанк
+			ТОГДА ВЫБОР
+					КОГДА Взаиморасчеты.ВидСтроки = &amp;Возврат
+						ТОГДА "Возвращено из банка"
+					ИНАЧЕ "Перечислено в банк"
+				КОНЕЦ
+		ИНАЧЕ "Способ выплаты не указан "
+	КОНЕЦ,
+	"",
+	"Всего выплачено",
+	&amp;парамПриоритетГруппыВыплачено,
+	Взаиморасчеты.СуммаВзаиморасчетов,
+	Взаиморасчеты.Регистратор
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСДепонентамиОрганизаций КАК Взаиморасчеты
+ГДЕ
+	&amp;парамИспользоватьВыплачено
+	И Взаиморасчеты.Активность
+	И Взаиморасчеты.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И Взаиморасчеты.ВидДвижения = &amp;Расход
+	И Взаиморасчеты.СуммаВзаиморасчетов &lt;&gt; 0
+	И НЕ Взаиморасчеты.Регистратор ССЫЛКА Документ.ДепонированиеЗаработнойПлаты</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>НачальныйОстаток</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СальдоНачальное.Организация КАК Организация,
+	СальдоНачальное.Физлицо КАК ФизЛицо,
+	"Начальное сальдо" КАК ИмяВидаРасчета,
+	NULL КАК ПриоритетВидаРасчета,
+	"_Удалить_1_НачальноеСальдо" КАК Группа,
+	&amp;парамПриоритетГруппыНачальноеСальдо КАК ПриоритетГруппы,
+	СальдоНачальное.СуммаВзаиморасчетовОстаток КАК Результат,
+	NULL КАК Регистратор
+{ВЫБРАТЬ
+	Организация.*,
+	ФизЛицо.*,
+	ИмяВидаРасчета,
+	ПриоритетВидаРасчета,
+	Группа,
+	ПриоритетГруппы,
+	Результат,
+	Регистратор}
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСРаботникамиОрганизаций.Остатки(&amp;НачалоПериода, &amp;парамИспользоватьНачальноеСальдо) КАК СальдоНачальное
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СальдоНачальное.Организация,
+	СальдоНачальное.Физлицо,
+	"Начальное сальдо",
+	NULL,
+	"_Удалить_1_НачальноеСальдо",
+	&amp;парамПриоритетГруппыНачальноеСальдо,
+	СальдоНачальное.СуммаВзаиморасчетовОстаток,
+	NULL
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСДепонентамиОрганизаций.Остатки(&amp;НачалоПериода, &amp;парамИспользоватьНачальноеСальдо) КАК СальдоНачальное</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>КонечныйОстаток</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СальдоКонечное.Организация КАК Организация,
+	СальдоКонечное.Физлицо КАК ФизЛицо,
+	"Конечное сальдо" КАК ИмяВидаРасчета,
+	NULL КАК ПриоритетВидаРасчета,
+	"_Удалить_1_КонечноеСальдо" КАК Группа,
+	&amp;парамПриоритетГруппыКонечноеСальдо КАК ПриоритетГруппы,
+	СальдоКонечное.СуммаВзаиморасчетовОстаток КАК Результат,
+	NULL КАК Регистратор
+{ВЫБРАТЬ
+	Организация.*,
+	ФизЛицо.*,
+	ИмяВидаРасчета,
+	ПриоритетВидаРасчета,
+	Группа,
+	ПриоритетГруппы,
+	Результат,
+	Регистратор}
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСРаботникамиОрганизаций.Остатки(&amp;СледующийПериод, &amp;парамИспользоватьКонечноеСальдо) КАК СальдоКонечное
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СальдоКонечное.Организация,
+	СальдоКонечное.Физлицо,
+	"Конечное сальдо",
+	NULL,
+	"_Удалить_1_КонечноеСальдо",
+	&amp;парамПриоритетГруппыКонечноеСальдо,
+	СальдоКонечное.СуммаВзаиморасчетовОстаток,
+	NULL
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСДепонентамиОрганизаций.Остатки(&amp;СледующийПериод, &amp;парамИспользоватьКонечноеСальдо) КАК СальдоКонечное</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>СН</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СНИсчисленный.Организация,
+	СНИсчисленный.ФизЛицо,
+	"Социальный налог" КАК ИмяВидаРасчета,
+	"А" КАК ПриоритетВидаРасчета,
+	"Всего отчислений" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	СНИсчисленный.Налог КАК Результат,
+	СНИсчисленный.Регистратор
+ИЗ
+	РегистрНакопления.СНИсчисленный КАК СНИсчисленный
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И СНИсчисленный.Активность
+	И СНИсчисленный.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И СНИсчисленный.Налог &lt;&gt; 0
+	И СНИсчисленный.НеОтражатьВРеглУчете = ЛОЖЬ</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>СО</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СОРасчетыСФондами.Организация,
+	СОРасчетыСФондами.ФизЛицо,
+	"Социальные отчисления" КАК ИмяВидаРасчета,
+	"Б" КАК ПриоритетВидаРасчета,
+	"Всего отчислений" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	СОРасчетыСФондами.Отчисление КАК Результат,
+	СОРасчетыСФондами.Регистратор
+ИЗ
+	РегистрНакопления.СОРасчетыСФондами КАК СОРасчетыСФондами
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И СОРасчетыСФондами.Активность
+	И СОРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И СОРасчетыСФондами.ВидДвижения = &amp;Приход
+	И СОРасчетыСФондами.ВидПлатежа = &amp;Налог
+	И СОРасчетыСФондами.ВидСтроки = &amp;ВидСтроки
+	И СОРасчетыСФондами.Отчисление &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ОППВ</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОППВРасчетыСФондами.Организация,
+	ОППВРасчетыСФондами.ФизЛицо,
+	"ОППВ" КАК ИмяВидаРасчета,
+	"ОППВ" КАК ПриоритетВидаРасчета,
+	"Всего отчислений" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	ОППВРасчетыСФондами.Взнос КАК Результат,
+	ОППВРасчетыСФондами.Регистратор
+ИЗ
+	РегистрНакопления.ОППВРасчетыСФондами КАК ОППВРасчетыСФондами
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И ОППВРасчетыСФондами.Активность
+	И ОППВРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ОППВРасчетыСФондами.ВидДвижения = &amp;Приход
+	И ОППВРасчетыСФондами.ВидПлатежа = &amp;Налог
+	И ОППВРасчетыСФондами.ВидСтроки = &amp;ВидСтроки
+	И ОППВРасчетыСФондами.Взнос &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ИПНЛьготы</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИПНСведенияОДоходах.Организация,
+	ИПНСведенияОДоходах.ФизЛицо,
+	"Налоговые льготы" КАК ИмяВидаРасчета,
+	"Б" КАК ПриоритетВидаРасчета,
+	"Налоговые вычеты и льготы" КАК Группа,
+	&amp;парамПриоритетГруппыНалоговыеВычетыИЛьготы КАК ПриоритетГруппы,
+	ИПНСведенияОДоходах.ПримененнаяЛьгота КАК Результат,
+	ИПНСведенияОДоходах.Регистратор
+ИЗ
+	РегистрНакопления.ИПНСведенияОДоходах КАК ИПНСведенияОДоходах
+ГДЕ
+	&amp;парамИспользоватьНалоговыеВычетыИЛьготы
+	И ИПНСведенияОДоходах.Активность
+	И ИПНСведенияОДоходах.ФизЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И ИПНСведенияОДоходах.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ИПНСведенияОДоходах.ПримененнаяЛьгота &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ИПНВычеты</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИПНСведенияОДоходах.Организация,
+	ИПНСведенияОДоходах.ФизЛицо КАК ФизЛицо,
+	ИПНСведенияОДоходах.ВидРасчета.Наименование КАК ИмяВидаРасчета,
+	ИПНСведенияОДоходах.ВидРасчета.Наименование КАК ПриоритетВидаРасчета,
+	ВЫБОР
+		КОГДА ИПНСведенияОДоходах.ВидРасчета ССЫЛКА Справочник.ВычетыИПН
+			ТОГДА "Налоговые вычеты и льготы"
+		ИНАЧЕ "Доходы в натуральной форме"
+	КОНЕЦ КАК Группа,
+	ВЫБОР
+		КОГДА ИПНСведенияОДоходах.ВидРасчета ССЫЛКА Справочник.ВычетыИПН
+			ТОГДА &amp;парамПриоритетГруппыНалоговыеВычетыИЛьготы
+		ИНАЧЕ &amp;парамПриоритетГруппыДоходыВНатуральнойФорме
+	КОНЕЦ КАК ПриоритетГруппы,
+	ВЫБОР
+		КОГДА ИПНСведенияОДоходах.ВидРасчета ССЫЛКА Справочник.ВычетыИПН
+			ТОГДА ИПНСведенияОДоходах.СуммаВычета
+		ИНАЧЕ ИПНСведенияОДоходах.СуммаДохода
+	КОНЕЦ КАК Результат,
+	ИПНСведенияОДоходах.Регистратор
+ИЗ
+	РегистрНакопления.ИПНСведенияОДоходах КАК ИПНСведенияОДоходах
+ГДЕ
+	ИПНСведенияОДоходах.Активность
+	И ИПНСведенияОДоходах.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ИПНСведенияОДоходах.ФизЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И ВЫБОР
+			КОГДА ИПНСведенияОДоходах.ВидРасчета ССЫЛКА Справочник.ВычетыИПН
+				ТОГДА ИПНСведенияОДоходах.СуммаВычета &lt;&gt; 0
+						И &amp;парамИспользоватьНалоговыеВычетыИЛьготы
+			ИНАЧЕ ИПНСведенияОДоходах.Регистратор ССЫЛКА Документ.РегистрацияПрочихДоходовВЦеляхНалогообложения
+					И ИПНСведенияОДоходах.СуммаДохода &lt;&gt; 0
+					И &amp;парамИспользоватьДоходыВНатуральнойФорме
+		КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ИПНСведенияОДоходах.Организация,
+	ИПНСведенияОДоходах.ФизЛицо,
+	"Налоговые вычеты",
+	"А",
+	"Налоговые вычеты и льготы",
+	&amp;парамПриоритетГруппыНалоговыеВычетыИЛьготы,
+	ИПНСведенияОДоходах.ПримененныйВычет,
+	ИПНСведенияОДоходах.Регистратор
+ИЗ
+	РегистрНакопления.ИПНСведенияОДоходах КАК ИПНСведенияОДоходах
+ГДЕ
+	&amp;парамИспользоватьНалоговыеВычетыИЛьготы
+	И ИПНСведенияОДоходах.Активность
+	И ИПНСведенияОДоходах.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ИПНСведенияОДоходах.ФизЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И ИПНСведенияОДоходах.ПримененныйВычет &lt;&gt; 0
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СведенияОбИсчисленииВычетовИПН.Организация,
+	СведенияОбИсчисленииВычетовИПН.ФизическоеЛицо,
+	СведенияОбИсчисленииВычетовИПН.ВидВычета.Наименование,
+	СведенияОбИсчисленииВычетовИПН.ВидВычета.Наименование,
+	ВЫБОР
+		КОГДА &amp;парамНоваяСхемаВычетовИПН
+			ТОГДА "Налоговые вычеты"
+		ИНАЧЕ "Налоговые вычеты и льготы"
+	КОНЕЦ,
+	&amp;парамПриоритетГруппыНалоговыеВычетыИЛьготы,
+	СведенияОбИсчисленииВычетовИПН.ПримененныйВычет,
+	СведенияОбИсчисленииВычетовИПН.Регистратор
+ИЗ
+	РегистрНакопления.СведенияОбИсчисленииВычетовИПН КАК СведенияОбИсчисленииВычетовИПН
+ГДЕ
+	&amp;парамИспользоватьНалоговыеВычетыИЛьготы
+	И СведенияОбИсчисленииВычетовИПН.Активность
+	И СведенияОбИсчисленииВычетовИПН.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И СведенияОбИсчисленииВычетовИПН.ФизическоеЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И СведенияОбИсчисленииВычетовИПН.ПримененныйВычет &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ВОСМС</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВОСМСРасчетыСФондами.Организация,
+	ВОСМСРасчетыСФондами.ФизЛицо,
+	"Взносы ОСМС" КАК ИмяВидаРасчета,
+	"ВОСМС" КАК ПриоритетВидаРасчета,
+	"Всего удержано" КАК Группа,
+	&amp;парамПриоритетГруппыУдержано КАК ПриоритетГруппы,
+	ВОСМСРасчетыСФондами.Взнос КАК Результат,
+	ВОСМСРасчетыСФондами.Регистратор
+ИЗ
+	РегистрНакопления.ВОСМСРасчетыСФондами КАК ВОСМСРасчетыСФондами
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И ВОСМСРасчетыСФондами.Активность
+	И ВОСМСРасчетыСФондами.ФизЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И ВОСМСРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ВОСМСРасчетыСФондами.ВидДвижения = &amp;Приход
+	И ВОСМСРасчетыСФондами.ВидПлатежа = &amp;Налог
+	И ВОСМСРасчетыСФондами.ВидСтроки = &amp;ВидСтроки
+	И ВОСМСРасчетыСФондами.Взнос &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ООСМС</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ООСМСРасчетыСФондами.Организация,
+	ООСМСРасчетыСФондами.ФизЛицо,
+	"Отчисления ОСМС" КАК ИмяВидаРасчета,
+	"В" КАК ПриоритетВидаРасчета,
+	"Всего отчислений" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	ООСМСРасчетыСФондами.Отчисление КАК Результат,
+	ООСМСРасчетыСФондами.Регистратор
+ИЗ
+	РегистрНакопления.ООСМСРасчетыСФондами КАК ООСМСРасчетыСФондами
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И ООСМСРасчетыСФондами.Активность
+	И ООСМСРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ООСМСРасчетыСФондами.ВидДвижения = &amp;Приход
+	И ООСМСРасчетыСФондами.ВидПлатежа = &amp;Налог
+	И ООСМСРасчетыСФондами.ВидСтроки = &amp;ВидСтроки
+	И ООСМСРасчетыСФондами.Отчисление &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ИПНКорректировка</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИПНСведенияОДоходах.Организация,
+	ИПНСведенияОДоходах.ФизЛицо,
+	"Корректировка дохода" КАК ИмяВидаРасчета,
+	"Б" КАК ПриоритетВидаРасчета,
+	"Корректировка дохода" КАК Группа,
+	&amp;парамПриоритетГруппыКорректировкаДохода КАК ПриоритетГруппы,
+	ИПНСведенияОДоходах.ПримененнаяЛьгота КАК Результат,
+	ИПНСведенияОДоходах.Регистратор
+ИЗ
+	РегистрНакопления.ИПНСведенияОДоходах КАК ИПНСведенияОДоходах
+ГДЕ
+	&amp;парамИспользоватьКорректировкаДохода
+	И ИПНСведенияОДоходах.Активность
+	И ИПНСведенияОДоходах.ФизЛицо ССЫЛКА Справочник.ФизическиеЛица
+	И ИПНСведенияОДоходах.ПериодРегистрации &gt;= ДАТАВРЕМЯ(2019, 1, 1)
+	И ИПНСведенияОДоходах.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ИПНСведенияОДоходах.ПримененнаяЛьгота &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ЕП</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЕПРасчетыСФондами.Организация,
+	ЕПРасчетыСФондами.ФизЛицо,
+	"Единый платеж" КАК ИмяВидаРасчета,
+	NULL КАК ПриоритетВидаРасчета,
+	"_Удалить_1_ЕП" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	ЕПРасчетыСФондами.СуммаПлатежа КАК Результат,
+	ЕПРасчетыСФондами.Регистратор
+ИЗ
+	РегистрНакопления.ЕПРасчетыСФондами КАК ЕПРасчетыСФондами
+ГДЕ
+	(&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	ИЛИ &amp;парамИспользоватьУдержано)
+	И ЕПРасчетыСФондами.Активность
+	И ЕПРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ЕПРасчетыСФондами.ВидДвижения = &amp;Приход
+	И ЕПРасчетыСФондами.ВидПлатежа = &amp;Налог
+	И ЕПРасчетыСФондами.ВидСтроки = &amp;ВидСтроки
+	И ЕПРасчетыСФондами.СуммаПлатежа &lt;&gt; 0</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ЕПКомпоненты</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЕПКомпонентыПлатежа.Организация,
+	ЕПКомпонентыПлатежа.ФизЛицо,
+	ЕПКомпонентыПлатежа.СуммаОПВ КАК СуммаОПВ,
+	ЕПКомпонентыПлатежа.СуммаВОСМС КАК СуммаВОСМС,
+	ЕПКомпонентыПлатежа.СуммаИПН КАК СуммаИПН,
+	ЕПКомпонентыПлатежа.СуммаООСМС КАК СуммаООСМС,
+	ЕПКомпонентыПлатежа.СуммаСО КАК СуммаСО,
+	ЕПКомпонентыПлатежа.СуммаОПВР КАК СуммаОПВР,
+	ЕПКомпонентыПлатежа.Регистратор
+ПОМЕСТИТЬ ВТ_ДанныеКомпонентыПлатежа
+ИЗ
+	РегистрНакопления.ЕПКомпоненты КАК ЕПКомпонентыПлатежа
+ГДЕ
+	(&amp;парамИспользоватьУдержано
+		ИЛИ &amp;парамИспользоватьОтчисленияОтОплатыТруда)
+	И ЕПКомпонентыПлатежа.Активность
+	И ЕПКомпонентыПлатежа.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЕПКомпонентыПлатежа.Организация,
+	ЕПКомпонентыПлатежа.ФизЛицо,
+	"Единый платеж (за счет работника)" КАК ИмяВидаРасчета,
+	"Единый платеж (за счет работника)" КАК ПриоритетВидаРасчета,
+	"_Удалить_1_ЕП" КАК Группа,
+	&amp;парамПриоритетГруппыУдержано КАК ПриоритетГруппы,
+	ЕПКомпонентыПлатежа.СуммаИПН КАК Результат,
+	ЕПКомпонентыПлатежа.Регистратор
+ИЗ
+	ВТ_ДанныеКомпонентыПлатежа КАК ЕПКомпонентыПлатежа
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И ЕПКомпонентыПлатежа.СуммаИПН &lt;&gt; 0
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЕПКомпонентыПлатежа.Организация,
+	ЕПКомпонентыПлатежа.ФизЛицо,
+	"Единый платеж (за счет работника)" КАК ИмяВидаРасчета,
+	"Единый платеж (за счет работника)" КАК ПриоритетВидаРасчета,
+	"_Удалить_1_ЕП" КАК Группа,
+	&amp;парамПриоритетГруппыУдержано КАК ПриоритетГруппы,
+	ЕПКомпонентыПлатежа.СуммаОПВ КАК Результат,
+	ЕПКомпонентыПлатежа.Регистратор
+ИЗ
+	ВТ_ДанныеКомпонентыПлатежа КАК ЕПКомпонентыПлатежа
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И ЕПКомпонентыПлатежа.СуммаОПВ &lt;&gt; 0
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЕПКомпонентыПлатежа.Организация,
+	ЕПКомпонентыПлатежа.ФизЛицо,
+	"Единый платеж (за счет работника)" КАК ИмяВидаРасчета,
+	"Единый платеж (за счет работника)" КАК ПриоритетВидаРасчета,
+	"_Удалить_1_ЕП" КАК Группа,
+	&amp;парамПриоритетГруппыУдержано КАК ПриоритетГруппы,
+	ЕПКомпонентыПлатежа.СуммаВОСМС КАК Результат,
+	ЕПКомпонентыПлатежа.Регистратор
+ИЗ
+	ВТ_ДанныеКомпонентыПлатежа КАК ЕПКомпонентыПлатежа
+ГДЕ
+	&amp;парамИспользоватьУдержано
+	И ЕПКомпонентыПлатежа.СуммаВОСМС &lt;&gt; 0
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЕПКомпонентыПлатежа.Организация,
+	ЕПКомпонентыПлатежа.ФизЛицо,
+	"Единый платеж (за счет работодателя)" КАК ИмяВидаРасчета,
+	"Единый платеж (за счет работодателя)" КАК ПриоритетВидаРасчета,
+	"_Удалить_1_ЕП" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	ЕПКомпонентыПлатежа.СуммаООСМС КАК Результат,
+	ЕПКомпонентыПлатежа.Регистратор
+ИЗ
+	ВТ_ДанныеКомпонентыПлатежа КАК ЕПКомпонентыПлатежа
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И ЕПКомпонентыПлатежа.СуммаООСМС &lt;&gt; 0
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЕПКомпонентыПлатежа.Организация,
+	ЕПКомпонентыПлатежа.ФизЛицо,
+	"Единый платеж (за счет работодателя)" КАК ИмяВидаРасчета,
+	"Единый платеж (за счет работодателя)" КАК ПриоритетВидаРасчета,
+	"_Удалить_1_ЕП" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	ЕПКомпонентыПлатежа.СуммаСО КАК Результат,
+	ЕПКомпонентыПлатежа.Регистратор
+ИЗ
+	ВТ_ДанныеКомпонентыПлатежа КАК ЕПКомпонентыПлатежа
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И ЕПКомпонентыПлатежа.СуммаСО &lt;&gt; 0
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЕПКомпонентыПлатежа.Организация,
+	ЕПКомпонентыПлатежа.ФизЛицо,
+	"Единый платеж (за счет работодателя)" КАК ИмяВидаРасчета,
+	"Единый платеж (за счет работодателя)" КАК ПриоритетВидаРасчета,
+	"_Удалить_1_ЕП" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	ЕПКомпонентыПлатежа.СуммаОПВР КАК Результат,
+	ЕПКомпонентыПлатежа.Регистратор
+ИЗ
+	ВТ_ДанныеКомпонентыПлатежа КАК ЕПКомпонентыПлатежа
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И ЕПКомпонентыПлатежа.СуммаОПВР &lt;&gt; 0
+</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ОПВР</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Результат</dataPath>
+				<field>Результат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Результат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизЛицо</dataPath>
+				<field>ФизЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяВидаРасчета</dataPath>
+				<field>ИмяВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетВидаРасчета</dataPath>
+				<field>ПриоритетВидаРасчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет вида расчета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПриоритетГруппы</dataPath>
+				<field>ПриоритетГруппы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приоритет группы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОПВРРасчетыСФондами.Организация КАК Организация,
+	ОПВРРасчетыСФондами.ФизЛицо КАК ФизЛицо,
+	"ОПВР" КАК ИмяВидаРасчета,
+	"ОПВР" КАК ПриоритетВидаРасчета,
+	"Всего отчислений" КАК Группа,
+	&amp;парамПриоритетГруппыОтчисленияОтОплатыТруда КАК ПриоритетГруппы,
+	ОПВРРасчетыСФондами.Взнос КАК Результат,
+	ОПВРРасчетыСФондами.Регистратор КАК Регистратор
+ИЗ
+	РегистрНакопления.ОПВРРасчетыСФондами КАК ОПВРРасчетыСФондами
+ГДЕ
+	&amp;парамИспользоватьОтчисленияОтОплатыТруда
+	И ОПВРРасчетыСФондами.Активность
+	И ОПВРРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ОПВРРасчетыСФондами.ВидДвижения = &amp;Приход
+	И ОПВРРасчетыСФондами.ВидПлатежа = &amp;Налог
+	И ОПВРРасчетыСФондами.ВидСтроки = &amp;ВидСтроки
+	И ОПВРРасчетыСФондами.Взнос &lt;&gt; 0</query>
+		</item>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>Работники</sourceDataSet>
+		<destinationDataSet>Данные</destinationDataSet>
+		<sourceExpression>ФизЛицо</sourceExpression>
+		<destinationExpression>ФизЛицо</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Работники</sourceDataSet>
+		<destinationDataSet>Данные</destinationDataSet>
+		<sourceExpression>Организация</sourceExpression>
+		<destinationExpression>Организация</destinationExpression>
+	</dataSetLink>
+	<totalField>
+		<dataPath>Результат</dataPath>
+		<expression>Сумма(Результат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИмяВидаРасчета.ПриоритетВидаРасчета</dataPath>
+		<expression>Максимум(ИмяВидаРасчета.ПриоритетВидаРасчета)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Группа.ПриоритетГруппы</dataPath>
+		<expression>Максимум(Группа.ПриоритетГруппы)</expression>
+	</totalField>
+	<parameter>
+		<name>ВидСтроки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид строки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.РасчетыСБюджетомФондамиВидСтроки</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Возврат</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Возврат</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.РасчетыСБюджетомФондамиВидСтроки</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.РасчетыСБюджетомФондамиВидСтроки.Возврат</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Налог</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Налог</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыПлатежейВБюджетИФонды</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыПлатежейВБюджетИФонды.Налог</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьВыплачено</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать выплачено</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьДоходыВНатуральнойФорме</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать доходы в натуральной форме</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьКонечноеСальдо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать конечное сальдо</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьНалоговыеВычетыИЛьготы</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать налоговые вычеты и льготы</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьНачальноеСальдо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать начальное сальдо</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьНачислено</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать начислено</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьОтработаноДней</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать отработано дней</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьОтработаноЧасов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать отработано часов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьОтчисленияОтОплатыТруда</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать отчисления от оплаты труда</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьУдержано</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать удержано</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыВыплачено</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы выплачено</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыДоходыВНатуральнойФорме</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы доходы в натуральной форме</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыКонечноеСальдо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы конечное сальдо</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыНалоговыеВычетыИЛьготы</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы налоговые вычеты и льготы</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыНачальноеСальдо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы начальное сальдо</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыНачислено</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы начислено</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыОтработаноДней</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы отработано дней</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыОтработаноЧасов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы отработано часов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыОтчисленияОтОплатыТруда</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы отчисления от оплаты труда</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыУдержано</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы удержано</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Приход</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приход</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise">d4p1:AccumulationRecordType</v8:Type>
+		</valueType>
+		<value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d3p1:AccumulationRecordType">Receipt</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Расход</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расход</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise">d4p1:AccumulationRecordType</v8:Type>
+		</valueType>
+		<value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d3p1:AccumulationRecordType">Expense</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СледующийПериод</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Следующий период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЧерезБанк</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Через банк</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СпособыВыплатыЗарплаты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВыплатыЗарплаты.ЧерезБанк</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ЧерезКассу</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Через кассу</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СпособыВыплатыЗарплаты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВыплатыЗарплаты.ЧерезКассу</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамНоваяСхемаВычетовИПН</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам новая схема вычетов ИПН</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамПриоритетГруппыКорректировкаДохода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам приоритет группы корректировка дохода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>парамИспользоватьКорректировкаДохода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Парам использовать корректировка дохода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Группа</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Группа</dcsat:name>
+			<dcsat:expression>Группа</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ИмяВидаРасчета</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ИмяВидаРасчета</dcsat:name>
+			<dcsat:expression>ИмяВидаРасчета</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Итого:</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<groupTemplate>
+		<groupField>Группа</groupField>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupField>ИмяВидаРасчета</groupField>
+		<templateType>Header</templateType>
+		<template>Макет2</template>
+	</groupTemplate>
+	<groupHeaderTemplate>
+		<groupName>Группировка</groupName>
+		<templateType>OverallFooter</templateType>
+		<template>Макет3</template>
+	</groupHeaderTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеОрганизации</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СотрудникиОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Результат</dcsset:left>
+					<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Организация.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПодразделениеОрганизации.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Сотрудник.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделять отрицательные</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ИмяВидаРасчета</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">45</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">45</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформление видов расчета</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

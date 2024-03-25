@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ОК" id="34">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="35"/>
+			</Button>
+			<Button name="Закрыть" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="37"/>
+			</Button>
+			<Button name="Справка" id="38">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="39"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NewWriteProcessing">ОбработкаЗаписиНового</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СвойстваИЗначения" id="1">
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СвойстваИЗначения</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СвойстваИЗначенияКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СвойстваИЗначенияКонтекстноеМенюСохранить" id="48">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Сохранить</CommandName>
+						<ExtendedTooltip name="СвойстваИЗначенияКонтекстноеМенюСохранитьРасширеннаяПодсказка" id="49"/>
+					</Button>
+					<Button name="СвойстваИЗначенияКонтекстноеМенюПеречитать" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Перечитать</CommandName>
+						<ExtendedTooltip name="СвойстваИЗначенияКонтекстноеМенюПеречитатьРасширеннаяПодсказка" id="51"/>
+					</Button>
+					<Button name="СвойстваИЗначенияКонтекстноеМенюДобавить" id="52">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.СвойстваИЗначения.StandardCommand.Add</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СвойстваИЗначенияКонтекстноеМенюДобавитьРасширеннаяПодсказка" id="53"/>
+					</Button>
+					<Button name="СвойстваИЗначенияКонтекстноеМенюУдалить" id="56">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.СвойстваИЗначения.StandardCommand.Delete</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Delete</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СвойстваИЗначенияКонтекстноеМенюУдалитьРасширеннаяПодсказка" id="57"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СвойстваИЗначенияКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СвойстваИЗначенияСохранить" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Сохранить</CommandName>
+						<ExtendedTooltip name="СвойстваИЗначенияСохранитьРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Button name="СвойстваИЗначенияПеречитать" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Перечитать</CommandName>
+						<ExtendedTooltip name="СвойстваИЗначенияПеречитатьРасширеннаяПодсказка" id="43"/>
+					</Button>
+					<Button name="СвойстваИЗначенияДобавить" id="44">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.СвойстваИЗначения.StandardCommand.Add</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СвойстваИЗначенияДобавитьРасширеннаяПодсказка" id="45"/>
+					</Button>
+					<Button name="СвойстваИЗначенияУдалить" id="46">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.СвойстваИЗначения.StandardCommand.Delete</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Delete</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СвойстваИЗначенияУдалитьРасширеннаяПодсказка" id="47"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СвойстваИЗначенияРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СвойстваИЗначенияСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>СвойстваИЗначения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СвойстваИЗначенияСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СвойстваИЗначенияСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СвойстваИЗначенияСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>СвойстваИЗначения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СвойстваИЗначенияСостояниеПросмотраКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="СвойстваИЗначенияСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СвойстваИЗначенияУправлениеПоиском" id="15">
+				<AdditionSource>
+					<Item>СвойстваИЗначения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СвойстваИЗначенияУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="СвойстваИЗначенияУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СвойстваИЗначенияПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">СвойстваИЗначенияПередУдалением</Event>
+				<Event name="OnStartEdit">СвойстваИЗначенияПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="СвойстваИЗначенияГруппаИндексКартинкиСвойство" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки и свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Width>1</Width>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="СвойстваИЗначенияГруппаИндексКартинкиСвойствоРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<PictureField name="СвойстваИЗначенияИндексКартинки" id="23">
+							<DataPath>Объект.СвойстваИЗначения.ИндексКартинки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="СвойстваИЗначенияИндексКартинкиКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="СвойстваИЗначенияИндексКартинкиРасширеннаяПодсказка" id="25"/>
+						</PictureField>
+						<InputField name="СвойстваИЗначенияСвойство" id="26">
+							<DataPath>Объект.СвойстваИЗначения.Свойство</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<ContextMenu name="СвойстваИЗначенияСвойствоКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СвойстваИЗначенияСвойствоРасширеннаяПодсказка" id="28"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СвойстваИЗначенияЗначение" id="29">
+					<DataPath>Объект.СвойстваИЗначения.Значение</DataPath>
+					<Width>1</Width>
+					<Wrap>false</Wrap>
+					<ClearButton>true</ClearButton>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Items.СвойстваИЗначения.CurrentData.Свойство</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="СвойстваИЗначенияЗначениеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СвойстваИЗначенияЗначениеРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УдалитьЗначенияСвойствОбъекта</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Перечитать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Перечитать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сохранить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Сохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ВладелецСвойств">
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

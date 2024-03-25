@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерСтрокиСтавокПериод" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки ставок, период</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерСтрокиСтавокПериодРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="НомерСтрокиСтавок" id="7">
+					<DataPath>Запись.НомерСтрокиСтавок</DataPath>
+					<ContextMenu name="НомерСтрокиСтавокКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НомерСтрокиСтавокРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ВидСтавокИПНиСН" id="4">
+			<DataPath>Запись.ВидСтавокИПНиСН</DataPath>
+			<ContextMenu name="ВидСтавокИПНиСНКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВидСтавокИПНиСНРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаСуммыДоходаСтавкаСуммаНалога" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммы дохода, ставка, сумма налога</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСуммыДоходаСтавкаСуммаНалогаРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНачСуммаДоходаСтавка" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нач. сумма дохода, ставка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНачСуммаДоходаСтавкаРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<InputField name="СуммаДоходаС" id="10">
+							<DataPath>Запись.СуммаДоходаС</DataPath>
+							<ContextMenu name="СуммаДоходаСКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СуммаДоходаСРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="Ставка" id="16">
+							<DataPath>Запись.Ставка</DataPath>
+							<ContextMenu name="СтавкаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СтавкаРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКонСуммаДоходаСуммаНалога" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кон. сумма дохода, сумма налога</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонСуммаДоходаСуммаНалогаРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="СуммаДоходаПо" id="13">
+							<DataPath>Запись.СуммаДоходаПо</DataPath>
+							<ContextMenu name="СуммаДоходаПоКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СуммаДоходаПоРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="СуммаНалогаПредыдущегоПредела" id="19">
+							<DataPath>Запись.СуммаНалогаПредыдущегоПредела</DataPath>
+							<ContextMenu name="СуммаНалогаПредыдущегоПределаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СуммаНалогаПредыдущегоПределаРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СведенияОСтавкахИПНиСН</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ПериодПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Организация" id="4">
+			<DataPath>Запись.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПараметрыУчетнойПолитики" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры учетной политики</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПараметрыУчетнойПолитикиРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<InputField name="СпособРасчетаСебестоимостиПроизводства" id="7">
+					<DataPath>Запись.СпособРасчетаСебестоимостиПроизводства</DataPath>
+					<ContextMenu name="СпособРасчетаСебестоимостиПроизводстваКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СпособРасчетаСебестоимостиПроизводстваРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ПодразделениеДляРеглОпераций" id="13">
+					<DataPath>Запись.ПодразделениеДляРеглОпераций</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПодразделениеДляРеглОперацийКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ПодразделениеДляРеглОперацийРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<CheckBoxField name="ОпределятьСтоимостьПриобретенияПоКурсуАванса" id="16">
+					<DataPath>Запись.ОпределятьСтоимостьПриобретенияПоКурсуАванса</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОпределятьСтоимостьПриобретенияПоКурсуАвансаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОпределятьСтоимостьПриобретенияПоКурсуАвансаРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОпределятьДоходОтРеализацииПоКурсуАванса" id="48">
+					<DataPath>Запись.ОпределятьДоходОтРеализацииПоКурсуАванса</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОпределятьДоходОтРеализацииПоКурсуАвансаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ОпределятьДоходОтРеализацииПоКурсуАвансаРасширеннаяПодсказка" id="50"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУчетВременныхРазниц" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет временных разниц</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаУчетВременныхРазницРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CheckBoxField name="УчетВременныхРазницПоНалогуНаПрибыль" id="10">
+					<DataPath>Запись.УчетВременныхРазницПоНалогуНаПрибыль</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчетВременныхРазницПоНалогуНаПрибыльКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="УчетВременныхРазницПоНалогуНаПрибыльРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">УчетВременныхРазницПоНалогуНаПрибыльПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ВедениеУчетаВременныхРазницБалансовымМетодом" id="22">
+					<DataPath>Запись.ВедениеУчетаВременныхРазницБалансовымМетодом</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВедениеУчетаВременныхРазницБалансовымМетодомКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВедениеУчетаВременныхРазницБалансовымМетодомРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ВедениеУчетаВременныхРазницБалансовымМетодомПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelDecoration name="НадписьВедениеУчетаВременныхРазницБалансовымМетодом1" id="29">
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установка признака позволяет вести учет временных разниц балансовым методом.  Особенность метода заключается в учете налоговой базы активов и обязательств, выявлении разниц  в момент признания активов и обязательств. Расчет итоговой величины отложенных налоговых активов и обязательств выполняется по данным о налоговой базе в налоговом учете. Данный порядок учета налога на прибыль соответствует МСФО (IAS)  12. </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьВедениеУчетаВременныхРазницБалансовымМетодом1КонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="НадписьВедениеУчетаВременныхРазницБалансовымМетодом1РасширеннаяПодсказка" id="31"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьВедениеУчетаВременныхРазницБалансовымМетодом2" id="32">
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рекомендуется устанавливать признак «Ведение учета временных разниц балансовым методом» в начале отчетного периода (года).</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьВедениеУчетаВременныхРазницБалансовымМетодом2КонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="НадписьВедениеУчетаВременныхРазницБалансовымМетодом2РасширеннаяПодсказка" id="34"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаПомощникПерехода" id="35">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа помощник перехода</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПомощникПереходаРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаПомощникПерехода" id="37">
+							<Width>4</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка помощник перехода</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ТОПомощникПодключения32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="КартинкаПомощникПереходаКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="КартинкаПомощникПереходаРасширеннаяПодсказка" id="39"/>
+						</PictureDecoration>
+						<LabelDecoration name="НадписьПомощникПерехода" id="40">
+							<Height>2</Height>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Помощник перехода на ведение учета временных разниц балансовым методом</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="НадписьПомощникПереходаКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="НадписьПомощникПереходаРасширеннаяПодсказка" id="42"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметрыНачисленияАмортизации" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры начисления амортизации</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПараметрыНачисленияАмортизацииРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<CheckBoxField name="ПрименятьПараметрыНачисленияАмортизацииВМесяцеИзменения" id="19">
+					<DataPath>Запись.ПрименятьПараметрыНачисленияАмортизацииВМесяцеИзменения</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименятьПараметрыНачисленияАмортизацииВМесяцеИзмененияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ПрименятьПараметрыНачисленияАмортизацииВМесяцеИзмененияРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+				<LabelDecoration name="НадписьПрименятьПараметрыНачисленияАмортизацииВМесяцеИзменения" id="45">
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка влияет на определение параметров начисления амортизации, в том числе на сам признак начисления. 
+Если настройка включена, то параметры будут определены на конец месяца, тем самым будут действовать изменения, сделанные в текущем месяце. 
+Если настройка отключена, то параметры будут определены на начало месяца, т.е. изменения, сделанные в текущем месяце, начнут действовать только со следующего месяца.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьПрименятьПараметрыНачисленияАмортизацииВМесяцеИзмененияКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="НадписьПрименятьПараметрыНачисленияАмортизацииВМесяцеИзмененияРасширеннаяПодсказка" id="47"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УчетнаяПолитикаБухгалтерскийУчет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПредыдущийПериод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущаяОрганизация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийПризнакУчетаВременныхРазниц" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий признак учета временных разниц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МонопольныйРежимИспользуется" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Монопольный режим используется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="Report.РасчетныеВедомостиОрганизаций.Command.РасчетныеВедомостиОрганизаций">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетнаяВедомостьОрганизацийТ1.Command.РасчетнаяВедомостьОрганизацийТ1">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетныеЛисткиОрганизаций.Command.РасчетныеЛисткиОрганизаций">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РегистрНалоговогоУчетаПоИПНиСН.Command.АнализНачисленийУдержанийПрочихЛиц">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.АнализНачисленийРаботникамОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетныеВедомостиОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетнаяВедомостьОрганизацийТ1.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РасчетныеЛисткиОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СводНачисленнойЗарплатыОрганизаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.РегистрНалоговогоУчетаПоИПНиСН.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СпискиУдержанийПоИсполнительнымЛистам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоРасчетуПениОПВиСО.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СправкаРасчетРезервыПоВознаграждениямРаботникам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Report.РасчетныеВедомостиОрганизаций.Command.РасчетныеВедомостиОрганизаций">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.РасчетнаяВедомостьОрганизацийТ1.Command.РасчетнаяВедомостьОрганизацийТ1">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.РасчетныеЛисткиОрганизаций.Command.РасчетныеЛисткиОрганизаций">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Report.РасчетныеВедомостиОрганизаций.Command.РасчетныеВедомостиОрганизаций">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Report.РасчетнаяВедомостьОрганизацийТ1.Command.РасчетнаяВедомостьОрганизацийТ1">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Report.РасчетныеЛисткиОрганизаций.Command.РасчетныеЛисткиОрганизаций">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Report.АнализНачисленийРаботникамОрганизаций.Command.АнализНачисленийРаботникамОрганизаций">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СводНачисленнойЗарплатыОрганизаций.Command.СводНачисленнойЗарплатыОрганизаций">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете.Command.КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.РегистрНалоговогоУчетаПоИПНиСН.Command.РегистрНалоговогоУчетаПоИПНиСН">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.РегистрНалоговогоУчетаПоИПНиСН.Command.АнализНачисленийУдержанийПрочихЛиц">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СпискиУдержанийПоИсполнительнымЛистам.Command.СпискиУдержанийПоИсполнительнымЛистам">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоРасчетуПениОПВиСО.Command.ОтчетПоРасчетуПениОПВиСО">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СправкаРасчетРезервыПоВознаграждениямРаботникам.Command.СправкаРасчетРезервыПоВознаграждениямРаботникам">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.АнализНачисленийРаботникамОрганизаций.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.РасчетныеВедомостиОрганизаций.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.РасчетнаяВедомостьОрганизацийТ1.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.РасчетныеЛисткиОрганизаций.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СводНачисленнойЗарплатыОрганизаций.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.РегистрНалоговогоУчетаПоИПНиСН.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СпискиУдержанийПоИсполнительнымЛистам.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоРасчетуПениОПВиСО.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СправкаРасчетРезервыПоВознаграждениямРаботникам.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>ActionsPanelReports</Group>
+	</GroupsOrder>
+</CommandInterface>

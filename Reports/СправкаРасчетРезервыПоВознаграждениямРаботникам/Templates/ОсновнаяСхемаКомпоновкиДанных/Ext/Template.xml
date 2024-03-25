@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Размер</dataPath>
+			<field>Размер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент отчислений в резерв по вознаграждениям</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерПрофессиональныхПенсионныхВзносов</dataPath>
+			<field>РазмерПрофессиональныхПенсионныхВзносов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент отчислений в резерв по профессиональным пенсионным взносам</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерСоциальногоНалога</dataPath>
+			<field>РазмерСоциальногоНалога</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент отчислений в резерв по социальному налогу</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерСоциальныхОтчислений</dataPath>
+			<field>РазмерСоциальныхОтчислений</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент отчислений в резерв по социальным отчислениям</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасчетнаяБаза</dataPath>
+			<field>РасчетнаяБаза</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчетная база</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРезерв</dataPath>
+			<field>СуммаРезерв</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая сумма резерва</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРезервОППВ</dataPath>
+			<field>СуммаРезервОППВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма резерва по профессиональным пенсионным взносам</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРезервПоВознаграждениям</dataPath>
+			<field>СуммаРезервПоВознаграждениям</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма резерва по вознаграждениям</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРезервСН</dataPath>
+			<field>СуммаРезервСН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма резерва по социальному налогу</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРезервСО</dataPath>
+			<field>СуммаРезервСО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма резерва по социальным отчислениям</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидРасчета</dataPath>
+			<field>ВидРасчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ регистрации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Резерв</dataPath>
+			<field>Резерв</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Физлицо</dataPath>
+			<field>Физлицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчета</dataPath>
+			<field>СчетУчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРезервООСМС</dataPath>
+			<field>СуммаРезервООСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма резерва по отчислениям ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерОтчисленийОСМС</dataPath>
+			<field>РазмерОтчисленийОСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент отчислений в резерв по отчислениям ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРезервОПВР</dataPath>
+			<field>СуммаРезервОПВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма резерв по пенсионным взносам работодателя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерПенсионныхВзносовРаботодателя</dataPath>
+			<field>РазмерПенсионныхВзносовРаботодателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент отчислений в резерв по пенсионным взносам работодателя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Данные.ФизЛицо КАК Физлицо,
+	Данные.Организация КАК Организация,
+	Данные.Резерв КАК Резерв,
+	Данные.Счет КАК Счет,
+	Данные.Регистратор КАК Регистратор,
+	Данные.ВидРасчета КАК ВидРасчета,
+	Данные.СуммаРезервПоВознаграждениям КАК СуммаРезервПоВознаграждениям,
+	Данные.СуммаРезервСН КАК СуммаРезервСН,
+	Данные.СуммаРезервСО КАК СуммаРезервСО,
+	Данные.СуммаРезервОППВ КАК СуммаРезервОППВ,
+	Данные.СуммаРезервОПВР КАК СуммаРезервОПВР,
+	Данные.СуммаРезервООСМС КАК СуммаРезервООСМС,
+	Данные.СуммаРезерв КАК СуммаРезерв,
+	Данные.РасчетнаяБаза КАК РасчетнаяБаза,
+	РазмерыОтчисленийВРезервы.Размер КАК Размер,
+	РазмерыОтчисленийВРезервы.РазмерСоциальногоНалога КАК РазмерСоциальногоНалога,
+	РазмерыОтчисленийВРезервы.РазмерСоциальныхОтчислений КАК РазмерСоциальныхОтчислений,
+	РазмерыОтчисленийВРезервы.РазмерПрофессиональныхПенсионныхВзносов КАК РазмерПрофессиональныхПенсионныхВзносов,
+	РазмерыОтчисленийВРезервы.РазмерПенсионныхВзносовРаботодателя КАК РазмерПенсионныхВзносовРаботодателя,
+	РазмерыОтчисленийВРезервы.РазмерОтчисленийОСМС КАК РазмерОтчисленийОСМС
+ИЗ
+	(ВЫБРАТЬ
+		ОтражениеВУчете.Ссылка.Организация КАК Организация,
+		ОтражениеВУчете.СчетКт КАК Счет,
+		ОтражениеВУчете.ВидРасчета КАК Резерв,
+		ОтражениеВУчете.ФизЛицо КАК ФизЛицо,
+		ОтражениеВУчете.Ссылка КАК Регистратор,
+		NULL КАК ВидРасчета,
+		СУММА(ВЫБОР
+				КОГДА ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныйНалог)
+						ИЛИ ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныеОтчисления)
+						ИЛИ ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОтчисленияОСМС)
+					ТОГДА 0
+				КОГДА ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныйНалог)
+						ИЛИ ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныеОтчисления)
+						ИЛИ ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОтчисленияОСМС)
+					ТОГДА 0
+				КОГДА ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныйНалог)
+						ИЛИ ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныеОтчисления)
+						ИЛИ ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОтчисленияОСМС)
+					ТОГДА 0
+				ИНАЧЕ ОтражениеВУчете.Сумма
+			КОНЕЦ) КАК СуммаРезервПоВознаграждениям,
+		СУММА(ВЫБОР
+				КОГДА ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныйНалог)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныйНалог)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныйНалог)
+					ТОГДА ОтражениеВУчете.Сумма
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаРезервСН,
+		СУММА(ВЫБОР
+				КОГДА ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныеОтчисления)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныеОтчисления)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.СоциальныеОтчисления)
+					ТОГДА ОтражениеВУчете.Сумма
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаРезервСО,
+		СУММА(ВЫБОР
+				КОГДА ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОбязательныеПрофессиональныеПенсионныеВзносы)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОбязательныеПрофессиональныеПенсионныеВзносы)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОбязательныеПрофессиональныеПенсионныеВзносы)
+					ТОГДА ОтражениеВУчете.Сумма
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаРезервОППВ,
+		СУММА(ВЫБОР
+				КОГДА ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОбязательныеПенсионныеВзносыРаботодателя)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОбязательныеПенсионныеВзносыРаботодателя)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОбязательныеПенсионныеВзносыРаботодателя)
+					ТОГДА ОтражениеВУчете.Сумма
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаРезервОПВР,
+		СУММА(ВЫБОР
+				КОГДА ОтражениеВУчете.СубконтоДт1 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОтчисленияОСМС)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт2 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОтчисленияОСМС)
+					ТОГДА ОтражениеВУчете.Сумма
+				КОГДА ОтражениеВУчете.СубконтоДт3 = ЗНАЧЕНИЕ(Справочник.СтатьиЗатрат.ОтчисленияОСМС)
+					ТОГДА ОтражениеВУчете.Сумма
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаРезервООСМС,
+		СУММА(ОтражениеВУчете.Сумма) КАК СуммаРезерв,
+		0 КАК РасчетнаяБаза
+	ИЗ
+		Документ.ОтражениеЗарплатыВРеглУчете.ОтражениеВУчете КАК ОтражениеВУчете
+	ГДЕ
+		ОтражениеВУчете.ВидРасчета ССЫЛКА Справочник.Резервы
+		И ОтражениеВУчете.Ссылка.Проведен
+		И ОтражениеВУчете.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	
+	СГРУППИРОВАТЬ ПО
+		ОтражениеВУчете.Ссылка.Организация,
+		ОтражениеВУчете.СчетКт,
+		ОтражениеВУчете.ВидРасчета,
+		ОтражениеВУчете.ФизЛицо,
+		ОтражениеВУчете.Ссылка
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		РазмерыОтчисленийВРезервы.Организация,
+		РазмерыОтчисленийВРезервы.СчетУчета,
+		РазмерыОтчисленийВРезервы.Резерв,
+		ОтражениеВУчете.ФизЛицо,
+		ОтражениеВУчете.Ссылка,
+		ОтражениеВУчете.ВидРасчета,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		СУММА(ОтражениеВУчете.Сумма)
+	ИЗ
+		(ВЫБРАТЬ РАЗЛИЧНЫЕ
+			РазмерыОтчисленийВРезервы.Организация КАК Организация,
+			РазмерыОтчисленийВРезервы.Резерв КАК Резерв,
+			РазмерыОтчисленийВРезервы.СчетУчета КАК СчетУчета
+		ИЗ
+			РегистрСведений.РазмерыОтчисленийВРезервы КАК РазмерыОтчисленийВРезервы
+		ГДЕ
+			РазмерыОтчисленийВРезервы.Размер &lt;&gt; 0) КАК РазмерыОтчисленийВРезервы
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Резервы.БазовыеВидыРасчета КАК БазовыеВидыРасчета
+			ПО РазмерыОтчисленийВРезервы.Резерв = БазовыеВидыРасчета.Ссылка
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ОтражениеЗарплатыВРеглУчете.ОтражениеВУчете КАК ОтражениеВУчете
+			ПО РазмерыОтчисленийВРезервы.Организация = ОтражениеВУчете.Ссылка.Организация
+				И (БазовыеВидыРасчета.ВидРасчета = ОтражениеВУчете.ВидРасчета)
+				И (ОтражениеВУчете.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода)
+				И (ОтражениеВУчете.Ссылка.Проведен)
+	
+	СГРУППИРОВАТЬ ПО
+		РазмерыОтчисленийВРезервы.Организация,
+		РазмерыОтчисленийВРезервы.СчетУчета,
+		РазмерыОтчисленийВРезервы.Резерв,
+		ОтражениеВУчете.ФизЛицо,
+		ОтражениеВУчете.Ссылка,
+		ОтражениеВУчете.ВидРасчета) КАК Данные
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РазмерыОтчисленийВРезервы.СрезПоследних(&amp;КонецПериода, ) КАК РазмерыОтчисленийВРезервы
+		ПО Данные.Организация = РазмерыОтчисленийВРезервы.Организация
+			И Данные.Резерв = РазмерыОтчисленийВРезервы.Резерв</query>
+	</dataSet>
+	<totalField>
+		<dataPath>РасчетнаяБаза</dataPath>
+		<expression>Сумма(РасчетнаяБаза)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРезерв</dataPath>
+		<expression>Сумма(СуммаРезерв)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРезервОППВ</dataPath>
+		<expression>Сумма(СуммаРезервОППВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРезервСО</dataPath>
+		<expression>Сумма(СуммаРезервСО)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРезервСН</dataPath>
+		<expression>Сумма(СуммаРезервСН)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРезервПоВознаграждениям</dataPath>
+		<expression>Сумма(СуммаРезервПоВознаграждениям)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Размер</dataPath>
+		<expression>Максимум(Размер)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерСоциальногоНалога</dataPath>
+		<expression>Максимум(РазмерСоциальногоНалога)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерСоциальныхОтчислений</dataPath>
+		<expression>Максимум(РазмерСоциальныхОтчислений)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерПрофессиональныхПенсионныхВзносов</dataPath>
+		<expression>Максимум(РазмерПрофессиональныхПенсионныхВзносов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРезервООСМС</dataPath>
+		<expression>Сумма(СуммаРезервООСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерОтчисленийОСМС</dataPath>
+		<expression>Максимум(РазмерОтчисленийОСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерПенсионныхВзносовРаботодателя</dataPath>
+		<expression>Максимум(РазмерПенсионныхВзносовРаботодателя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРезервОПВР</dataPath>
+		<expression>Сумма(СуммаРезервОПВР)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Резерв</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Счет</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Организация.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Резерв.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделять отрицательные</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

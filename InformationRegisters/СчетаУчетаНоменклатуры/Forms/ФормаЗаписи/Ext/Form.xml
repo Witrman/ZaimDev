@@ -1,0 +1,2381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="105">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="295"/>
+			<ChildItems>
+				<InputField name="Организация" id="1">
+					<DataPath>Запись.Организация</DataPath>
+					<ClearButton>true</ClearButton>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="296"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Номенклатура" id="3">
+					<DataPath>Запись.Номенклатура</DataPath>
+					<ClearButton>true</ClearButton>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НоменклатураExtendedTooltip" id="297"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницыСчета" id="106">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыСчетаExtendedTooltip" id="298"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаСчетаУчета" id="107">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета учета</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаСтраницаСчетаУчетаExtendedTooltip" id="299"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСтраницаСчетаУчетаЛевая" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счета учета (левая)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтраницаСчетаУчетаЛеваяExtendedTooltip" id="300"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСчетаУчета" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Счета учета</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаСчетаУчетаExtendedTooltip" id="301"/>
+									<ChildItems>
+										<InputField name="СчетУчетаБУ" id="5">
+											<DataPath>Запись.СчетУчетаБУ</DataPath>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СчетУчетаБУКонтекстноеМеню" id="6"/>
+											<ExtendedTooltip name="СчетУчетаБУExtendedTooltip" id="302"/>
+											<Events>
+												<Event name="OnChange">СчетУчетаБУПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СчетУчетаПередачиБУ" id="9">
+											<DataPath>Запись.СчетУчетаПередачиБУ</DataPath>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СчетУчетаПередачиБУКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="СчетУчетаПередачиБУExtendedTooltip" id="303"/>
+											<Events>
+												<Event name="OnChange">СчетУчетаПередачиБУПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЗабалансовыеСчетаУчета" id="119">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Забалансовые счета учета</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаЗабалансовыеСчетаУчетаExtendedTooltip" id="304"/>
+									<ChildItems>
+										<InputField name="СчетУчетаЗабалансовый" id="7">
+											<DataPath>Запись.СчетУчетаЗабалансовый</DataPath>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СчетУчетаЗабалансовыйКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="СчетУчетаЗабалансовыйExtendedTooltip" id="305"/>
+										</InputField>
+										<InputField name="СчетУчетаПередачиЗабалансовый" id="11">
+											<DataPath>Запись.СчетУчетаПередачиЗабалансовый</DataPath>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СчетУчетаПередачиЗабалансовыйКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="СчетУчетаПередачиЗабалансовыйExtendedTooltip" id="306"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСтраницаСчетаУчетаПравая" id="117">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счета учета (правая)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтраницаСчетаУчетаПраваяExtendedTooltip" id="307"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСчетаНалоговогоУчета" id="120">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Счета налогового учета</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаСчетаНалоговогоУчетаExtendedTooltip" id="308"/>
+									<ChildItems>
+										<InputField name="СчетУчетаНУ" id="37">
+											<DataPath>Запись.СчетУчетаНУ</DataPath>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СчетУчетаНУКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="СчетУчетаНУExtendedTooltip" id="309"/>
+										</InputField>
+										<InputField name="СчетУчетаПередачиНУ" id="39">
+											<DataPath>Запись.СчетУчетаПередачиНУ</DataPath>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СчетУчетаПередачиНУКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="СчетУчетаПередачиНУExtendedTooltip" id="310"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаСчетаДоходов" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета доходов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаСтраницаСчетаДоходовExtendedTooltip" id="311"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУчетДоходовОтРеализации" id="121">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет доходов от реализации</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ExtendedTooltip name="ГруппаУчетДоходовОтРеализацииExtendedTooltip" id="312"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовкиСчетУчетаДоходовОтРеализацииБУ" id="133">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заголовки счет учета доходов от реализации БУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовкиСчетУчетаДоходовОтРеализацииБУExtendedTooltip" id="313"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияСчетДоходовОтРеализацииБУ" id="135">
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет доходов (БУ):</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСчетДоходовОтРеализацииБУКонтекстноеМеню" id="136"/>
+											<ExtendedTooltip name="ДекорацияСчетДоходовОтРеализацииБУExtendedTooltip" id="314"/>
+										</LabelDecoration>
+										<LabelField name="ЗаголовокСубконтоДоходовОтРеализацииБУ1" id="137">
+											<DataPath>ЗаголовокСубконтоДоходовОтРеализацииБУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовОтРеализацииБУ1КонтекстноеМеню" id="138"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовОтРеализацииБУ1ExtendedTooltip" id="315"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовОтРеализацииБУ2" id="139">
+											<DataPath>ЗаголовокСубконтоДоходовОтРеализацииБУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовОтРеализацииБУ2КонтекстноеМеню" id="140"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовОтРеализацииБУ2ExtendedTooltip" id="316"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовОтРеализацииБУ3" id="141">
+											<DataPath>ЗаголовокСубконтоДоходовОтРеализацииБУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовОтРеализацииБУ3КонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовОтРеализацииБУ3ExtendedTooltip" id="317"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПоляСчетаУчетаДоходовОтРеализацииБУ" id="134">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа поля счета учета доходов от реализации БУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоляСчетаУчетаДоходовОтРеализацииБУExtendedTooltip" id="318"/>
+									<ChildItems>
+										<InputField name="СчетДоходовОтРеализацииБУ" id="21">
+											<DataPath>Запись.СчетДоходовОтРеализацииБУ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СчетДоходовОтРеализацииБУКонтекстноеМеню" id="22"/>
+											<ExtendedTooltip name="СчетДоходовОтРеализацииБУExtendedTooltip" id="319"/>
+											<Events>
+												<Event name="OnChange">СчетДоходовОтРеализацииБУПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СубконтоДоходовОтРеализацииБУ1" id="23">
+											<DataPath>Запись.СубконтоДоходовОтРеализацииБУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоДоходовОтРеализацииБУ1КонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="СубконтоДоходовОтРеализацииБУ1ExtendedTooltip" id="320"/>
+											<Events>
+												<Event name="OnChange">СубконтоДоходовОтРеализацииБУ1ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоДоходовОтРеализацииБУ1НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовОтРеализацииБУ1" id="233">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовОтРеализацииБУ1КонтекстноеМеню" id="234"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовОтРеализацииБУ1ExtendedTooltip" id="321"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовОтРеализацииБУ2" id="25">
+											<DataPath>Запись.СубконтоДоходовОтРеализацииБУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоДоходовОтРеализацииБУ2КонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="СубконтоДоходовОтРеализацииБУ2ExtendedTooltip" id="322"/>
+											<Events>
+												<Event name="OnChange">СубконтоДоходовОтРеализацииБУ2ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоДоходовОтРеализацииБУ2НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовОтРеализацииБУ2" id="245">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовОтРеализацииБУ2КонтекстноеМеню" id="246"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовОтРеализацииБУ2ExtendedTooltip" id="323"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовОтРеализацииБУ3" id="27">
+											<DataPath>Запись.СубконтоДоходовОтРеализацииБУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоДоходовОтРеализацииБУ3КонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="СубконтоДоходовОтРеализацииБУ3ExtendedTooltip" id="324"/>
+											<Events>
+												<Event name="OnChange">СубконтоДоходовОтРеализацииБУ3ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоДоходовОтРеализацииБУ3НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовОтРеализацииБУ3" id="247">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовОтРеализацииБУ3КонтекстноеМеню" id="248"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовОтРеализацииБУ3ExtendedTooltip" id="325"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНалоговыйУчетДоходовОтРеализации" id="122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Налоговый учет доходов от реализации</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ExtendedTooltip name="ГруппаНалоговыйУчетДоходовОтРеализацииExtendedTooltip" id="326"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовкиСчетУчетаДоходовОтРеализацииНУ" id="143">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заголовки счет учета доходов от реализации НУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовкиСчетУчетаДоходовОтРеализацииНУExtendedTooltip" id="327"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияСчетДоходовОтРеализацииНУ" id="151">
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет доходов (НУ):</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСчетДоходовОтРеализацииНУКонтекстноеМеню" id="152"/>
+											<ExtendedTooltip name="ДекорацияСчетДоходовОтРеализацииНУExtendedTooltip" id="328"/>
+										</LabelDecoration>
+										<LabelField name="ЗаголовокСубконтоДоходовОтРеализацииНУ1" id="145">
+											<DataPath>ЗаголовокСубконтоДоходовОтРеализацииНУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовОтРеализацииНУ1КонтекстноеМеню" id="146"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовОтРеализацииНУ1ExtendedTooltip" id="329"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовОтРеализацииНУ2" id="147">
+											<DataPath>ЗаголовокСубконтоДоходовОтРеализацииНУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовОтРеализацииНУ2КонтекстноеМеню" id="148"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовОтРеализацииНУ2ExtendedTooltip" id="330"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовОтРеализацииНУ3" id="149">
+											<DataPath>ЗаголовокСубконтоДоходовОтРеализацииНУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовОтРеализацииНУ3КонтекстноеМеню" id="150"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовОтРеализацииНУ3ExtendedTooltip" id="331"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПоляСчетУчетДоходовОтРеализацииНУ" id="144">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поля счет учет доходов от реализации НУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоляСчетУчетДоходовОтРеализацииНУExtendedTooltip" id="332"/>
+									<ChildItems>
+										<InputField name="СчетДоходовОтРеализацииНУ" id="41">
+											<DataPath>Запись.СчетДоходовОтРеализацииНУ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СчетДоходовОтРеализацииНУКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="СчетДоходовОтРеализацииНУExtendedTooltip" id="333"/>
+											<Events>
+												<Event name="OnChange">СчетДоходовОтРеализацииНУПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СубконтоДоходовОтРеализацииНУ1" id="43">
+											<DataPath>Запись.СубконтоДоходовОтРеализацииНУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоДоходовОтРеализацииНУ1КонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="СубконтоДоходовОтРеализацииНУ1ExtendedTooltip" id="334"/>
+											<Events>
+												<Event name="StartChoice">СубконтоДоходовОтРеализацииНУ1НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовОтРеализацииНУ1" id="257">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовОтРеализацииНУ1КонтекстноеМеню" id="258"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовОтРеализацииНУ1ExtendedTooltip" id="335"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовОтРеализацииНУ2" id="45">
+											<DataPath>Запись.СубконтоДоходовОтРеализацииНУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоДоходовОтРеализацииНУ2КонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="СубконтоДоходовОтРеализацииНУ2ExtendedTooltip" id="336"/>
+											<Events>
+												<Event name="StartChoice">СубконтоДоходовОтРеализацииНУ2НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовОтРеализацииНУ2" id="289">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовОтРеализацииНУ2КонтекстноеМеню" id="290"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовОтРеализацииНУ2ExtendedTooltip" id="337"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовОтРеализацииНУ3" id="47">
+											<DataPath>Запись.СубконтоДоходовОтРеализацииНУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоДоходовОтРеализацииНУ3КонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="СубконтоДоходовОтРеализацииНУ3ExtendedTooltip" id="338"/>
+											<Events>
+												<Event name="StartChoice">СубконтоДоходовОтРеализацииНУ3НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовОтРеализацииНУ3" id="291">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовОтРеализацииНУ3КонтекстноеМеню" id="292"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовОтРеализацииНУ3ExtendedTooltip" id="339"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаСчетаВозвратов" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета возвратов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаСтраницаСчетаВозвратовExtendedTooltip" id="340"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУчетДоходовОтВозвратаПроданныхТоваров" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет доходов от возврата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет доходов от возврата проданных товаров</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ExtendedTooltip name="ГруппаУчетДоходовОтВозвратаПроданныхТоваровExtendedTooltip" id="341"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовкиСчетДоходовПриВозвратеБУ" id="153">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заголовки счет доходов при возврате БУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовкиСчетДоходовПриВозвратеБУExtendedTooltip" id="342"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияСчетДоходовПриВозвратеБУ" id="161">
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет доходов при возврате (БУ):</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСчетДоходовПриВозвратеБУКонтекстноеМеню" id="162"/>
+											<ExtendedTooltip name="ДекорацияСчетДоходовПриВозвратеБУExtendedTooltip" id="343"/>
+										</LabelDecoration>
+										<LabelField name="ЗаголовокСубконтоДоходовПриВозвратеБУ1" id="155">
+											<DataPath>ЗаголовокСубконтоДоходовПриВозвратеБУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовПриВозвратеБУ1КонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовПриВозвратеБУ1ExtendedTooltip" id="344"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовПриВозвратеБУ2" id="157">
+											<DataPath>ЗаголовокСубконтоДоходовПриВозвратеБУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовПриВозвратеБУ2КонтекстноеМеню" id="158"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовПриВозвратеБУ2ExtendedTooltip" id="345"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовПриВозвратеБУ3" id="159">
+											<DataPath>ЗаголовокСубконтоДоходовПриВозвратеБУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовПриВозвратеБУ3КонтекстноеМеню" id="160"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовПриВозвратеБУ3ExtendedTooltip" id="346"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПоляСчетДоходовПриВозвратеБУ" id="154">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поля счет доходов при возврате БУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоляСчетДоходовПриВозвратеБУExtendedTooltip" id="347"/>
+									<ChildItems>
+										<InputField name="СчетДоходовПриВозвратеБУ" id="57">
+											<DataPath>Запись.СчетДоходовПриВозвратеБУ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СчетДоходовПриВозвратеБУКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="СчетДоходовПриВозвратеБУExtendedTooltip" id="348"/>
+											<Events>
+												<Event name="OnChange">СчетДоходовПриВозвратеБУПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СубконтоДоходовПриВозвратеБУ1" id="61">
+											<DataPath>Запись.СубконтоДоходовПриВозвратеБУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоДоходовПриВозвратеБУ1КонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="СубконтоДоходовПриВозвратеБУ1ExtendedTooltip" id="349"/>
+											<Events>
+												<Event name="OnChange">СубконтоДоходовПриВозвратеБУ1ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоДоходовПриВозвратеБУ1НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовПриВозвратеБУ1" id="249">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовПриВозвратеБУ1КонтекстноеМеню" id="250"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовПриВозвратеБУ1ExtendedTooltip" id="350"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовПриВозвратеБУ2" id="63">
+											<DataPath>Запись.СубконтоДоходовПриВозвратеБУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоДоходовПриВозвратеБУ2КонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="СубконтоДоходовПриВозвратеБУ2ExtendedTooltip" id="351"/>
+											<Events>
+												<Event name="OnChange">СубконтоДоходовПриВозвратеБУ2ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоДоходовПриВозвратеБУ2НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовПриВозвратеБУ2" id="259">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовПриВозвратеБУ2КонтекстноеМеню" id="260"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовПриВозвратеБУ2ExtendedTooltip" id="352"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовПриВозвратеБУ3" id="65">
+											<DataPath>Запись.СубконтоДоходовПриВозвратеБУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоДоходовПриВозвратеБУ3КонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="СубконтоДоходовПриВозвратеБУ3ExtendedTooltip" id="353"/>
+											<Events>
+												<Event name="OnChange">СубконтоДоходовПриВозвратеБУ3ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоДоходовПриВозвратеБУ3НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовПриВозвратеБУ3" id="261">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовПриВозвратеБУ3КонтекстноеМеню" id="262"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовПриВозвратеБУ3ExtendedTooltip" id="354"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНалоговыйУчетДоходовОтВозврата" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Налоговый учет доходов от возврата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Налоговый учет доходов от возврата проданных товаров</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ExtendedTooltip name="ГруппаНалоговыйУчетДоходовОтВозвратаExtendedTooltip" id="355"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовкиСчетДоходовПриВозвратеНУ" id="163">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заголовки счет доходов при возврате НУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовкиСчетДоходовПриВозвратеНУExtendedTooltip" id="356"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияСчетДоходовПриВозвратеНУ" id="171">
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет доходов при возврате (НУ):</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСчетДоходовПриВозвратеНУКонтекстноеМеню" id="172"/>
+											<ExtendedTooltip name="ДекорацияСчетДоходовПриВозвратеНУExtendedTooltip" id="357"/>
+										</LabelDecoration>
+										<LabelField name="ЗаголовокСубконтоДоходовПриВозвратеНУ1" id="165">
+											<DataPath>ЗаголовокСубконтоДоходовПриВозвратеНУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовПриВозвратеНУ1КонтекстноеМеню" id="166"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовПриВозвратеНУ1ExtendedTooltip" id="358"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовПриВозвратеНУ2" id="167">
+											<DataPath>ЗаголовокСубконтоДоходовПриВозвратеНУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовПриВозвратеНУ2КонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовПриВозвратеНУ2ExtendedTooltip" id="359"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоДоходовПриВозвратеНУ3" id="169">
+											<DataPath>ЗаголовокСубконтоДоходовПриВозвратеНУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоДоходовПриВозвратеНУ3КонтекстноеМеню" id="170"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоДоходовПриВозвратеНУ3ExtendedTooltip" id="360"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПоляСчетДоходовПриВозвратеНУ" id="164">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поля счет доходов при возврате НУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоляСчетДоходовПриВозвратеНУExtendedTooltip" id="361"/>
+									<ChildItems>
+										<InputField name="СчетДоходовПриВозвратеНУ" id="59">
+											<DataPath>Запись.СчетДоходовПриВозвратеНУ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СчетДоходовПриВозвратеНУКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="СчетДоходовПриВозвратеНУExtendedTooltip" id="362"/>
+											<Events>
+												<Event name="OnChange">СчетДоходовПриВозвратеНУПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СубконтоДоходовПриВозвратеНУ1" id="67">
+											<DataPath>Запись.СубконтоДоходовПриВозвратеНУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоДоходовПриВозвратеНУ1КонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="СубконтоДоходовПриВозвратеНУ1ExtendedTooltip" id="363"/>
+											<Events>
+												<Event name="StartChoice">СубконтоДоходовПриВозвратеНУ1НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовПриВозвратеНУ1" id="251">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовПриВозвратеНУ1КонтекстноеМеню" id="252"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовПриВозвратеНУ1ExtendedTooltip" id="364"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовПриВозвратеНУ2" id="69">
+											<DataPath>Запись.СубконтоДоходовПриВозвратеНУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоДоходовПриВозвратеНУ2КонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="СубконтоДоходовПриВозвратеНУ2ExtendedTooltip" id="365"/>
+											<Events>
+												<Event name="StartChoice">СубконтоДоходовПриВозвратеНУ2НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовПриВозвратеНУ2" id="253">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовПриВозвратеНУ2КонтекстноеМеню" id="254"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовПриВозвратеНУ2ExtendedTooltip" id="366"/>
+										</LabelDecoration>
+										<InputField name="СубконтоДоходовПриВозвратеНУ3" id="293">
+											<DataPath>Запись.СубконтоДоходовПриВозвратеНУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоДоходовПриВозвратеНУ3КонтекстноеМеню" id="294"/>
+											<ExtendedTooltip name="СубконтоДоходовПриВозвратеНУ3ExtendedTooltip" id="367"/>
+											<Events>
+												<Event name="StartChoice">СубконтоДоходовПриВозвратеНУ3НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоДоходовПриВозвратеНУ3" id="263">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоДоходовПриВозвратеНУ3КонтекстноеМеню" id="264"/>
+											<ExtendedTooltip name="ДекорацияСубконтоДоходовПриВозвратеНУ3ExtendedTooltip" id="368"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаСчетаОтнесенияСебестоимости" id="110">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета отнесения себестоимости/затрат</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаСтраницаСчетаОтнесенияСебестоимостиExtendedTooltip" id="369"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУчетСебестоимостиЗатрат" id="125">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет себестоимости/затрат</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ExtendedTooltip name="ГруппаУчетСебестоимостиЗатратExtendedTooltip" id="370"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовкиСчетСебестоимостиПриРеализацииБУ" id="173">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заголовки счет себестоимости при реализации БУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовкиСчетСебестоимостиПриРеализацииБУExtendedTooltip" id="371"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияСчетСебестоимостиПриРеализацииБУ" id="177">
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет себестоимости/затрат (БУ):</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСчетСебестоимостиПриРеализацииБУКонтекстноеМеню" id="178"/>
+											<ExtendedTooltip name="ДекорацияСчетСебестоимостиПриРеализацииБУExtendedTooltip" id="372"/>
+										</LabelDecoration>
+										<LabelField name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ1" id="181">
+											<DataPath>ЗаголовокСубконтоСебестоимостиПриРеализацииБУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ1КонтекстноеМеню" id="182"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ1ExtendedTooltip" id="373"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ2" id="183">
+											<DataPath>ЗаголовокСубконтоСебестоимостиПриРеализацииБУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ2КонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ2ExtendedTooltip" id="374"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ3" id="185">
+											<DataPath>ЗаголовокСубконтоСебестоимостиПриРеализацииБУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ3КонтекстноеМеню" id="186"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ3ExtendedTooltip" id="375"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПоляСчетСебестоимостиПриРеализацииБУ" id="174">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поля счет себестоимости при реализации БУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоляСчетСебестоимостиПриРеализацииБУExtendedTooltip" id="376"/>
+									<ChildItems>
+										<InputField name="СчетСебестоимостиПриРеализацииБУ" id="29">
+											<DataPath>Запись.СчетСебестоимостиПриРеализацииБУ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СчетСебестоимостиПриРеализацииБУКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="СчетСебестоимостиПриРеализацииБУExtendedTooltip" id="377"/>
+											<Events>
+												<Event name="OnChange">СчетСебестоимостиПриРеализацииБУПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СубконтоСебестоимостиПриРеализацииБУ1" id="31">
+											<DataPath>Запись.СубконтоСебестоимостиПриРеализацииБУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоСебестоимостиПриРеализацииБУ1КонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="СубконтоСебестоимостиПриРеализацииБУ1ExtendedTooltip" id="378"/>
+											<Events>
+												<Event name="OnChange">СубконтоСебестоимостиПриРеализацииБУ1ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоСебестоимостиПриРеализацииБУ1НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ1" id="255">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ1КонтекстноеМеню" id="256"/>
+											<ExtendedTooltip name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ1ExtendedTooltip" id="379"/>
+										</LabelDecoration>
+										<InputField name="СубконтоСебестоимостиПриРеализацииБУ2" id="33">
+											<DataPath>Запись.СубконтоСебестоимостиПриРеализацииБУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоСебестоимостиПриРеализацииБУ2КонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="СубконтоСебестоимостиПриРеализацииБУ2ExtendedTooltip" id="380"/>
+											<Events>
+												<Event name="OnChange">СубконтоСебестоимостиПриРеализацииБУ2ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоСебестоимостиПриРеализацииБУ2НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ2" id="235">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ2КонтекстноеМеню" id="236"/>
+											<ExtendedTooltip name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ2ExtendedTooltip" id="381"/>
+										</LabelDecoration>
+										<InputField name="СубконтоСебестоимостиПриРеализацииБУ3" id="35">
+											<DataPath>Запись.СубконтоСебестоимостиПриРеализацииБУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+											<ContextMenu name="СубконтоСебестоимостиПриРеализацииБУ3КонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="СубконтоСебестоимостиПриРеализацииБУ3ExtendedTooltip" id="382"/>
+											<Events>
+												<Event name="OnChange">СубконтоСебестоимостиПриРеализацииБУ3ПриИзменении</Event>
+												<Event name="StartChoice">СубконтоСебестоимостиПриРеализацииБУ3НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ3" id="237">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ3КонтекстноеМеню" id="238"/>
+											<ExtendedTooltip name="ДекорацияСубконтоСебестоимостиПриРеализацииБУ3ExtendedTooltip" id="383"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНалоговыйУчетСебестоимостиЗатрат" id="126">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Налоговый учет себестоимости/затрат</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ExtendedTooltip name="ГруппаНалоговыйУчетСебестоимостиЗатратExtendedTooltip" id="384"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовкиСчетСебестоимостиПриРеализацииНУ" id="175">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заголовки счет себестоимости при реализации НУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовкиСчетСебестоимостиПриРеализацииНУExtendedTooltip" id="385"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияСчетСебестоимостиПриРеализацииНУ" id="179">
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Счет себестоимости/затрат (НУ):</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСчетСебестоимостиПриРеализацииНУКонтекстноеМеню" id="180"/>
+											<ExtendedTooltip name="ДекорацияСчетСебестоимостиПриРеализацииНУExtendedTooltip" id="386"/>
+										</LabelDecoration>
+										<LabelField name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ1" id="187">
+											<DataPath>ЗаголовокСубконтоСебестоимостиПриРеализацииНУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ1КонтекстноеМеню" id="188"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ1ExtendedTooltip" id="387"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ2" id="189">
+											<DataPath>ЗаголовокСубконтоСебестоимостиПриРеализацииНУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ2КонтекстноеМеню" id="190"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ2ExtendedTooltip" id="388"/>
+										</LabelField>
+										<LabelField name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ3" id="191">
+											<DataPath>ЗаголовокСубконтоСебестоимостиПриРеализацииНУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ3КонтекстноеМеню" id="192"/>
+											<ExtendedTooltip name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ3ExtendedTooltip" id="389"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПоляСчетСебестоимостиПриРеализацииНУ" id="176">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поля счет себестоимости при реализации НУ</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоляСчетСебестоимостиПриРеализацииНУExtendedTooltip" id="390"/>
+									<ChildItems>
+										<InputField name="СчетСебестоимостиПриРеализацииНУ" id="49">
+											<DataPath>Запись.СчетСебестоимостиПриРеализацииНУ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СчетСебестоимостиПриРеализацииНУКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="СчетСебестоимостиПриРеализацииНУExtendedTooltip" id="391"/>
+											<Events>
+												<Event name="OnChange">СчетСебестоимостиПриРеализацииНУПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СубконтоСебестоимостиПриРеализацииНУ1" id="51">
+											<DataPath>Запись.СубконтоСебестоимостиПриРеализацииНУ1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоСебестоимостиПриРеализацииНУ1КонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="СубконтоСебестоимостиПриРеализацииНУ1ExtendedTooltip" id="392"/>
+											<Events>
+												<Event name="StartChoice">СубконтоСебестоимостиПриРеализацииНУ1НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ1" id="239">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ1КонтекстноеМеню" id="240"/>
+											<ExtendedTooltip name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ1ExtendedTooltip" id="393"/>
+										</LabelDecoration>
+										<InputField name="СубконтоСебестоимостиПриРеализацииНУ2" id="53">
+											<DataPath>Запись.СубконтоСебестоимостиПриРеализацииНУ2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоСебестоимостиПриРеализацииНУ2КонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="СубконтоСебестоимостиПриРеализацииНУ2ExtendedTooltip" id="394"/>
+											<Events>
+												<Event name="StartChoice">СубконтоСебестоимостиПриРеализацииНУ2НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ2" id="241">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ2КонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ2ExtendedTooltip" id="395"/>
+										</LabelDecoration>
+										<InputField name="СубконтоСебестоимостиПриРеализацииНУ3" id="55">
+											<DataPath>Запись.СубконтоСебестоимостиПриРеализацииНУ3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+											<ContextMenu name="СубконтоСебестоимостиПриРеализацииНУ3КонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="СубконтоСебестоимостиПриРеализацииНУ3ExtendedTooltip" id="396"/>
+											<Events>
+												<Event name="StartChoice">СубконтоСебестоимостиПриРеализацииНУ3НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ3" id="243">
+											<Visible>false</Visible>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ3КонтекстноеМеню" id="244"/>
+											<ExtendedTooltip name="ДекорацияСубконтоСебестоимостиПриРеализацииНУ3ExtendedTooltip" id="397"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаСчетаНДСАкциз" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС / Акциз</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ExtendedTooltip name="ГруппаСтраницаСчетаНДСАкцизExtendedTooltip" id="398"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСчетУчетаНДС" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счета учета НДС</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаСчетУчетаНДСExtendedTooltip" id="399"/>
+							<ChildItems>
+								<InputField name="СчетУчетаНДСПоПриобретению" id="13">
+									<DataPath>Запись.СчетУчетаНДСПоПриобретению</DataPath>
+									<ClearButton>true</ClearButton>
+									<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+									<ContextMenu name="СчетУчетаНДСПоПриобретениюКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="СчетУчетаНДСПоПриобретениюExtendedTooltip" id="400"/>
+								</InputField>
+								<InputField name="СчетУчетаНДСПоРеализации" id="15">
+									<DataPath>Запись.СчетУчетаНДСПоРеализации</DataPath>
+									<ClearButton>true</ClearButton>
+									<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+									<ContextMenu name="СчетУчетаНДСПоРеализацииКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="СчетУчетаНДСПоРеализацииExtendedTooltip" id="401"/>
+								</InputField>
+								<InputField name="СчетУчетаНДСУплаченногоНаТаможне" id="17">
+									<DataPath>Запись.СчетУчетаНДСУплаченногоНаТаможне</DataPath>
+									<ClearButton>true</ClearButton>
+									<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+									<ContextMenu name="СчетУчетаНДСУплаченногоНаТаможнеКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СчетУчетаНДСУплаченногоНаТаможнеExtendedTooltip" id="402"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСчетУчетаАкциз" id="128">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет учета акциза</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаСчетУчетаАкцизExtendedTooltip" id="403"/>
+							<ChildItems>
+								<InputField name="СчетУчетаАкцизаПоРеализации" id="19">
+									<DataPath>Запись.СчетУчетаАкцизаПоРеализации</DataPath>
+									<ClearButton>true</ClearButton>
+									<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+									<ContextMenu name="СчетУчетаАкцизаПоРеализацииКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="СчетУчетаАкцизаПоРеализацииExtendedTooltip" id="404"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаСчетаПередачиСтруктурнымПодразделениям" id="112">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Передача структурным подразделениям</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаСтраницаСчетаПередачиСтруктурнымПодразделениямExtendedTooltip" id="405"/>
+					<ChildItems>
+						<Pages name="ГруппаСтраницыСчетаПередачиСтруктурнымПодразделениям" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы счетов передачи структурным подразделениям</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаСтраницыСчетаПередачиСтруктурнымПодразделениямExtendedTooltip" id="406"/>
+							<ChildItems>
+								<Page name="ГруппаСтраницаСчетаПоложительныеОтколонения" id="114">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Положительные отклонения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаСтраницаСчетаПоложительныеОтколоненияExtendedTooltip" id="407"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаУчетПоложительныхОтклонений" id="129">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Учет положительных отклонений</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+											<ExtendedTooltip name="ГруппаУчетПоложительныхОтклоненийExtendedTooltip" id="408"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЗаголовкиСчетПоложительныхОтклоненийБУ" id="193">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заголовки счет положительных отклонений БУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЗаголовкиСчетПоложительныхОтклоненийБУExtendedTooltip" id="409"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияСчетПоложительныхОтклоненийБУ" id="201">
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет учета полож. откл. (БУ):</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет учета положительных отклонений (БУ)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ДекорацияСчетПоложительныхОтклоненийБУКонтекстноеМеню" id="202"/>
+															<ExtendedTooltip name="ДекорацияСчетПоложительныхОтклоненийБУExtendedTooltip" id="410"/>
+														</LabelDecoration>
+														<LabelField name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="209">
+															<DataPath>ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1КонтекстноеМеню" id="210"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ExtendedTooltip" id="411"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="211">
+															<DataPath>ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2КонтекстноеМеню" id="212"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ExtendedTooltip" id="412"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="213">
+															<DataPath>ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3КонтекстноеМеню" id="214"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ExtendedTooltip" id="413"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПоляСчетПоложительныхОтклоненийБУ" id="194">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Поля счет положительных отклонений БУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПоляСчетПоложительныхОтклоненийБУExtendedTooltip" id="414"/>
+													<ChildItems>
+														<InputField name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ" id="73">
+															<DataPath>Запись.СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУКонтекстноеМеню" id="74"/>
+															<ExtendedTooltip name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУExtendedTooltip" id="415"/>
+															<Events>
+																<Event name="OnChange">СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="75">
+															<DataPath>Запись.СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1КонтекстноеМеню" id="76"/>
+															<ExtendedTooltip name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ExtendedTooltip" id="416"/>
+															<Events>
+																<Event name="OnChange">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ПриИзменении</Event>
+																<Event name="StartChoice">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="271">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1КонтекстноеМеню" id="272"/>
+															<ExtendedTooltip name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ExtendedTooltip" id="417"/>
+														</LabelDecoration>
+														<InputField name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="77">
+															<DataPath>Запись.СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2КонтекстноеМеню" id="78"/>
+															<ExtendedTooltip name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ExtendedTooltip" id="418"/>
+															<Events>
+																<Event name="OnChange">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ПриИзменении</Event>
+																<Event name="StartChoice">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="273">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2КонтекстноеМеню" id="274"/>
+															<ExtendedTooltip name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ExtendedTooltip" id="419"/>
+														</LabelDecoration>
+														<InputField name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="79">
+															<DataPath>Запись.СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3КонтекстноеМеню" id="80"/>
+															<ExtendedTooltip name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ExtendedTooltip" id="420"/>
+															<Events>
+																<Event name="OnChange">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ПриИзменении</Event>
+																<Event name="StartChoice">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="275">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3КонтекстноеМеню" id="276"/>
+															<ExtendedTooltip name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ExtendedTooltip" id="421"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаНалоговыйУчетПоложительныхОтклонений" id="130">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Налоговый учет положительных отклонений</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+											<ExtendedTooltip name="ГруппаНалоговыйУчетПоложительныхОтклоненийExtendedTooltip" id="422"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЗаголовкиСчетПоложительныхОтклоненийНУ" id="195">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заголовки счет положительных отклонений НУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЗаголовкиСчетПоложительныхОтклоненийНУExtendedTooltip" id="423"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияСчетПоложительныхОтклоненийНУ" id="203">
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет учета полож. откл. (НУ):</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет учета положительных отклонений (НУ)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ДекорацияСчетПоложительныхОтклоненийНУКонтекстноеМеню" id="204"/>
+															<ExtendedTooltip name="ДекорацияСчетПоложительныхОтклоненийНУExtendedTooltip" id="424"/>
+														</LabelDecoration>
+														<LabelField name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="215">
+															<DataPath>ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1КонтекстноеМеню" id="216"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1ExtendedTooltip" id="425"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="217">
+															<DataPath>ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2КонтекстноеМеню" id="218"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2ExtendedTooltip" id="426"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="219">
+															<DataPath>ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3КонтекстноеМеню" id="220"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3ExtendedTooltip" id="427"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПоляСчетПоложительныхОтклоненийНУ" id="196">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Поля счет положительных отклонений НУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПоляСчетПоложительныхОтклоненийНУExtendedTooltip" id="428"/>
+													<ChildItems>
+														<InputField name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ" id="89">
+															<DataPath>Запись.СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУКонтекстноеМеню" id="90"/>
+															<ExtendedTooltip name="СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУExtendedTooltip" id="429"/>
+															<Events>
+																<Event name="OnChange">СчетПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="91">
+															<DataPath>Запись.СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1КонтекстноеМеню" id="92"/>
+															<ExtendedTooltip name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1ExtendedTooltip" id="430"/>
+															<Events>
+																<Event name="StartChoice">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="265">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1КонтекстноеМеню" id="266"/>
+															<ExtendedTooltip name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1ExtendedTooltip" id="431"/>
+														</LabelDecoration>
+														<InputField name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="93">
+															<DataPath>Запись.СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2КонтекстноеМеню" id="94"/>
+															<ExtendedTooltip name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2ExtendedTooltip" id="432"/>
+															<Events>
+																<Event name="StartChoice">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="267">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2КонтекстноеМеню" id="268"/>
+															<ExtendedTooltip name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2ExtendedTooltip" id="433"/>
+														</LabelDecoration>
+														<InputField name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="95">
+															<DataPath>Запись.СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3КонтекстноеМеню" id="96"/>
+															<ExtendedTooltip name="СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3ExtendedTooltip" id="434"/>
+															<Events>
+																<Event name="StartChoice">СубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="269">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3КонтекстноеМеню" id="270"/>
+															<ExtendedTooltip name="ДекорацияСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3ExtendedTooltip" id="435"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаСтраницаСчетаОтрицательныеОтколонения" id="115">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отрицательные отколонения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаСтраницаСчетаОтрицательныеОтколоненияExtendedTooltip" id="436"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаУчетОтрицательныхОтклонений" id="131">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Учет отрицательных отклонений</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+											<ExtendedTooltip name="ГруппаУчетОтрицательныхОтклоненийExtendedTooltip" id="437"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЗаголовкиСчетОтрицательныхОтклоненийБУ" id="197">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заголовки счет отрицательных отклонений БУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЗаголовкиСчетОтрицательныхОтклоненийБУExtendedTooltip" id="438"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияСчетОтрицательныхОтклоненийБУ" id="205">
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет учета отриц. откл. (БУ):</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет учета отрицательных отклонений (БУ)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ДекорацияСчетОтрицательныхОтклоненийБУКонтекстноеМеню" id="206"/>
+															<ExtendedTooltip name="ДекорацияСчетОтрицательныхОтклоненийБУExtendedTooltip" id="439"/>
+														</LabelDecoration>
+														<LabelField name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="221">
+															<DataPath>ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1КонтекстноеМеню" id="222"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ExtendedTooltip" id="440"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="223">
+															<DataPath>ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2КонтекстноеМеню" id="224"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ExtendedTooltip" id="441"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="225">
+															<DataPath>ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3КонтекстноеМеню" id="226"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ExtendedTooltip" id="442"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПоляСчетОтрицательныхОтклоненийБУ" id="198">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Поля счет отрицательных отклонений БУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПоляСчетОтрицательныхОтклоненийБУExtendedTooltip" id="443"/>
+													<ChildItems>
+														<InputField name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ" id="81">
+															<DataPath>Запись.СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУКонтекстноеМеню" id="82"/>
+															<ExtendedTooltip name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУExtendedTooltip" id="444"/>
+															<Events>
+																<Event name="OnChange">СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="83">
+															<DataPath>Запись.СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1КонтекстноеМеню" id="84"/>
+															<ExtendedTooltip name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ExtendedTooltip" id="445"/>
+															<Events>
+																<Event name="OnChange">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ПриИзменении</Event>
+																<Event name="StartChoice">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="277">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1КонтекстноеМеню" id="278"/>
+															<ExtendedTooltip name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1ExtendedTooltip" id="446"/>
+														</LabelDecoration>
+														<InputField name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="85">
+															<DataPath>Запись.СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2КонтекстноеМеню" id="86"/>
+															<ExtendedTooltip name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ExtendedTooltip" id="447"/>
+															<Events>
+																<Event name="OnChange">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ПриИзменении</Event>
+																<Event name="StartChoice">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="279">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2КонтекстноеМеню" id="280"/>
+															<ExtendedTooltip name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2ExtendedTooltip" id="448"/>
+														</LabelDecoration>
+														<InputField name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="87">
+															<DataPath>Запись.СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоБУ</BackColor>
+															<ContextMenu name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3КонтекстноеМеню" id="88"/>
+															<ExtendedTooltip name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ExtendedTooltip" id="449"/>
+															<Events>
+																<Event name="OnChange">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ПриИзменении</Event>
+																<Event name="StartChoice">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="281">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3КонтекстноеМеню" id="282"/>
+															<ExtendedTooltip name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3ExtendedTooltip" id="450"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаНалоговыйУчетОтрицательныхОтклонений" id="132">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Налоговый учет отрицательных отклонений</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+											<ExtendedTooltip name="ГруппаНалоговыйУчетОтрицательныхОтклоненийExtendedTooltip" id="451"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЗаголовкиСчетОтрицательныхОтклоненийНУ" id="199">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заголовки счет отрицательных отклонений НУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЗаголовкиСчетОтрицательныхОтклоненийНУExtendedTooltip" id="452"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияСчетОтрицательныхОтклоненийНУ" id="207">
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет учета отриц. откл. (НУ):</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счет отрицательных отклонений (НУ):</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ДекорацияСчетОтрицательныхОтклоненийНУКонтекстноеМеню" id="208"/>
+															<ExtendedTooltip name="ДекорацияСчетОтрицательныхОтклоненийНУExtendedTooltip" id="453"/>
+														</LabelDecoration>
+														<LabelField name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="227">
+															<DataPath>ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1КонтекстноеМеню" id="228"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1ExtendedTooltip" id="454"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="229">
+															<DataPath>ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2КонтекстноеМеню" id="230"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2ExtendedTooltip" id="455"/>
+														</LabelField>
+														<LabelField name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="231">
+															<DataPath>ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3КонтекстноеМеню" id="232"/>
+															<ExtendedTooltip name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3ExtendedTooltip" id="456"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПоляСчетОтрицательныхОтклоненийНУ" id="200">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Поля счет отрицательных отклонений НУ</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПоляСчетОтрицательныхОтклоненийНУExtendedTooltip" id="457"/>
+													<ChildItems>
+														<InputField name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ" id="97">
+															<DataPath>Запись.СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУКонтекстноеМеню" id="98"/>
+															<ExtendedTooltip name="СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУExtendedTooltip" id="458"/>
+															<Events>
+																<Event name="OnChange">СчетОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="99">
+															<DataPath>Запись.СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1КонтекстноеМеню" id="100"/>
+															<ExtendedTooltip name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1ExtendedTooltip" id="459"/>
+															<Events>
+																<Event name="StartChoice">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="283">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1КонтекстноеМеню" id="284"/>
+															<ExtendedTooltip name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1ExtendedTooltip" id="460"/>
+														</LabelDecoration>
+														<InputField name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="101">
+															<DataPath>Запись.СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2КонтекстноеМеню" id="102"/>
+															<ExtendedTooltip name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2ExtendedTooltip" id="461"/>
+															<Events>
+																<Event name="StartChoice">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="285">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2КонтекстноеМеню" id="286"/>
+															<ExtendedTooltip name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2ExtendedTooltip" id="462"/>
+														</LabelDecoration>
+														<InputField name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="103">
+															<DataPath>Запись.СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ClearButton>true</ClearButton>
+															<OpenButton>true</OpenButton>
+															<BackColor>style:ЦветКолонкиДляСчетовИСубконтоНУ</BackColor>
+															<ContextMenu name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3КонтекстноеМеню" id="104"/>
+															<ExtendedTooltip name="СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3ExtendedTooltip" id="463"/>
+															<Events>
+																<Event name="StartChoice">СубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3НачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="287">
+															<Visible>false</Visible>
+															<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;из свойств номенклатуры&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3КонтекстноеМеню" id="288"/>
+															<ExtendedTooltip name="ДекорацияСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3ExtendedTooltip" id="464"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СчетаУчетаНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовОтРеализацииБУ1" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовОтРеализацииНУ3" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовОтРеализацииНУ2" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовОтРеализацииНУ1" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ3" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ2" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоСебестоимостиПриРеализацииБУ1" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовОтРеализацииБУ3" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовОтРеализацииБУ2" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовПриВозвратеБУ3" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовПриВозвратеНУ1" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовПриВозвратеНУ2" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовПриВозвратеНУ3" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ3" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ1" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямБУ2" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовПриВозвратеБУ2" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоДоходовПриВозвратеБУ1" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ3" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ2" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоСебестоимостиПриРеализацииНУ1" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоПоложительныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ1" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ2" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСубконтоОтрицательныхОтклоненийПриПередачеСтруктурнымПодразделениямНУ3" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок субконто отрицательных отклонений при передаче структурным подразделениям н у3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

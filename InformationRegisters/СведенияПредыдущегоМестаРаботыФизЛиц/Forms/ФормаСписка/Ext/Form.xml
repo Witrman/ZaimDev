@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="62"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<InputField name="ОтборНалогоплательщик" id="52">
+					<DataPath>ОтборНалогоплательщик</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные предоставлены по налогоплательщику</v8:content>
+						</v8:item>
+					</Title>
+					<ClearButton>true</ClearButton>
+					<ChoiceParameters>
+						<app:item name="ВыбиратьНалогоплательщиков">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">true</Value>
+							</app:value>
+						</app:item>
+						<app:item name="РазделНалоговогоУчета">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.РазделыНалоговогоУчета.EnumValue.НалогиСЗаработнойПлаты</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ОтборНалогоплательщикКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ОтборНалогоплательщикРасширеннаяПодсказка" id="54"/>
+					<Events>
+						<Event name="OnChange">ОтборНалогоплательщикПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Год" id="49">
+					<DataPath>Год</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>за</v8:content>
+						</v8:item>
+					</Title>
+					<ClearButton>true</ClearButton>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ГодКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">ГодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ГодНадпись" id="58">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>год</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ГодНадписьКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ГодНадписьРасширеннаяПодсказка" id="60"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="63">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="66">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="69">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ФизЛицо" id="7">
+					<DataPath>Список.ФизЛицо</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ФизЛицоКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+				<LabelField name="МесяцНалоговогоПериода" id="13">
+					<DataPath>Список.МесяцНалоговогоПериода</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ = 'ММММ гггг'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="МесяцНалоговогоПериодаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="МесяцНалоговогоПериодаРасширеннаяПодсказка" id="15"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСведенияДляИсчисленияИПН" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения для исчисления ИПН</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаСведенияДляИсчисленияИПНРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<LabelField name="Доход" id="16">
+							<DataPath>Список.Доход</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="ДоходКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДоходРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+						<LabelField name="ДоходНеОблагаемыйИПН" id="19">
+							<DataPath>Список.ДоходНеОблагаемыйИПН</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необлаг. доход</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДоходНеОблагаемыйИПНКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДоходНеОблагаемыйИПНРасширеннаяПодсказка" id="21"/>
+						</LabelField>
+						<LabelField name="ПримененнаяЛьгота" id="25">
+							<DataPath>Список.ПримененнаяЛьгота</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>в т.ч. льгота</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПримененнаяЛьготаКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ПримененнаяЛьготаРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+						<LabelField name="ПримененныйВычет" id="28">
+							<DataPath>Список.ПримененныйВычет</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вычет</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПримененныйВычетКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ПримененныйВычетРасширеннаяПодсказка" id="30"/>
+						</LabelField>
+						<LabelField name="ОПВ" id="31">
+							<DataPath>Список.ОПВ</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="ОПВКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ОПВРасширеннаяПодсказка" id="33"/>
+						</LabelField>
+						<LabelField name="ИПН" id="34">
+							<DataPath>Список.ИПН</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="ИПНКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ИПНРасширеннаяПодсказка" id="36"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаСведенияДляИсчисленияСН" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения для исчисления СН</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаСведенияДляИсчисленияСНРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<LabelField name="ДоходОблагаемыйСН" id="22">
+							<DataPath>Список.ДоходОблагаемыйСН</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Облаг. доход</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДоходОблагаемыйСНКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ДоходОблагаемыйСНРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="СН" id="37">
+							<DataPath>Список.СН</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="СНКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="СНРасширеннаяПодсказка" id="39"/>
+						</LabelField>
+						<LabelField name="СО" id="40">
+							<DataPath>Список.СО</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="СОКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СОРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ВОСМС" id="72">
+					<DataPath>Список.ВОСМС</DataPath>
+					<ContextMenu name="ВОСМСКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ВОСМСРасширеннаяПодсказка" id="74"/>
+				</LabelField>
+				<LabelField name="Налогоплательщик" id="10">
+					<DataPath>Список.Налогоплательщик</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НалогоплательщикКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="НалогоплательщикРасширеннаяПодсказка" id="12"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ФизЛицо,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.Налогоплательщик,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.МесяцНалоговогоПериода,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.Доход,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ДоходНеОблагаемыйИПН,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ДоходОблагаемыйСН,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ПримененнаяЛьгота,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ПримененныйВычет,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ОПВ,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ИПН,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.СН,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.СО,
+	РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.ВОСМС
+ИЗ
+	РегистрСведений.СведенияПредыдущегоМестаРаботыФизЛиц КАК РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;Налогоплательщик = НЕОПРЕДЕЛЕНО
+					ИЛИ &amp;Налогоплательщик = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.Налогоплательщик = &amp;Налогоплательщик
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;НачПериода = &amp;ПустаяДата
+					И &amp;КонПериода = &amp;ПустаяДата
+				ТОГДА ИСТИНА
+			ИНАЧЕ РегистрСведенийСведенияПредыдущегоМестаРаботыФизЛиц.МесяцНалоговогоПериода МЕЖДУ &amp;НачПериода И &amp;КонПериода
+		КОНЕЦ</QueryText>
+				<MainTable>InformationRegister.СведенияПредыдущегоМестаРаботыФизЛиц</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборНалогоплательщик" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налогоплательщик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетЗарплатыИКадры</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Год" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетЗарплатыИКадры</Item>
+			</FunctionalOptions>
+		</Attribute>
+	</Attributes>
+</Form>

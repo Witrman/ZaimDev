@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="b42014c7-feb7-4eee-bf6b-ef463c2da4ca">
+		<Properties>
+			<Name>Маркировка</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркировка продукции (ИС МП)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ИС МП</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркируемогоТабакаИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркируемойОбувиИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиИСМПТКСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркируемойОбувиИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркируемогоТекстиляИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиДополнительныйИСМПТКСлужебныйКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПечатьКодовМаркировкиИСМПТККлиентСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПодключаемоеОборудованиеИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТКВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПодключаемоеОборудованиеИСМПТККлиентСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПодключаемоеОборудованиеИСМПТККлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркируемойПродукцииИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТККлиентСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПечатьКодовМаркировкиИСМПТККлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТККлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТКСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПодключаемоеОборудованиеИСМПТККлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеОбщийИСМПТКСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПодключаемоеОборудованиеИСМПТККлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СлужебныеПроцедурыИФункцииИСМПТКВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркируемойПродукцииИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СлужебныеПроцедурыИФункцииИСМПТККлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыШтрихкодовИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыУпаковокИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыУпаковокИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиДополнительныйИСМПТКСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиДополнительныйИСМПТКСлужебныйКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиДополнительныйИСМПТКСлужебныйВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркируемыхЛекарствИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиДополнительныйИСМПТКСлужебныйКлиентСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.НоменклатураИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиИСМПТКСлужебныйПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыПродукцииИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркируемогоТабакаИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ХарактеристикаНоменклатурыИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиИСМПТКСлужебныйКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазборКодаМаркировкиИСМПТКСлужебныйКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияИСМПТККлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияИСМПТККлиентСерверПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТККлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТККлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеИСМПТКПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркируемойМолочкиИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркируемыхЛекарствИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркируемойМолочкиИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркируемогоТекстиляИСМПТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МаркируемаяПродукцияТЧ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МаркируемаяПродукцияШапка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ОсобенностиУчетаНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыМаркировкиККТ</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

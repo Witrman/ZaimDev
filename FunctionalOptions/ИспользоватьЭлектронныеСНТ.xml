@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FunctionalOption uuid="209df236-e3ff-418f-a432-2f6d551d1c30">
+		<Properties>
+			<Name>ИспользоватьЭлектронныеСНТ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать электронные СНТ</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ИспользоватьЭлектронныеСНТ</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Document.СНТ</xr:Object>
+				<xr:Object>Subsystem.ЭлектронныеСопроводительныеНакладные</xr:Object>
+				<xr:Object>DataProcessor.ОбменСНТ</xr:Object>
+				<xr:Object>AccumulationRegister.ТоварыВиртуальногоСкладаВРезерве</xr:Object>
+				<xr:Object>Catalog.ВиртуальныеСкладыКонтрагента</xr:Object>
+				<xr:Object>Document.СопоставлениеСНТиФНО</xr:Object>
+				<xr:Object>Enum.ВидыОперацийСНТ</xr:Object>
+				<xr:Object>Enum.ВидыВвозаСНТ</xr:Object>
+				<xr:Object>Enum.ВидыВывозаСНТ</xr:Object>
+				<xr:Object>Enum.ВидыПеремещенияСНТ</xr:Object>
+				<xr:Object>Enum.СтатусыСНТ</xr:Object>
+				<xr:Object>Enum.СостоянияСНТ</xr:Object>
+				<xr:Object>Enum.ТипыСНТ</xr:Object>
+				<xr:Object>Enum.НаправленияСНТ</xr:Object>
+				<xr:Object>Enum.СтатусыСопоставленийСНТиФНО</xr:Object>
+				<xr:Object>Report.АнализОстатковТоваровНаВиртуальномСкладеСУчетомРезервов</xr:Object>
+				<xr:Object>Constant.СНТВнешнийМодульОбменаДанными</xr:Object>
+				<xr:Object>Constant.СНТИспользоватьВнешнийМодульОбменаДанными</xr:Object>
+				<xr:Object>Enum.СтатусыСопоставленияДляСНТ</xr:Object>
+				<xr:Object>InformationRegister.ОсновныеВиртуальныеСкладыКонтрагентов</xr:Object>
+				<xr:Object>Report.ОтчетПоНаличиюСНТВыданныхПолученных</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

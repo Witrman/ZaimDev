@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>История изменения сведений об участнике ВОВ</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="32">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОКРасширеннаяПодсказка" id="33"/>
+			</Button>
+			<Button name="ФормаКомандаОтмена" id="34">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОтмена</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОтменаРасширеннаяПодсказка" id="35"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаИнформационная" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная группа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнформационнаяРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<PictureDecoration name="ИнформационнаяКартинка" id="45">
+					<Width>3</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информационная картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ИнформационнаяКартинкаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ИнформационнаяКартинкаРасширеннаяПодсказка" id="47"/>
+				</PictureDecoration>
+				<LabelDecoration name="ИнформационнаяНадпись" id="42">
+					<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Редактирование истории недоступно,
+т.к. личные данные сотрудника редактируются другим пользователем</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИнформационнаяНадписьКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ИнформационнаяНадписьРасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="НаборЗаписей" id="48">
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>НаборЗаписей</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборЗаписейКонтекстноеМеню" id="49"/>
+			<AutoCommandBar name="НаборЗаписейКоманднаяПанель" id="50">
+				<ChildItems>
+					<ButtonGroup name="ГруппаФормаКоманды" id="91">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Команды</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>Form</CommandSource>
+						<ExtendedTooltip name="ГруппаФормаКомандыРасширеннаяПодсказка" id="92"/>
+					</ButtonGroup>
+					<Button name="Справка" id="93">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="94"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="НаборЗаписейРасширеннаяПодсказка" id="51"/>
+			<SearchStringAddition name="НаборЗаписейСтрокаПоиска" id="52">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСтрокаПоискаКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="НаборЗаписейСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборЗаписейСостояниеПросмотра" id="57">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСостояниеПросмотраКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="НаборЗаписейСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборЗаписейУправлениеПоиском" id="62">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейУправлениеПоискомКонтекстноеМеню" id="65"/>
+				<ExtendedTooltip name="НаборЗаписейУправлениеПоискомРасширеннаяПодсказка" id="66"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">НаборЗаписейПриОкончанииРедактирования</Event>
+				<Event name="BeforeDeleteRow">НаборЗаписейПередУдалением</Event>
+				<Event name="BeforeEditEnd">НаборЗаписейПередОкончаниемРедактирования</Event>
+				<Event name="OnStartEdit">НаборЗаписейПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="НаборЗаписейПериод" id="67">
+					<DataPath>НаборЗаписей.Period</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует с</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаборЗаписейПериодКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="НаборЗаписейПериодРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="НаборЗаписейСтатус" id="101">
+					<DataPath>НаборЗаписей.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаборЗаписейСтатусКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="НаборЗаписейСтатусРасширеннаяПодсказка" id="103"/>
+				</InputField>
+				<ColumnGroup name="НаборЗаписейГруппаСерияНомерУдостоверения" id="113">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия / номер удостоверения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НаборЗаписейГруппаСерияНомерУдостоверенияРасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<InputField name="НаборЗаписейСерияУдостоверения" id="104">
+							<DataPath>НаборЗаписей.СерияУдостоверения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаборЗаписейСерияУдостоверенияКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="НаборЗаписейСерияУдостоверенияРасширеннаяПодсказка" id="106"/>
+						</InputField>
+						<InputField name="НаборЗаписейНомерУдостоверения" id="107">
+							<DataPath>НаборЗаписей.НомерУдостоверения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаборЗаписейНомерУдостоверенияКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="НаборЗаписейНомерУдостоверенияРасширеннаяПодсказка" id="109"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="НаборЗаписейДатаВыдачи" id="110">
+					<DataPath>НаборЗаписей.ДатаВыдачи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаборЗаписейДатаВыдачиКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="НаборЗаписейДатаВыдачиРасширеннаяПодсказка" id="112"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборЗаписей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор записей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СведенияОФизлицахУчастникахВОВ</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПериодЗакрыт" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период закрыт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОбъектВладелец" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект владелец</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаЗапрета" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата запрета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НаборЗаписей</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборЗаписей.ПериодЗакрыт</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+		</Command>
+		<Command name="КомандаОтмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтмена</Action>
+		</Command>
+	</Commands>
+</Form>

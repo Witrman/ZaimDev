@@ -1,0 +1,1371 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>ДанныеДокументовОтгрузки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаБезНДСОборот</dataPath>
+			<field>СуммаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ отгрузки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Налогоплательщик</dataPath>
+			<field>Налогоплательщик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налогоплательщик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОборотПоРеализацииОборот</dataPath>
+			<field>ОборотПоРеализации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оборот по реализации</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНДСОборот</dataPath>
+			<field>СуммаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВсего</dataPath>
+			<field>СуммаВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма всего</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурноеПодразделение</dataPath>
+			<field>СтруктурноеПодразделение</field>
+			<presentationExpression>Выбор Когда Не ЗначениеЗаполнено(СтруктурноеПодразделение) Тогда "Головное подразделение" Иначе СтруктурноеПодразделение Конец</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТ</dataPath>
+			<field>СНТ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СНТ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДокумента</dataPath>
+			<field>ТипДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТПроведен</dataPath>
+			<field>СНТПроведен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проведен СНТ</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ВЫБОР Когда СНТПроведен = ИСТИНА тогда "✔" ИНАЧЕ ""  КОНЕЦ</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСтатус</dataPath>
+			<field>СНТСтатус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус СНТ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УплаченныйНДС</dataPath>
+			<field>УплаченныйНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьДней</dataPath>
+			<field>ОсталосьДней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось дней</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрацииСНТ</dataPath>
+			<field>ДатаРегистрацииСНТ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации СНТ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КрайняяДатаСНТ</dataPath>
+			<field>КрайняяДатаСНТ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Крайняя дата подтверждения/отклонения СНТ</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ВЫБОР Когда ЗначениеЗаполнено(КрайняяДатаСНТ) Тогда КрайняяДатаСНТ Иначе СНТСостояние Конец</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСостояние</dataPath>
+			<field>СНТСостояние</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СНТСостояние</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ПоступлениеТоваровУслуг</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Контрагент</dataPath>
+				<field>Контрагент</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Налогоплательщик</dataPath>
+				<field>Налогоплательщик</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налогоплательщик</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаВсего</dataPath>
+				<field>СуммаВсего</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма всего</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтруктурноеПодразделение</dataPath>
+				<field>СтруктурноеПодразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТ</dataPath>
+				<field>СНТ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипДокумента</dataPath>
+				<field>ТипДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип документа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТПроведен</dataPath>
+				<field>СНТПроведен</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТПроведен</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТСтатус</dataPath>
+				<field>СНТСтатус</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТСтатус</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаНДС</dataPath>
+				<field>СуммаНДС</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма НДС</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаБезНДС</dataPath>
+				<field>СуммаБезНДС</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма без НДС</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>УплаченныйНДС</dataPath>
+				<field>УплаченныйНДС</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Уплаченный НДС</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОсталосьДней</dataPath>
+				<field>ОсталосьДней</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Осталось дней</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаРегистрацииСНТ</dataPath>
+				<field>ДатаРегистрацииСНТ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата регистрации СНТ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КрайняяДатаСНТ</dataPath>
+				<field>КрайняяДатаСНТ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Крайняя дата СНТ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТСостояние</dataPath>
+				<field>СНТСостояние</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТСостояние</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПоступлениеТоваровУслуг.Ссылка КАК Ссылка,
+	ПоступлениеТоваровУслуг.Организация КАК Налогоплательщик,
+	ПоступлениеТоваровУслуг.Организация КАК Организация,
+	ПоступлениеТоваровУслуг.Контрагент КАК Контрагент,
+	ПоступлениеТоваровУслуг.СтруктурноеПодразделение КАК СтруктурноеПодразделение,
+	ПоступлениеТоваровУслуг.СуммаВключаетНДС КАК СуммаВключаетНДС,
+	ВЫБОР
+		КОГДА ПоступлениеТоваровУслуг.ВалютаДокумента = &amp;ВалютаРегламентированногоУчета
+			ТОГДА 1
+		ИНАЧЕ ВЫБОР
+				КОГДА ПоступлениеТоваровУслуг.КурсВзаиморасчетов = 0
+						ИЛИ ПоступлениеТоваровУслуг.КратностьВзаиморасчетов = 0
+					ТОГДА 1
+				ИНАЧЕ ПоступлениеТоваровУслуг.КурсВзаиморасчетов / ПоступлениеТоваровУслуг.КратностьВзаиморасчетов
+			КОНЕЦ
+	КОНЕЦ КАК КоэффициентПересчета
+ПОМЕСТИТЬ ВТ_ДокументыОтгрузки
+ИЗ
+	Документ.ПоступлениеТоваровУслуг КАК ПоступлениеТоваровУслуг
+ГДЕ
+	ПоступлениеТоваровУслуг.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПоступлениеТоваровУслуг.Проведен
+	И НЕ ПоступлениеТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеТоваровУслуг.Импорт)
+	И НЕ ПоступлениеТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеТоваровУслуг.ПоступлениеОтНерезидента)
+	И НЕ ПоступлениеТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеТоваровУслуг.ВПереработку)
+{ГДЕ
+	ПоступлениеТоваровУслуг.Организация.*,
+	ПоступлениеТоваровУслуг.СтруктурноеПодразделение.*}
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПоступлениеТоваровУслугТовары.Ссылка КАК Ссылка,
+	СУММА(ПоступлениеТоваровУслугТовары.Сумма - ВЫБОР
+			КОГДА ВТ_ДокументыОтгрузки.СуммаВключаетНДС
+				ТОГДА ПоступлениеТоваровУслугТовары.СуммаНДС
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаБезНДС,
+	СУММА(ПоступлениеТоваровУслугТовары.СуммаНДС) КАК СуммаНДС
+ПОМЕСТИТЬ ВТ_ДокументыОтгрузкиТабЧасти
+ИЗ
+	Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДокументыОтгрузки КАК ВТ_ДокументыОтгрузки
+		ПО ПоступлениеТоваровУслугТовары.Ссылка = ВТ_ДокументыОтгрузки.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ПоступлениеТоваровУслугТовары.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДокументСНТ.ДокументОснование КАК ДокументОснования,
+	ДокументСНТ.Ссылка КАК СНТ,
+	ДокументСНТ.Проведен КАК Проведен,
+	ДокументСНТ.РегистрационныйНомерИСЭСФ КАК РегистрационныйНомерИСЭСФ,
+	ДокументСНТ.Статус КАК Статус,
+	ДокументСНТ.Состояние КАК Состояние,
+	ДокументСНТ.ДатаРегистрацииИСЭСФ КАК ДатаРегистрацииСНТ,
+	ВЫБОР
+		КОГДА НЕ ДокументСНТ.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыСНТ.Подтвержден)
+				И НЕ ДокументСНТ.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыСНТ.Отклонен)
+				И НЕ ДокументСНТ.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыСНТ.Отозван)
+				И НЕ ДокументСНТ.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыСНТ.Аннулирован)
+			ТОГДА ВЫБОР
+					КОГДА ДокументСНТ.ПрочийТранспорт
+							ИЛИ ДокументСНТ.Трубопровод
+							ИЛИ ДокументСНТ.МорскойТранспорт
+							ИЛИ ДокументСНТ.Мультимодальный
+							ИЛИ ДокументСНТ.АвтомобильныйТранспорт
+							ИЛИ ДокументСНТ.ВоздушныйТранспорт
+							ИЛИ ДокументСНТ.ЖелезнодорожныйТранспорт
+						ТОГДА ДОБАВИТЬКДАТЕ(ДокументСНТ.ДатаРегистрацииИСЭСФ, ДЕНЬ, 20)
+					ИНАЧЕ ДОБАВИТЬКДАТЕ(ДокументСНТ.ДатаРегистрацииИСЭСФ, ДЕНЬ, 10)
+				КОНЕЦ
+	КОНЕЦ КАК КрайняяДатаСНТ
+ПОМЕСТИТЬ ВТ_СНТ
+ИЗ
+	Документ.СНТ КАК ДокументСНТ
+ГДЕ
+	ДокументСНТ.ДокументОснование В
+			(ВЫБРАТЬ
+				ВТ_ДокументыОтгрузки.Ссылка КАК Ссылка
+			ИЗ
+				ВТ_ДокументыОтгрузки КАК ВТ_ДокументыОтгрузки)
+	И НЕ ДокументСНТ.Ссылка.ПометкаУдаления
+	И ДокументСНТ.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияСНТ.Входящий)
+
+ИНДЕКСИРОВАТЬ ПО
+	ДокументОснования
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДокументыОтгрузки.Ссылка КАК Регистратор,
+	ВТ_ДокументыОтгрузки.Налогоплательщик КАК Налогоплательщик,
+	ВТ_ДокументыОтгрузки.Организация КАК Организация,
+	ВТ_ДокументыОтгрузки.Контрагент КАК Контрагент,
+	ВЫРАЗИТЬ(СУММА(ВТ_ДокументыОтгрузкиТабЧасти.СуммаБезНДС * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК СуммаБезНДС,
+	ВЫРАЗИТЬ(СУММА(ВТ_ДокументыОтгрузкиТабЧасти.СуммаНДС * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК СуммаНДС,
+	ВЫРАЗИТЬ(СУММА(ВТ_ДокументыОтгрузкиТабЧасти.СуммаНДС * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК УплаченныйНДС,
+	ВЫРАЗИТЬ(СУММА((ВТ_ДокументыОтгрузкиТабЧасти.СуммаБезНДС + ВТ_ДокументыОтгрузкиТабЧасти.СуммаНДС) * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК СуммаВсего,
+	ВТ_ДокументыОтгрузки.СтруктурноеПодразделение КАК СтруктурноеПодразделение,
+	ВТ_СНТ.СНТ КАК СНТ,
+	ТИПЗНАЧЕНИЯ(ВТ_ДокументыОтгрузки.Ссылка) КАК ТипДокумента,
+	ЕСТЬNULL(ВТ_СНТ.Проведен, ЛОЖЬ) КАК СНТПроведен,
+	ВТ_СНТ.Статус КАК СНТСтатус,
+	ВТ_СНТ.ДатаРегистрацииСНТ КАК ДатаРегистрацииСНТ,
+	ВТ_СНТ.КрайняяДатаСНТ КАК КрайняяДатаСНТ,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ВТ_СНТ.КрайняяДатаСНТ) = ТИП(ДАТА)
+			ТОГДА -РАЗНОСТЬДАТ(ВТ_СНТ.КрайняяДатаСНТ, &amp;ТекущаяДата, ДЕНЬ)
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОсталосьДней,
+	ВТ_СНТ.Состояние КАК СНТСостояние
+ИЗ
+	ВТ_ДокументыОтгрузки КАК ВТ_ДокументыОтгрузки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДокументыОтгрузкиТабЧасти КАК ВТ_ДокументыОтгрузкиТабЧасти
+		ПО ВТ_ДокументыОтгрузки.Ссылка = ВТ_ДокументыОтгрузкиТабЧасти.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_СНТ КАК ВТ_СНТ
+		ПО ВТ_ДокументыОтгрузки.Ссылка = ВТ_СНТ.ДокументОснования
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ДокументыОтгрузки.Ссылка,
+	ВТ_ДокументыОтгрузки.Контрагент,
+	ВТ_ДокументыОтгрузки.Налогоплательщик,
+	ВТ_ДокументыОтгрузки.Организация,
+	ВТ_ДокументыОтгрузки.СтруктурноеПодразделение,
+	ВТ_СНТ.СНТ,
+	ТИПЗНАЧЕНИЯ(ВТ_ДокументыОтгрузки.Ссылка),
+	ЕСТЬNULL(ВТ_СНТ.Проведен, ЛОЖЬ),
+	ВТ_СНТ.Статус,
+	ВТ_СНТ.КрайняяДатаСНТ,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ВТ_СНТ.КрайняяДатаСНТ) = ТИП(ДАТА)
+			ТОГДА -РАЗНОСТЬДАТ(ВТ_СНТ.КрайняяДатаСНТ, &amp;ТекущаяДата, ДЕНЬ)
+		ИНАЧЕ ""
+	КОНЕЦ,
+	ВТ_СНТ.ДатаРегистрацииСНТ,
+	ВТ_СНТ.Состояние</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ВозвратТоваровОтПокупателя</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаБезНДС</dataPath>
+				<field>СуммаБезНДС</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма без НДС</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Налогоплательщик</dataPath>
+				<field>Налогоплательщик</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налогоплательщик</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаНДС</dataPath>
+				<field>СуммаНДС</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма НДС</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Контрагент</dataPath>
+				<field>Контрагент</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОборотПоРеализации</dataPath>
+				<field>ОборотПоРеализации</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Оборот по реализации</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаВсего</dataPath>
+				<field>СуммаВсего</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма всего</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтруктурноеПодразделение</dataPath>
+				<field>СтруктурноеПодразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТ</dataPath>
+				<field>СНТ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипДокумента</dataPath>
+				<field>ТипДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип документа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТПроведен</dataPath>
+				<field>СНТПроведен</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТПроведен</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТСтатус</dataPath>
+				<field>СНТСтатус</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТСтатус</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОсталосьДней</dataPath>
+				<field>ОсталосьДней</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Осталось дней</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КрайняяДатаСНТ</dataPath>
+				<field>КрайняяДатаСНТ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Крайняя дата СНТ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаРегистрацииСНТ</dataPath>
+				<field>ДатаРегистрацииСНТ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата регистрации СНТ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНТСостояние</dataPath>
+				<field>СНТСостояние</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СНТСостояние</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВозвратТоваровОтПокупателя.Ссылка КАК Ссылка,
+	ВозвратТоваровОтПокупателя.Организация КАК Налогоплательщик,
+	ВозвратТоваровОтПокупателя.Организация КАК Организация,
+	ВозвратТоваровОтПокупателя.Контрагент КАК Контрагент,
+	ВозвратТоваровОтПокупателя.СтруктурноеПодразделение КАК СтруктурноеПодразделение,
+	ВозвратТоваровОтПокупателя.СуммаВключаетНДС КАК СуммаВключаетНДС,
+	ВозвратТоваровОтПокупателя.СуммаВключаетАкциз КАК СуммаВключаетАкциз,
+	ВЫБОР
+		КОГДА ВозвратТоваровОтПокупателя.ВалютаДокумента = &amp;ВалютаРегламентированногоУчета
+			ТОГДА 1
+		ИНАЧЕ ВЫБОР
+				КОГДА ВозвратТоваровОтПокупателя.КурсВзаиморасчетов = 0
+						ИЛИ ВозвратТоваровОтПокупателя.КратностьВзаиморасчетов = 0
+					ТОГДА 1
+				ИНАЧЕ ВозвратТоваровОтПокупателя.КурсВзаиморасчетов / ВозвратТоваровОтПокупателя.КратностьВзаиморасчетов
+			КОНЕЦ
+	КОНЕЦ КАК КоэффициентПересчета
+ПОМЕСТИТЬ ВТ_ДокументыОтгрузки
+ИЗ
+	Документ.ВозвратТоваровОтПокупателя КАК ВозвратТоваровОтПокупателя
+ГДЕ
+	ВозвратТоваровОтПокупателя.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ВозвратТоваровОтПокупателя.Проведен
+	И ВЫБОР
+			КОГДА ВозвратТоваровОтПокупателя.Контрагент.ЭтоГруппа = ИСТИНА
+					ИЛИ ВозвратТоваровОтПокупателя.Контрагент.ИдентификационныйКодЛичности = "000000000000"
+				ТОГДА ЛОЖЬ
+			КОГДА ВозвратТоваровОтПокупателя.Контрагент.МалаяТорговаяТочка = ИСТИНА
+					И ВозвратТоваровОтПокупателя.УчитыватьАкциз = ЛОЖЬ
+				ТОГДА ЛОЖЬ
+			КОГДА ВозвратТоваровОтПокупателя.Контрагент.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ФизЛицо)
+					И НЕ ВозвратТоваровОтПокупателя.Контрагент.ИндивидуальныйПредпринимательАдвокатЧастныйНотариус
+				ТОГДА ЛОЖЬ
+			КОГДА ВозвратТоваровОтПокупателя.Контрагент.СтранаРезидентства = ЗНАЧЕНИЕ(Справочник.КлассификаторСтранМира.Казахстан)
+				ТОГДА ИСТИНА
+		КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВозвратТоваровОтПокупателяТовары.Ссылка КАК Ссылка,
+	СУММА(ВозвратТоваровОтПокупателяТовары.Сумма - ВЫБОР
+			КОГДА ВТ_ДокументыОтгрузки.СуммаВключаетНДС
+				ТОГДА ВозвратТоваровОтПокупателяТовары.СуммаНДС
+			ИНАЧЕ 0
+		КОНЕЦ + ВЫБОР
+			КОГДА ВТ_ДокументыОтгрузки.СуммаВключаетАкциз
+				ТОГДА 0
+			ИНАЧЕ ВозвратТоваровОтПокупателяТовары.СуммаАкциза
+		КОНЕЦ) КАК СуммаБезНДС,
+	СУММА(ВозвратТоваровОтПокупателяТовары.Сумма - ВЫБОР
+			КОГДА ВТ_ДокументыОтгрузки.СуммаВключаетНДС
+				ТОГДА ВозвратТоваровОтПокупателяТовары.СуммаНДС
+			ИНАЧЕ 0
+		КОНЕЦ + ВЫБОР
+			КОГДА ВТ_ДокументыОтгрузки.СуммаВключаетАкциз
+				ТОГДА 0
+			ИНАЧЕ ВозвратТоваровОтПокупателяТовары.СуммаАкциза
+		КОНЕЦ) КАК ОборотПоРеализации,
+	СУММА(ВозвратТоваровОтПокупателяТовары.СуммаНДС) КАК СуммаНДС
+ПОМЕСТИТЬ ВТ_ДокументыОтгрузкиТабЧасти
+ИЗ
+	Документ.ВозвратТоваровОтПокупателя.Товары КАК ВозвратТоваровОтПокупателяТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДокументыОтгрузки КАК ВТ_ДокументыОтгрузки
+		ПО ВозвратТоваровОтПокупателяТовары.Ссылка = ВТ_ДокументыОтгрузки.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ВозвратТоваровОтПокупателяТовары.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДокументСНТ.Ссылка КАК СНТ,
+	ДокументСНТ.ДокументОснование КАК ДокументОснование,
+	ДокументСНТ.Проведен КАК Проведен,
+	ДокументСНТ.РегистрационныйНомерИСЭСФ КАК РегистрационныйНомерИСЭСФ,
+	ДокументСНТ.Статус КАК Статус,
+	ДокументСНТ.ДатаРегистрацииИСЭСФ КАК ДатаРегистрацииСНТ,
+	ВЫБОР
+		КОГДА НЕ ДокументСНТ.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияСНТ.ПодтвержденПолучателем)
+				И НЕ ДокументСНТ.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияСНТ.ОтклоненПолучателем)
+			ТОГДА ВЫБОР
+					КОГДА ДокументСНТ.ПрочийТранспорт
+							ИЛИ ДокументСНТ.Трубопровод
+							ИЛИ ДокументСНТ.МорскойТранспорт
+							ИЛИ ДокументСНТ.Мультимодальный
+							ИЛИ ДокументСНТ.АвтомобильныйТранспорт
+							ИЛИ ДокументСНТ.ВоздушныйТранспорт
+							ИЛИ ДокументСНТ.ЖелезнодорожныйТранспорт
+						ТОГДА ДОБАВИТЬКДАТЕ(ДокументСНТ.ДатаРегистрацииИСЭСФ, ДЕНЬ, 20)
+					ИНАЧЕ ДОБАВИТЬКДАТЕ(ДокументСНТ.ДатаРегистрацииИСЭСФ, ДЕНЬ, 10)
+				КОНЕЦ
+	КОНЕЦ КАК КрайняяДатаСНТ,
+	ДокументСНТ.Состояние КАК Состояние
+ПОМЕСТИТЬ ВТ_СНТ
+ИЗ
+	Документ.СНТ КАК ДокументСНТ
+ГДЕ
+	ДокументСНТ.ДокументОснование В
+			(ВЫБРАТЬ
+				ВТ_ДокументыОтгрузки.Ссылка КАК Ссылка
+			ИЗ
+				ВТ_ДокументыОтгрузки КАК ВТ_ДокументыОтгрузки)
+	И НЕ ДокументСНТ.Ссылка.ПометкаУдаления
+	И ДокументСНТ.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияСНТ.Входящий)
+
+ИНДЕКСИРОВАТЬ ПО
+	ДокументОснование
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДокументыОтгрузки.Ссылка КАК Регистратор,
+	ВТ_ДокументыОтгрузки.Налогоплательщик КАК Налогоплательщик,
+	ВТ_ДокументыОтгрузки.Организация КАК Организация,
+	ВТ_ДокументыОтгрузки.Контрагент КАК Контрагент,
+	ВЫРАЗИТЬ(СУММА(ВТ_ДокументыОтгрузкиТабЧасти.СуммаБезНДС * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК СуммаБезНДС,
+	ВЫРАЗИТЬ(СУММА(ВТ_ДокументыОтгрузкиТабЧасти.ОборотПоРеализации * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК ОборотПоРеализации,
+	ВЫРАЗИТЬ(СУММА(ВТ_ДокументыОтгрузкиТабЧасти.СуммаНДС * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК СуммаНДС,
+	ВЫРАЗИТЬ(СУММА((ВТ_ДокументыОтгрузкиТабЧасти.СуммаБезНДС + ВТ_ДокументыОтгрузкиТабЧасти.СуммаНДС) * ВТ_ДокументыОтгрузки.КоэффициентПересчета) КАК ЧИСЛО(15, 2)) КАК СуммаВсего,
+	ВТ_ДокументыОтгрузки.СтруктурноеПодразделение КАК СтруктурноеПодразделение,
+	ВТ_СНТ.СНТ КАК СНТ,
+	ТИПЗНАЧЕНИЯ(ВТ_ДокументыОтгрузки.Ссылка) КАК ТипДокумента,
+	ЕСТЬNULL(ВТ_СНТ.Проведен, ЛОЖЬ) КАК СНТПроведен,
+	ВТ_СНТ.Статус КАК СНТСтатус,
+	ВТ_СНТ.КрайняяДатаСНТ КАК КрайняяДатаСНТ,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ВТ_СНТ.КрайняяДатаСНТ) = ТИП(ДАТА)
+			ТОГДА -РАЗНОСТЬДАТ(ВТ_СНТ.КрайняяДатаСНТ, &amp;ТекущаяДата, ДЕНЬ)
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОсталосьДней,
+	ВТ_СНТ.ДатаРегистрацииСНТ КАК ДатаРегистрацииСНТ,
+	ВТ_СНТ.Состояние КАК СНТСостояние
+ИЗ
+	ВТ_ДокументыОтгрузки КАК ВТ_ДокументыОтгрузки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДокументыОтгрузкиТабЧасти КАК ВТ_ДокументыОтгрузкиТабЧасти
+		ПО ВТ_ДокументыОтгрузки.Ссылка = ВТ_ДокументыОтгрузкиТабЧасти.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_СНТ КАК ВТ_СНТ
+		ПО ВТ_ДокументыОтгрузки.Ссылка = ВТ_СНТ.ДокументОснование
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ДокументыОтгрузки.Ссылка,
+	ВТ_ДокументыОтгрузки.Налогоплательщик,
+	ВТ_ДокументыОтгрузки.Организация,
+	ВТ_ДокументыОтгрузки.Контрагент,
+	ВТ_ДокументыОтгрузки.СтруктурноеПодразделение,
+	ВТ_СНТ.СНТ,
+	ТИПЗНАЧЕНИЯ(ВТ_ДокументыОтгрузки.Ссылка),
+	ЕСТЬNULL(ВТ_СНТ.Проведен, ЛОЖЬ),
+	ВТ_СНТ.Статус,
+	ВТ_СНТ.КрайняяДатаСНТ,
+	ВТ_СНТ.ДатаРегистрацииСНТ,
+	ВТ_СНТ.Состояние</query>
+		</item>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеСНТ</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурноеПодразделение</dataPath>
+			<field>СтруктурноеПодразделение</field>
+			<presentationExpression>Выбор Когда Не ЗначениеЗаполнено(СтруктурноеПодразделение) Тогда "Головное подразделение" Иначе СтруктурноеПодразделение Конец</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Налогоплательщик</dataPath>
+			<field>Налогоплательщик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налогоплательщик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСуммаНДС</dataPath>
+			<field>СНТСуммаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НДС регл. (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСуммаБезНДС</dataPath>
+			<field>СНТСуммаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС регл. (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСуммаАкциза</dataPath>
+			<field>СНТСуммаАкциза</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма акциза регл. (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТОборотПоРеализации</dataPath>
+			<field>СНТОборотПоРеализации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оборот по реализации регл. (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСуммаАкцизаВВалютеДоговора</dataPath>
+			<field>СНТСуммаАкцизаВВалютеДоговора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма акциза в валюте договора (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСуммаБезНДСВВалютеДоговора</dataPath>
+			<field>СНТСуммаБезНДСВВалютеДоговора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС в валюте договора (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособВыставления</dataPath>
+			<field>СпособВыставления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ выставления</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ВЫБОР КОГДА СпособВыставления = 1 ТОГДА "На бумажном носителе" КОГДА СпособВыставления = 2 ТОГДА "В электронном виде" КОГДА СпособВыставления = 3 ТОГДА "Обоими способами" КОНЕЦ</presentationExpression>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<availableValue>
+				<value xsi:type="xs:decimal">1</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>На бумажном носителе</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:decimal">2</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>В электронном виде</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:decimal">3</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Обоими способами</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТОборотПоРеализацииВВалютеДоговора</dataPath>
+			<field>СНТОборотПоРеализацииВВалютеДоговора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оборот по реализации в валюте договора (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СНТСуммаНДСВВалютеДоговора</dataPath>
+			<field>СНТСуммаНДСВВалютеДоговора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НДС в валюте договора (СНТ)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ
+	ДокументыСНТ.Ссылка КАК Ссылка,
+	ДокументыСНТ.Организация КАК Организация,
+	ДокументыСНТ.Контрагент КАК Контрагент,
+	ДокументыСНТ.СтруктурноеПодразделение КАК СтруктурноеПодразделение,
+	ДокументыСНТ.Организация КАК Налогоплательщик,
+	ВЫБОР
+		КОГДА ДокументыСНТ.Валюта = &amp;ВалютаРегламентированногоУчета
+			ТОГДА 1
+		ИНАЧЕ ВЫБОР
+				КОГДА ДокументыСНТ.КурсВалюты = 0
+					ТОГДА 1
+				ИНАЧЕ ДокументыСНТ.КурсВалюты
+			КОНЕЦ
+	КОНЕЦ КАК КоэффициентПересчета,
+	ВЫБОР
+		КОГДА НЕ ЕСТЬNULL(ЭСФ.ДатаВыпискиНаБумажномНосителе, ДАТАВРЕМЯ(1, 1, 1)) = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА 3
+		ИНАЧЕ ВЫБОР
+				КОГДА ДокументыСНТ.ПредоставленВБумажномВиде = ЛОЖЬ
+					ТОГДА 2
+				ИНАЧЕ 1
+			КОНЕЦ
+	КОНЕЦ КАК СпособВыставления
+ПОМЕСТИТЬ ВТ_ДокументыСНТ
+ИЗ
+	Документ.СНТ КАК ДокументыСНТ
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭСФ КАК ЭСФ
+		ПО ДокументыСНТ.Ссылка = ЭСФ.СНТ
+ГДЕ
+	ДокументыСНТ.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СНТТовары.Ссылка КАК Ссылка,
+	СУММА(СНТТовары.Сумма - ВЫБОР
+			КОГДА НЕ СНТТовары.СуммаНДС ЕСТЬ NULL
+				ТОГДА СНТТовары.СуммаНДС
+			ИНАЧЕ NULL
+		КОНЕЦ - ВЫБОР
+			КОГДА НЕ СНТТовары.СуммаАкциза ЕСТЬ NULL
+				ТОГДА СНТТовары.СуммаАкциза
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СуммаБезНДС,
+	СУММА(СНТТовары.ОборотПоРеализации) КАК ОборотПоРеализации,
+	СУММА(СНТТовары.СуммаАкциза) КАК СуммаАкциза,
+	СУММА(СНТТовары.СуммаНДС) КАК СуммаНДС,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ СНТТовары.БезНДС) КАК БезНДС
+ПОМЕСТИТЬ ВТ_ДокументыСНТТабЧасти
+ИЗ
+	Документ.СНТ.Товары КАК СНТТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДокументыСНТ КАК ВТ_ДокументыСНТ
+		ПО (ВТ_ДокументыСНТ.Ссылка = СНТТовары.Ссылка)
+
+СГРУППИРОВАТЬ ПО
+	СНТТовары.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СНТТоварыВС.Ссылка,
+	СУММА(СНТТоварыВС.Сумма - ВЫБОР
+			КОГДА НЕ СНТТоварыВС.СуммаНДС ЕСТЬ NULL
+				ТОГДА СНТТоварыВС.СуммаНДС
+			ИНАЧЕ NULL
+		КОНЕЦ - ВЫБОР
+			КОГДА НЕ СНТТоварыВС.СуммаАкциза ЕСТЬ NULL
+				ТОГДА СНТТоварыВС.СуммаАкциза
+			ИНАЧЕ 0
+		КОНЕЦ),
+	СУММА(СНТТоварыВС.ОборотПоРеализации),
+	СУММА(СНТТоварыВС.СуммаАкциза),
+	СУММА(СНТТоварыВС.СуммаНДС),
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ СНТТоварыВС.БезНДС)
+ИЗ
+	Документ.СНТ.ТоварыВС КАК СНТТоварыВС
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДокументыСНТ КАК ВТ_ДокументыСНТ
+		ПО СНТТоварыВС.Ссылка = ВТ_ДокументыСНТ.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	СНТТоварыВС.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДокументыСНТТабЧасти.Ссылка КАК Ссылка,
+	СУММА(ВТ_ДокументыСНТТабЧасти.СуммаБезНДС) КАК СуммаБезНДС,
+	СУММА(ВТ_ДокументыСНТТабЧасти.ОборотПоРеализации) КАК ОборотПоРеализации,
+	СУММА(ВТ_ДокументыСНТТабЧасти.СуммаАкциза) КАК СуммаАкциза,
+	СУММА(ВТ_ДокументыСНТТабЧасти.СуммаНДС) КАК СуммаНДС,
+	СУММА(ВТ_ДокументыСНТТабЧасти.БезНДС) КАК БезНДС
+ПОМЕСТИТЬ ВТ_СгруппированныеТабЧасти
+ИЗ
+	ВТ_ДокументыСНТТабЧасти КАК ВТ_ДокументыСНТТабЧасти
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ДокументыСНТТабЧасти.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДокументыСНТ.Ссылка КАК Ссылка,
+	ВТ_ДокументыСНТ.Организация КАК Организация,
+	ВТ_ДокументыСНТ.Контрагент КАК Контрагент,
+	ВТ_ДокументыСНТ.СтруктурноеПодразделение КАК СтруктурноеПодразделение,
+	ВТ_ДокументыСНТ.Налогоплательщик КАК Налогоплательщик,
+	ВТ_СгруппированныеТабЧасти.СуммаБезНДС КАК СНТСуммаБезНДСВВалютеДоговора,
+	ВТ_СгруппированныеТабЧасти.ОборотПоРеализации КАК СНТОборотПоРеализацииВВалютеДоговора,
+	ВТ_СгруппированныеТабЧасти.СуммаАкциза КАК СНТСуммаАкцизаВВалютеДоговора,
+	ВТ_СгруппированныеТабЧасти.СуммаНДС КАК СНТСуммаНДСВВалютеДоговора,
+	ВЫРАЗИТЬ(ВТ_СгруппированныеТабЧасти.СуммаБезНДС * ВТ_ДокументыСНТ.КоэффициентПересчета КАК ЧИСЛО(15, 2)) КАК СНТСуммаБезНДС,
+	ВТ_ДокументыСНТ.СпособВыставления КАК СпособВыставления,
+	ВЫРАЗИТЬ(ВТ_СгруппированныеТабЧасти.ОборотПоРеализации * ВТ_ДокументыСНТ.КоэффициентПересчета КАК ЧИСЛО(15, 2)) КАК СНТОборотПоРеализации,
+	ВЫРАЗИТЬ(ВТ_СгруппированныеТабЧасти.СуммаАкциза * ВТ_ДокументыСНТ.КоэффициентПересчета КАК ЧИСЛО(15, 2)) КАК СНТСуммаАкциза,
+	ВЫРАЗИТЬ(ВТ_СгруппированныеТабЧасти.СуммаНДС * ВТ_ДокументыСНТ.КоэффициентПересчета КАК ЧИСЛО(15, 2)) КАК СНТСуммаНДС
+ИЗ
+	ВТ_ДокументыСНТ КАК ВТ_ДокументыСНТ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_СгруппированныеТабЧасти КАК ВТ_СгруппированныеТабЧасти
+		ПО ВТ_ДокументыСНТ.Ссылка = ВТ_СгруппированныеТабЧасти.Ссылка</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>ДанныеДокументовОтгрузки</sourceDataSet>
+		<destinationDataSet>ДанныеСНТ</destinationDataSet>
+		<sourceExpression>Организация</sourceExpression>
+		<destinationExpression>Организация</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ДанныеДокументовОтгрузки</sourceDataSet>
+		<destinationDataSet>ДанныеСНТ</destinationDataSet>
+		<sourceExpression>Налогоплательщик</sourceExpression>
+		<destinationExpression>Налогоплательщик</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ДанныеДокументовОтгрузки</sourceDataSet>
+		<destinationDataSet>ДанныеСНТ</destinationDataSet>
+		<sourceExpression>Контрагент</sourceExpression>
+		<destinationExpression>Контрагент</destinationExpression>
+		<required>false</required>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ДанныеДокументовОтгрузки</sourceDataSet>
+		<destinationDataSet>ДанныеСНТ</destinationDataSet>
+		<sourceExpression>СНТ</sourceExpression>
+		<destinationExpression>Ссылка</destinationExpression>
+	</dataSetLink>
+	<totalField>
+		<dataPath>ОборотПоРеализацииОборот</dataPath>
+		<expression>Сумма(ОборотПоРеализацииОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаБезНДСОборот</dataPath>
+		<expression>Сумма(СуммаБезНДСОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНДСОборот</dataPath>
+		<expression>Сумма(СуммаНДСОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВсего</dataPath>
+		<expression>Сумма(СуммаВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТСуммаАкциза</dataPath>
+		<expression>Сумма(СНТСуммаАкциза)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТСуммаБезНДС</dataPath>
+		<expression>Сумма(СНТСуммаБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТСуммаНДС</dataPath>
+		<expression>Сумма(СНТСуммаНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТОборотПоРеализации</dataPath>
+		<expression>Сумма(СНТОборотПоРеализации)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТСуммаАкцизаВВалютеДоговора</dataPath>
+		<expression>Сумма(СНТСуммаАкцизаВВалютеДоговора)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТСуммаБезНДСВВалютеДоговора</dataPath>
+		<expression>Сумма(СНТСуммаБезНДСВВалютеДоговора)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТСуммаНДСВВалютеДоговора</dataPath>
+		<expression>Сумма(СНТСуммаНДСВВалютеДоговора)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СНТОборотПоРеализацииВВалютеДоговора</dataPath>
+		<expression>Сумма(СНТОборотПоРеализацииВВалютеДоговора)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВалютаРегламентированногоУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта регламентированного учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>НаличиеСНТПолученных</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Наличие СНТ полученных</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделять отрицательные</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="9" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основной шрифт</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОсталосьДней</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет текста</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Green</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Together</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

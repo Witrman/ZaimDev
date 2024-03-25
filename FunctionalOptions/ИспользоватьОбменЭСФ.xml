@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FunctionalOption uuid="e22dade7-38c0-4bba-8174-35f2935485f9">
+		<Properties>
+			<Name>ИспользоватьОбменЭСФ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать обмен ЭСФ</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ИспользоватьОбменЭСФ</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Constant.ИспользоватьОбменЭСФЧерезAPI</xr:Object>
+				<xr:Object>Constant.ИспользоватьОбменЭСФЧерезXML</xr:Object>
+				<xr:Object>Constant.ЭСФВнешнийМодульОбменаДанными</xr:Object>
+				<xr:Object>Constant.ПараметрыПодключенияКСерверуИСЭСФ</xr:Object>
+				<xr:Object>Constant.ПараметрыЭСФ</xr:Object>
+				<xr:Object>Constant.ЭСФВерсияВнешнегоМодуля</xr:Object>
+				<xr:Object>Constant.ЭСФВнешнийМодуль</xr:Object>
+				<xr:Object>Constant.ЭСФПараметрыСоглашения</xr:Object>
+				<xr:Object>Catalog.ПрофилиИСЭСФ</xr:Object>
+				<xr:Object>Catalog.ПользователиИСЭСФ</xr:Object>
+				<xr:Object>Catalog.КлючиАналитикиУчетаСоответствий</xr:Object>
+				<xr:Object>Document.ЭСФ</xr:Object>
+				<xr:Object>DataProcessor.ОбменЭСФ</xr:Object>
+				<xr:Object>DataProcessor.ПомощникНастройкиОбменаЭСФ</xr:Object>
+				<xr:Object>InformationRegister.АктуальныеЭСФ</xr:Object>
+				<xr:Object>InformationRegister.ИсторияЭСФ</xr:Object>
+				<xr:Object>InformationRegister.ПараметрыМетодовИСЭСФ</xr:Object>
+				<xr:Object>InformationRegister.СоответствияНаименованийИСсылокЕдиницИзмерения</xr:Object>
+				<xr:Object>InformationRegister.СоответствияНаименованийИСсылокТоваров</xr:Object>
+				<xr:Object>InformationRegister.АналитикаУчетаСоответствий</xr:Object>
+				<xr:Object>InformationRegister.СоответствиеНаименованийИСсылокЕдиницИзмеренийИТоваров</xr:Object>
+				<xr:Object>InformationRegister.ОчередьОтправкиЭСФ</xr:Object>
+				<xr:Object>InformationRegister.АктивныеСессииИСЭСФ</xr:Object>
+				<xr:Object>Document.СчетФактураВыданный.Attribute.СпособВыставления</xr:Object>
+				<xr:Object>Document.СчетФактураПолученный.Attribute.СпособПолучения</xr:Object>
+				<xr:Object>Constant.ЭСФИспользоватьВнешнийМодульОбменаДанными</xr:Object>
+				<xr:Object>Catalog.ЭСФПрисоединенныеФайлы</xr:Object>
+				<xr:Object>Catalog.КлассификаторЕдиницИзмерения.Attribute.КодЭСФ</xr:Object>
+				<xr:Object>Catalog.НематериальныеАктивы.Attribute.ИдентификаторТовараЭСФ</xr:Object>
+				<xr:Object>Catalog.Номенклатура.Attribute.ИдентификаторТовараЭСФ</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.РегистрационныйНомерЭСФ</xr:Object>
+				<xr:Object>Catalog.ОсновныеСредства.Attribute.ИдентификаторТовараЭСФ</xr:Object>
+				<xr:Object>Catalog.НомераГТД</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

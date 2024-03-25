@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FilterCriterion uuid="87c2da55-6965-4302-a181-c32db13f6557">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.ДокументыПоСотрудникуОрганизации" category="Manager">
+				<xr:TypeId>bb125b0a-e209-4e52-ac25-d6206280cfb6</xr:TypeId>
+				<xr:ValueId>fd791f3e-0958-47d3-be95-360568b20e26</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.ДокументыПоСотрудникуОрганизации" category="List">
+				<xr:TypeId>a5745b6d-e72a-4b48-ae89-4a08e0cc6a1e</xr:TypeId>
+				<xr:ValueId>b9e88267-2f7b-4039-bd14-3cb642e9c17d</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДокументыПоСотрудникуОрганизации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы по сотруднику организации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СотрудникиОрганизаций</v8:Type>
+			</Type>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводСведенийОРеглУчетеПлановыхНачисленийРаботниковОрганизаций.TabularSection.ОсновныеНачисления.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.TabularSection.ОсновныеНачисления.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КомандировкиОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.TabularSection.ОсновныеНачисления.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

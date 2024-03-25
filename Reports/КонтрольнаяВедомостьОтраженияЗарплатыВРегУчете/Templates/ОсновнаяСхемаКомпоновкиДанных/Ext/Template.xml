@@ -1,0 +1,3026 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Начислено</dataPath>
+			<field>Начислено</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИПН</dataPath>
+			<field>ИПН</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИПНБух</dataPath>
+			<field>ИПНБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено ИПН</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачисленоБух</dataPath>
+			<field>НачисленоБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено начислений</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОПВ</dataPath>
+			<field>ОПВ</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОПВБух</dataPath>
+			<field>ОПВБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено ОПВ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениОПВ</dataPath>
+			<field>ПениОПВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по ОПВ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениОПВБух</dataPath>
+			<field>ПениОПВБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено пени по ОПВ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениСО</dataPath>
+			<field>ПениСО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по СО</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениСОБух</dataPath>
+			<field>ПениСОБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено пени по СО</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьИПН</dataPath>
+			<field>РазностьИПН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИПН - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьНачислено</dataPath>
+			<field>РазностьНачислено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислено - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьОПВ</dataPath>
+			<field>РазностьОПВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОПВ - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьПениОПВ</dataPath>
+			<field>РазностьПениОПВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по ОПВ - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьПениСО</dataPath>
+			<field>РазностьПениСО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по СО - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьСоциальныеОтчисления</dataPath>
+			<field>РазностьСоциальныеОтчисления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Социальные отчисления - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьСоциальныйНалог</dataPath>
+			<field>РазностьСоциальныйНалог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Социальный налог - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьУдержано</dataPath>
+			<field>РазностьУдержано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие удержания - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СоциальныеОтчисления</dataPath>
+			<field>СоциальныеОтчисления</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СоциальныеОтчисленияБух</dataPath>
+			<field>СоциальныеОтчисленияБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено социальных отчислений</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СоциальныйНалог</dataPath>
+			<field>СоциальныйНалог</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СоциальныйНалогБух</dataPath>
+			<field>СоциальныйНалогБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено социальный налог</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Удержано</dataPath>
+			<field>Удержано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие удержания</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдержаноБух</dataPath>
+			<field>УдержаноБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено прочих удержаний</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодРегистрации</dataPath>
+			<field>ПериодРегистрации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Физлицо</dataPath>
+			<field>Физлицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ движения (Регистратор)</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОППВ</dataPath>
+			<field>ОППВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОППВ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОППВБух</dataPath>
+			<field>ОППВБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено ОППВ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениОППВ</dataPath>
+			<field>ПениОППВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по ОППВ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениОППВБух</dataPath>
+			<field>ПениОППВБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено пени по ОППВ </v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьОППВ</dataPath>
+			<field>РазностьОППВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОППВ - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьПениОППВ</dataPath>
+			<field>РазностьПениОППВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по ОППВ - отражено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВОСМСБух</dataPath>
+			<field>ВОСМСБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено взносов ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьПениООСМС</dataPath>
+			<field>РазностьПениООСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по отчислениям ОСМС - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениООСМСБух</dataPath>
+			<field>ПениООСМСБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено пени по отчислениям ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениВОСМСБух</dataPath>
+			<field>ПениВОСМСБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено пени по взносам ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьВОСМС</dataPath>
+			<field>РазностьВОСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Взносы ОСМС - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВОСМС</dataPath>
+			<field>ВОСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Взносы ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениВОСМС</dataPath>
+			<field>ПениВОСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по взносам ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьООСМС</dataPath>
+			<field>РазностьООСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчисления ОСМС - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьПениВОСМС</dataPath>
+			<field>РазностьПениВОСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по взносам ОСМС - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ООСМС</dataPath>
+			<field>ООСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчисления ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ООСМСБух</dataPath>
+			<field>ООСМСБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено отчислений ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениООСМС</dataPath>
+			<field>ПениООСМС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени по отчислениям ОСМС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениЕПБух</dataPath>
+			<field>ПениЕПБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено пени ЕП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕП</dataPath>
+			<field>ЕП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЕП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕПБух</dataPath>
+			<field>ЕПБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено ЕП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьЕП</dataPath>
+			<field>РазностьЕП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЕП - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениЕП</dataPath>
+			<field>ПениЕП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени ЕП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьПениЕП</dataPath>
+			<field>РазностьПениЕП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени ЕП - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОПВР</dataPath>
+			<field>ОПВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОПВР</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениОПВР</dataPath>
+			<field>ПениОПВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени ОПВР</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПениОПВРБух</dataPath>
+			<field>ПениОПВРБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено пени ОПВР</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОПВРБух</dataPath>
+			<field>ОПВРБух</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражено ОПВР</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьОПВР</dataPath>
+			<field>РазностьОПВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОПВР - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьПениОПВР</dataPath>
+			<field>РазностьПениОПВР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени ОПВР - отражено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.Ссылка КАК Ссылка,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.НомерСтроки КАК НомерСтроки,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СтруктурноеПодразделениеДт КАК СтруктурноеПодразделениеДт,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СчетДт КАК СчетДт,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоДт1 КАК СубконтоДт1,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоДт2 КАК СубконтоДт2,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоДт3 КАК СубконтоДт3,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СтруктурноеПодразделениеКт КАК СтруктурноеПодразделениеКт,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СчетКт КАК СчетКт,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоКт1 КАК СубконтоКт1,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоКт2 КАК СубконтоКт2,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоКт3 КАК СубконтоКт3,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.Сумма КАК Сумма,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.ВидРасчета КАК ВидРасчета,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.ФизЛицо КАК ФизЛицо,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СчетДтНУ КАК СчетДтНУ,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоДтНУ1 КАК СубконтоДтНУ1,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоДтНУ2 КАК СубконтоДтНУ2,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоДтНУ3 КАК СубконтоДтНУ3,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СчетКтНУ КАК СчетКтНУ,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоКтНУ1 КАК СубконтоКтНУ1,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоКтНУ2 КАК СубконтоКтНУ2,
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.СубконтоКтНУ3 КАК СубконтоКтНУ3,
+	ОтражениеЗарплатыВРеглУчете.Организация КАК Организация,
+	Организации.ИндивидуальныйПредприниматель КАК ИндивидуальныйПредприниматель
+ПОМЕСТИТЬ ВТ_ОтражениеВУчете
+ИЗ
+	Документ.ОтражениеЗарплатыВРеглУчете.ОтражениеВУчете КАК ОтражениеЗарплатыВРеглУчетеОтражениеВУчете
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ОтражениеЗарплатыВРеглУчете КАК ОтражениеЗарплатыВРеглУчете
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Организации
+			ПО ОтражениеЗарплатыВРеглУчете.Организация = Организации.Ссылка
+		ПО ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.Ссылка = ОтражениеЗарплатыВРеглУчете.Ссылка
+ГДЕ
+	ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.Ссылка.Проведен
+	И ОтражениеЗарплатыВРеглУчетеОтражениеВУчете.Сумма &lt;&gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Данные.Организация КАК Организация,
+	Данные.Физлицо КАК Физлицо,
+	Данные.ПериодРегистрации КАК ПериодРегистрации,
+	Данные.Начислено КАК Начислено,
+	Данные.НачисленоБух КАК НачисленоБух,
+	Данные.РазностьНачислено КАК РазностьНачислено,
+	Данные.ИПН КАК ИПН,
+	Данные.ИПНБух КАК ИПНБух,
+	Данные.РазностьИПН КАК РазностьИПН,
+	Данные.ОПВ КАК ОПВ,
+	Данные.ОПВБух КАК ОПВБух,
+	Данные.РазностьОПВ КАК РазностьОПВ,
+	Данные.ВОСМС КАК ВОСМС,
+	Данные.ВОСМСБух КАК ВОСМСБух,
+	Данные.РазностьВОСМС КАК РазностьВОСМС,
+	Данные.Удержано КАК Удержано,
+	Данные.УдержаноБух КАК УдержаноБух,
+	Данные.РазностьУдержано КАК РазностьУдержано,
+	Данные.СоциальныеОтчисления КАК СоциальныеОтчисления,
+	Данные.СоциальныеОтчисленияБух КАК СоциальныеОтчисленияБух,
+	Данные.РазностьСоциальныеОтчисления КАК РазностьСоциальныеОтчисления,
+	Данные.СоциальныйНалог КАК СоциальныйНалог,
+	Данные.СоциальныйНалогБух КАК СоциальныйНалогБух,
+	Данные.РазностьСоциальныйНалог КАК РазностьСоциальныйНалог,
+	Данные.ОППВ КАК ОППВ,
+	Данные.ОППВБух КАК ОППВБух,
+	Данные.РазностьОППВ КАК РазностьОППВ,
+	Данные.ООСМС КАК ООСМС,
+	Данные.ООСМСБух КАК ООСМСБух,
+	Данные.РазностьООСМС КАК РазностьООСМС,
+	Данные.ПениОПВ КАК ПениОПВ,
+	Данные.ПениОПВБух КАК ПениОПВБух,
+	Данные.РазностьПениОПВ КАК РазностьПениОПВ,
+	Данные.ПениСО КАК ПениСО,
+	Данные.ПениСОБух КАК ПениСОБух,
+	Данные.РазностьПениСО КАК РазностьПениСО,
+	Данные.ПениОППВ КАК ПениОППВ,
+	Данные.ПениОППВБух КАК ПениОППВБух,
+	Данные.РазностьПениОППВ КАК РазностьПениОППВ,
+	Данные.ПениВОСМС КАК ПениВОСМС,
+	Данные.ПениВОСМСБух КАК ПениВОСМСБух,
+	Данные.РазностьПениВОСМС КАК РазностьПениВОСМС,
+	Данные.ПениООСМС КАК ПениООСМС,
+	Данные.ПениООСМСБух КАК ПениООСМСБух,
+	Данные.РазностьПениООСМС КАК РазностьПениООСМС,
+	Данные.ЕП КАК ЕП,
+	Данные.ЕПБух КАК ЕПБух,
+	Данные.РазностьЕП КАК РазностьЕП,
+	Данные.ПениЕП КАК ПениЕП,
+	Данные.ПениЕПБух КАК ПениЕПБух,
+	Данные.РазностьПениЕП КАК РазностьПениЕП,
+	Данные.ОПВР КАК ОПВР,
+	Данные.ОПВРБух КАК ОПВРБух,
+	Данные.РазностьОПВР КАК РазностьОПВР,
+	Данные.ПениОПВР КАК ПениОПВР,
+	Данные.ПениОПВРБух КАК ПениОПВРБух,
+	Данные.РазностьПениОПВР КАК РазностьПениОПВР,
+	Данные.Регистратор КАК Регистратор
+{ВЫБРАТЬ
+	Организация.*,
+	Физлицо.*,
+	ПериодРегистрации,
+	Начислено,
+	НачисленоБух,
+	РазностьНачислено,
+	ИПН,
+	ИПНБух,
+	РазностьИПН,
+	ОПВ,
+	ОПВБух,
+	РазностьОПВ,
+	ВОСМС,
+	ВОСМСБух,
+	РазностьВОСМС,
+	Удержано,
+	УдержаноБух,
+	РазностьУдержано,
+	СоциальныеОтчисления,
+	СоциальныеОтчисленияБух,
+	РазностьСоциальныеОтчисления,
+	СоциальныйНалог,
+	СоциальныйНалогБух,
+	РазностьСоциальныйНалог,
+	ОППВ,
+	ОППВБух,
+	РазностьОППВ,
+	ООСМС,
+	ООСМСБух,
+	РазностьООСМС,
+	ПениОПВ,
+	ПениОПВБух,
+	РазностьПениОПВ,
+	ПениСО,
+	ПениСОБух,
+	РазностьПениСО,
+	ПениОППВ,
+	ПениОППВБух,
+	РазностьПениОППВ,
+	ПениВОСМС,
+	ПениВОСМСБух,
+	РазностьПениВОСМС,
+	ПениООСМС,
+	ПениООСМСБух,
+	РазностьПениООСМС,
+	ЕП,
+	ЕПБух,
+	РазностьЕП,
+	ПениЕП,
+	ПениЕПБух,
+	РазностьПениЕП,
+	ОПВР,
+	ОПВРБух,
+	РазностьОПВР,
+	ПениОПВР,
+	ПениОПВРБух,
+	РазностьПениОПВР,
+	Регистратор.*}
+ИЗ
+	(ВЫБРАТЬ
+		Начисления.Ссылка.Организация КАК Организация,
+		Начисления.Ссылка.ПериодРегистрации КАК ПериодРегистрации,
+		Начисления.Физлицо КАК Физлицо,
+		Начисления.Результат КАК Начислено,
+		0 КАК НачисленоБух,
+		Начисления.Результат КАК РазностьНачислено,
+		0 КАК ИПН,
+		0 КАК ИПНБух,
+		0 КАК РазностьИПН,
+		0 КАК ОПВ,
+		0 КАК ОПВБух,
+		0 КАК РазностьОПВ,
+		0 КАК ВОСМС,
+		0 КАК ВОСМСБух,
+		0 КАК РазностьВОСМС,
+		0 КАК Удержано,
+		0 КАК УдержаноБух,
+		0 КАК РазностьУдержано,
+		0 КАК СоциальныеОтчисления,
+		0 КАК СоциальныеОтчисленияБух,
+		0 КАК РазностьСоциальныеОтчисления,
+		0 КАК СоциальныйНалог,
+		0 КАК СоциальныйНалогБух,
+		0 КАК РазностьСоциальныйНалог,
+		0 КАК ОППВ,
+		0 КАК ОППВБух,
+		0 КАК РазностьОППВ,
+		0 КАК ООСМС,
+		0 КАК ООСМСБух,
+		0 КАК РазностьООСМС,
+		0 КАК ПениОПВ,
+		0 КАК ПениОПВБух,
+		0 КАК РазностьПениОПВ,
+		0 КАК ПениСО,
+		0 КАК ПениСОБух,
+		0 КАК РазностьПениСО,
+		0 КАК ПениОППВ,
+		0 КАК ПениОППВБух,
+		0 КАК РазностьПениОППВ,
+		0 КАК ПениВОСМС,
+		0 КАК ПениВОСМСБух,
+		0 КАК РазностьПениВОСМС,
+		0 КАК ПениООСМС,
+		0 КАК ПениООСМСБух,
+		0 КАК РазностьПениООСМС,
+		0 КАК ЕП,
+		0 КАК ЕПБух,
+		0 КАК РазностьЕП,
+		0 КАК ПениЕП,
+		0 КАК ПениЕПБух,
+		0 КАК РазностьПениЕП,
+		0 КАК ОПВР,
+		0 КАК ОПВРБух,
+		0 КАК РазностьОПВР,
+		0 КАК ПениОПВР,
+		0 КАК ПениОПВРБух,
+		0 КАК РазностьПениОПВР,
+		Начисления.Ссылка КАК Регистратор
+	ИЗ
+		Документ.НачислениеЗарплатыРаботникамОрганизаций.Начисления КАК Начисления
+	ГДЕ
+		Начисления.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И Начисления.Ссылка.Проведен
+		И Начисления.Результат &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ИПНСведенияОДоходах.Организация,
+		НАЧАЛОПЕРИОДА(ИПНСведенияОДоходах.ПериодРегистрации, МЕСЯЦ),
+		ИПНСведенияОДоходах.ФизЛицо,
+		ИПНСведенияОДоходах.СуммаДохода,
+		0,
+		ИПНСведенияОДоходах.СуммаДохода,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ИПНСведенияОДоходах.Регистратор
+	ИЗ
+		РегистрНакопления.ИПНСведенияОДоходах КАК ИПНСведенияОДоходах
+	ГДЕ
+		ИПНСведенияОДоходах.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ИПНСведенияОДоходах.Регистратор ССЫЛКА Документ.РегистрацияПрочихДоходовВЦеляхНалогообложения
+		И ИПНСведенияОДоходах.Регистратор.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийРегистрацияПрочихДоходов.ДоходыКонтрагентов)
+		И ИПНСведенияОДоходах.ФизЛицо ССЫЛКА Справочник.Контрагенты
+		И ИПНСведенияОДоходах.СуммаДохода &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Удержания.Ссылка.Организация,
+		Удержания.Ссылка.ПериодРегистрации,
+		Удержания.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		Удержания.Результат,
+		0,
+		Удержания.Результат,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		Удержания.Ссылка
+	ИЗ
+		Документ.РасчетУдержанийРаботниковОрганизаций.Удержания КАК Удержания
+	ГДЕ
+		Удержания.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И Удержания.Ссылка.Проведен
+		И Удержания.Результат &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Удержания.Ссылка.Организация,
+		Удержания.Ссылка.ПериодРегистрации,
+		Удержания.Физлицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		Удержания.Результат,
+		0,
+		Удержания.Результат,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		Удержания.Ссылка
+	ИЗ
+		Документ.РегистрацияРазовыхУдержанийРаботниковОрганизаций.Удержания КАК Удержания
+	ГДЕ
+		Удержания.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И Удержания.Ссылка.Проведен
+		И Удержания.Результат &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Удержания.Ссылка.Организация,
+		Удержания.Ссылка.ПериодРегистрации,
+		Удержания.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		Удержания.Результат,
+		0,
+		Удержания.Результат,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		Удержания.Ссылка
+	ИЗ
+		Документ.РасчетЕдиногоПлатежа.Удержания КАК Удержания
+	ГДЕ
+		Удержания.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И Удержания.Ссылка.Проведен
+		И Удержания.Результат &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ИПНРасчетыСБюджетом.Организация,
+		НАЧАЛОПЕРИОДА(ИПНРасчетыСБюджетом.Период, МЕСЯЦ),
+		ИПНРасчетыСБюджетом.ФизЛицо,
+		0,
+		0,
+		0,
+		ИПНРасчетыСБюджетом.Налог,
+		0,
+		ИПНРасчетыСБюджетом.Налог,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ИПНРасчетыСБюджетом.Регистратор
+	ИЗ
+		РегистрНакопления.ИПНРасчетыСБюджетом КАК ИПНРасчетыСБюджетом
+	ГДЕ
+		ИПНРасчетыСБюджетом.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ИПНРасчетыСБюджетом.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И ИПНРасчетыСБюджетом.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И НЕ ИПНРасчетыСБюджетом.НеОтражатьВРеглУчете
+		И ИПНРасчетыСБюджетом.Налог &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ОПВРасчетыСФондами.Организация,
+		НАЧАЛОПЕРИОДА(ОПВРасчетыСФондами.Период, МЕСЯЦ),
+		ОПВРасчетыСФондами.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ОПВРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОПВРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ОПВРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОПВРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ОПВРасчетыСФондами.Регистратор
+	ИЗ
+		РегистрНакопления.ОПВРасчетыСФондами КАК ОПВРасчетыСФондами
+	ГДЕ
+		ОПВРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ОПВРасчетыСФондами.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И ОПВРасчетыСФондами.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И ОПВРасчетыСФондами.Взнос &lt;&gt; 0
+		И НЕ ОПВРасчетыСФондами.Регистратор ССЫЛКА Документ.РасчетНалоговПриПоступленииАктивовУслуг
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ВОСМСРасчетыСФондами.Организация,
+		НАЧАЛОПЕРИОДА(ВОСМСРасчетыСФондами.Период, МЕСЯЦ),
+		ВОСМСРасчетыСФондами.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ВОСМСРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ВОСМСРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ВОСМСРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ВОСМСРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ВОСМСРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ВОСМСРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ВОСМСРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ВОСМСРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВОСМСРасчетыСФондами.Регистратор
+	ИЗ
+		РегистрНакопления.ВОСМСРасчетыСФондами КАК ВОСМСРасчетыСФондами
+	ГДЕ
+		ВОСМСРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ВОСМСРасчетыСФондами.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И ВОСМСРасчетыСФондами.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И НЕ ВОСМСРасчетыСФондами.НеОтражатьВРеглУчете
+		И ВОСМСРасчетыСФондами.Взнос &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		СОРасчетыСФондами.Организация,
+		НАЧАЛОПЕРИОДА(СОРасчетыСФондами.Период, МЕСЯЦ),
+		СОРасчетыСФондами.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА СОРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА СОРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА СОРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА СОРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА СОРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА СОРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА СОРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА СОРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		СОРасчетыСФондами.Регистратор
+	ИЗ
+		РегистрНакопления.СОРасчетыСФондами КАК СОРасчетыСФондами
+	ГДЕ
+		СОРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И СОРасчетыСФондами.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И СОРасчетыСФондами.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И СОРасчетыСФондами.Отчисление &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		СНИсчисленный.Организация,
+		НАЧАЛОПЕРИОДА(СНИсчисленный.Период, МЕСЯЦ),
+		СНИсчисленный.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		СНИсчисленный.Налог,
+		0,
+		СНИсчисленный.Налог,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		СНИсчисленный.Регистратор
+	ИЗ
+		РегистрНакопления.СНИсчисленный КАК СНИсчисленный
+	ГДЕ
+		СНИсчисленный.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И НЕ СНИсчисленный.НеОтражатьВРеглУчете
+		И СНИсчисленный.Налог &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ОППВРасчетыСФондами.Организация,
+		НАЧАЛОПЕРИОДА(ОППВРасчетыСФондами.Период, МЕСЯЦ),
+		ОППВРасчетыСФондами.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ОППВРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОППВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОППВРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОППВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ОППВРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОППВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОППВРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОППВРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ОППВРасчетыСФондами.Регистратор
+	ИЗ
+		РегистрНакопления.ОППВРасчетыСФондами КАК ОППВРасчетыСФондами
+	ГДЕ
+		ОППВРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ОППВРасчетыСФондами.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И ОППВРасчетыСФондами.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И ОППВРасчетыСФондами.Взнос &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ОПВРРасчетыСФондами.Организация,
+		НАЧАЛОПЕРИОДА(ОПВРРасчетыСФондами.Период, МЕСЯЦ),
+		ОПВРРасчетыСФондами.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ОПВРРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОПВРРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА ОПВРРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОПВРРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОПВРРасчетыСФондами.Взнос
+			ИНАЧЕ 0
+		КОНЕЦ,
+		ОПВРРасчетыСФондами.Регистратор
+	ИЗ
+		РегистрНакопления.ОПВРРасчетыСФондами КАК ОПВРРасчетыСФондами
+	ГДЕ
+		ОПВРРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ОПВРРасчетыСФондами.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И ОПВРРасчетыСФондами.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И ОПВРРасчетыСФондами.Взнос &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ООСМСРасчетыСФондами.Организация,
+		НАЧАЛОПЕРИОДА(ООСМСРасчетыСФондами.Период, МЕСЯЦ),
+		ООСМСРасчетыСФондами.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ООСМСРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ООСМСРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ООСМСРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ООСМСРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ООСМСРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ООСМСРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ООСМСРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ООСМСРасчетыСФондами.Отчисление
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ООСМСРасчетыСФондами.Регистратор
+	ИЗ
+		РегистрНакопления.ООСМСРасчетыСФондами КАК ООСМСРасчетыСФондами
+	ГДЕ
+		ООСМСРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ООСМСРасчетыСФондами.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И ООСМСРасчетыСФондами.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И ООСМСРасчетыСФондами.Отчисление &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЕПРасчетыСФондами.Организация,
+		НАЧАЛОПЕРИОДА(ЕПРасчетыСФондами.Период, МЕСЯЦ),
+		ЕПРасчетыСФондами.ФизЛицо,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ВЫБОР
+			КОГДА ЕПРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ЕПРасчетыСФондами.СуммаПлатежа
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ЕПРасчетыСФондами.ВидПлатежа = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ЕПРасчетыСФондами.СуммаПлатежа
+			ИНАЧЕ 0
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА ЕПРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ЕПРасчетыСФондами.СуммаПлатежа
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ЕПРасчетыСФондами.ВидПлатежа &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ЕПРасчетыСФондами.СуммаПлатежа
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		ЕПРасчетыСФондами.Регистратор
+	ИЗ
+		РегистрНакопления.ЕПРасчетыСФондами КАК ЕПРасчетыСФондами
+	ГДЕ
+		ЕПРасчетыСФондами.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И ЕПРасчетыСФондами.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+		И ЕПРасчетыСФондами.ВидСтроки = ЗНАЧЕНИЕ(Перечисление.РасчетыСБюджетомФондамиВидСтроки.Исчисление)
+		И ЕПРасчетыСФондами.СуммаПлатежа &lt;&gt; 0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ОтражениеВУчете.Ссылка.Организация,
+		НАЧАЛОПЕРИОДА(ОтражениеВУчете.Ссылка.ПериодРегистрации, МЕСЯЦ),
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СубконтоДт1 ССЫЛКА Справочник.Контрагенты
+					И ОтражениеВУчете.СубконтоДт1 &lt;&gt; НЕОПРЕДЕЛЕНО
+					И ОтражениеВУчете.СубконтоДт1 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				ТОГДА ВЫРАЗИТЬ(ОтражениеВУчете.СубконтоДт1 КАК Справочник.Контрагенты)
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СубконтоКт1 ССЫЛКА Справочник.Контрагенты
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; НЕОПРЕДЕЛЕНО
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				ТОГДА ВЫРАЗИТЬ(ОтражениеВУчете.СубконтоКт1 КАК Справочник.Контрагенты)
+			ИНАЧЕ ОтражениеВУчете.ФизЛицо
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+				ТОГДА ОтражениеВУчете.Сумма
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СубконтоКт1 ССЫЛКА Справочник.Контрагенты
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; НЕОПРЕДЕЛЕНО
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+				ТОГДА ОтражениеВУчете.Сумма
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СубконтоКт1 ССЫЛКА Справочник.Контрагенты
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; НЕОПРЕДЕЛЕНО
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетИПН
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетИПН
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.ФизЛицо = ОтражениеВУчете.ИндивидуальныйПредприниматель
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносы)
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			КОГДА ОтражениеВУчете.СчетДт = ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+					И ОтражениеВУчете.СубконтоДт1 ССЫЛКА Справочник.Контрагенты
+					И ОтражениеВУчете.СубконтоДт1 &lt;&gt; НЕОПРЕДЕЛЕНО
+					И ОтражениеВУчете.СубконтоДт1 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.ФизЛицо = ОтражениеВУчете.Ссылка.Организация.ИндивидуальныйПредприниматель
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносы)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			КОГДА ОтражениеВУчете.СчетДт = ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+					И ОтражениеВУчете.СубконтоДт1 ССЫЛКА Справочник.Контрагенты
+					И ОтражениеВУчете.СубконтоДт1 &lt;&gt; НЕОПРЕДЕЛЕНО
+					И ОтражениеВУчете.СубконтоДт1 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетВОСМС
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетВОСМС
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетДт = ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетОПВ
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетИПН
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетВОСМС
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетЕП
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетДт = ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетОПВ
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетИПН
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетВОСМС
+					И ОтражениеВУчете.СчетКт &lt;&gt; &amp;СчетЕП
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетСО
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетСО
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетСН
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетСН
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОППВ
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПрофессиональныеПенсионныеВзносы)
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОППВ
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПрофессиональныеПенсионныеВзносы)
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетООСМС
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетООСМС
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносы)
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетОПВ
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносы)
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетСО
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетСО
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетОППВ
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПрофессиональныеПенсионныеВзносы)
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетОППВ
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПрофессиональныеПенсионныеВзносы)
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетВОСМС
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетВОСМС
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетООСМС
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетООСМС
+					И ОтражениеВУчете.СубконтоКт1 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетЕП
+					И ОтражениеВУчете.СубконтоКт1 = &amp;АналитикаЕП
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетЕП
+					И ОтражениеВУчете.СубконтоКт1 = &amp;АналитикаЕП
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетЕП
+					И ОтражениеВУчете.СубконтоКт1 = &amp;АналитикаЕП
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетЕП
+					И ОтражениеВУчете.СубконтоКт1 = &amp;АналитикаЕП
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВР
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносыРаботодателя)
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетДт &lt;&gt; ЗНАЧЕНИЕ(ПланСчетов.Типовой.КраткосрочнаяЗадолженностьПоОплатеТруда)
+					И ОтражениеВУчете.СчетКт = &amp;СчетОПВР
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносыРаботодателя)
+					И ОтражениеВУчете.СубконтоКт2 = ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		0,
+		ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетОПВР
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносыРаботодателя)
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		-ВЫБОР
+			КОГДА ОтражениеВУчете.СчетКт = &amp;СчетОПВР
+					И ОтражениеВУчете.СубконтоКт1 = ЗНАЧЕНИЕ(Справочник.НалогиСборыОтчисления.ОбязательныеПенсионныеВзносыРаботодателя)
+					И ОтражениеВУчете.СубконтоКт2 &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыПлатежейВБюджетИФонды.Налог)
+				ТОГДА ОтражениеВУчете.Сумма
+			ИНАЧЕ 0
+		КОНЕЦ,
+		ОтражениеВУчете.Ссылка
+	ИЗ
+		ВТ_ОтражениеВУчете КАК ОтражениеВУчете) КАК Данные
+{ГДЕ
+	Данные.Организация.*,
+	Данные.Физлицо.*}</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Начислено</dataPath>
+		<expression>Сумма(Начислено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачисленоБух</dataPath>
+		<expression>Сумма(НачисленоБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьНачислено</dataPath>
+		<expression>Сумма(РазностьНачислено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИПН</dataPath>
+		<expression>Сумма(ИПН)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИПНБух</dataPath>
+		<expression>Сумма(ИПНБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьИПН</dataPath>
+		<expression>Сумма(РазностьИПН)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОПВ</dataPath>
+		<expression>Сумма(ОПВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОПВБух</dataPath>
+		<expression>Сумма(ОПВБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьОПВ</dataPath>
+		<expression>Сумма(РазностьОПВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Удержано</dataPath>
+		<expression>Сумма(Удержано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УдержаноБух</dataPath>
+		<expression>Сумма(УдержаноБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьУдержано</dataPath>
+		<expression>Сумма(РазностьУдержано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СоциальныеОтчисления</dataPath>
+		<expression>Сумма(СоциальныеОтчисления)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СоциальныеОтчисленияБух</dataPath>
+		<expression>Сумма(СоциальныеОтчисленияБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьСоциальныеОтчисления</dataPath>
+		<expression>Сумма(РазностьСоциальныеОтчисления)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СоциальныйНалог</dataPath>
+		<expression>Сумма(СоциальныйНалог)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СоциальныйНалогБух</dataPath>
+		<expression>Сумма(СоциальныйНалогБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьСоциальныйНалог</dataPath>
+		<expression>Сумма(РазностьСоциальныйНалог)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениСО</dataPath>
+		<expression>Сумма(ПениСО)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениСОБух</dataPath>
+		<expression>Сумма(ПениСОБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьПениСО</dataPath>
+		<expression>Сумма(РазностьПениСО)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениОПВБух</dataPath>
+		<expression>Сумма(ПениОПВБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениОПВ</dataPath>
+		<expression>Сумма(ПениОПВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьПениОПВ</dataPath>
+		<expression>Сумма(РазностьПениОПВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОППВ</dataPath>
+		<expression>Сумма(ОППВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОППВБух</dataPath>
+		<expression>Сумма(ОППВБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьОППВ</dataPath>
+		<expression>Сумма(РазностьОППВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьПениОППВ</dataPath>
+		<expression>Сумма(РазностьПениОППВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениОППВ</dataPath>
+		<expression>Сумма(ПениОППВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениОППВБух</dataPath>
+		<expression>Сумма(ПениОППВБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВОСМС</dataPath>
+		<expression>Сумма(ВОСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВОСМСБух</dataPath>
+		<expression>Сумма(ВОСМСБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ООСМС</dataPath>
+		<expression>Сумма(ООСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ООСМСБух</dataPath>
+		<expression>Сумма(ООСМСБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениВОСМС</dataPath>
+		<expression>Сумма(ПениВОСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениВОСМСБух</dataPath>
+		<expression>Сумма(ПениВОСМСБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениООСМС</dataPath>
+		<expression>Сумма(ПениООСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениООСМСБух</dataPath>
+		<expression>Сумма(ПениООСМСБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьВОСМС</dataPath>
+		<expression>Сумма(РазностьВОСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьООСМС</dataPath>
+		<expression>Сумма(РазностьООСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьПениВОСМС</dataPath>
+		<expression>Сумма(РазностьПениВОСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьПениООСМС</dataPath>
+		<expression>Сумма(РазностьПениООСМС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕП</dataPath>
+		<expression>Сумма(ЕП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕПБух</dataPath>
+		<expression>Сумма(ЕПБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениЕП</dataPath>
+		<expression>Сумма(ПениЕП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениЕПБух</dataPath>
+		<expression>Сумма(ПениЕПБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьПениЕП</dataPath>
+		<expression>Сумма(РазностьПениЕП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьЕП</dataPath>
+		<expression>Сумма(РазностьЕП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьОПВР</dataPath>
+		<expression>Сумма(РазностьОПВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазностьПениОПВР</dataPath>
+		<expression>Сумма(РазностьПениОПВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениОПВР</dataPath>
+		<expression>Сумма(ПениОПВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПениОПВРБух</dataPath>
+		<expression>Сумма(ПениОПВРБух)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОПВР</dataPath>
+		<expression>Сумма(ОПВР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОПВРБух</dataPath>
+		<expression>Сумма(ОПВРБух)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетИПН</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет ИПН</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетОПВ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет ОПВ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетСН</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет СН</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетСО</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет СО</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетОППВ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет ОППВ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетВОСМС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет ВОСМС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетООСМС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет ООСМС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НастройкиОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройки отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:ValueStorage</v8:Type>
+		</valueType>
+		<value xsi:type="v8:ValueStorage">AQEIAAAAAAAAAO+7v3siVSJ9</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период рассылки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетЕП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет ЕП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>АналитикаЕП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Аналитика ЕП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.НалогиСборыОтчисления</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.НалогиСборыОтчисления.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетОПВР</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет ОПВР</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Типовой</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Типовой.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>КонтрольнаяВедомостьОтраженияЗарплатыВРегУчете</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрольная ведомость отражения зарплаты в регламентированном учете</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Начислено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачисленоБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьНачислено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИПН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИПНБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьИПН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОПВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОПВБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьОПВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВОСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВОСМСБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьВОСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Удержано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УдержаноБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьУдержано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СоциальныеОтчисления</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СоциальныеОтчисленияБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьСоциальныеОтчисления</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СоциальныйНалог</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СоциальныйНалогБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьСоциальныйНалог</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ООСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ООСМСБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьООСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОПВР</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОПВРБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьОПВР</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОППВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОППВБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьОППВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕПБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьЕП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениСО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениСОБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьПениСО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениОПВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениОПВБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьПениОПВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениВОСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениВОСМСБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьПениВОСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениООСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениООСМСБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьПениООСМС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениОПВР</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениОПВРБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьПениОПВР</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениОППВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениОППВБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьПениОППВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениЕП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПениЕПБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьПениЕП</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>d5fe8cb8-b047-4c53-b9c6-a971e302227a</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f6918ed2-7a4e-4394-85af-d745fda11d51</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СчетСО</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.РасчетыСБюджетомФондамиВидСтроки.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					<dcsset:userSettingID>f0bcde97-3a69-46ce-ad4f-4b511e9cb581</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Организация</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Физлицо</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>26df009f-43f5-4809-b3dd-94b9056fbfb4</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">МакетОформленияОтчетов</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>41e8af35-db3f-4868-9124-73e5181a521d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">StackedColumn3D</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Остатки денежных средств</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>1a2ec4f3-53ab-4880-a99e-8f785123526b</dcsset:userSettingID>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Физлицо</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>4aefb92b-df13-43ae-aa1e-2e4a811468d3</dcsset:userSettingID>
+					</dcsset:selection>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>5ea80bfc-ac19-458f-af50-3cd613b77c35</dcsset:userSettingID>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>84d808c6-58ca-4bda-a541-31ee56a985ff</dcsset:itemsUserSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>245c5131-5841-4a39-9a78-4eaf1158b6b9</dcsset:userSettingID>
+				<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+				<dcsset:itemsUserSettingID>595671ab-3a7c-428d-a47e-0c22df0f4ae5</dcsset:itemsUserSettingID>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>18ecdcf1-61f2-42d0-b5e1-62caf6f8e4d0</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

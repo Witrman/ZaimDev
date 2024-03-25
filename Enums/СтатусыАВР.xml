@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Enum uuid="60d9b9e1-0322-42b8-bcdd-2673ad7b3618">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.СтатусыАВР" category="Ref">
+				<xr:TypeId>9f7afeca-2392-4d3f-a8f4-c181cb8202f6</xr:TypeId>
+				<xr:ValueId>f054b8e5-b1de-40c2-8bfe-74c5c5e7583c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.СтатусыАВР" category="Manager">
+				<xr:TypeId>6e43630a-72e1-4f0a-b1fa-7ba82c6324df</xr:TypeId>
+				<xr:ValueId>491fe953-4a3e-4b14-b7a8-97968566e9fb</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.СтатусыАВР" category="List">
+				<xr:TypeId>6ce0d451-2350-4fbe-afa3-2c5993be7787</xr:TypeId>
+				<xr:ValueId>4601d650-2794-4f53-863e-d60bf0d01776</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СтатусыАВР</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы АВР</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Order">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="a1278f23-6110-4b2b-8661-467d31df64b3">
+				<Properties>
+					<Name>Непросмотренный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не просмотрен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя "CREATED".</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b67a529f-f890-4147-a056-3d6d7cc06ec6">
+				<Properties>
+					<Name>Доставленный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доставленный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя "DELIVERED".</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="03df937a-638d-4ab1-becd-91eb55cecfee">
+				<Properties>
+					<Name>Созданный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создан</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя "CANCELED".</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7312b47e-4258-4061-9d3c-6f82d10544e2">
+				<Properties>
+					<Name>Отозванный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отозванный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя "REVOKED".</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6a7b0bf1-e9b2-4e09-806d-bc9577c065f8">
+				<Properties>
+					<Name>Импортированный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Импортированный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя "IMPORTED".</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7f46f67e-505e-4f71-a9a2-d17aa6b15e70">
+				<Properties>
+					<Name>Черновик</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Черновик</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя "DRAFT".</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3cbb7f56-fc28-45a3-abe0-9d79b3d6b124">
+				<Properties>
+					<Name>Ошибочный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибочный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя "FAILED".</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bbc6837b-8d0c-4555-9bd4-4965e32815fd">
+				<Properties>
+					<Name>Удаленный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удаленный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7d4171e7-186f-47ec-a7d3-db88f7bb052a">
+				<Properties>
+					<Name>Отклоненный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклоненный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя DECLINED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c4718313-9945-48c7-b15a-5ddb91b29024">
+				<Properties>
+					<Name>НаСтадииРасторжения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В процессе расторжения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя IN_TERMINATING</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7ba3c527-0f2c-4c12-8371-e26a3afccba1">
+				<Properties>
+					<Name>Расторгнут</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расторгнут</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя TERMINATED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d60b3b1b-1379-4a04-8c72-b7f6111d1c57">
+				<Properties>
+					<Name>Подтвержденный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтвержденный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>В API ИС ЭСФ имеет имя CONFIRMED</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fbeb64c6-7438-43a5-829c-188ca549c366">
+				<Properties>
+					<Name>Аннулирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аннулирован</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

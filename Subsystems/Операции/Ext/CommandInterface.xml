@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="InformationRegister.ДатыЗапретаИзменения.Command.ДатыЗапретаЗагрузкиДанных">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Операции.Subsystem.Операции</Subsystem>
+		<Subsystem>Subsystem.Операции.Subsystem.ЖурналыПроводок</Subsystem>
+		<Subsystem>Subsystem.Операции.Subsystem.ЗакрытиеДтКтЗадолженности</Subsystem>
+		<Subsystem>Subsystem.Операции.Subsystem.РегламентныеОперации</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

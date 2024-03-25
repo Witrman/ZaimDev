@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<FunctionalOption uuid="f89f326f-4e9c-43dd-8af4-19d0277b0771">
+		<Properties>
+			<Name>ВедетсяУчетТоваровПоТоварамОрганизацииБУ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведется учет по товарам организаций в разрезе источников происхождения</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ВедетсяУчетТоваровПоТоварамОрганизацииБУ</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Catalog.НомераГТД</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.СтранаПроисхожденияТовара</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.КодТНВЭД</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.СпособПроисхожденияТовара</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.ДатаСертификатаПроисхожденияТовара</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.НомерСтрокиГТД</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.РегистрационныйНомерЭСФ</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.НаименованиеТовара</xr:Object>
+				<xr:Object>Catalog.НомераГТД.Attribute.ПризнакПроисхождения</xr:Object>
+				<xr:Object>Document.ВозвратТоваровОтПокупателя.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.КомплектацияНоменклатуры.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.ПередачаТоваров.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.ПеремещениеТоваров.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.ПринятиеКУчетуОС.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.РеализацияТоваровУслуг.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.РегистрацияПрочихОперацийПоРеализованнымТоварамВЦеляхНДС.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.СписаниеТоваров.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.СчетФактураВыданный.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.ТребованиеНакладная.TabularSection.НомераГТД</xr:Object>
+				<xr:Object>Document.АвансовыйОтчет.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ВводНачальныхОстатков.TabularSection.ТоварыОрганизаций.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ВозвратТоваровПоставщику.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ЗаявлениеОВвозеТоваровИУплатеКосвенныхНалогов.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.КомплектацияНоменклатуры.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.КомплектацияНоменклатуры.TabularSection.Комплектующие.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ОприходованиеТоваров.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ОтчетПроизводстваЗаСмену.TabularSection.Продукция.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ОтчетПроизводстваЗаСмену.TabularSection.ВозвратныеОтходы.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ПоступлениеИзПереработки.TabularSection.Продукция.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ПоступлениеИзПереработки.TabularSection.ВозвращенныеМатериалы.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ПоступлениеТоваровУслуг.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.РегистрацияПрочихОперацийПоПриобретеннымТоварамВЦеляхНДС.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.СписаниеОС.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.СчетФактураПолученный.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>Document.ЭСФ.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>DataProcessor.ОбработкаТабличнойЧастиТовары.TabularSection.Товары.Attribute.НомерГТД</xr:Object>
+				<xr:Object>AccumulationRegister.ТоварыОрганизацийБУ</xr:Object>
+				<xr:Object>InformationRegister.ТоварыСПониженнойСтавкойПошлин</xr:Object>
+				<xr:Object>Report.СверкаДанныхТоваровОрганизацийИБУ</xr:Object>
+				<xr:Object>Constant.ДатаПереходаНаУчетПоТоварамОрганизацийВРазрезеНомеровГТДБУ</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>
